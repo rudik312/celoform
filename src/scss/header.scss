@@ -9,23 +9,39 @@
 	&__logo {
 		display: flex;
 		align-items: center;
+		column-gap: 15px;
 	}
 	// .header__logo-text
 	&__logo-text {
 		display: flex;
 		flex-direction: column;
+		row-gap: 5px;
+	}
+	//header__logo-name
+	&__logo-name {
+		@extend %mont-700;
+		font-size: rem(28);
+		color: $accent;
+	}
+	//header__logo-descr
+	&__logo-descr {
+		@extend %mont-400;
+		max-width: 40px;
+		font-size: rem(14);
 	}
 	// .header__menu
 	&__menu {
+		@extend %mont-400;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		row-gap: 10px;
 	}
 	// .header__contacts
 	&__contacts {
-		// display: grid;
 		display: flex;
 		justify-content: flex-end;
-
+		column-gap: 40px;
 	}
 	// .header__email
 	&__email {
@@ -51,14 +67,28 @@
 	}
 	// .menu__link
 	&__link {
+		@media (any-hover: hover){
+			&:hover{
+				transition: color .3s;
+				color: $accent;
+			}
+		}
 	}
 	// .menu__icon
 	&__icon {
 	}
 }
-.header-actions {
-	// .header-actions__btn
+.header-action {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// .header-action__btn
 	&__btn {
+		@extend %mont-400;
+		color: $white;
+		background-color: $accent;
+		padding: rem(15) rem(45) rem(15) rem(45);
+		border-radius: 5px;
 	}
 }
 .btn {
