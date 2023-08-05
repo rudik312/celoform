@@ -1,3 +1,90 @@
 //====================================================================================================
+.main {
+  // .main__container
+  &__container {
+  }
+  // .main__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  // .main__content
+  &__content {
+    margin-top: 350px;
+    display: grid;
+    row-gap: 25px;
+  }
+  // .main__title-box
+  &__title-box {
+  }
+  // .main__title
+  &__title {
+    @extend %mont-700;
+    font-size: rem(80);
+    color: $accent;
+  }
+  // .main__subtitle
+  &__subtitle {
+    font-size: rem(20);
+    @extend %mont-400;
+  }
+  // .main__list
+  &__list {
+    @extend %mont-400;
+    font-size: rem(18);
+    padding-left: 25px;
+    
+  }
+  // .main__list-item
+  &__list-item {
+    position: relative;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: -20px;
+      top: 4px;
+      border-radius: 50%;
+      background: $accent;
+    }
+    &::after{
+      content:'';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: -24px;
+      border-radius: 50%;
+      background: rgba(55, 82, 233, 0.459);
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+  // .main__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .main__button
+  &__button {
+    padding: 10px 50px 10px 50px;
+    // display: inline-flex;
+  }
+  // .main__link-reviews
+  &__link-reviews {
+    @extend %mont-400;
+    &:hover {
+      transition: all 0.3s ease 0s;
+      text-decoration: underline;
+    }
+  }
+  // .main__bg
+  &__bg {
+  }
+}
+.btn {
+}
 
 //====================================================================================================

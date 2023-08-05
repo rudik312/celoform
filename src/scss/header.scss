@@ -1,9 +1,14 @@
 //====================================================================================================
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	// .header__container
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		padding: 10px 0;
 	}
 	// .header__logo
 	&__logo {
@@ -35,7 +40,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		row-gap: 10px;
+		row-gap: 15px;
 	}
 	// .header__contacts
 	&__contacts {
@@ -80,19 +85,18 @@
 }
 .header-action {
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
 	// .header-action__btn
 	&__btn {
-		@extend %mont-400;
-		color: $white;
-		background-color: $accent;
-		padding: rem(15) rem(45) rem(15) rem(45);
-		border-radius: 5px;
+		// @extend %mont-400;
+		// color: $white;
+		// background-color: $accent;
+		// padding: 10px 45px 10px 45px;
+		// border-radius: 5px;
 	}
 }
-.btn {
-}
+
 .icon-menu {
 }
 

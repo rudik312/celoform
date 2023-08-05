@@ -2,6 +2,8 @@
 $accent: #0033D9;
 $white: #ffffff;
 
+$btnColor: #0033D9;
+
 
 
 // скрытие для чекбокса, радио (для своих стилей)
@@ -24,6 +26,13 @@ $white: #ffffff;
   font-weight: 700;
 }
 
+.btn {
+  @extend %mont-400;
+  color: $white;
+  background-color: $accent;
+  padding: 10px 45px 10px 45px;
+  border-radius: 5px;
+}
 
 
 //Лекарство к Fancybox
