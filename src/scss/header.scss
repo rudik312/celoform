@@ -44,10 +44,24 @@
 		column-gap: 30px;
 	}
 	// .header__email
-	&__email {
-	}
 	// .header__phone
+	&__email,
 	&__phone {
+		display: flex;
+		align-items: center;
+		column-gap: 5px;
+	}
+	// .header__email-icon
+	// .header__phone-icon
+	&__email-icon,
+	&__phone-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background-color: $accent;
 	}
 	// .header__bottom
 	&__bottom {
