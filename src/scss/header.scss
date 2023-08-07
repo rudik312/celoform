@@ -50,6 +50,14 @@
 		display: flex;
 		align-items: center;
 		column-gap: 5px;
+		@extend %mont-400;
+		font-size: rem(14);
+		@media (any-hover: hover){
+			transition: color 0.3s ease 0s;
+			&:hover{
+				color: $accent;
+			}
+		}
 	}
 	// .header__email-icon
 	// .header__phone-icon
@@ -73,6 +81,8 @@
 	}
 	// .header__btn
 	&__btn {
+		@extend %mont-500;
+		font-size: rem(16);
 		padding: 10px 51px;
 		border-radius: 40px;
 		background: linear-gradient(0deg, #0033D9 0%, #0033D9 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
@@ -95,6 +105,14 @@
 	}
 	// .menu__link
 	&__link {
+		@extend %mont-400;
+		font-size: rem(15);
+		@media (any-hover: hover){
+			transition: color 0.3s ease 0s;
+			&:hover{
+				color: $accent;
+			}
+		}
 	}
 	// .menu__icon
 	&__icon {
