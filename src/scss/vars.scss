@@ -1,6 +1,7 @@
 // Цвета
 $accent: #0033D9;
 $white: #ffffff;
+$black: #000000;
 
 $btnColor: #0033D9;
 
@@ -20,6 +21,17 @@ $btnColor: #0033D9;
   font-family: 'Montserrat-Regular', sans-serif;
   font-weight: 400;
 }
+
+%mont-500 {
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%mont-600 {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
 
 %mont-700 {
   font-family: 'Montserrat-Bold', sans-serif;

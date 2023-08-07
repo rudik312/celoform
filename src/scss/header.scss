@@ -1,52 +1,47 @@
 //====================================================================================================
 .header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+	padding-top: 14px;
 	// .header__container
 	&__container {
 		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+	}
+	// .header__top
+	&__top {
+		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		padding: 10px 0;
 	}
 	// .header__logo
 	&__logo {
 		display: flex;
 		align-items: center;
-		column-gap: 15px;
 	}
 	// .header__logo-text
 	&__logo-text {
 		display: flex;
-		flex-direction: column;
-		row-gap: 5px;
+		align-items: center;
+		column-gap: 14px;
+		padding-left: 10px;
 	}
-	//header__logo-name
+	// .header__logo-name
 	&__logo-name {
 		@extend %mont-700;
 		font-size: rem(28);
 		color: $accent;
 	}
-	//header__logo-descr
+	// .header__logo-descr
 	&__logo-descr {
-		@extend %mont-400;
-		max-width: 40px;
-		font-size: rem(14);
+		max-width: 104px;
+		@extend %mont-500;
+		font-size: rem(10);
 	}
-	// .header__menu
-	&__menu {
-		@extend %mont-400;
+	// .header__actions
+	&__actions {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		row-gap: 15px;
-	}
-	// .header__contacts
-	&__contacts {
-		display: flex;
-		justify-content: flex-end;
-		column-gap: 40px;
+		align-items: center;
+		column-gap: 30px;
 	}
 	// .header__email
 	&__email {
@@ -54,51 +49,46 @@
 	// .header__phone
 	&__phone {
 	}
-	// .header__action
-	&__action {
+	// .header__bottom
+	&__bottom {
+		
+	}
+	// .header__menu
+	&__menu {
+		
+	}
+	// .header__btn
+	&__btn {
+		padding: 10px 51px;
+		border-radius: 40px;
+		background: linear-gradient(0deg, #0033D9 0%, #0033D9 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
+		cursor: pointer;
 	}
 }
+
 .menu {
 	// .menu__body
 	&__body {
+
 	}
 	// .menu__list
 	&__list {
 		display: flex;
-		column-gap: 40px;
+		justify-content: space-between;
 	}
 	// .menu__item
 	&__item {
 	}
 	// .menu__link
 	&__link {
-		@media (any-hover: hover){
-			&:hover{
-				transition: color .3s;
-				color: $accent;
-			}
-		}
 	}
 	// .menu__icon
 	&__icon {
 	}
 }
-.header-action {
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	// .header-action__btn
-	&__btn {
-		// @extend %mont-400;
-		// color: $white;
-		// background-color: $accent;
-		// padding: 10px 45px 10px 45px;
-		// border-radius: 5px;
-	}
-}
-
 .icon-menu {
 }
+
 
 //====================================================================================================
 
