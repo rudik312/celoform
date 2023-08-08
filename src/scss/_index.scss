@@ -92,8 +92,8 @@
   &__link-consultation {
     @extend %mont-400;
     transition: all 0.3s ease 0s;
+    text-decoration: underline !important;
     &:hover {
-      text-decoration: underline;
     }
   }
   // .main__bg
