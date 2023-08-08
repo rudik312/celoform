@@ -164,7 +164,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 55px;
     padding-top: 40px;
     padding-bottom: 50px;
   }
@@ -186,7 +186,7 @@
   &__img {
     position: absolute;
     top: -40px;
-    left: 200px;
+    left: 150px;
     max-width: 100%;
     min-height: 100%;
   }
