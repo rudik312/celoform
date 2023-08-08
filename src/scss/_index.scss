@@ -166,6 +166,7 @@
     flex-direction: column;
     row-gap: 20px;
     padding-top: 40px;
+    padding-bottom: 50px;
   }
   // .property__title
   &__title {
@@ -175,10 +176,19 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 430px;
+    position: relative;
   }
   // .property__items
   &__items {
+    z-index: 5;
+  }
 
+  &__img {
+    position: absolute;
+    top: -40px;
+    left: 200px;
+    max-width: 100%;
+    min-height: 100%;
   }
   // .property__item
   &__item {
