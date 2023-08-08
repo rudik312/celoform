@@ -119,18 +119,23 @@
     padding: 23px 35px;
     background-color: $white;
     border-right: 2px solid #F5F6FD;
-    border-bottom: 2px solid #F5F6FD;
     &:first-child{
       border-top-left-radius: 30px;
     }
     &:last-child{
       border-bottom-right-radius: 30px;
+      border-right: none;
     }
+
     &:nth-child(5) {
       border-top-right-radius: 30px;
+      border-right: none;
     }
     &:nth-child(6){
       border-bottom-left-radius: 30px;
+    }
+    &:nth-child(n + 6) {
+      border-top: 2px solid #F5F6FD;
     }
   }
   // .main-use__item-img
