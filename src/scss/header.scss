@@ -17,13 +17,14 @@
 	&__logo {
 		display: flex;
 		align-items: center;
+		column-gap: 14px;
 	}
 	// .header__logo-text
 	&__logo-text {
 		display: flex;
 		align-items: center;
 		column-gap: 14px;
-		padding-left: 10px;
+		// padding-left: 10px;
 	}
 	// .header__logo-name
 	&__logo-name {
@@ -52,12 +53,6 @@
 		column-gap: 5px;
 		@extend %mont-400;
 		font-size: rem(14);
-		@media (any-hover: hover){
-			transition: color 0.3s ease 0s;
-			&:hover{
-				color: $accent;
-			}
-		}
 	}
 	// .header__email-icon
 	// .header__phone-icon
@@ -99,18 +94,28 @@
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		@include adaptiveValue("gap", 86, 50);
 	}
 	// .menu__item
 	&__item {
+			a::after {
+			display: block;
+			content: attr(title);
+			font-weight: bold;
+			height: 0;
+			overflow: hidden;
+			visibility: hidden;
+		}
 	}
 	// .menu__link
 	&__link {
 		@extend %mont-400;
 		font-size: rem(15);
 		@media (any-hover: hover){
-			transition: color 0.3s ease 0s;
 			&:hover{
 				color: $accent;
+				font-family: 'Montserrat-SemiBold', sans-serif;
+				font-weight: 600;
 			}
 		}
 	}

@@ -44,6 +44,12 @@ $btnColor: #0033D9;
   background-color: $accent;
   padding: 10px 45px 10px 45px;
   border-radius: 5px;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover){
+    &:hover{
+      background: linear-gradient(0deg, #022AAA 0%, #022AAA 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
+    }
+  }
 }
 
 
