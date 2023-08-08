@@ -16,8 +16,10 @@
   }
   // .main__content
   &__content {
-    display: grid;
-    row-gap: 25px;
+    // display: grid;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
     padding-top: 187px;
   }
   // .main__title-box
