@@ -1,17 +1,18 @@
 //====================================================================================================
 .header {
-	padding-top: 14px;
 	// .header__container
 	&__container {
+		padding-top: 14px;
 		display: flex;
 		flex-direction: column;
-		row-gap: 12px;
+		// row-gap: 12px;
 	}
 	// .header__top
 	&__top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-bottom: 12px;
 	}
 	// .header__logo
 	&__logo {
@@ -68,7 +69,9 @@
 	}
 	// .header__bottom
 	&__bottom {
-		
+		border-top: 1px solid #FFF;
+		padding-top: 14px;
+		padding-bottom: 15px;
 	}
 	// .header__menu
 	&__menu {
@@ -94,7 +97,7 @@
 	&__list {
 		display: flex;
 		justify-content: space-between;
-		@include adaptiveValue("gap", 86, 50);
+		@include adaptiveValue("gap", 86, 10);
 	}
 	// .menu__item
 	&__item {
@@ -109,8 +112,10 @@
 	}
 	// .menu__link
 	&__link {
+		white-space: nowrap;
 		@extend %mont-400;
 		font-size: rem(15);
+		// transition: all 0.3s ease 0s;
 		@media (any-hover: hover){
 			&:hover{
 				color: $accent;

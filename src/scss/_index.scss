@@ -14,7 +14,7 @@
   &__content {
     display: grid;
     row-gap: 25px;
-    padding-top: 350px;
+    padding-top: 72px;
   }
   // .main__title-box
   &__title-box {
@@ -84,6 +84,7 @@
   }
   // .main__bg
   &__bg {
+    padding-top: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
