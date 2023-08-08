@@ -45,12 +45,19 @@ $btnColor: #0033D9;
   background: linear-gradient(0deg, #0033D9 0%, #0033D9 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
   padding: 10px 45px 10px 45px;
   border-radius: 5px;
+  transition: all 0.5s;
   @media (any-hover: hover){
-    transition: all 0.3s;
     &:hover{
       background: linear-gradient(0deg, #022AAA 0%, #022AAA 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
     }
   }
+}
+
+.title {
+  font-size: rem(40);
+  line-height: math.div(56 , 40);
+  color: $accent;
+  @extend %mont-700;
 }
 
 
