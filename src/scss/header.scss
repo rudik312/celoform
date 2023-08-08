@@ -1,5 +1,9 @@
 //====================================================================================================
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	// .header__container
 	&__container {
 		padding-top: 14px;

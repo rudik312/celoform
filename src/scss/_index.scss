@@ -1,5 +1,9 @@
 //====================================================================================================
 .main {
+  max-width: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  // background-size: contain;
   // .main__container
   &__container {
 
@@ -14,10 +18,13 @@
   &__content {
     display: grid;
     row-gap: 25px;
-    padding-top: 72px;
+    padding-top: 187px;
   }
   // .main__title-box
   &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
   }
   // .main__title
   &__title {
@@ -28,7 +35,7 @@
   // .main__subtitle
   &__subtitle {
     font-size: rem(16);
-    @extend %mont-400;
+    @extend %mont-600;
   }
   // .main__list
   &__list {
@@ -84,7 +91,7 @@
   }
   // .main__bg
   &__bg {
-    padding-top: 32px;
+    padding-top: 147px;
     display: flex;
     align-items: center;
     justify-content: center;
