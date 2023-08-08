@@ -1,9 +1,10 @@
+//.main
 //====================================================================================================
 .main {
   max-width: 100%;
   background-position: center top;
   background-repeat: no-repeat;
-  background-color: #F5F6FD;
+  background-color: $bg;
   // background-size: contain;
   // .main__container
   &__container {
@@ -153,6 +154,56 @@
   &__item-text {
   }
 }
-
-
 //====================================================================================================
+
+//.property 
+//====================================================================================================
+.property {
+  background-color: $bg;
+  // .property__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 40px;
+  }
+  // .property__title
+  &__title {
+  }
+  // .property__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 430px;
+  }
+  // .property__items
+  &__items {
+
+  }
+  // .property__item
+  &__item {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    border-radius: 64px;
+    background: rgba(255, 255, 255, 0.60);
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .property__item-icon
+  &__item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background-color: $accent;
+    border-radius: 50%;
+  }
+  // .property__item-text
+  &__item-text {
+  }
+}
+
