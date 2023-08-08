@@ -149,6 +149,7 @@
   }
   // .main-use__item-img
   &__item-img {
+    
   }
   // .main-use__item-text
   &__item-text {
@@ -160,11 +161,14 @@
 //====================================================================================================
 .property {
   background-color: $bg;
+  background-position: 300px 110px;
+  background-repeat: no-repeat;
+
   // .property__container
   &__container {
     display: flex;
     flex-direction: column;
-    row-gap: 55px;
+    row-gap: 20px;
     padding-top: 40px;
     padding-bottom: 50px;
   }
@@ -176,7 +180,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 430px;
-    position: relative;
+    padding-top: 35px;
   }
   // .property__items
   &__items {
