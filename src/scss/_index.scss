@@ -450,19 +450,19 @@
 
 //.expert-form__message._form-error
 .expert-form__message._form-error {
-  border: 2px solid #f00;
+  border: 1px solid #f00;
 }
 //.expert-form__input._form-error
 .expert-form__input._form-error {
-  border: 2px solid #f00;
+  border: 1px solid #f00;
 }
 //.expert-form__input._form-focus
 .expert-form__input:focus {
-  outline: 2px solid $accent;
+  outline: 1px solid $accent;
 }
 //.expert-form__message:focus
 .expert-form__message:focus {
-  outline: 2px solid $accent;
+  outline: 1px solid $accent;
 }
 
 
