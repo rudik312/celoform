@@ -450,19 +450,19 @@
 
 //.expert-form__message._form-error
 .expert-form__message._form-error {
-  border: 1px solid #f00;
+  border: 3px solid #f00;
 }
 //.expert-form__input._form-error
 .expert-form__input._form-error {
-  border: 1px solid #f00;
+  border: 3px solid #f00;
 }
 //.expert-form__input._form-focus
 .expert-form__input:focus {
-  outline: 1px solid $accent;
+  outline: 3px solid $accent;
 }
 //.expert-form__message:focus
 .expert-form__message:focus {
-  outline: 1px solid $accent;
+  outline: 3px solid $accent;
 }
 
 
@@ -515,7 +515,7 @@
   //._form-error
   &._form-error {
     .checkbox__label::before {
-      border: 2px solid #f00;
+      border: 3px solid #f00;
     }
   }
 }
