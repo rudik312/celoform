@@ -192,7 +192,7 @@
 								<div class="expert-form__info">
 									<h5 class="expert-form__title title">ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ ОТ ВРАЧА</h5>
 									<p class="expert-form__subtitle">
-										Задайте свой вопрос квалифицированному специалисту и получите развернутый ответ по свойствам и применению <p>Целоформа</p>
+										Задайте свой вопрос квалифицированному специалисту и получите развернутый ответ по свойствам и применению <br>Целоформа</br>
 									</p>
 								</div>
 								<div class="expert-form__item">
@@ -214,8 +214,10 @@
 									</label>
 								</div>
 								<div class="expert-form__checkbox checkbox">
-									<input class="checkbox__input" id="c_1" data-error="Ошибка"  type="checkbox" value="1" name="form[]">
-									<label class="checkbox__label" for="c_1"><span class="checkbox__text">Я не робот</span></label>
+									<input class="checkbox__input" id="c_1" data-required data-error="Ошибка"  type="checkbox" value="1" name="form[]">
+									<label class="checkbox__label" for="c_1">
+										<span class="expert-form__text">Я не робот</span>
+									</label>
 								</div>
 								<button class="expert__button btn" type="submit">Получить консультацию врача</button>
 							</form>

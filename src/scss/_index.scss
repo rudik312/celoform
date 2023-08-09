@@ -355,11 +355,14 @@
   &__button {
     padding: 15px 68px;
     border-radius: 16px;
+    @extend %mont-500;
+    line-height: 120%;
   }
 }
 //.expert-form
 .expert-form {
   max-width: 475px;
+  width: 100%;
   padding: 40px 44px;
   border-radius: 40px;
   background-color: $white;
@@ -368,12 +371,18 @@
   row-gap: 15px;
   // .expert-form__title
   &__title {
+    text-transform: uppercase;
+    text-align: center;
     font-size: rem(18);
     line-height: math.div(26 , 18);
   }
   // .expert-form__subtitle
   &__subtitle {
+    @extend %mont-500;
+    font-size: rem(12);
+    line-height: normal;
     text-align: center;
+    color: #6D737A;
   }
   // .expert-form__info
   &__info {
@@ -399,11 +408,30 @@
   }
   // .expert-form__message
   &__message {
+    height: 140px;
     display: flex;
     // max-width: 100%;
     padding: 16px;
     border-radius: 16px;
     background-color: $bgInp;
+    resize: none;
+  }
+  // .expert-form__checkbox
+  &__checkbox {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+		&:checked + .checkbox__label::after {
+			transform: scale(1);
+		}
+  }
+  // .expert-form_text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(12);
+
   }
 }
 
