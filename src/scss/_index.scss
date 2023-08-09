@@ -275,6 +275,9 @@
 //.expert
 //========================================================================================================================================================
 .expert {
+  background-position: center right 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: $bg;
   // .expert__container
   &__container {
