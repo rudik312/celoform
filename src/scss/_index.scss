@@ -429,10 +429,10 @@
   }
 }
 .expert-form__input._form-error {
-  border: 3px solid #f00;
+  border: 2px solid #f00;
 }
 .expert-form__message._form-error {
-  border: 3px solid #f00;
+  border: 2px solid #f00;
 }
 
 
@@ -482,7 +482,7 @@
 
   &._form-error {
     .checkbox__label::before {
-      border: 3px solid #f00;
+      border: 2px solid #f00;
     }
   }
 }
