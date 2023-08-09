@@ -272,4 +272,99 @@
 }
 //======================================================================================================
 
+//.expert
+//========================================================================================================================================================
+.expert {
+  background-color: $bg;
+  // .expert__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 110px;
+  }
+  // .expert__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 124px;
+  }
+  // .expert__info
+  &__info {
+  }
+  // .expert__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+  }
+  // .expert__title
+  &__title {
+
+  }
+  // .expert__text
+  &__text {
+    max-width: 573px;
+    text-align: justify;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .expert__doctor
+  &__doctor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+  }
+  // .expert__avatar
+  &__avatar {
+  }
+  // .expert__doctor-info
+  &__doctor-info {
+    display: flex;
+    flex-direction: column;
+  }
+  // .expert__name
+  &__name {
+  }
+  // .expert__profile
+  &__profile {
+  }
+  // .expert__form
+  &__form {
+  }
+  // .expert__subtitle
+  &__subtitle {
+    text-align: center;
+  }
+  // .expert__button
+  &__button {
+  }
+}
+.expert-form {
+  // .expert-form__title
+  &__title {
+
+  }
+  // .expert-form__subtitle
+  &__subtitle {
+
+  }
+  // .expert-form__info
+  &__info {
+  }
+  // .expert-form__item
+  &__item {
+  }
+  // .expert-form__label
+  &__label {
+  }
+  // .expert-form__input
+  &__input {
+  }
+  // .expert-form__message
+  &__message {
+  }
+}
+.btn {
+}
+
 

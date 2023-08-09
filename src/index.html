@@ -142,7 +142,7 @@
 				</section> -->
 				<!-- end property -->
 				<!-- start product -->
-				<section class="product">
+				<!-- <section class="product">
 					<div class="product__container">
 						<div class="product__inner">
 							<div class="product__content">
@@ -163,6 +163,60 @@
 							</div>
 						</div>
 					</div>
+				</section> -->
+				<!-- end product -->
+				<!-- start expert -->
+				<section class="expert">
+					<div class="expert__container">
+						<div class="expert__inner">
+							<div class="expert__info">
+								<div class="expert__content">
+									<h3 class="expert__title title">Порошок для заживления ран советует эксперт</h3>
+										<p class="expert__text">
+											«Лечение ран Целоформом позволяет в ранние сроки снизить болевой синдром, обеспечить безболезненность перевязок и дезодорацию гнойного экссудата. Препарат эффективен и прост в использовании,не имеет противопоказаний и не вызывает  обочных и аллергических реакций, что позволяет рекомендовать его для широкого клинического внедрения и при лечении осложненных разных видов ран».
+										</p>
+								</div>
+								<div class="expert__doctor">
+									<div class="expert__avatar">
+										<img src="@img/expert/avatar.png" alt="avatar">
+									</div>
+									<div class="expert__doctor-info">
+										<h5 class="expert__name">Ахмеров Фарит Рашидович</h5>
+										<p class="expert__profile">
+											врач анестезиолог‑реаниматолог, кандидат медицинских наук
+										</p>
+									</div>
+								</div>
+							</div>
+							<form class="expert__form expert-form" action="#">
+								<div class="expert-form__info">
+									<h5 class="expert-form__title">ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ ОТ ВРАЧА</h5>
+									<p class="expert-form__subtitle">
+										Задайте свой вопрос квалифицированному специалисту и получите развернутый ответ по свойствам и применению Целоформа
+									</p>
+								</div>
+								<div class="expert-form__item">
+									<label class="expert-form__label" for="name">
+										Ваше имя
+										<input class="expert-form__input" id="name" type="text" name="form[name]" data-required data-error="Введите имя" placeholder="Введите имя">
+									</label>
+								</div>
+								<div class="expert-form__item">
+									<label class="expert-form__label" for="email">
+										E-mail
+										<input class="expert-form__input" id="email" type="text" name="form[email]" data-required data-error="Введите E-mail" placeholder="Введите E-mail">
+									</label>
+								</div>
+								<div class="expert-form__item">
+									<label for="message">
+										Ваш вопрос
+										<textarea class="expert-form__message" id="message" data-required name="message" placeholder="Введите вопрос" data-placeholder="Введите вопрос"></textarea>
+									</label>
+								</div>
+								<button class="expert__button btn" type="submit">Получить консультацию врача</button>
+							</form>
+						</div>
+					</div>
 				</section>
 				<!-- end product -->
 			</main>
@@ -172,3 +226,7 @@
 		@@include('html/_js.htm',{})
 	</body>
 </html>
+<form action="files/sendmail/sendmail.php" method="POST">
+	<input type="text" name="form[email]" data-error="Error" placeholder="E-mail" class="input">
+	<button type="submit" class="button">Send</button>
+</form>
