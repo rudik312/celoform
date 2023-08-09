@@ -301,7 +301,8 @@
   }
   // .expert__title
   &__title {
-
+    font-size: rem(40);
+    line-height: math.div(56 , 40);
   }
   // .expert__text
   &__text {
@@ -322,6 +323,7 @@
   }
   // .expert__doctor-info
   &__doctor-info {
+    padding-top: 28px;
     max-width: 275px;
     display: flex;
     flex-direction: column;
@@ -343,8 +345,7 @@
   }
   // .expert__form
   &__form {
-    display: flex;
-    flex-direction: column;
+
   }
   // .expert__subtitle
   &__subtitle {
@@ -352,9 +353,19 @@
   }
   // .expert__button
   &__button {
+    padding: 15px 68px;
+    border-radius: 16px;
   }
 }
+//.expert-form
 .expert-form {
+  max-width: 475px;
+  padding: 40px 44px;
+  border-radius: 40px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
   // .expert-form__title
   &__title {
     font-size: rem(18);
@@ -362,7 +373,7 @@
   }
   // .expert-form__subtitle
   &__subtitle {
-
+    text-align: center;
   }
   // .expert-form__info
   &__info {
@@ -375,18 +386,26 @@
   &__label {
     display: flex;
     flex-direction: column;
+    row-gap: 10px;
+    @extend %mont-500;
+    font-size: rem(14);
+    
   }
   // .expert-form__input
   &__input {
+    padding: 16px;
+    border-radius: 16px;
+    background-color: $bgInp;
   }
   // .expert-form__message
   &__message {
-    width: 100%;
-    max-width: 100%;
     display: flex;
+    // max-width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: $bgInp;
   }
 }
-.btn {
-}
+
 
 
