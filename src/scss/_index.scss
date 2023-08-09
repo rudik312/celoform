@@ -289,6 +289,9 @@
   }
   // .expert__info
   &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
   }
   // .expert__content
   &__content {
@@ -319,17 +322,29 @@
   }
   // .expert__doctor-info
   &__doctor-info {
+    max-width: 275px;
     display: flex;
     flex-direction: column;
+    row-gap: 5px;
   }
   // .expert__name
   &__name {
+    color: $accent;
+    @extend %mont-700;
+    font-size: rem(18);
+    line-height: math.div(25 , 18);
+    white-space: nowrap;
   }
   // .expert__profile
   &__profile {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(20 , 14);
   }
   // .expert__form
   &__form {
+    display: flex;
+    flex-direction: column;
   }
   // .expert__subtitle
   &__subtitle {
@@ -342,7 +357,8 @@
 .expert-form {
   // .expert-form__title
   &__title {
-
+    font-size: rem(18);
+    line-height: math.div(26 , 18);
   }
   // .expert-form__subtitle
   &__subtitle {
@@ -353,15 +369,21 @@
   }
   // .expert-form__item
   &__item {
+
   }
   // .expert-form__label
   &__label {
+    display: flex;
+    flex-direction: column;
   }
   // .expert-form__input
   &__input {
   }
   // .expert-form__message
   &__message {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
   }
 }
 .btn {
