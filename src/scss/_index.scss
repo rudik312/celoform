@@ -259,6 +259,11 @@
     span {
       @extend %mont-600;
     }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
   }
 // .product__cards 
   &__cards {
@@ -579,9 +584,12 @@
   }
   // .advantages__item
   &__item {
-    display: grid;
+    // display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     row-gap: 20px;
-    padding: 20px 38px;
+    padding: 20px 38.3px;
   }
   // .advantages__image-ibg
   &__image-ibg {
@@ -594,13 +602,102 @@
   }
   // .advantages__item-text
   &__item-text {
+    flex-grow: 1;
     @extend %mont-500;
     font-size: rem(14);
     line-height: math.div(23 , 14);
-
     text-align: center;
+  }
+}
+//========================================================================================================================================================
+
+//.application
+//========================================================================================================================================================
+.application {
+  background-color: $bg;
+  // .application__container
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  // .application__top
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .application__title
+  &__title {
+  }
+  // .application__action
+  &__action {
+
+  }
+  // .application__button
+  &__button {
+    padding: 10px 20px;
+
+  }
+  // .application__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+  }
+  // .application__item
+  &__item {
+    padding: 30px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    background-color: $white;
+  }
+  // .application__item-heading
+  &__item-heading {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+  }
+  // .application__item-icon
+  &__item-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: $accent;
+  }
+  // .application__item-title
+  &__item-title {
+    @extend %mont-600;
+    font-size: rem(20);
+    line-height: math.div(24 , 20);
+  }
+  // .application__list
+  &__list {
+    display: grid;
+    gap: 15px;
+    padding-left: 28px;
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: normal;
+  }
+  // .application__list-item
+  &__list-item {
+    max-width: 286px;
   }
 }
 .title {
 }
+.btn {
+}
+
+
 
