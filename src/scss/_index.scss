@@ -626,7 +626,8 @@
   // .application__top
   &__top {
     display: flex;
-    align-items: center;
+    // align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
   }
   // .application__title
@@ -634,10 +635,13 @@
   }
   // .application__action
   &__action {
-
+    display: flex;
+    align-items: center;
+    // justify-content: center;
   }
   // .application__button
   &__button {
+    display: inline-flex;
     padding: 10px 20px;
 
   }
@@ -676,6 +680,7 @@
   }
   // .application__item-title
   &__item-title {
+    max-width: 231px;
     @extend %mont-600;
     font-size: rem(20);
     line-height: math.div(24 , 20);
