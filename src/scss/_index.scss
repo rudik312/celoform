@@ -46,6 +46,7 @@
     max-width: 269px;
     @extend %mont-500;
     font-size: rem(16);
+    line-height: math.div(20 , 16);
     padding-left: 31px;
     
   }
@@ -211,6 +212,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 46px;
     height: 46px;
     background-color: $accent;
@@ -527,6 +529,184 @@
 
 //buy
 //========================================================================================================================================================
+.buy {
+  background-color: $bg;
+  // .buy__container
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+  }
+  // .buy__title
+  &__title {
+  }
+  // .buy__inner
+  &__inner {
+  
+  }
+}
+.tabcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+}
+.tabcontent {
+  max-width: 575px;
+  padding: 0 26px;
+  overflow: hidden;
+  img {
+    width: 521px;
+    height: 508px;
+  }
+  // .tabcontent__descr
+  &__descr {
+
+  }
+}
+.tabheader {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  // .tabheader__inner
+  &__inner {
+
+  }
+  
+  // .tabheader__title
+  &__title {
+    @extend %mont-600;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .tabheader__select
+  &__select {
+    display: grid;
+    row-gap: 26px;
+  }
+  // .tabheader__size
+  &__size {
+    display: flex;
+    column-gap: 15px;
+  }
+  // .tabheader__item
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px 15px;
+    @extend %mont-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    cursor: pointer;
+    // .tabheader__item_active
+    &_active {
+      background-color: $accent;
+      border-radius: 16px;
+      color: $white;
+    }
+    svg {
+      path {
+        fill: $accent;
+      }
+    }
+    &.tabheader__item_active {
+      svg {
+        path {
+          fill: $white;
+          stroke: #0033D9;
+        }
+      }
+    }
+  }
+
+  &__item-img {
+
+  }
+  //.tabheader__item-btn
+  &__item-text {
+
+  }
+  //tabheader__price
+  &__price {
+    display: flex;
+    @extend %mont-600;
+    font-size: rem(28);
+    line-height: math.div(45 , 28);
+    color: $accent;
+  }
+  //tabheader__price-item
+  &__price-item {
+
+  }
+
+  &__marketplace {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 20px;
+  }
+
+  //tabheader__marketplace-item
+  &__marketplace-item  {
+    max-width: 100%;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: $white;
+    cursor: pointer;
+  }
+
+  // .tabheader__delivery
+  &__delivery {
+
+  }
+}
+
+.tabheader {
+
+}
+// .tabheader-delivery
+.tabheader-delivery {
+  display: grid;
+  row-gap: 20px;
+  // .tabheader-delivery__desc
+  &__desc {
+    @extend %mont-500;
+    color: #1B1B1B;
+    padding: 0 10px;
+    font-size: rem(16);
+    line-height: math.div(22 , 16);
+  }
+  // .tabheader-delivery__item
+  &__item-link {
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  // .tabheader-delivery__icons
+  &__icons {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__link {
+    
+  }
+}
+
 
 
 //========================================================================================================================================================
@@ -618,7 +798,7 @@
   // .application__container
   &__container {
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -693,15 +873,12 @@
     @extend %mont-500;
     font-size: rem(14);
     line-height: normal;
+
   }
   // .application__list-item
   &__list-item {
-    max-width: 286px;
+    max-width: 260px;
   }
-}
-.title {
-}
-.btn {
 }
 
 

@@ -1,3 +1,128 @@
 //====================================================================================================
+.footer {
+  background-color: $accent;
+  // .footer__container
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 140px;
+    color: $white;
+  }
+  // .footer__inner
+  &__inner {
+    display: flex;
+    // justify-content: space-between;
+  }
+  // .footer__item
+  &__item {
+    &:nth-child(1) {
+      max-width: 230px;
+      width: 100%;
+      margin-right: 96px;
+    }
+    &:nth-child(2){
+      max-width: 212px;
+      width: 100%;
+      margin-right: 62px;
+    }
+    &:nth-child(3){
+      max-width: 200px;
+      width: 100%;
+      margin-right: 80px;
+    }
+    &:nth-child(4){
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+  
+  // .footer__logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 20px;
+  }
+  // .footer__logo-name
+  &__logo-name {
+    @extend %mont-700;
+    font-size: rem(28);
+    line-height: normal;
+  }
+  // .footer__links
+  &__links {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+  // .footer__links-link
+  &__links-link {
+    @extend %mont-400;
+    font-size: rem(14);
+    line-height: math.div(20 , 14);
+    transition: all 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        text-shadow: 0 0 .90px #fff, 0 0 .90px #fff;
+      }
+    }
+  }
+  // .footer__copyright
+  &__copyright {
+    @extend %mont-400;
+    font-size: rem(12);
+    line-height: normal;
+  }
+  // .footer__menu-list
+  &__menu-list {
+    display: grid;
+    row-gap: 15px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: normal;
+  }
+  // .footer__menu-item
+  &__menu-item {
+
+  }
+  // .footer__menu-link
+  &__menu-link {
+    transition: all 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        text-shadow: 0 0 .90px #fff, 0 0 .90px #fff;
+      }
+    }
+  }
+  // .footer__contacts
+  &__contacts {
+    display: grid;
+    row-gap: 15px;
+  }
+  // .footer__contacts-title
+  &__contacts-title {
+    @extend %mont-700;
+    font-size: rem(20);
+
+  }
+  // .footer__contacts-email
+  &__contacts-email {
+    @extend %mont-400;
+    font-size: rem(16);
+    text-decoration: underline !important;
+  }
+  // .footer__social
+  &__social {
+    display: flex;
+  }
+  // .footer__social-list
+  &__social-list {
+    display: flex;
+    column-gap: 10px;
+  }
+  // .footer__social-link
+  &__social-link {
+    display: inline-flex;
+  }
+}
 
 //====================================================================================================

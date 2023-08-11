@@ -51,13 +51,14 @@ $btnColor: #0033D9;
   border-radius: 16px;
   background: linear-gradient(0deg, #0033D9 0%, #0033D9 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
   padding: 10px 45px 10px 45px;
-  transition: all 0.5s;
   @media (any-hover: hover){
     &:hover{
       background: linear-gradient(0deg, #022AAA 0%, #022AAA 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
     }
   }
 }
+
+
 
 .title {
   font-size: rem(40);
@@ -87,6 +88,30 @@ $btnColor: #0033D9;
     left: -24px;
     border-radius: 50%;
     background: rgba(55, 82, 233, 0.459);
+  }
+}
+
+//tabs
+//=========================================================================================================
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
   }
 }
 
