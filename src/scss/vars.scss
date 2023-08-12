@@ -3,6 +3,8 @@ $accent: #0033D9;
 $white: #ffffff;
 $black: #000000;
 
+$btnHover: #022AAA;
+
 $bg: #F5F6FD;
 $bgInp: #F2F3F8;
 $colInp: #ADB1B6;
@@ -49,16 +51,15 @@ $btnColor: #0033D9;
   @extend %mont-400;
   color: $white;
   border-radius: 16px;
-  background: linear-gradient(0deg, #0033D9 0%, #0033D9 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
+  background-color: $accent;
   padding: 10px 45px 10px 45px;
+  transition: all 0.3s ease 0s;
   @media (any-hover: hover){
     &:hover{
-      background: linear-gradient(0deg, #022AAA 0%, #022AAA 100%), linear-gradient(180deg, #6B99FE 0%, #1E5DE8 100%);
+      background-color: $btnHover;
     }
   }
 }
-
-
 
 .title {
   font-size: rem(40);

@@ -23,8 +23,8 @@
 									<li class="main__list-item item-dots">Отсутствие противопоказаний и побочныйх эффектов</li>
 								</ul>
 								<div class="main__actions">
-									<a class="main__button btn" href="#">Купить</a>
-									<a class="main__link-consultation" href="#">Получить консультацию</a>
+									<a class="main__button btn" data-goto=".buy" href="#">Купить</a>
+									<a class="main__link-consultation" data-goto="." href="#">Получить консультацию</a>
 								</div>
 							</div>
 							<div class="main__bg">
@@ -33,43 +33,43 @@
 						</div>
 						<div class="main-use">
 							<div class="main-use__inner">
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/hirurg-icon.svg" alt="hirurg-icon">
 									<p class="main-use__item-text">Хирургия</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/ambulance-icon.svg" alt="ambulance-icon">
 									<p class="main-use__item-text">Скорая помощь</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/pediatrics-icon.svg" alt="pediatrics-icon">
 									<p class="main-use__item-text">Педиатрия</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/hygiene-icon.svg" alt="hygiene-icon">
 									<p class="main-use__item-text">Гигиена</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/allergology-icon.svg" alt="allergology-icon">
 									<p class="main-use__item-text">Аллергология</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/infection-icon.svg" alt="infection-icon">
 									<p class="main-use__item-text">Инфекции кожи</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/dermatov-icon.svg" alt="dermatov-icon">
 									<p class="main-use__item-text">Дерматовенерология</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/cosmetology-icon.svg" alt="cosmetology-icon">
 									<p class="main-use__item-text">Косметология</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/stomatolog-icon.svg" alt="stomatolog-icon">
 									<p class="main-use__item-text">Стоматология</p>
 								</a>
-								<a class="main-use__item" href="#">
+								<a class="main-use__item" data-goto=".application" href="#">
 									<img class="main-use__item-img" src="@img/main/main-icon/veterinar-icon.svg" alt="veterinar-icon">
 									<p class="main-use__item-text">Ветеринария</p>
 								</a>
@@ -283,19 +283,19 @@
 									</div>
 									<div class="tabheader__box">
 										<div class="tabheader__marketplace">
-											<a class="tabheader__marketplace-item mix category-5 category-15 category-50" href="#" target="_blank">
+											<a class="tabheader__marketplace-item mix category-5 category-15 category-50 button_ozon" href="#" target="_blank">
 												<img src="@img/buy/ozon-icon.png" alt="ozon-icon">
 												<p>Ozon Аптека</p>
 											</a>
-											<a class="tabheader__marketplace-item mix category-5 category-15 category-50" href="#" target="_blank">
+											<a class="tabheader__marketplace-item mix category-5 category-15 category-50 button_wildberries" href="#" target="_blank">
 												<img src="@img/buy/wildberries-icon.png" alt="wildberries-icon">
 												<p>Wildberries</p>
 											</a>
-											<a class="tabheader__marketplace-item mix category-5 category-15 category-50" href="#" target="_blank">
+											<a class="tabheader__marketplace-item mix category-5 category-15 category-50 button_yamarket" href="#" target="_blank">
 												<img src="@img/buy/yandex-icon.png" alt="yandex-icon">
 												<p>Яндекс.Маркет</p>
 											</a>
-											<a class="tabheader__marketplace-item mix category-5 category-15" href="#" target="_blank">
+											<a class="tabheader__marketplace-item mix category-5 category-15 button_sbermarket" href="#" target="_blank">
 												<img src="@img/buy/sber-icon.png" alt="ozon-icon">
 												<p>Сбер Мегамаркет</p>
 											</a>
@@ -304,7 +304,7 @@
 											<div class="tabheader-delivery__desc">
 												<p>"Целоформ" можно заказать и получить даже в самых удаленных уголках страны</p>
 											</div>
-											<a class="tabheader-delivery__item mix category-15 category-50" href="#" target="_blank">
+											<a class="tabheader-delivery__item mix category-15 category-50 button_ali" href="#" target="_blank">
 												<div class="tabheader-delivery__icons">
 													<img src="@img/buy/pochta-icon.png" alt="pochta-icon">
 													<img src="@img/buy/ali-icon.png" alt="ali-icon">

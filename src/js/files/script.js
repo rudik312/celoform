@@ -58,25 +58,11 @@ import { flsModules } from "./modules.js";
           hideTabContent();
           showTabContent(i);
           showTabPrice(i);
-
         }
       });
     }
 
   });
-
-  //   const clickedButton = event.target.closest('.tabheader__item');
-    
-  //   if (!clickedButton) return;
-  //   console.log(clickedButton);
-  //   // Активная вкладка
-  //   tabs.forEach(tab => tab.classList.remove('tabheader__item_active'));
-  //   clickedButton.classList.add("show");
-
-  //     // Активный контент
-  // tabContents.forEach(content =>
-  //   content.classList.remove('operations__content--active')
-  // );
 
   $(function () {
     var mixer = mixitup('.tabheader__box', {
@@ -86,4 +72,24 @@ import { flsModules } from "./modules.js";
     }
     });
   });
+
+let btnMarkets = document.querySelectorAll('.category-15');
+console.log(btnMarkets);
+
+function changeAtr() {
+  let link = document.querySelector(".category-5");
+
+  link.getAttribute("href");
+  link.setAttribute("href",
+      "https://ya.ru");
+}
+
+let btnOzon = document.querySelector('.button_ozon'),
+    btnWild = document.querySelector('.button_wildberries'),
+    btnYam = document.querySelector('.button_yamarket'),
+    btnSber = document.querySelector('.button_sbermarket'),
+    btnAli = document.querySelector('.button_ali');
+
+    
+
 
