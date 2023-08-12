@@ -48,7 +48,7 @@ import { flsModules } from "./modules.js";
 
   tabsParent.addEventListener("click", function(event) {
     const target = event.target;
-    console.dir(target);
+    // console.dir(target);
     
     if (target && target.classList.contains("tabheader__item")) {
       tabs.forEach((item, i) => {
@@ -84,5 +84,11 @@ import { flsModules } from "./modules.js";
   // );
 
   $(function () {
-    var mixer = mixitup('.tabheader__box');
+    var mixer = mixitup('.tabheader__box', {
+      animation: {
+        duration: 500,
+        effects: 'fade opacity(1)'
+    }
+    });
   });
+
