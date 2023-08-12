@@ -3,7 +3,6 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-
   //Работаем с табами
   const tabs = document.querySelectorAll(".tabheader__item"),
     tabsContent = document.querySelectorAll(".tabcontent"),
@@ -14,9 +13,6 @@ import { flsModules } from "./modules.js";
 
     // markets = document.querySelectorAll('.tabheader__marketplace-item');
 
-
-  
-    
   function hideTabContent() {
     tabsContent.forEach((item) => {
       item.classList.add("hide");
@@ -31,9 +27,7 @@ import { flsModules } from "./modules.js";
       item.classList.add("hide");
       item.classList.remove("show", "fade");
     });
-
     // markets.forEach((item) => {
-
     // });
   }
 
@@ -41,13 +35,11 @@ import { flsModules } from "./modules.js";
     tabsContent[i].classList.add("show", "fade");
     tabsContent[i].classList.remove("hide");
     tabs[i].classList.add("tabheader__item_active");
-
   }
 
   function showTabPrice(i = 1) {
     prices[i].classList.add("show", "fade");
     prices[i].classList.remove("hide");
-
   }
 
   hideTabContent();
@@ -67,22 +59,16 @@ import { flsModules } from "./modules.js";
         }
       });
     }
-    if (target && target.classList.contains("tabheader__item")) {
-      tabs.forEach((item, i) => {
-        if (target == item) {
-          hideTabContent();
-          showTabContent(i);
-          showTabPrice(i);
-        }
-      });
-    }
-
+    // if (target && target.matches("tabheader__item")) {
+    //   tabs.forEach((item, i) => {
+    //     if (target == item) {
+    //       hideTabContent();
+    //       showTabContent(i);
+    //       showTabPrice(i);
+    //     }
+    //   });
+    // }
   });
-
-
-  
-
-
 
   //   const clickedButton = event.target.closest('.tabheader__item');
     
@@ -96,3 +82,7 @@ import { flsModules } from "./modules.js";
   // tabContents.forEach(content =>
   //   content.classList.remove('operations__content--active')
   // );
+
+  $(function () {
+    var mixer = mixitup('.tabheader__box');
+  });

@@ -573,6 +573,12 @@
   &__inner {
 
   }
+  // .tabheader__box
+  &__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
   
   // .tabheader__title
   &__title {
@@ -685,7 +691,7 @@
     line-height: math.div(22 , 16);
   }
   // .tabheader-delivery__item
-  &__item-link {
+  &__item {
     max-width: 100%;
     padding: 16px;
     border-radius: 16px;
