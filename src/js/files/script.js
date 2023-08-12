@@ -50,24 +50,19 @@ import { flsModules } from "./modules.js";
     const target = event.target;
     // console.dir(target);
     
+    if (target.nodeName !== "BUTTON") return;
+
     if (target && target.classList.contains("tabheader__item")) {
       tabs.forEach((item, i) => {
         if (target == item) {
           hideTabContent();
           showTabContent(i);
           showTabPrice(i);
+
         }
       });
     }
-    // if (target && target.matches("tabheader__item")) {
-    //   tabs.forEach((item, i) => {
-    //     if (target == item) {
-    //       hideTabContent();
-    //       showTabContent(i);
-    //       showTabPrice(i);
-    //     }
-    //   });
-    // }
+
   });
 
   //   const clickedButton = event.target.closest('.tabheader__item');
@@ -86,7 +81,7 @@ import { flsModules } from "./modules.js";
   $(function () {
     var mixer = mixitup('.tabheader__box', {
       animation: {
-        duration: 500,
+        duration: 400,
         effects: 'fade opacity(1)'
     }
     });

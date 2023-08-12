@@ -614,20 +614,32 @@
       background-color: $accent;
       border-radius: 16px;
       color: $white;
-    }
-    svg {
-      path {
-        fill: $accent;
-      }
-    }
-    &.tabheader__item_active {
-      svg {
-        path {
-          fill: $white;
-          stroke: #0033D9;
+      &.tabheader__item {
+        &::before{
+          color: $white;
+          
         }
       }
     }
+    // svg {
+    //   path {
+    //     fill: $accent;
+    //   }
+    // }
+    // &.tabheader__item_active {
+    //   svg {
+    //     path {
+    //       fill: $white;
+    //       stroke: #0033D9;
+    //     }
+    //   }
+    // }
+    &::before {
+      margin-right: 4px;
+      font-size: rem(32);
+      color: $accent;
+    }
+    
   }
 
   //tabheader__price
