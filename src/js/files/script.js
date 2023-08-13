@@ -73,23 +73,35 @@ import { flsModules } from "./modules.js";
     });
   });
 
-let btnMarkets = document.querySelectorAll('.category-15');
-console.log(btnMarkets);
 
-function changeAtr() {
-  let link = document.querySelector(".category-5");
+// let btnOzon = document.querySelector('.button_ozon'),
+//     btnWild = document.querySelector('.button_wildberries'),
+//     btnYam = document.querySelector('.button_yamarket'),
+//     btnSber = document.querySelector('.button_sbermarket'),
+//     btnAli = document.querySelector('.button_ali');
 
-  link.getAttribute("href");
-  link.setAttribute("href",
-      "https://ya.ru");
+
+let celoform_5 = {
+  ozon: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr",
+  wildberries: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-15-gr",
+  yandex: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
+  sber: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
 }
 
-let btnOzon = document.querySelector('.button_ozon'),
-    btnWild = document.querySelector('.button_wildberries'),
-    btnYam = document.querySelector('.button_yamarket'),
-    btnSber = document.querySelector('.button_sbermarket'),
-    btnAli = document.querySelector('.button_ali');
+let celoform_15 = {
+  ozon: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr",
+  wildberries: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-15-gr",
+  yandex: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
+  sber: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
+  ali: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
+}
 
-    
+let celoform_50 = {
+  ozon: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr",
+  wildberries: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-15-gr",
+  yandex: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
+  ali: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
+}
+
 
 
