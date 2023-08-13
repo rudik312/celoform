@@ -1,1 +1,63 @@
-//========================================================================================================================================================
+//.application========================================================================================================================================================
+
+.application {
+  // .application__detailed
+  &__detailed {
+
+  }
+}
+.application-detailed {
+
+  // .application-detailed__title
+  &__title {
+    @extend %mont-600;
+    font-size: rem(24);
+    line-height: math.div(29 , 24);
+    margin-bottom: 25px;
+  }
+// .application-detailed__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+  }
+  // .application-detailed__item
+  &__item {
+    max-width: 575px;
+    display: grid;
+    row-gap: 25px;
+    padding: 25px;
+    border-radius: 24px;
+    background-color: $white;
+
+  }
+  // .application-detailed__item-title
+  &__item-title {
+    @extend %mont-600;
+    font-size: rem(24);
+    line-height: math.div(29 , 24);
+    color: $accent;
+
+  }
+  // .application-detailed__item-text
+  &__item-text {
+    @extend %mont-400;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+  }
+  // .application-detailed__btn
+  &__btn {
+
+  }
+  // .application-detailed__btn-link
+  &__btn-link {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(20 , 16);
+    color: $accent;
+  }
+}

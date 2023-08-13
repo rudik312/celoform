@@ -42,6 +42,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
     row-gap: 25px;
+    padding-bottom: 25px;
   }
   // .application__item
   &__item {
@@ -78,9 +79,6 @@
   }
   // .application__item-desc
   &__item-desc {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
     font-size: rem(14);
     line-height: math.div(22 , 14);
   }
@@ -125,6 +123,8 @@
     }
   }
 }
+//========================================================================================================================================================
+
 
 
 

@@ -8,8 +8,7 @@ import { flsModules } from "./modules.js";
     tabsContent = document.querySelectorAll(".tabcontent"),
     tabsParent = document.querySelector(".tabheader__size"),
 
-    prices = document.querySelectorAll('.tabheader__price-item'),
-    tabsPrice = document.querySelector('.tabheader__price');
+    prices = document.querySelectorAll('.tabheader__price-item');
 
     // markets = document.querySelectorAll('.tabheader__marketplace-item');
 
