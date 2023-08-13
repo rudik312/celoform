@@ -41,7 +41,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
-
+    row-gap: 25px;
   }
   // .application__item
   &__item {
