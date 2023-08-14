@@ -48,7 +48,8 @@
   }
   // .application-detailed__btn
   &__btn {
-
+    display: flex;
+    max-width: 167px;
   }
   // .application-detailed__btn-link
   &__btn-link {

@@ -109,12 +109,16 @@
   }
   // .application__listing-item
   &__listing-item {
-    padding: 12px 16px 12px 16px;
+
+  }
+  
+  &__listing-link {
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F5F6FD;
+    padding: 12px 16px 12px 16px;
     p {
       max-width: 250px;
     }
