@@ -29,15 +29,15 @@
 	}
 	// .header__logo-text
 	&__logo-text {
-		display: flex;
-		align-items: center;
-		column-gap: 14px;
 		// display: flex;
-    // align-items: flex-start;
-    // column-gap: 14px;
-    // row-gap: 5px;
-    // flex-direction: column;
-    // justify-content: flex-start;
+		// align-items: center;
+		// column-gap: 14px;
+		display: flex;
+    align-items: flex-start;
+    column-gap: 14px;
+    row-gap: 5px;
+    flex-direction: column;
+    white-space: nowrap;
 	}
 	// .header__logo-name
 	&__logo-name {
@@ -47,6 +47,7 @@
 	}
 	// .header__logo-descr
 	&__logo-descr {
+		display: flex;
 		max-width: 104px;
 		@extend %mont-500;
 		font-size: rem(10);
