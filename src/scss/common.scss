@@ -1,133 +1,196 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-//.application
-//========================================================================================================================================================
-.application {
+
+//.buy =====================================================================================================================================
+.buy {
   background-color: #F5F6FD;
-  // .application__container
+  // .buy__container
   &__container {
-    padding-top: 153px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 36px;
   }
-  // .application__top
-  &__top {
-    display: flex;
-    // align-items: center;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  // .application__title
+  // .buy__title
   &__title {
   }
-
-
-  // .application__action
-  &__action {
-    display: flex;
-    align-items: center;
-    // justify-content: center;
-  }
-  // .application__button
-  &__button {
-    display: inline-flex;
-    padding: 10px 20px;
-
-  }
-  // .application__inner
+  // .buy__inner
   &__inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 25px;
-    row-gap: 25px;
-    padding-bottom: 25px;
-  }
-  // .application__item
-  &__item {
-    padding: 30px;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-    background-color: #fff;
-  }
-  // .application__item-heading
-  &__item-heading {
-    display: flex;
-    align-items: flex-start;
-    column-gap: 10px;
-  }
-  // .application__item-icon
-  &__item-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    background-color: #0033D9;
-  }
-  // .application__item-title
-  &__item-title {
-    max-width: 231px;
-    @extend %mont-600;
-    font-size: rem(20);
-    line-height: math.div(24 , 20);
-  }
-  // .application__item-desc
-  &__item-desc {
-    font-size: rem(14);
-    line-height: math.div(22 , 14);
-  }
-  // .application__list
-  &__list {
-    display: grid;
-    gap: 15px;
-    padding-left: 28px;
-    @extend %mont-500;
-    font-size: rem(14);
-    line-height: normal;
-
-  }
-  // .application__list-item
-  &__list-item {
-    max-width: 260px;
-  }
-
-
-  // .application__listing
-  &__listing {
-    display: grid;
-    row-gap: 10px;
-    @extend %mont-500;
-    font-size: rem(14);
-    line-height: normal;
-    
-  }
-  // .application__listing-item
-  &__listing-item {
-
-  }
   
-  &__listing-link {
-    border-radius: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F5F6FD;
-    padding: 12px 16px 12px 16px;
-    p {
-      max-width: 250px;
-    }
-    img {
-      padding-left: 12px;
-    }
   }
 }
-//========================================================================================================================================================
+.tabcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+}
+.tabcontent {
+  max-width: 575px;
+  padding: 0 26px;
+  overflow: hidden;
+  img {
+    width: 521px;
+    height: 508px;
+  }
+  // .tabcontent__descr
+  &__descr {
+
+  }
+}
+.tabheader {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  // .tabheader__inner
+  &__inner {
+
+  }
+  // .tabheader__box
+  &__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  
+  // .tabheader__title
+  &__title {
+    @extend %mont-600;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .tabheader__select
+  &__select {
+    display: grid;
+    row-gap: 26px;
+  }
+  // .tabheader__size
+  &__size {
+    display: flex;
+    column-gap: 15px;
+  }
+  // .tabheader__item
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px 15px;
+    @extend %mont-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    cursor: pointer;
+    // .tabheader__item_active
+    &_active {
+      background-color: #0033D9;
+      border-radius: 16px;
+      color: #fff;
+      &.tabheader__item {
+        &::before{
+          color: #FFF;
+        }
+      }
+    }
+    &::before {
+      margin-right: 4px;
+      font-size: rem(32);
+      color: #0033D9;
+    }
+    // svg {
+    //   path {
+    //     fill: $accent;
+    //   }
+    // }
+    // &.tabheader__item_active {
+    //   svg {
+    //     path {
+    //       fill: $white;
+    //       stroke: #0033D9;
+    //     }
+    //   }
+    // }
+    
+  }
+
+  //tabheader__price
+  &__price {
+    display: flex;
+    @extend %mont-600;
+    font-size: rem(28);
+    line-height: math.div(45 , 28);
+    color: #0033D9;
+  }
+  //tabheader__price-item
+  &__price-item {
+
+  }
+
+  &__marketplace {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 20px;
+  }
+
+  //tabheader__marketplace-item
+  &__marketplace-item  {
+    max-width: 100%;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  // .tabheader__delivery
+  &__delivery {
+
+  }
+}
+
+.tabheader {
+
+}
+// .tabheader-delivery
+.tabheader-delivery {
+  display: grid;
+  row-gap: 20px;
+  // .tabheader-delivery__desc
+  &__desc {
+    @extend %mont-500;
+    color: #1B1B1B;
+    padding: 0 10px;
+    font-size: rem(16);
+    line-height: math.div(22 , 16);
+  }
+  // .tabheader-delivery__item
+  &__item {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  // .tabheader-delivery__icons
+  &__icons {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__link {
+    
+  }
+}
+
+
 
 
 
