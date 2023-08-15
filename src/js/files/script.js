@@ -26,8 +26,7 @@ import { flsModules } from "./modules.js";
       item.classList.add("hide");
       item.classList.remove("show", "fade");
     });
-    // markets.forEach((item) => {
-    // });
+
   }
 
   function showTabContent(i = 1) {
@@ -57,12 +56,15 @@ import { flsModules } from "./modules.js";
           hideTabContent();
           showTabContent(i);
           showTabPrice(i);
+          changeUrl();
         }
       });
     }
 
   });
 
+
+  // функция работы MixitUp
   $(function () {
     var mixer = mixitup('.tabheader__box', {
       animation: {
@@ -71,13 +73,6 @@ import { flsModules } from "./modules.js";
     }
     });
   });
-
-
-// let btnOzon = document.querySelector('.button_ozon'),
-//     btnWild = document.querySelector('.button_wildberries'),
-//     btnYam = document.querySelector('.button_yamarket'),
-//     btnSber = document.querySelector('.button_sbermarket'),
-//     btnAli = document.querySelector('.button_ali');
 
 
 // let celoform_5 = {
@@ -101,6 +96,72 @@ import { flsModules } from "./modules.js";
 //   yandex: ,
 //   ali: ,
 // }
+
+
+
+const changeUrl = () => {
+  // кнопки выбора продукта
+  const cel5 = document.querySelector('._icon-celoform-5');
+  const cel15 = document.querySelector('._icon-celoform-15');
+  const cel50 = document.querySelector('._icon-celoform-50');
+
+  // все кнопки магазинов
+  const markets = document.querySelectorAll('.mix');
+  
+  //каждая кнопка по отдельности 
+  const btnOzon = document.querySelector('.button_ozon');
+  const btnWild = document.querySelector('.button_wildberries');
+  const btnYam = document.querySelector('.button_yamarket');
+  const btnSber = document.querySelector('.button_sbermarket');
+  const btnAli = document.querySelector('.button_ali');
+  
+  // function deleteUrl () {
+  //   markets.forEach(item => {
+  //     item.removeAttribute("href");
+      
+  //   })
+  // };
+
+  function addSizeMini () {
+    markets.forEach(item => {
+      if (item.classList.contains('category-5')) {
+
+        if (item.classList.contains('button_ozon')) {
+          item.setAttribute('href', 'https://kurl.ru/qlsUQ');
+          console.log(item);
+        }
+      }
+    });
+    
+  };
+
+  function addSizeMedium () {
+    markets.forEach(item => {
+      if (item.classList.contains('category-15')) {
+        if (item.classList.contains('button_ozon')) {
+          item.setAttribute('href', 'https://kurl.ru/AfRvV');
+          console.log(item);
+        }
+      }
+    })
+    
+  };
+
+  function addSizeBig () {
+    markets.forEach(item => {
+      if (item.classList.contains('category-50')) {
+        
+      }
+    })
+
+  };
+
+  // deleteUrl();
+  addSizeMini();
+  addSizeMedium();
+  addSizeBig();
+
+}
 
 
 
