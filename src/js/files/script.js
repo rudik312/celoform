@@ -80,27 +80,27 @@ import { flsModules } from "./modules.js";
 //     btnAli = document.querySelector('.button_ali');
 
 
-let celoform_5 = {
-  ozon: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr",
-  wildberries: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-15-gr",
-  yandex: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
-  sber: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
-}
+// let celoform_5 = {
+//   ozon: ,
+//   wildberries: ,
+//   yandex: ,
+//   sber: ,
+// }
 
-let celoform_15 = {
-  ozon: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr",
-  wildberries: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-15-gr",
-  yandex: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
-  sber: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
-  ali: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
-}
+// let celoform_15 = {
+//   ozon: ,
+//   wildberries: ,
+//   yandex: ,
+//   sber: ,
+//   ali: ,
+// }
 
-let celoform_50 = {
-  ozon: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr",
-  wildberries: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-15-gr",
-  yandex: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
-  ali: "https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr",
-}
+// let celoform_50 = {
+//   ozon: ,
+//   wildberries: ,
+//   yandex: ,
+//   ali: ,
+// }
 
 
 
