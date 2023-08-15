@@ -56,7 +56,7 @@ import { flsModules } from "./modules.js";
           hideTabContent();
           showTabContent(i);
           showTabPrice(i);
-          changeUrl();
+          // changeUrl();
         }
       });
     }
@@ -99,7 +99,7 @@ import { flsModules } from "./modules.js";
 
 
 
-const changeUrl = () => {
+// const changeUrl = () => {
   // кнопки выбора продукта
   const cel5 = document.querySelector('._icon-celoform-5');
   const cel15 = document.querySelector('._icon-celoform-15');
@@ -122,46 +122,119 @@ const changeUrl = () => {
   //   })
   // };
 
-  function addSizeMini () {
-    markets.forEach(item => {
-      if (item.classList.contains('category-5')) {
+  // function addSizeMini () {
+  //   markets.forEach(item => {
+  //     if (item.classList.contains('category-5')) {
 
-        if (item.classList.contains('button_ozon')) {
-          item.setAttribute('href', 'https://kurl.ru/qlsUQ');
-          console.log(item);
-        }
-      }
-    });
+  //       if (item.classList.contains('button_ozon')) {
+  //         item.setAttribute('href', 'https://kurl.ru/qlsUQ');
+  //         console.log(item);
+  //       }
+  //     }
+  //   });
+  // };
+
+  // function addSizeMedium () {
+  //   markets.forEach(item => {
+  //     if (item.classList.contains('category-15')) {
+  //       if (item.classList.contains('button_ozon')) {
+  //         item.setAttribute('href', 'https://kurl.ru/AfRvV');
+  //         console.log(item);
+  //       }
+  //     }
+  //   })
     
-  };
+  // };
 
-  function addSizeMedium () {
-    markets.forEach(item => {
-      if (item.classList.contains('category-15')) {
-        if (item.classList.contains('button_ozon')) {
-          item.setAttribute('href', 'https://kurl.ru/AfRvV');
-          console.log(item);
-        }
-      }
-    })
-    
-  };
-
-  function addSizeBig () {
-    markets.forEach(item => {
-      if (item.classList.contains('category-50')) {
+  // function addSizeBig () {
+  //   markets.forEach(item => {
+  //     if (item.classList.contains('category-50')) {
         
-      }
-    })
+  //     }
+  //   })
 
-  };
+  // };
 
   // deleteUrl();
-  addSizeMini();
-  addSizeMedium();
-  addSizeBig();
+  // addSizeMini();
+  // addSizeMedium();
+  // addSizeBig();
 
-}
+// }
 
+cel5.addEventListener('click', function () {
+  markets.forEach(item => {
+    if (item.classList.contains('category-5')) {
 
+      if (item.classList.contains('button_ozon')) {
+        item.setAttribute('href', 'https://kurl.ru/qlsUQ');
+        console.log(item);
+      }
+      if (item.classList.contains('button_wildberries')) {
+        item.setAttribute('href', 'https://kurl.ru/vQhoC');
+        console.log(item);
+      }
+      if (item.classList.contains('button_yamarket')) {
+        item.setAttribute('href', 'https://kurl.ru/WPURu');
+        console.log(item);
+      }
+      if (item.classList.contains('button_sbermarket')) {
+        item.setAttribute('href', 'https://kurl.ru/YBIrU');
+        console.log(item);
+      }
+    }
+  });
+});
+
+cel15.addEventListener('click', function () {
+  markets.forEach(item => {
+    if (item.classList.contains('category-15')) {
+
+      if (item.classList.contains('button_ozon')) {
+        item.setAttribute('href', 'https://kurl.ru/AfRvV');
+        console.log(item);
+      }
+      if (item.classList.contains('button_wildberries')) {
+        item.setAttribute('href', 'https://kurl.ru/eMHjq');
+        console.log(item);
+      }
+      if (item.classList.contains('button_yamarket')) {
+        item.setAttribute('href', 'https://kurl.ru/ffDpp');
+        console.log(item);
+      }
+      if (item.classList.contains('button_sbermarket')) {
+        item.setAttribute('href', 'https://kurl.ru/IqJJB');
+        console.log(item);
+      }
+      if (item.classList.contains('button_ali')) {
+        item.setAttribute('href', 'https://kurl.ru/KQmPb');
+        console.log(item);
+      }
+    }
+  });
+});
+
+cel50.addEventListener('click', function () {
+  markets.forEach(item => {
+    if (item.classList.contains('category-50')) {
+
+      if (item.classList.contains('button_ozon')) {
+        item.setAttribute('href', 'https://kurl.ru/CHPsz');
+        console.log(item);
+      }
+      if (item.classList.contains('button_wildberries')) {
+        item.setAttribute('href', 'https://kurl.ru/PJwiy');
+        console.log(item);
+      }
+      if (item.classList.contains('button_yamarket')) {
+        item.setAttribute('href', 'https://kurl.ru/ibqqK');
+        console.log(item);
+      }
+      if (item.classList.contains('button_ali')) {
+        item.setAttribute('href', 'https://kurl.ru/UOgak');
+        console.log(item);
+      }
+    }
+  });
+});
 
