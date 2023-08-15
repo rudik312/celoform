@@ -374,6 +374,9 @@
     line-height: normal;
     text-align: center;
     color: #6D737A;
+    span {
+      display: block;
+    }
   }
   // .expert-form__info
   &__info {
