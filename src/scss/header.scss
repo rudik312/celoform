@@ -102,15 +102,16 @@
 }
 
 .menu {
+
 	// .menu__body
 	&__body {
-
+		
 	}
 	// .menu__list
 	&__list {
 		display: flex;
 		justify-content: space-between;
-		@include adaptiveValue("gap", 86, 10);
+		@include adaptiveValue("column-gap", 86, 10);
 	}
 	// .menu__item
 	&__item {
