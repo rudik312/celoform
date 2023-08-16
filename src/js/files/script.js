@@ -139,19 +139,15 @@ cel5.addEventListener('click', function () {
 
       if (item.classList.contains('button_ozon')) {
         item.setAttribute('href', 'https://kurl.ru/qlsUQ');
-        console.log(item);
       }
       if (item.classList.contains('button_wildberries')) {
         item.setAttribute('href', 'https://kurl.ru/vQhoC');
-        console.log(item);
       }
       if (item.classList.contains('button_yamarket')) {
         item.setAttribute('href', 'https://kurl.ru/WPURu');
-        console.log(item);
       }
       if (item.classList.contains('button_sbermarket')) {
         item.setAttribute('href', 'https://kurl.ru/YBIrU');
-        console.log(item);
       }
     }
     
