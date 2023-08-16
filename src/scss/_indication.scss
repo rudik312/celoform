@@ -110,6 +110,7 @@
   // .detailed__listing
   &__listing {
     display: grid;
+    // flex-grow: 1;
     row-gap: 10px;
     @extend %mont-500;
     font-size: rem(14);
