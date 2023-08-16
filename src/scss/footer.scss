@@ -68,6 +68,8 @@
   }
   // .footer__copyright
   &__copyright {
+    display: grid;
+    row-gap: 10px;
     @extend %mont-400;
     font-size: rem(12);
     line-height: normal;
