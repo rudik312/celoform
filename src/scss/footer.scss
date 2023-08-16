@@ -113,11 +113,9 @@
   }
 
   // .footer__contacts-email
-  &__contacts-email {
-    @extend %mont-400;
-    font-size: rem(16);
-    text-decoration: underline !important;
-  }
+  // &__contacts-email {
+
+  // }
 
   &__email,
   &__phone {
@@ -150,6 +148,14 @@
   // .footer__social-link
   &__social-link {
     display: inline-flex;
+  }
+
+  &__requisites {
+    padding-top: 20px;
+    @extend %mont-400;
+    font-size: rem(12);
+    line-height: math.div(24 , 12);
+    color: #fff;
   }
 }
 
