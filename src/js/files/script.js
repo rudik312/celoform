@@ -37,7 +37,7 @@ tabs[i].classList.add("tabheader__item_active");
 }
 
 function showTabPrice(i = 1) {
-prices[i].classList.add("show", "fade");
+prices[i].classList.add("show", "fades");
 prices[i].classList.remove("hide");
 }
 
