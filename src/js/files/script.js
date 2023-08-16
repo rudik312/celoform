@@ -56,7 +56,6 @@ import { flsModules } from "./modules.js";
           hideTabContent();
           showTabContent(i);
           showTabPrice(i);
-          // changeUrl();
         }
       });
     }
@@ -75,31 +74,6 @@ import { flsModules } from "./modules.js";
   });
 
 
-// let celoform_5 = {
-//   ozon: ,
-//   wildberries: ,
-//   yandex: ,
-//   sber: ,
-// }
-
-// let celoform_15 = {
-//   ozon: ,
-//   wildberries: ,
-//   yandex: ,
-//   sber: ,
-//   ali: ,
-// }
-
-// let celoform_50 = {
-//   ozon: ,
-//   wildberries: ,
-//   yandex: ,
-//   ali: ,
-// }
-
-
-
-// const changeUrl = () => {
   // кнопки выбора продукта
   const cel5 = document.querySelector('._icon-celoform-5');
   const cel15 = document.querySelector('._icon-celoform-15');
@@ -109,16 +83,15 @@ import { flsModules } from "./modules.js";
   const markets = document.querySelectorAll('.mix');
   
   //каждая кнопка по отдельности 
-  const btnOzon = document.querySelector('.button_ozon');
-  const btnWild = document.querySelector('.button_wildberries');
-  const btnYam = document.querySelector('.button_yamarket');
-  const btnSber = document.querySelector('.button_sbermarket');
-  const btnAli = document.querySelector('.button_ali');
+  // const btnOzon = document.querySelector('.button_ozon');
+  // const btnWild = document.querySelector('.button_wildberries');
+  // const btnYam = document.querySelector('.button_yamarket');
+  // const btnSber = document.querySelector('.button_sbermarket');
+  // const btnAli = document.querySelector('.button_ali');
   
   // function deleteUrl () {
   //   markets.forEach(item => {
   //     item.removeAttribute("href");
-      
   //   })
   // };
 
@@ -152,7 +125,6 @@ import { flsModules } from "./modules.js";
         
   //     }
   //   })
-
   // };
 
   // deleteUrl();
@@ -160,7 +132,6 @@ import { flsModules } from "./modules.js";
   // addSizeMedium();
   // addSizeBig();
 
-// }
 
 cel5.addEventListener('click', function () {
   markets.forEach(item => {
@@ -183,6 +154,7 @@ cel5.addEventListener('click', function () {
         console.log(item);
       }
     }
+    
   });
 });
 
@@ -192,25 +164,21 @@ cel15.addEventListener('click', function () {
 
       if (item.classList.contains('button_ozon')) {
         item.setAttribute('href', 'https://kurl.ru/AfRvV');
-        console.log(item);
       }
       if (item.classList.contains('button_wildberries')) {
         item.setAttribute('href', 'https://kurl.ru/eMHjq');
-        console.log(item);
       }
       if (item.classList.contains('button_yamarket')) {
         item.setAttribute('href', 'https://kurl.ru/ffDpp');
-        console.log(item);
       }
       if (item.classList.contains('button_sbermarket')) {
         item.setAttribute('href', 'https://kurl.ru/IqJJB');
-        console.log(item);
       }
       if (item.classList.contains('button_ali')) {
         item.setAttribute('href', 'https://kurl.ru/KQmPb');
-        console.log(item);
       }
     }
+
   });
 });
 
@@ -220,21 +188,18 @@ cel50.addEventListener('click', function () {
 
       if (item.classList.contains('button_ozon')) {
         item.setAttribute('href', 'https://kurl.ru/CHPsz');
-        console.log(item);
       }
       if (item.classList.contains('button_wildberries')) {
         item.setAttribute('href', 'https://kurl.ru/PJwiy');
-        console.log(item);
       }
       if (item.classList.contains('button_yamarket')) {
         item.setAttribute('href', 'https://kurl.ru/ibqqK');
-        console.log(item);
       }
       if (item.classList.contains('button_ali')) {
         item.setAttribute('href', 'https://kurl.ru/UOgak');
-        console.log(item);
       }
     }
+
   });
 });
 
