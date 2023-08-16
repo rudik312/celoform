@@ -27,10 +27,10 @@
 		align-items: center;
 		column-gap: 14px;
 		img {
-			-webkit-transition: all 0.3s ease-out;
-			-moz-transition: all 0.3s ease-out;
-			-o-transition: all 0.3s ease-out;
-			transition: all 0.3s ease-out;
+			// -webkit-transition: all 0.3s ease-out;
+			// -moz-transition: all 0.3s ease-out;
+			// -o-transition: all 0.3s ease-out;
+			// transition: all 0.3s ease-out;
 		}
 	}
 	// .header__logo-text
@@ -56,7 +56,8 @@
 		// display: flex;
 		// max-width: 104px;
 		@extend %mont-500;
-		font-size: rem(11);
+		font-size: rem(10.4);
+		text-align: justify;
 	}
 	// .header__actions
 	&__actions {

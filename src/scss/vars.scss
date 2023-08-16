@@ -24,23 +24,23 @@ $btnColor: #0033D9;
 }
 
 %mont-400 {
-  font-family: 'Montserrat-Regular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 %mont-500 {
-  font-family: 'Montserrat-Medium', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
 %mont-600 {
-  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
 
 %mont-700 {
-  font-family: 'Montserrat-Bold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -102,12 +102,12 @@ $btnColor: #0033D9;
   display: none;
 }
 
-.fade {
-  animation-name: fade;
+.fades {
+  animation-name: fades;
   animation-duration: 1.5s;
 }
 
-@keyframes fade {
+@keyframes fades {
   from {
     opacity: 0.1;
   }

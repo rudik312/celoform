@@ -6,7 +6,7 @@
   // .detailed__container
   &__container {
     padding-top: 153px;
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
   }
 // .detailed__box
   &__box {
@@ -88,6 +88,7 @@
   }
   // .detailed__item-desc
   &__item-desc {
+    @extend %mont-400;
     font-size: rem(14);
     line-height: math.div(22 , 14);
   }
