@@ -1,10 +1,15 @@
 //========================================================================================================================================================
 .questions {
+  background-color: $bg;
+  padding-top: 173px;
   // .questions__container
   &__container {
   }
   // .questions__title-box
   &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
   }
   // .questions__title
   &__title {
@@ -20,6 +25,9 @@
   }
   // .questions__inner
   &__inner {
+    padding-top: 30px;
+    // display: grid;  
+    // row-gap: 30px;
   }
   // .questions__spollers
   &__spollers {

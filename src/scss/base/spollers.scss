@@ -4,20 +4,24 @@
 // Блок со спойлерами
 .spollers {
 	display: grid;
-	gap: 15px;
+	gap: 10px;
 }
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
+	background-color: #fff;
 	
 }
 // Заголовок спойлера
 .spollers__title {
+	@extend %mont-600;
+	font-size: rem(16);
+	line-height: math.div(26 , 16);
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
+	// border: 1px solid #eee;
+	// padding: rem(10) rem(15);
+	padding: 20px;
 	border-radius: rem(5);
 	position: relative;
 	._spoller-init & {
@@ -26,11 +30,11 @@
 		&::after {
 			content: "";
 			position: absolute;
-			right: 10px;
+			right: 20px;
 			top: 50%;
 			background-color: #000;
 			height: 2px;
-			width: 15px;
+			width: 12px;
 			transition: transform 0.5s ease 0s;
 		}
 		&::before {

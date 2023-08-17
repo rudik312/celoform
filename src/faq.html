@@ -5,7 +5,7 @@
 	})
 	<body>
 		<div class="wrapper">
-			<!-- @@include('html/_header.htm',{}) -->
+			@@include('html/_header.htm',{})
 			<main class="page">
 				<!-- start questions -->
 				<section class="questions">
@@ -15,7 +15,7 @@
 							<span class="questions__subtitle">Нажмите по интересующему вопросу, чтобы открыть ответ на него</span>
 						</div>
 							<div class="questions__inner">
-								<div data-spollers class="questions__spollers spollers">
+								<div class="questions__spollers spollers" data-spollers data-one-spoller >
 									<div class="questions__item spollers__item">
 										<button class="questions__item-title spollers__title" type="button" data-spoller>
 											Требуется ли обработка раны антисептиком перед применением Целоформа?
@@ -168,7 +168,7 @@
 											</p>
 										</div>
 									</div>
-								</div>
+								</div>	
 							</div>
 						</div>
 					</div>
