@@ -27,8 +27,8 @@
 		align-items: center;
 		column-gap: 14px;
 		img {
-			height: auto;
-			width: 100%;
+			width: 48px;
+			height: 44px;
 		}
 	}
 	// .header__logo-text
@@ -58,6 +58,7 @@
 	}
 	// .header__actions
 	&__actions {
+		max-width: 545px;
 		display: flex;
 		align-items: center;
 		column-gap: 30px;
@@ -91,6 +92,7 @@
 		// padding-top: 14px;
 		padding-top: 15px;
 		padding-bottom: 15px;
+		// max-width: 100%;
 	}
 	// .header__menu
 	&__menu {
@@ -109,7 +111,7 @@
 
 	// .menu__body
 	&__body {
-		
+
 	}
 	// .menu__list
 	&__list {
