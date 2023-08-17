@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Ответы на вопросы"
+	"title":"Контакты"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<!-- start questions -->
+				<!-- start contacts -->
 				<section class="contacts">
 					<div class="contacts__container">
 						<div class="contacts__items">
@@ -32,6 +32,9 @@
 										</div>
 									</div>
 									<div class="contacts__social">
+										<div class="contacts__social-title">
+											<p>Подписывайтесь на наши соц.сети:</p>
+										</div>
 										<ul class="contacts__social-list">
 											<li class="contacts__social-link">
 												<a href="https://vk.com/apteka_ach" target="_blank" rel="noopener noreferrer">
@@ -58,14 +61,46 @@
 								</div>
 							</div>
 							<div class="contacts__item">
-								<div class="contacts__form">
-									
-								</div>
+								<form class="contacts__form contacts-form" action="#">
+									<div class="contacts-form__info">
+										<h5 class="contacts-form__title title">ЗАДАТЬ ВОПРОС</h5>
+										<p class="contacts-form__subtitle">
+											Задайте свой вопрос в форме и получите развернутый ответ по свойствам и применению<span>Целоформа</span>
+										</p>
+									</div>
+									<div class="contacts-form__items">
+										<div class="contacts-form__item">
+											<label class="contacts-form__label" for="name">
+												Ваше имя
+												<input class="contacts-form__input" id="name" type="text" name="form[name]" data-required  placeholder="Введите имя">
+											</label>
+										</div>
+										<div class="contacts-form__item">
+											<label class="contacts-form__label" for="email">
+												E-mail
+												<input class="contacts-form__input" id="email" type="text" name="form[email]" data-required placeholder="Введите E-mail">
+											</label>
+										</div>
+									</div>
+									<div class="contacts-form__item">
+										<label class="contacts-form__label" for="message">
+											Ваш вопрос
+											<textarea class="contacts-form__message" id="message" data-required name="message" placeholder="Введите вопрос" data-placeholder="Введите вопрос"></textarea>
+										</label>
+									</div>
+									<div class="contacts-form__checkbox checkbox">
+										<input class="checkbox__input" id="c_2" data-required  type="checkbox" value="1" name="form[]">
+										<label class="checkbox__label" for="c_2">
+											<span class="contacts-form__text">Я не робот</span>
+										</label>
+									</div>
+									<button class="contacts__button btn" type="submit">Получить консультацию врача</button>
+								</form>
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- end questions -->
+				<!-- end contacts -->
 				<!-- start buy -->
 				<section class="buy">
 					<div class="buy__container">
