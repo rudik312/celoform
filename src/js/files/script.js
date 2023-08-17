@@ -74,4 +74,3 @@ if (target && target.classList.contains("tabheader__item")) {
     });
   });
 
-  
