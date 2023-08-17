@@ -55,11 +55,11 @@
 }
 // Контент спойлера
 .spollers {
-
+	// .spollers__body
 	&__body {
 
 	}
-
+	// .spollers__body-content
 	&__body-content {
 		@extend %mont-400;
 		font-size: rem(16);
@@ -67,11 +67,29 @@
 		padding: 0 54px 20px 20px;
 
 	}
-
+	// .spollers__body-text 
 	&__body-text {
 	&:not(:last-child) {
-		margin-bottom: 10px;
+			margin-bottom: 10px;
+		}
 	}
+	//.spollers__list
+	&__list {
+		padding-left: 18px;
+	}
+	// .spollers__list-item 
+	&__list-item {
+		position: relative;
+		&::before{
+			content: "";
+			border-radius: 50%;
+			position: absolute;
+			width: 2px;
+			height: 2px;
+			background-color: #000;
+			top: 12px;
+			left: -17px;
+		}
 	}
 
 }
