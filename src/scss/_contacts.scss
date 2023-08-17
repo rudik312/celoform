@@ -8,7 +8,7 @@
   // .contacts__items
   &__items {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.7fr;
     @include adaptiveValue("column-gap", 127, 50);
   }
   // .contacts__item
@@ -23,6 +23,8 @@
   }
   // .contacts__title-box
   &__title-box {
+    display: grid;
+    row-gap: 20px;
   }
   // .contacts__title
   &__title {
@@ -200,8 +202,12 @@
     
   }
 
-  &__button {
+  &__button-box {
     
+  }
+
+  &__button {
+    padding: 15px 33px;
   }
 }
 
