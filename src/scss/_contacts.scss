@@ -1,0 +1,133 @@
+
+
+
+
+
+  // .footer__contacts
+.contacts {
+
+
+  &__title {
+
+  }
+
+  &__wrapper {
+
+  }
+
+  // .footer__social
+  &__social {
+    display: flex;
+  }
+  // .footer__social-list
+  &__social-list {
+    display: flex;
+    column-gap: 10px;
+  }
+  // .footer__social-link
+  &__social-link {
+    display: inline-flex;
+  }
+
+  &__requisites {
+
+  }
+
+}
+.contacts {
+  background-color: $bg;
+  padding-top: 167px;
+  // .contacts__container
+  &__container {
+  }
+  // .contacts__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 127px;
+  }
+  // .contacts__item
+  &__item {
+  }
+  // .contacts__
+  &__body {
+    max-width: 373px;
+  }
+  // .contacts__title-box
+  &__title-box {
+  }
+  // .contacts__title
+  &__title {
+    font-size: rem(40);
+    @extend %mont-700;
+    line-height: math.div(56 , 40);
+  }
+  // .contacts__subtitle
+  &__subtitle {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: normal;
+  }
+  // .contacts__wrapper
+  &__wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  // .contacts__email
+  // .contacts__phone
+  &__email, 
+  &__phone {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  // .contacts__email-icon
+  // .contacts__phone-icon
+  &__email-icon,
+  &__phone-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $accent;
+  }
+  // .contacts__phone-link
+  &__phone-link {
+  }
+  // .contacts__social
+  &__social {
+  }
+  // .contacts__social-list
+  &__social-list {
+  }
+  // .contacts__social-link
+  &__social-link {
+  }
+  // .contacts__details
+  &__details {
+    padding-top: 20px;
+    display: grid;
+    row-gap: 20px;
+  }
+  // .contacts__adress
+  &__adress {
+  }
+  // .contacts__requisites
+  &__requisites {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(28 , 14);
+    color: $black;
+  }
+  // .contacts__form
+  &__form {
+  }
+}
+.title {
+}

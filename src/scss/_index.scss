@@ -19,6 +19,7 @@
   // .main__content
   &__content {
     // display: grid;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
