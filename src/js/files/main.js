@@ -1,5 +1,5 @@
 
-window.addEventListener('DOMContentLoaded', function(){
+
 		// кнопки выбора продукта
 	const cel5 = document.querySelector('._icon-celoform-5');
 	const cel15 = document.querySelector('._icon-celoform-15');
@@ -74,4 +74,3 @@ window.addEventListener('DOMContentLoaded', function(){
 
 		});
 	});
-});

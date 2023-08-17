@@ -41,6 +41,10 @@
     align-items: center;
     column-gap: 10px;
     margin-bottom: 20px;
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
   // .footer__logo-name
   &__logo-name {
