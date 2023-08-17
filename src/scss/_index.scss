@@ -418,7 +418,7 @@
     @extend %mont-500;
     font-size: rem(12);
     line-height: normal;
-    height: 140px;
+    height: 196px;
     display: flex;
     // max-width: 100%;
     padding: 16px;
@@ -548,10 +548,12 @@
   }
   // .advantages__list
   &__list {
+    display: grid;
+    row-gap: 20px;
   }
   // .advantages__list-item
   &__list-item {
-    max-width: 440px;
+    max-width: 480px;
     padding-left: 36px;
     &::before{
       top: 8px;
@@ -560,9 +562,6 @@
     &::after{
       top: 4px;
       left: 5px;
-    }
-    &:not(:last-child) {
-      margin-bottom: 21px;
     }
   }
   // .advantages__inner

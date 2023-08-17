@@ -1,3 +1,4 @@
+//========================================================================================================================================================
 .questions {
   // .questions__container
   &__container {
@@ -7,9 +8,18 @@
   }
   // .questions__title
   &__title {
+    font-size: rem(40);
+    line-height: math.div(48 , 40);
+
   }
   // .questions__subtitle
   &__subtitle {
+    font-size: rem(20);
+    line-height: math.div(32 , 20);
+    color: #1B1B1B;
+  }
+  // .questions__inner
+  &__inner {
   }
   // .questions__spollers
   &__spollers {
