@@ -40,13 +40,13 @@
     @extend %mont-700;
     // font-size: rem(72);
     color: $accent;
-    @include adaptiveValue("font-size", 72, 60, 1240, 1000, 1);
+    @include adaptiveValue("font-size", 72, 55, 1240, 1000, 1);
   }
   // .main__subtitle
   &__subtitle {
     font-size: rem(16);
     @extend %mont-600;
-    @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
+    @include adaptiveValue("font-size", 16, 12.4, 1240, 1000, 1);
   }
   // .main__list
   &__list {

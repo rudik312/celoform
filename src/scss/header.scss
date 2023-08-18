@@ -119,7 +119,34 @@
 .menu {
 	// .menu__body
 	&__body {
-
+		@media (max-width:$mobile){
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			// align-items: flex-start;
+			// justify-content: flex-end;
+			// padding-top: rem(102);
+			// padding-right: rem(20);
+			padding-top: 120px;
+			padding-left: 20px;
+			top: 0;
+			right: -100%;
+			width: 80%;
+			height: 100%;
+			overflow: auto;
+			transition: right 0.3s ease 0s;
+			background-color: #ffffff;
+			z-index: 5;
+			order: -1;
+			.menu-open & {
+				right: 0;
+				
+				&::before {
+					right: 0;
+				}
+			}
+		}
 	}
 	// .menu__list
 	&__list {
@@ -176,50 +203,6 @@
 
 .icon-menu {
 	display: none;
-	@media (max-width: $tablet) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
