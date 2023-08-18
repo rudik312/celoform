@@ -79,6 +79,12 @@ $btnColor: #0033D9;
     top: 4px;
     border-radius: 50%;
     background: $accent;
+    @media (max-width:$tablet){
+      width: 5px;
+      height: 5px;
+      left: -20px;
+      top: 6px;
+    }
   }
   &::after{
     content:'';
@@ -89,6 +95,12 @@ $btnColor: #0033D9;
     left: -24px;
     border-radius: 50%;
     background: rgba(55, 82, 233, 0.459);
+    @media (max-width:$tablet){
+      width: 10.58px;
+      height: 10.58px;
+      left: -23px;
+      top: 3px;
+    }
   }
 }
 

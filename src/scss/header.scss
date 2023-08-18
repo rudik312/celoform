@@ -23,12 +23,18 @@
 	}
 	// .header__logo
 	&__logo {
+		position: relative;
+		z-index: 50;
 		display: flex;
 		align-items: center;
 		column-gap: 14px;
 		img {
 			width: 48px;
 			height: 44px;
+			@media (max-width:$tablet){
+				width: 44px;
+				height: 40px;
+			}
 		}
 	}
 	// .header__logo-text
@@ -38,16 +44,14 @@
 		align-items: center;
     column-gap: 14px;
     row-gap: 5px;
-		// display: flex;
-		// align-items: center;
-		// column-gap: 14px;
-    // align-items: flex-start;
+
 	}
 	// .header__logo-name
 	&__logo-name {
 		@extend %mont-700;
-		font-size: rem(28);
+		// font-size: rem(28);
 		color: $accent;
+		@include adaptiveValue("font-size", 28, 24, 1240, 1000, 1);
 	}
 	// .header__logo-descr
 	&__logo-descr {
@@ -55,13 +59,15 @@
 		// max-width: 104px;
 		@extend %mont-500;
 		font-size: rem(10.4);
+		@include adaptiveValue("font-size", 10.4, 9, 1240, 1000, 1);
 	}
 	// .header__actions
 	&__actions {
 		max-width: 545px;
 		display: flex;
 		align-items: center;
-		column-gap: 30px;
+		// column-gap: 30px;
+		@include adaptiveValue("column-gap", 30, 15, 1240, 1000, 1);
 	}
 	// .header__email
 	// .header__phone
@@ -71,7 +77,8 @@
 		align-items: center;
 		column-gap: 5px;
 		@extend %mont-400;
-		font-size: rem(14);
+		// font-size: rem(14);
+		@include adaptiveValue("font-size", 14, 12, 1240, 1000, 1);
 	}
 	// .header__email-icon
 	// .header__phone-icon
@@ -92,7 +99,8 @@
 	}
 	// .header__menu
 	&__menu {
-
+		// display: flex;
+		// justify-content: center;
 	}
 	// .header__btn
 	&__btn {
@@ -100,6 +108,11 @@
 		font-size: rem(16);
 		padding: 10px 51px;
 		cursor: pointer;
+		@include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
+		@include adaptiveValue("padding-left", 51, 40, 1240, 1000, 1);
+		@include adaptiveValue("padding-right", 51, 40, 1240, 1000, 1);
+		@include adaptiveValue("padding-top", 10, 8, 1240, 1000, 1);
+		@include adaptiveValue("padding-bottom", 10, 8, 1240, 1000, 1);
 	}
 }
 
