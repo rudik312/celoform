@@ -17,7 +17,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-
+			padding-bottom: 10px;
 		}
 	}
 	// .header__top
@@ -29,7 +29,7 @@
 		@media (max-width:$mobile){
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			 margin-bottom: 0;
+			margin-bottom: 0;
 		}
 	}
 	// .header__logo
