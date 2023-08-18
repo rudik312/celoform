@@ -13,6 +13,12 @@
 		display: flex;
 		flex-direction: column;
 		// row-gap: 12px;
+		@media (max-width:$mobile){
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+		}
 	}
 	// .header__top
 	&__top {
@@ -20,6 +26,11 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 10px;
+		@media (max-width:$mobile){
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			 margin-bottom: 0;
+		}
 	}
 	// .header__logo
 	&__logo {
@@ -113,6 +124,9 @@
 		@include adaptiveValue("padding-right", 51, 40, 1240, 1000, 1);
 		@include adaptiveValue("padding-top", 10, 8, 1240, 1000, 1);
 		@include adaptiveValue("padding-bottom", 10, 8, 1240, 1000, 1);
+		@media (max-width:$mobile){
+			display: none;
+		}
 	}
 }
 
@@ -129,14 +143,16 @@
 			// padding-top: rem(102);
 			// padding-right: rem(20);
 			padding-top: 120px;
-			padding-left: 20px;
+			padding-left: 200px;
 			top: 0;
 			right: -100%;
-			width: 80%;
+			width: 100%;
 			height: 100%;
 			overflow: auto;
 			transition: right 0.3s ease 0s;
-			background-color: #ffffff;
+			// background-color: #ffffff;
+			background-color: transparent;
+			backdrop-filter: blur(20px);
 			z-index: 5;
 			order: -1;
 			.menu-open & {
@@ -156,9 +172,11 @@
 		padding-bottom: 15px;
 		// flex-wrap: wrap;
 		@include adaptiveValue("column-gap", 86, 10, 1080, 920, 1);
-		@media (max-width: em(1150)){
-
-		}
+		@media (max-width: $mobile){
+			flex-direction: column;
+			row-gap: 15px;
+			text-align: center;
+		}	
 	}
 	// .menu__item
 	&__item {
@@ -206,10 +224,11 @@
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: rem(30);
-		height: rem(18);
+		width: rem(22);
+		height: rem(16);
 		cursor: pointer;
 		z-index: 5;
+		right: 21px;
 		span,
 		&::before,
 		&::after {
