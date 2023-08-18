@@ -9,7 +9,7 @@
 	z-index: 50;
 	// .header__container
 	&__container {
-		padding-top: 14px;
+		padding-top: 10px;
 		display: flex;
 		flex-direction: column;
 		// row-gap: 12px;
@@ -19,7 +19,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 12px;
+		margin-bottom: 10px;
 	}
 	// .header__logo
 	&__logo {
@@ -88,14 +88,12 @@
 	}
 	// .header__bottom
 	&__bottom {
-		// border-top: 1px solid #FFF;
-		// padding-top: 14px;
 		padding-top: 15px;
 		padding-bottom: 15px;
-		// max-width: 100%;
 	}
 	// .header__menu
 	&__menu {
+
 	}
 	// .header__btn
 	&__btn {
@@ -115,7 +113,11 @@
 	&__list {
 		display: flex;
 		justify-content: space-between;
-		@include adaptiveValue("column-gap", 86, 10);
+		// flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 86, 10, 1080, 920, 1);
+		@media (max-width: em(1150)){
+
+		}
 	}
 	// .menu__item
 	&__item {
@@ -143,6 +145,9 @@
 				// font-weight: 600;
 			}
 		}
+		@media (max-width: em(1170)){
+			font-size: rem(12);
+		}
 	}
 	// .menu__icon
 	&__icon {
@@ -155,9 +160,10 @@
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
-	display: none;
+
+
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
@@ -203,4 +209,4 @@
 		}
 	}
 }
-*/
+
