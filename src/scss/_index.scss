@@ -217,6 +217,9 @@
   background-color: $bg;
   background-position: 40% 110px;
   background-repeat: no-repeat;
+  @media (max-width:$mobile){
+    background-position: 40% 200px;
+  }
 
   // .property__container
   &__container {
@@ -285,6 +288,9 @@
   &__item-text {
     @extend %mont-500;
     font-size: rem(18);
+    @media (max-width:$tablet){
+      font-size: rem(14);
+    }
   }
 }
 //====================================================================================================
@@ -297,9 +303,11 @@
   &__container {
     padding-top: 50px;
     padding-bottom: 100px;
+    @media (max-width:$tablet){
+      padding-bottom: 50px;       
+    }
     @media (max-width:$mobile){
       padding-top: 25px;
-      padding-bottom: 50px;       
     }
   }
   // .product__inner
@@ -342,6 +350,10 @@
         margin-bottom: 15px;
       }
     }
+    @media (max-width:$tablet){
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
+    }
   }
 // .product__cards 
   &__cards {
@@ -383,6 +395,7 @@
     @media (max-width: em(1190)){
       display: flex;
       flex-direction: column;
+      row-gap: 25px;
     }
   }
   // .expert__info
@@ -399,8 +412,8 @@
   }
   // .expert__title
   &__title {
-    font-size: rem(40);
-    line-height: math.div(56 , 40);
+    // font-size: rem(40);
+    // line-height: math.div(56 , 40);
   }
   // .expert__text
   &__text {
@@ -410,7 +423,9 @@
     font-size: rem(16);
     line-height: math.div(26 , 16);
     @media (max-width: em(1190)){
-      margin: 0 auto;
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
+      max-width: 100%;
     }
   }
   // .expert__doctor
@@ -422,6 +437,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      display: none;
     }
   }
   // .expert__avatar
@@ -434,6 +450,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
+
   }
   // .expert__name
   &__name {
@@ -547,6 +564,9 @@
     resize: none;
     &::placeholder {
       color: $colInp;
+    }
+    @media (max-width:$tablet){
+      height: 80px;
     }
   }
   // .expert-form__checkbox
@@ -664,7 +684,6 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
-
   }
   // .advantages__list
   &__list {
@@ -682,6 +701,10 @@
     &::after{
       top: 4px;
       left: 5px;
+      @media (max-width:$tablet){
+        top: 5px;
+        left: 6px;
+      }
     }
   }
   // .advantages__inner
