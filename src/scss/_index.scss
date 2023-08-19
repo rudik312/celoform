@@ -687,6 +687,9 @@
     @media (max-width:$tablet){
       font-size: rem(14);
     }
+    @media (max-width:$mobile){
+      display: flex;
+    }
   }
   // .advantages__list
   &__list {
@@ -719,6 +722,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
+    @media (max-width:$mobile){
+
+    }
   }
   // .advantages__item
   &__item {
