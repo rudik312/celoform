@@ -1,0 +1,36 @@
+.documents {
+  background-color: $bg;
+  // .documents__container
+  &__container {
+    padding-top: 187px;
+  }
+  // .documents__title-box
+  &__title-box {
+    display: grid;
+    row-gap: 12px;
+  }
+  // .documents__title
+  &__title {
+  }
+  // .documents__subtitle
+  &__subtitle {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .documents__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 30px;
+  }
+  // .documents__item
+  &__item {
+
+  }
+  // .documents__img-ibg
+  &__img {
+    height: auto;
+    width: 100%;
+  }
+}

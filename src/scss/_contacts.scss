@@ -92,6 +92,13 @@
   }
   // .contacts__adress
   &__adress {
+    max-width: 355px;
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(28 , 14);
+    address {
+      font-style: normal;
+    }
   }
   // .contacts__requisites
   &__requisites {
