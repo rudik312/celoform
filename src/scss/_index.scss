@@ -684,6 +684,9 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+    @media (max-width:$tablet){
+      font-size: rem(14);
+    }
   }
   // .advantages__list
   &__list {
@@ -697,12 +700,16 @@
     &::before{
       top: 8px;
       left: 9px;
+      @media (max-width:$tablet){
+        left: 9px;
+        top: 10px;
+      }
     }
     &::after{
       top: 4px;
       left: 5px;
       @media (max-width:$tablet){
-        top: 5px;
+        top: 7px;
         left: 6px;
       }
     }
