@@ -22,15 +22,21 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 26px;
     padding-top: 30px;
   }
   // .documents__item
   &__item {
 
   }
-  // .documents__img-ibg
+  // .documents__img
   &__img {
-    height: auto;
-    width: 100%;
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }

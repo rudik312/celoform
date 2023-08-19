@@ -225,6 +225,10 @@
     row-gap: 20px;
     padding-top: 40px;
     padding-bottom: 50px;
+    @media (max-width:$tablet){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
   // .property__title
   &__title {
@@ -233,8 +237,14 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 430px;
+    // column-gap: 422px;
+    @include adaptiveValue("column-gap", 422, 30, 1240, 1000, 1);
     padding-top: 35px;
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+    }
   }
   // .property__items
   &__items {
@@ -287,20 +297,33 @@
   &__container {
     padding-top: 50px;
     padding-bottom: 100px;
+    @media (max-width:$mobile){
+      padding-top: 25px;
+      padding-bottom: 50px;       
+    }
   }
   // .product__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 32px;
+    // column-gap: 32px;
+    @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
   }
   // .product__content
   &__content{
     max-width: 572px;
     display: flex;
     flex-direction: column;
-    
     row-gap: 20px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
   }
   // .product__title
   &__title {
@@ -328,6 +351,13 @@
   }
   // .product__image
   &__image {
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 //======================================================================================================
@@ -348,7 +378,12 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 124px;
+    // column-gap: 124px;
+    @include adaptiveValue("column-gap", 124, 20, 1000, 768, 1);
+    @media (max-width: em(1190)){
+      display: flex;
+      flex-direction: column;
+    }
   }
   // .expert__info
   &__info {
@@ -374,12 +409,20 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+    @media (max-width: em(1190)){
+      margin: 0 auto;
+    }
   }
   // .expert__doctor
   &__doctor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
+    @media (max-width: em(1190)){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   // .expert__avatar
   &__avatar {
@@ -409,6 +452,11 @@
   // .expert__form
   &__form {
 
+  }
+  // .expert__form-wrap
+  &__form-wrap {
+    display: flex;
+    justify-content: center;
   }
   // .expert__subtitle
   &__subtitle {
