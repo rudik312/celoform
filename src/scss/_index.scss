@@ -13,14 +13,24 @@
   @media (max-width:$mobile){
     background-position: 70% 92%;
   }
+  @media (max-width:$mobileSmall){
+    background-position: 73% 0;
+
+  }
+  @media (max-width: em(380)){
+    background-position: 73% 23%;
+    background-size: 300%;
+  }
   &__container {
     padding-bottom: 40px;
     @media (max-width:$tablet){
       padding-bottom: 25px;
     }
     @media (max-width:$mobile){
-      // padding-top: 25px;
-      @include adaptiveValue("padding-top", 82, 46, 767, 480, 1);
+      @include adaptiveValue("padding-top", 82, 50, 767, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("padding-top", 50, 70, 480, 420, 1); 
     }
   }
   // .main__inner
@@ -32,12 +42,10 @@
     @media (max-width:$mobile){
       display: flex;
       flex-direction: column-reverse;
-      // padding-top: 50px;
     }
   }
   // .main__content
   &__content {
-    // display: grid;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,7 +53,9 @@
     padding-top: 187px;
     @media (max-width:$mobile){
       padding: 0;
-      // padding-left: 25px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 24px;
     }
   }
   // .main__title-box
@@ -66,6 +76,9 @@
     @media (max-width: em(767)){
       @include adaptiveValue("font-size", 72, 64, 767, 480, 1);
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 64, 32, 480, 420, 1);
+    }
   }
 
   // .main__subtitle
@@ -79,6 +92,10 @@
     @media (max-width: em(767)){
       @include adaptiveValue("font-size", 16, 14.4, 767, 480, 1);
     } 
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 14.4, 14, 480, 420, 1);
+      max-width: 210px;
+    }
   }
   // .main__list
   &__list {
@@ -87,12 +104,18 @@
     font-size: rem(16);
     line-height: math.div(19 , 16);
     padding-left: 25px;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
+    }
   }
   // .main__list-item
   &__list-item {
     position: relative;
     &:not(:last-child) {
       margin-bottom: 21px;
+      @media (max-width: em(380)){
+        margin-bottom: 14px;
+      }
     }
   }
   // .main__actions
@@ -103,6 +126,10 @@
     @media (max-width:$mobile){
       column-gap: 78px;
       @include adaptiveValue("column-gap", 78, 41, 768, 480, 1);
+    }
+    @media (max-width: em(460)){
+      flex-direction: column;
+      row-gap: 20px;
     }
   }
   // .main__button
@@ -122,6 +149,13 @@
       @include adaptiveValue("padding-top", 12, 8, 768, 480, 1);
       @include adaptiveValue("padding-bottom", 12, 8, 768, 480, 1);
       width: 50%;
+    }
+    @media (max-width: em(460)){
+      padding-left: 118px;
+      padding-right: 118px;
+    }
+    @media (max-width: em(390)){
+      width: 100%;
     }
 
   }
