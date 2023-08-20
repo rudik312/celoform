@@ -285,13 +285,42 @@
   background-color: $bg;
   background-position: 40% 110px;
   background-repeat: no-repeat;
+
   @media (max-width:$tablet){
-    background-position: 25% 97px
+    background-position: 25% 100px;
+
+  }
+  @media (max-width: em(860)){
+    background-position: 20% 100px;
+  }
+  @media (max-width: em(780)){
+    background-position: 5% 100px;
   }
   @media (max-width:$mobile){
-    background-position: 40% 200px;
-  }
+    background-position: 0px 75px;
 
+  }
+  @media (max-width: em(640)){
+    background-position: -50px 75px;
+  }
+  @media (max-width: em(620)){
+    background-position: -100px 75px;
+  }
+  @media (max-width: em(520)){
+    background-position: -130px 75px;
+  }
+  @media (max-width: em(480)){
+    background-position: -150px 75px;
+  }
+  @media (max-width: em(440)){
+    background-position: -180px 75px;
+  }
+  @media (max-width: em(410)){
+    background-position: -200px 75px;
+  }
+  @media (max-width: em(380)){
+    background-position: -255px 75px;
+  }
   // .property__container
   &__container {
     display: flex;
@@ -303,6 +332,9 @@
       padding-top: 25px;
       padding-bottom: 25px;
     }
+    @media (max-width:$mobile){
+      padding-top: 25px;
+    }
   }
   // .property__title
   &__title {
@@ -312,19 +344,29 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // column-gap: 422px;
     @include adaptiveValue("column-gap", 422, 250, 1240, 1000, 1);
     padding-top: 35px;
     @media (max-width:$tablet){
-      
+      column-gap: 16px;
+      padding-top: 390px;
     }
     @media (max-width:$mobile){
-
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    @media (max-width: em(620)){
+      flex-direction: column;
     }
   }
   // .property__items
   &__items {
     z-index: 5;
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__img {
@@ -363,6 +405,9 @@
     font-size: rem(18);
     @media (max-width:$tablet){
       font-size: rem(16);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1); 
     }
   }
 }
