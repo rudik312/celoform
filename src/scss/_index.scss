@@ -370,11 +370,7 @@
   }
 
   &__img {
-    position: absolute;
-    top: -40px;
-    left: 150px;
-    max-width: 100%;
-    min-height: 100%;
+
   }
   // .property__item
   &__item {
@@ -398,6 +394,12 @@
     height: 46px;
     background-color: $accent;
     border-radius: 50%;
+    @media (max-width:$mobile){
+      zoom: 80%;
+    }
+    @media (max-width:$mobileSmall){
+      zoom: 70%;
+    }
   }
   // .property__item-text
   &__item-text {
