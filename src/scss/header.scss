@@ -1,12 +1,22 @@
 //====================================================================================================
 .header {
-	position: absolute;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	background-color: $bg;
 	z-index: 50;
+
+	&__container-fluid {
+		display: none;
+		@media (max-width:$mobile){
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: $accent;
+			padding: 8px 15px;
+		}
+	}
 	// .header__container
 	&__container {
 		padding-top: 10px;
@@ -46,6 +56,9 @@
 				width: 44px;
 				height: 40px;
 			}
+		}
+		@media (max-width:$mobile){
+			// padding-left: 35px;
 		}
 	}
 	// .header__logo-text
@@ -102,6 +115,29 @@
 		height: 22px;
 		border-radius: 50%;
 		background-color: $accent;
+		svg {
+			width: 14px;
+			height: 14px;
+			@media (max-width:$mobile){
+				path {
+					fill: $accent;
+				}
+			}
+		}
+		@media (max-width:$mobile){
+			background-color: #fff;
+		}
+		// width: 20px;
+		// height: 20px;
+		// background-color: $white;
+	}
+
+	&__email-link,
+	&__phone-link {
+		@media (max-width:$mobile){
+			font-size: rem(14);
+			color: $white;
+		}
 	}
 	// .header__bottom
 	&__bottom {

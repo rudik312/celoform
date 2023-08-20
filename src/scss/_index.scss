@@ -5,15 +5,22 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-color: $bg;
-  // background-size: contain;
+
   // .main__container
   @media (max-width:$tablet){
     background-position: 90% 0;
+  }
+  @media (max-width:$mobile){
+    background-position: 70% 92%;
   }
   &__container {
     padding-bottom: 40px;
     @media (max-width:$tablet){
       padding-bottom: 25px;
+    }
+    @media (max-width:$mobile){
+      // padding-top: 25px;
+      @include adaptiveValue("padding-top", 82, 46, 767, 480, 1);
     }
   }
   // .main__inner
@@ -24,8 +31,8 @@
     @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
     @media (max-width:$mobile){
       display: flex;
-      flex-direction: column-reverse; 
-      padding-top: 60px;
+      flex-direction: column-reverse;
+      // padding-top: 50px;
     }
   }
   // .main__content
@@ -38,7 +45,7 @@
     padding-top: 187px;
     @media (max-width:$mobile){
       padding: 0;
-
+      // padding-left: 25px;
     }
   }
   // .main__title-box
@@ -53,13 +60,25 @@
     font-size: rem(72);
     color: $accent;
     @include adaptiveValue("font-size", 72, 62, 1000, 868, 1);
-
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 62, 72, 868, 767, 1);
+    }
+    @media (max-width: em(767)){
+      @include adaptiveValue("font-size", 72, 64, 767, 480, 1);
+    }
   }
+
   // .main__subtitle
   &__subtitle {
     font-size: rem(16);
     @extend %mont-600;
     @include adaptiveValue("font-size", 16, 13.8, 1000, 868, 1);
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 13.8, 16, 868, 767, 1);
+    }
+    @media (max-width: em(767)){
+      @include adaptiveValue("font-size", 16, 14.4, 767, 480, 1);
+    } 
   }
   // .main__list
   &__list {
@@ -74,9 +93,6 @@
     position: relative;
     &:not(:last-child) {
       margin-bottom: 21px;
-      @media (max-width:$tablet){
-        margin-bottom: 14px;
-      }
     }
   }
   // .main__actions
@@ -84,6 +100,10 @@
     display: flex;
     align-items: center;
     column-gap: 20px;
+    @media (max-width:$mobile){
+      column-gap: 78px;
+      @include adaptiveValue("column-gap", 78, 41, 768, 480, 1);
+    }
   }
   // .main__button
   &__button {
@@ -95,15 +115,27 @@
 		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-top", 12, 10, 1240, 1000, 1);
 		@include adaptiveValue("padding-bottom", 12, 10, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      // padding: 12px 122px;
+      @include adaptiveValue("padding-left", 122, 82, 768, 480, 1);
+      @include adaptiveValue("padding-right", 122, 82, 768, 480, 1);
+      @include adaptiveValue("padding-top", 12, 8, 768, 480, 1);
+      @include adaptiveValue("padding-bottom", 12, 8, 768, 480, 1);
+      width: 50%;
+    }
+
   }
   // .main__link-reviews
   &__link-consultation {
     @extend %mont-400;
-    // font-size: rem(14);
-    @include adaptiveValue("font-size", 14, 13, 1240, 1000, 1);
+    font-size: rem(14);
     transition: all 0.3s;
     text-decoration: underline !important;
     white-space: nowrap;
+    @media (max-width:$mobile){
+      // padding: 12px 62px;
+      @include adaptiveValue("font-size", 14, 13, 768, 480, 1);
+    }
   }
   // .main__bg
   &__bg {
@@ -114,6 +146,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      // padding-right: 72px;
     }
     img {
       height: auto;
@@ -121,6 +154,11 @@
       @media (max-width:$mobile){
         width: 546px;
         height: 482px;
+        @include adaptiveValue("width", 546, 434, 767, 480, 1);
+        @include adaptiveValue("height", 482, 379, 767, 480, 1);
+      }
+      @media (max-width:$mobileSmall){
+
       }
     }
   }
