@@ -60,9 +60,8 @@
 	// .header__logo-name
 	&__logo-name {
 		@extend %mont-700;
-		// font-size: rem(28);
+		font-size: rem(28);
 		color: $accent;
-		@include adaptiveValue("font-size", 28, 24, 1240, 1000, 1);
 	}
 	// .header__logo-descr
 	&__logo-descr {
@@ -70,7 +69,7 @@
 		// max-width: 104px;
 		@extend %mont-500;
 		font-size: rem(10.4);
-		@include adaptiveValue("font-size", 10.4, 9, 1240, 1000, 1);
+
 	}
 	// .header__actions
 	&__actions {
