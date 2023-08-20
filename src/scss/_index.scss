@@ -158,7 +158,8 @@
         @include adaptiveValue("height", 482, 379, 767, 480, 1);
       }
       @media (max-width:$mobileSmall){
-
+        @include adaptiveValue("width", 434, 279, 480, 380, 1);
+        @include adaptiveValue("height", 379, 244, 480, 380, 1);
       }
     }
   }

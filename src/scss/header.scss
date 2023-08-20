@@ -68,7 +68,8 @@
 			}
 		}
 		@media (max-width:$mobile){
-			// padding-left: 35px;
+			// column-gap: 10px;
+			@include adaptiveValue("column-gap", 10, 5, 767, 480, 1);
 		}
 	}
 	// .header__logo-text
@@ -137,6 +138,10 @@
 				path {
 					fill: $accent;
 				}
+			}
+			@media (max-width:$mobileSmall){
+				width: 12px;
+				height: 12px;
 			}
 		}
 		@media (max-width:$mobile){
@@ -283,6 +288,10 @@
 		cursor: pointer;
 		z-index: 5;
 		right: 21px;
+		@media (max-width: em(390)){
+			top: -1px;
+			right: 5px;
+		}
 		span,
 		&::before,
 		&::after {
