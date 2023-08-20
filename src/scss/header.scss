@@ -15,6 +15,10 @@
 			align-items: center;
 			background-color: $accent;
 			padding: 8px 15px;
+			column-gap: 119px;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("column-gap", 119, 0, 767, 480, 1);
 		}
 	}
 	// .header__container
@@ -28,6 +32,7 @@
 			align-items: center;
 			justify-content: space-between;
 			padding-bottom: 10px;
+			padding-top: 12px;
 		}
 	}
 	// .header__top
@@ -56,6 +61,11 @@
 				width: 44px;
 				height: 40px;
 			}
+			@media (max-width:$mobile){
+				@include adaptiveValue("width", 44, 30, 767, 480, 1);
+				@include adaptiveValue("height", 40, 27, 767, 480, 1);
+				
+			}
 		}
 		@media (max-width:$mobile){
 			// padding-left: 35px;
@@ -75,6 +85,9 @@
 		@extend %mont-700;
 		font-size: rem(28);
 		color: $accent;
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 18, 767, 480, 1);
+		}
 	}
 	// .header__logo-descr
 	&__logo-descr {
@@ -82,7 +95,9 @@
 		// max-width: 104px;
 		@extend %mont-500;
 		font-size: rem(10.4);
-
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 10.4, 6.5, 767, 480, 1);
+		}
 	}
 	// .header__actions
 	&__actions {
@@ -125,19 +140,23 @@
 			}
 		}
 		@media (max-width:$mobile){
-			background-color: #fff;
+			background-color: $white;
+			width: 20px;
+			height: 20px;
+			@include adaptiveValue("width", 20, 16, 480, 360, 1);
+			@include adaptiveValue("height", 20, 16, 480, 360, 1);
 		}
-		// width: 20px;
-		// height: 20px;
-		// background-color: $white;
+
 	}
 
 	&__email-link,
 	&__phone-link {
 		@media (max-width:$mobile){
-			font-size: rem(14);
+			// font-size: rem(14);
 			color: $white;
+			@include adaptiveValue("font-size", 14, 12, 767, 480, 1);
 		}
+
 	}
 	// .header__bottom
 	&__bottom {
