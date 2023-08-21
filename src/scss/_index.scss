@@ -511,6 +511,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
+  @media (max-width: em(1240)){
+    background-position: -190px 75%;
+    background-size: contain;
+  }
+  @media (max-width:$tablet){
+    background-position: right 27%;
+    background-size: contain;
+  }
+  @media (max-width: em(660)){
+    background-position: 45% 30%;
+    background-size: 190%;
+  }
   // .expert__container
   &__container {
     padding-top: 40px;
@@ -572,6 +584,12 @@
       display: flex;
       justify-content: center;
     }
+    @media (max-width:$mobile){
+      @include adaptiveValue("column-gap", 40, 0, 768, 520, 1);
+    }
+    @media (max-width: em(435)){
+      justify-content: flex-start;
+    }
   }
   // .expert__avatar
   &__avatar {
@@ -585,9 +603,18 @@
         width: 200px;
         height: 175px;
       }
+      @media (max-width: em(485)){
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
     }
-    @media (max-width:$tablet){
-      
+    @media (max-width: em(485)){
+      max-width: 100%;
+      display: block;
+    }
+    @media (max-width: em(435)){
+      display: none;
     }
   }
   // .expert__doctor-info
@@ -597,7 +624,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-
   }
   // .expert__name
   &__name {
@@ -606,6 +632,12 @@
     font-size: rem(18);
     line-height: math.div(25 , 18);
     white-space: nowrap;
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 18, 16, 768, 520, 1);
+      line-height: math.div(22 , 16);
+    }
+    @media (max-width:$mobile){
+    }
   }
   // .expert__profile
   &__profile {
