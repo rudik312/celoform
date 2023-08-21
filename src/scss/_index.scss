@@ -426,17 +426,17 @@
     padding-bottom: 100px;
     @media (max-width:$tablet){
       padding-top: 25px;
-      padding-bottom: 50px;       
+      padding-bottom: 66px;       
     }
     @media (max-width:$mobile){
       padding-top: 25px;
+      padding-bottom: 50px;
     }
   }
   // .product__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // column-gap: 32px;
     @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
     @media (max-width:$tablet){
       display: flex;
@@ -481,6 +481,15 @@
     display: flex;
     align-items: center;
     column-gap: 16px;
+    @media (max-width:$tablet){
+      column-gap: 37px;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("column-gap", 37, 30, 767, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
+    }
   }
   // .product__image
   &__image {
@@ -511,12 +520,10 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // column-gap: 124px;
-    @include adaptiveValue("column-gap", 124, 20, 1000, 768, 1);
-    @media (max-width: em(1190)){
+    @include adaptiveValue("column-gap", 124, 20, 1280, 1000, 1);
+    @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
-      row-gap: 25px;
     }
   }
   // .expert__info
@@ -533,8 +540,10 @@
   }
   // .expert__title
   &__title {
-    // font-size: rem(40);
-    // line-height: math.div(56 , 40);
+    width: 598px;
+    @media (max-width: em(1220)){
+      width: 100%;
+    }
   }
   // .expert__text
   &__text {
@@ -543,9 +552,7 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
-    @media (max-width: em(1190)){
-      font-size: rem(14);
-      line-height: math.div(24 , 14);
+    @media (max-width:$tablet){
       max-width: 100%;
     }
   }
@@ -554,15 +561,27 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
-    @media (max-width: em(1190)){
+    @media (max-width:$tablet){
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      display: none;
+      justify-content: center;
     }
   }
   // .expert__avatar
   &__avatar {
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width:$tablet){
+        width: 200px;
+        height: 175px;
+      }
+    }
+    @media (max-width:$tablet){
+      
+    }
   }
   // .expert__doctor-info
   &__doctor-info {
@@ -608,6 +627,7 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: 120%;
+    white-space: nowrap;
   }
 }
 //.expert-form
