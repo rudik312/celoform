@@ -531,6 +531,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+    @media (max-width:$tablet){
+      row-gap: 20px;
+    }
   }
   // .expert__content
   &__content {
