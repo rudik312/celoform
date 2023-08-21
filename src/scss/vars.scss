@@ -68,11 +68,16 @@ $btnColor: #0033D9;
   @extend %mont-700;
   @media (max-width:$tablet){
     text-align: center;
-    font-size: rem(40);
   }
   @media (max-width:$mobile){
-    font-size: rem(24);
+    @include adaptiveValue("font-size", 40, 32, 768, 480, 1);
   }
+  @media (max-width:$mobileSmall){
+
+    @include adaptiveValue("font-size", 32, 24, 480, 420, 1);
+    
+  }
+
 }
 
 .item-dots {

@@ -559,6 +559,9 @@
     @media (max-width:$tablet){
       max-width: 100%;
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
   }
   // .expert__doctor
   &__doctor {
@@ -635,6 +638,9 @@
     @media (max-width: em(660)){
       width: 100%;
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 460, 1);
+    }
   }
 }
 //.expert-form
@@ -650,12 +656,30 @@
   @media (max-width:$tablet){
     max-width: 100%;
   }
+  @media (max-width:$mobile){
+    @include adaptiveValue("padding-top", 40, 30, 768, 480, 1);
+    @include adaptiveValue("padding-bottom", 40, 30, 768, 480, 1);
+    @include adaptiveValue("padding-left", 40, 30, 768, 480, 1);
+    @include adaptiveValue("padding-right", 40, 30, 768, 480, 1);
+  }
+  @media (max-width:$mobileSmall){
+    @include adaptiveValue("padding-top", 30, 16, 480, 420, 1);
+    @include adaptiveValue("padding-bottom", 30, 16, 480, 420, 1);
+    @include adaptiveValue("padding-left", 30, 16, 480, 420, 1);
+    @include adaptiveValue("padding-right", 30, 16, 480, 420, 1);
+  }
   // .expert-form__title
   &__title {
     text-transform: uppercase;
     text-align: center;
     font-size: rem(18);
     line-height: math.div(26 , 18);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 18, 16, 480, 420, 1);
+    }
+    @media (max-width: em(420)){
+      line-height: math.div(22 , 16);
+    }
   }
   // .expert-form__subtitle
   &__subtitle {
@@ -669,10 +693,14 @@
       @media (max-width:$tablet){
         display: inline-flex;
       }
+
     }
     @media (max-width:$tablet){
       max-width: 391px;
       margin: 0 auto;
+    }
+    @media (max-width: em(390)){
+      display: none;
     }
   }
   // .expert-form__info
