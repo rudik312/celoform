@@ -530,6 +530,9 @@
   &__container {
     padding-top: 40px;
     padding-bottom: 40px;
+    @media (max-width:$tablet){
+      @include adaptiveValue("padding-bottom", 40, 25, 1000, 768, 1);
+    }
   }
   // .expert__inner
   &__inner {
@@ -908,6 +911,10 @@
     row-gap: 40px;
     padding-top: 50px;
     padding-bottom: 50px;
+    @media (max-width:$tablet){
+      padding-top: 25px;
+      
+    }
   }
   // .advantages__title
   &__title {
