@@ -357,6 +357,7 @@
     }
     @media (max-width: em(620)){
       flex-direction: column;
+      row-gap: 15px;
     }
   }
   // .property__items
@@ -424,6 +425,7 @@
     padding-top: 50px;
     padding-bottom: 100px;
     @media (max-width:$tablet){
+      padding-top: 25px;
       padding-bottom: 50px;       
     }
     @media (max-width:$mobile){
@@ -470,9 +472,8 @@
         margin-bottom: 15px;
       }
     }
-    @media (max-width:$tablet){
-      font-size: rem(14);
-      line-height: math.div(24 , 14);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
     }
   }
 // .product__cards 

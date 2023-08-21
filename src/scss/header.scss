@@ -241,20 +241,21 @@
 	}
 	// .menu__item
 	&__item {
-			a::after {
-			display: block;
-			content: attr(title);
-			font-weight: bold;
-			height: 0;
-			overflow: hidden;
-			visibility: hidden;
-		}
+			
+		// 	a::after {
+		// 	display: block;
+		// 	content: attr(title);
+		// 	font-weight: bold;
+		// 	height: 0;
+		// 	overflow: hidden;
+		// 	visibility: hidden;
+		// }
 	}
+
 	// .menu__link
 	&__link {
 		white-space: nowrap;
 		@extend %mont-400;
-		// font-size: rem(15);
 		transition: text-shadow 0.2s;
 		@include adaptiveValue("font-size", 15, 12, 1240, 1000, 1);
 		@media (any-hover: hover){
