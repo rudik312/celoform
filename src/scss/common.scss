@@ -212,6 +212,9 @@
     @media (max-width:$mobile){
       @include adaptiveValue("font-size", 18, 16, 768, 480, 1);
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
 
   }
 
