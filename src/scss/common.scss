@@ -50,6 +50,10 @@
       width: 325px;
       height: 289px;
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("width", 325, 225, 480, 420, 1);
+      @include adaptiveValue("height", 289, 216, 480, 420, 1);
+    }
   }
   // .tabcontent__descr
   &__descr {
@@ -117,7 +121,10 @@
     font-size: rem(18);
     line-height: math.div(29 , 18);
     cursor: pointer;
-
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 18, 16, 480, 420, 1);
+      padding: 10px 10px;
+    }
     // .tabheader__item_active
     &_active {
       background-color: #0033D9;
@@ -133,6 +140,9 @@
       margin-right: 4px;
       font-size: rem(32);
       color: #0033D9;
+      @media (max-width:$mobileSmall){
+        font-size: rem(24);
+      }
     }
   }
 
@@ -154,20 +164,25 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 25px;
     row-gap: 20px;
+    @media (max-width: em(475)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
   }
 
   //tabheader__marketplace-item
   &__marketplace-item  {
-    @extend %mont-500;
-    font-size: rem(18);
-    line-height: math.div(29 , 18);
-    max-width: 100%;
-    border-radius: 16px;
     display: flex;
     align-items: center;
     column-gap: 10px;
+    max-width: 100%;
+    border-radius: 16px;
     padding: 10px;
     background-color: #fff;
+    @extend %mont-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
     cursor: pointer;
     img {
       width: 40px;
@@ -180,7 +195,7 @@
     @media (max-width:$mobile){
       @include adaptiveValue("font-size", 18, 16, 768, 480, 1);
     }
-    
+
   }
 
   // .tabheader__delivery
@@ -203,6 +218,9 @@
     padding: 0 10px;
     font-size: rem(16);
     line-height: math.div(22 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
   }
   // .tabheader-delivery__item
   &__item {
@@ -217,8 +235,12 @@
     column-gap: 20px;
     background-color: #fff;
     cursor: pointer;
-    @media (max-width:$mobile){
-      @include adaptiveValue("font-size", 18, 16, 768, 480, 1);
+    @media (max-width:$tablet){
+      justify-content: center;
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 18, 14, 480, 420, 1);
+      line-height: 22px;
     }
   }
   // .tabheader-delivery__icons
@@ -230,8 +252,8 @@
       width: 40px;
       height: 40px;
       @media (max-width:$mobile){
-        @include adaptiveValue("width", 40, 30, 768, 480, 1);
-        @include adaptiveValue("height", 40, 30, 768, 480, 1);
+        @include adaptiveValue("width", 40, 30, 480, 420, 1);
+        @include adaptiveValue("height", 40, 30, 480, 420, 1);
       }
     }
   }
