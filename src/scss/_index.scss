@@ -1008,7 +1008,7 @@
         grid-auto-columns: 50%;
         grid-column: span 2;
         justify-content: center;
-        @media (max-width:$mobileSmall){
+        @media (max-width: em(580)){
           grid-auto-columns: auto;
         }
       }
