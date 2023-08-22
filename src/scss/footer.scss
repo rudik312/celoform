@@ -9,8 +9,15 @@
   }
   // .footer__inner
   &__inner {
-    display: flex;
-    // justify-content: space-between;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 16px;
+      row-gap: 50px;
+    }
   }
   // .footer__item
   &__item {
@@ -18,20 +25,35 @@
       max-width: 236px;
       width: 100%;
       margin-right: 96px;
+      @media (max-width:$tablet){
+        max-width: 100%;
+        margin: 0;
+        grid-column: 2 / 1;
+        grid-row: 2 / 2;
+      }
     }
     &:nth-child(2){
       max-width: 212px;
       width: 100%;
       margin-right: 62px;
+      @media (max-width:$tablet){
+        max-width: 100%;
+        margin: 0;
+      }
     }
     &:nth-child(3){
       max-width: 200px;
       width: 100%;
       margin-right: 80px;
+      @media (max-width:$tablet){
+        max-width: 100%;
+        margin: 0;
+      }
     }
     &:nth-child(4){
-      max-width: 200px;
-      width: 100%;
+      @media (max-width:$tablet){
+        max-width: 100%;
+      }
     }
   }
   
@@ -64,6 +86,7 @@
     font-size: rem(14);
     line-height: math.div(20 , 14);
     transition: all 0.3s;
+    text-decoration: underline !important;
     @media (any-hover: hover){
       &:hover{
         text-shadow: 0 0 .90px #fff, 0 0 .90px #fff;
@@ -85,6 +108,9 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: normal;
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 16, 14, 768, 480, 1);
+    }
   }
   // .footer__menu-item
   &__menu-item {
@@ -157,11 +183,23 @@
   }
 
   &__requisites {
+    display: flex;
+    flex-direction: column;
     padding-top: 20px;
     @extend %mont-400;
     font-size: rem(12);
     line-height: math.div(24 , 12);
     color: #fff;
+
+  }
+  &__requisites-box {
+    @media (max-width:$tablet){
+      display: flex;
+      column-gap: 10px;
+      @media (max-width: em(620)){
+        flex-direction: column;
+      }
+    }
   }
 }
 

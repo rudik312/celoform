@@ -1059,7 +1059,14 @@
     row-gap: 40px;
     @media (max-width:$tablet){
       padding-top: 25px;
+      padding-bottom: 120px;
       row-gap: 30px;
+    }
+    @media (max-width: em(680)){
+      padding-bottom: 75px;
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("padding-bottom", 75, 50, 480, 420, 1);
     }
   }
   // .application__top
@@ -1118,6 +1125,9 @@
     flex-direction: column;
     row-gap: 24px;
     background-color: #fff;
+    @media (max-width: em(420)){
+      padding: 15px;
+    }
   }
   // .application__item-heading
   &__item-heading {
