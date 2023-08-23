@@ -1,0 +1,52 @@
+.instruction {
+  // .instruction__container
+  &__container {
+  }
+  // .instruction__title
+  &__title {
+  }
+    // .instruction__wrapper
+  &__wrapper {
+    padding-top: 25px;
+  }
+
+  // .instruction__desc
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .instruction__desc-item
+  &__desc-item {
+    display: grid;
+    row-gap: 20px;
+  }
+  // .instruction__subtitle
+  &__subtitle {
+    @extend %mont-600;
+    font-size: rem(24);
+    line-height: math.div(38 , 24);
+    color: $accent;
+  }
+  // .instruction__desc-box
+  &__desc-box {
+    display: flex;
+    column-gap: 10px;
+  }
+  // .instruction__capsule
+  &__capsule {
+  }
+  // .instruction__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+  }
+  // .instruction__list
+  &__list {
+    max-width: 545px;
+  }
+  // .instruction__list-item
+  &__list-item {
+  }
+}
