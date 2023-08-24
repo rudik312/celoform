@@ -2,9 +2,24 @@
   background-color: $bg;
   // .instruction__container
   &__container {
+    padding-top: 153px;
+    @media (max-width:$mobile){
+      padding-top: 134px;
+      padding-bottom: 25px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 106px;
+    }
   }
   // .instruction__title
   &__title {
+    @media (max-width:$mobile){
+      max-width: 464px;
+      margin: 0 auto;
+    }
+    @media (max-width:$mobileSmall){
+      max-width: 273px;
+    }
   }
     // .instruction__wrapper
   &__wrapper {
@@ -12,6 +27,9 @@
     flex-direction: column;
     row-gap: 30px;
     padding-top: 25px;
+    @media (max-width:$mobileSmall){
+      padding-top: 30px;
+    }
   }
 
   // .instruction__desc
@@ -29,6 +47,10 @@
       font-size: rem(16);
       line-height: math.div(26 , 16);
       color: #1B1B1B;
+      @media (max-width: em(420)){
+        font-size: rem(14);
+        line-height: math.div(26 , 14);
+      }
     }
   }
   // .instruction__subtitle
@@ -37,12 +59,17 @@
     font-size: rem(24);
     line-height: math.div(38 , 24);
     color: $accent;
+    @media (max-width: em(420)){
+      font-size: rem(20);
+      line-height: math.div(32 , 20);
+    }
   }
   // .instruction__desc-box
   &__desc-box {
     display: flex;
     flex-wrap: wrap;
     column-gap: 10px;
+    row-gap: 10px;
   }
   // .instruction__capsule
   &__capsule {
@@ -52,14 +79,25 @@
     padding: 5px 20px;
     background-color: $white;
     border-radius: 24px;
-
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #1B1B1B;
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(26 , 14);
+    }
   }
   // .instruction__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 25px;
-
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
   // .instruction__list
   &__list {
@@ -71,9 +109,23 @@
     @extend %mont-400;
     font-size: rem(16);
     line-height: normal;
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(26 , 14);
+    }
   }
   // .instruction__list-item
   &__list-item {
+    @media (max-width: em(420)){
+      &::before{
+        content:'';
+        top: 10px;
+      }
+      &::after{
+        content:'';
+        top: 7px;
+      }
+    }
   }
 }
 
@@ -93,6 +145,10 @@
     font-size: rem(18);
     line-height: math.div(29 , 18);
     color: #1B1B1B;
+    @media (max-width: em(420)){
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+    }
   }
   // .instruction__application-list
   &__application-list {
@@ -102,12 +158,30 @@
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(26 , 14);
+    }
   }
   // .instruction__application-item
   &__application-item {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(26 , 14);
+    }
   }
   // .instruction__application-text
   &__application-text {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(26 , 14);
+    }
   }
 }
 .instruction-application {
@@ -118,6 +192,10 @@
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(26 , 14);
+    }
   }
   // .instruction-application__item
   &__item {
@@ -129,6 +207,7 @@
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+
     svg {
       path {
         fill: #D90027;
@@ -139,6 +218,10 @@
       font-size: rem(18);
       line-height: math.div(29 , 18);
       color: #D90027;
+      @media (max-width: em(420)){
+        font-size: rem(16);
+        line-height: math.div(26 , 16);
+      }
     }
     &:last-child{
       padding: 10px 20px;
@@ -156,14 +239,22 @@
         font-size: rem(18);
         line-height: math.div(29 , 18);
         color: $white;
+        @media (max-width: em(420)){
+          font-size: rem(16);
+          line-height: math.div(26 , 16);
+        }
       }
+    }
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(26 , 14);
     }
   }
   // .instruction-application__item-title
   &__item-title {
     display: flex;
     align-items: center;
-    column-gap: 8px;
+    column-gap: 10px;
   }
   // .instruction-application__item-icon
   &__item-icon {
@@ -196,6 +287,10 @@
     font-size: rem(18);
     line-height: math.div(29 , 18);
     color: #1B1B1B;
+    @media (max-width: em(420)){
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+    }
   }
   // .instruction__use-box
   &__use-box {
