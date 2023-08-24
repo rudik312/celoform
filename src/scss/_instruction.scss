@@ -71,3 +71,66 @@
   &__list-item {
   }
 }
+
+.instruction {
+  // .instruction__application
+  &__application {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .instruction__subtitle
+  &__subtitle {
+  }
+  // .instruction__application-subtitle
+  &__application-subtitle {
+    @extend %mont-600;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: #1B1B1B;
+  }
+  // .instruction__application-list
+  &__application-list {
+
+  }
+  // .instruction__application-item
+  &__application-item {
+  }
+  // .instruction__application-text
+  &__application-text {
+  }
+}
+.instruction-application {
+  // .instruction-application__content
+  &__content {
+    display: grid;
+    row-gap: 15px;
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .instruction-application__item
+  &__item {
+    display: grid;
+    row-gap: 15px;
+    padding: 20px;
+    background-color: $white;
+    border-radius: 24px;
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .instruction-application__item-title
+  &__item-title {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+  // .instruction-application__item-icon
+  &__item-icon {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+}
