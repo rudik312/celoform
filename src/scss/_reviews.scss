@@ -5,6 +5,7 @@
   background-color: $bg;
   // .reviews__container
   &__container {
+    padding-top: 173px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -112,15 +113,23 @@
   }
   // .reviews__content
   &__content {
+    @extend %mont-500;
+    font-size: rem(20);
+    line-height: math.div(32 , 20);
   }
-}
-.reviews {
-  // .review__wrapper
+// .reviews__content-email
+  &__content-email {
+
+    text-decoration-line: underline !important;
+    cursor: pointer;
+  }
+
+  // .reviews__wrapper
   &__wrapper {
     display: grid;
     row-gap: 5px;
   }
-  // .review__all-link
+  // .reviews__all-link
   &__all-link {
     display: flex;
     align-items: center;

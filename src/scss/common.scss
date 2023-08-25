@@ -8,7 +8,7 @@
   // .buy__container
   &__container {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     @include adaptiveValue("row-gap", 36, 20, 1240, 1000, 1);
