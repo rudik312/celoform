@@ -109,6 +109,9 @@
 		margin-right: 135px;
 		max-width: 145px;
 		padding-left: 15px;
+		@media (max-width: em(830)){
+			display: none;
+		}
 	}
 
 	&__site-link {
