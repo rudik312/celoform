@@ -123,6 +123,13 @@
 		@media (max-width:$tablet){
 			display: none;
 		}
+		@media (any-hover: hover){
+			transition: text-shadow 0.2s;
+			&:hover{
+				text-shadow: 0 0 .20px #0033D9, 0 0 .20px #0033D9;
+			}
+		}
+
 	}
 
 	// .header__actions
@@ -287,10 +294,6 @@
 		@media (any-hover: hover){
 			&:hover{
 				text-shadow: 0 0 .90px #0033D9, 0 0 .90px #0033D9;
-				// text-shadow: 0 0 .9px #0033D9, 0 0 .9px #333, 0 0 .9px #0033D9;
-				// color: $accent;
-				// font-family: 'Montserrat-SemiBold', sans-serif;
-				// font-weight: 600;
 			}
 		}
 		@media (max-width:$mobile){
