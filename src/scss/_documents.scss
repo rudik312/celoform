@@ -3,6 +3,16 @@
   // .documents__container
   &__container {
     padding-top: 187px;
+    @media (max-width:$tablet){
+      padding-top: 134px;
+      padding-bottom: 50px;
+    }
+    @media (max-width:$mobile){
+      padding-bottom: 75px; 
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 106px;
+    }
   }
   // .documents__title-box
   &__title-box {
@@ -17,13 +27,28 @@
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      text-align: center;
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
   }
   // .documents__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 26px;
-    padding-top: 30px;
+    padding-top: 25px;
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 30px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 20px;
+    }
   }
   // .documents__item
   &__item {

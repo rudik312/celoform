@@ -20,18 +20,8 @@
   }
   // .questions__title
   &__title {
-    font-size: rem(40);
-    line-height: math.div(48 , 40);
     @media (max-width:$tablet){
       text-align: center;
-    }
-    @media (max-width:$mobile){
-      @include adaptiveValue("font-size", 40, 32, 768, 480, 1);
-    }
-    @media (max-width:$mobileSmall){
-  
-      @include adaptiveValue("font-size", 32, 24, 480, 420, 1);
-      
     }
   }
   // .questions__subtitle
@@ -74,7 +64,7 @@
   }
 }
 
-.spollers {
+  .spollers {
   // .spollers__item
   &__item {
   }
