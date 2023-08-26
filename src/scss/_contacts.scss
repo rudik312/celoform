@@ -7,6 +7,9 @@
     @media (max-width:$tablet){
       padding-top: 134px;
     }
+    @media (max-width:$mobile){
+      padding-top: 106px;
+    }
   }
   // .contacts__heading
   &__heading {
@@ -47,9 +50,9 @@
       max-width: 100%;
     }
     @media (max-width: em(640)){
+      padding-top: 30px;
       display: flex;
       flex-direction: column;
-
       row-gap: 15px;
     }
   }
@@ -109,6 +112,11 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    font-size: rem(18);
+    line-height: normal;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 18, 16, 480, 420, 1);
+    }
   }
   // .contacts__email-icon
   // .contacts__phone-icon
@@ -122,6 +130,10 @@
     height: 28px;
     border-radius: 50%;
     background-color: $accent;
+    img {
+      width: 18px;
+      height: 18px;
+    }
   }
   // .contacts__phone-link
   &__phone-link {
@@ -177,6 +189,9 @@
     address {
       font-style: normal;
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 14, 12, 480, 420, 1);
+    }
   }
   // .contacts__requisites
   &__requisites {
@@ -184,6 +199,9 @@
     font-size: rem(14);
     line-height: math.div(28 , 14);
     color: $black;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 14, 12, 480, 420, 1);
+    }
   }
   // .contacts__form
   &__form {
@@ -194,7 +212,7 @@
 
 
 //========================================================================================================================================================
-
+//.contacts-form
 .contacts-form {
   max-width: 100%;
   padding: 40px 40px;
@@ -202,14 +220,23 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-
   row-gap: 15px;
+  @media (max-width: em(640)){
+    padding: 30px 30px;
+  }
+  @media (max-width: em(420)){
+    border-radius: 24px;
+    padding: 15px 15px;
+  }
   // .contacts-form__title
   &__title {
     text-transform: uppercase;
     text-align: center;
     font-size: rem(18);
     line-height: math.div(26 , 18);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 18, 16, 480, 420, 1);
+    }
   }
   // .contacts-form__subtitle
   &__subtitle {
@@ -224,6 +251,9 @@
         display: inline-block;
         padding-left: 5px;
       }
+    }
+    @media (max-width: em(462)){
+      display: none;
     }
   }
   // .contacts-form__info
@@ -286,6 +316,9 @@
     &::placeholder {
       color: $colInp;
     }
+    @media (max-width:$mobileSmall){
+      height: 140px;
+    }
   }
   // .contacts-form__checkbox
   &__checkbox {
@@ -295,13 +328,20 @@
   &__text {
     
   }
-
+  //.contacts-form__button-box
   &__button-box {
-    
+    @media (max-width:$mobileSmall){
+      padding-top: 25px;
+    }
   }
-
+  //.contacts-form__button
   &__button {
+    font-size: rem(16);
     padding: 15px 33px;
+    line-height: normal;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
   }
 }
 
