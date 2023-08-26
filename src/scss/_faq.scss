@@ -1,11 +1,15 @@
 //========================================================================================================================================================
 .questions {
   background-color: $bg;
-  padding-top: 173px;
   // .questions__container
   &__container {
+    padding-top: 173px;
     @media (max-width:$tablet){
+      padding-top: 134px;
       padding-bottom: 75px;
+    }
+    @media (max-width:$mobile){
+      padding-top: 106px;
     }
   }
   // .questions__title-box
@@ -18,7 +22,17 @@
   &__title {
     font-size: rem(40);
     line-height: math.div(48 , 40);
-
+    @media (max-width:$tablet){
+      text-align: center;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 40, 32, 768, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+  
+      @include adaptiveValue("font-size", 32, 24, 480, 420, 1);
+      
+    }
   }
   // .questions__subtitle
   &__subtitle {
@@ -30,12 +44,24 @@
       font-size: rem(16);
       line-height: math.div(26 , 16);
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
   }
   // .questions__inner
   &__inner {
     padding-top: 30px;
     // display: grid;  
     // row-gap: 30px;
+    @media (max-width:$tablet){
+      padding-top: 40px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 30px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 20px;
+    }
   }
   // .questions__spollers
   &__spollers {
@@ -47,8 +73,7 @@
   &__item-title {
   }
 }
-.title {
-}
+
 .spollers {
   // .spollers__item
   &__item {

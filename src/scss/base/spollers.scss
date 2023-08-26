@@ -53,6 +53,13 @@
 			}
 		}
 	}
+	@media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+	@media (max-width: em(420)){
+		padding: 10px 60px 10px 10px;
+		line-height: math.div(23 , 14);
+	}
 }
 // Контент спойлера
 .spollers {
@@ -73,6 +80,9 @@
 	&:not(:last-child) {
 			margin-bottom: 10px;
 		}
+		@media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
 	}
 	//.spollers__list
 	&__list {
@@ -91,6 +101,9 @@
 			top: 12px;
 			left: -17px;
 		}
+		@media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
 	}
 
 }
