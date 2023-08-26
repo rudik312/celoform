@@ -152,6 +152,17 @@
       @include adaptiveValue("font-size", 12, 10, 768, 480, 1);
     }
   }
+  // .footer__site-link
+  &__site-link {
+    max-width: 220px;
+    @media (any-hover: hover){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        text-shadow: 0 0 .90px #fff, 0 0 .90px #fff;
+      }
+    }
+  }
+
   // .footer__menu-list
   &__menu-list {
     display: grid;
