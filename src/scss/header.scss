@@ -40,6 +40,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		// display: grid;
+		// grid-template-columns: repeat(3, 1fr);
+		
 		margin-bottom: 10px;
 		@media (max-width:$mobile){
 			display: grid;
@@ -100,6 +103,25 @@
 			@include adaptiveValue("font-size", 10.4, 6.5, 767, 480, 1);
 		}
 	}
+
+	//.header__site
+	&__site {
+		margin-right: 135px;
+		max-width: 145px;
+		padding-left: 15px;
+	}
+
+	&__site-link {
+		@extend %mont-500;
+		// font-size: rem(12);
+		line-height: normal;
+		@include adaptiveValue("font-size", 12, 10, 1240, 1000, 1);
+		// text-decoration: underline !important;
+		@media (max-width:$tablet){
+			display: none;
+		}
+	}
+
 	// .header__actions
 	&__actions {
 		max-width: 545px;
@@ -115,6 +137,7 @@
 		display: flex;
 		align-items: center;
 		column-gap: 5px;
+		white-space: nowrap;
 		@extend %mont-400;
 		// font-size: rem(14);
 		@include adaptiveValue("font-size", 14, 12, 1240, 1000, 1);

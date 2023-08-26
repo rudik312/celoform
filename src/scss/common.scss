@@ -170,6 +170,7 @@
     font-size: rem(28);
     line-height: math.div(45 , 28);
     color: #0033D9;
+    display: none;
   }
   //tabheader__price-item
   &__price-item {
@@ -224,9 +225,6 @@
   }
 }
 
-.tabheader {
-
-}
 // .tabheader-delivery
 .tabheader-delivery {
   display: grid;
