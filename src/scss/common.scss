@@ -14,10 +14,16 @@
     @include adaptiveValue("row-gap", 36, 20, 1240, 1000, 1);
     @media (max-width:$tablet){
       padding-top: 50px;
-      padding-bottom: 25px;
+      padding-bottom: 50px;
     }
     @media (max-width:$mobile){
       @include adaptiveValue("padding-top", 50, 25, 1000, 768, 1);
+    }
+    @media (max-width:$mobileSmall){
+      padding-bottom: 85px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 50px;
     }
   }
   // .buy__title

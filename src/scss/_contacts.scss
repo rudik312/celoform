@@ -6,9 +6,11 @@
     padding-top: 167px;
     @media (max-width:$tablet){
       padding-top: 134px;
+      padding-bottom: 50px;
     }
     @media (max-width:$mobile){
       padding-top: 106px;
+      padding-bottom: 75px;
     }
   }
   // .contacts__heading
@@ -190,6 +192,7 @@
       font-style: normal;
     }
     @media (max-width:$mobileSmall){
+      max-width: 310px;
       @include adaptiveValue("font-size", 14, 12, 480, 420, 1);
     }
   }
@@ -330,9 +333,14 @@
   }
   //.contacts-form__button-box
   &__button-box {
+    @media (max-width: em(590)){
+      display: flex;
+      justify-content: center;
+    }
     @media (max-width:$mobileSmall){
       padding-top: 25px;
     }
+
   }
   //.contacts-form__button
   &__button {
@@ -340,6 +348,9 @@
     padding: 15px 33px;
     line-height: normal;
     @media (max-width:$mobileSmall){
+      display: block;
+      width: 100%;
+      padding: 15px 10px;
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
     }
   }
