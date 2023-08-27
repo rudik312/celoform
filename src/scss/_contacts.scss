@@ -241,12 +241,15 @@
   }
   // .contacts-form__title
   &__title {
+    @extend %mont-700;
     text-transform: uppercase;
     text-align: center;
     font-size: rem(18);
     line-height: math.div(26 , 18);
+    color: $accent;
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 18, 16, 480, 420, 1);
+      line-height: math.div(23 , 16);
     }
   }
   // .contacts-form__subtitle
