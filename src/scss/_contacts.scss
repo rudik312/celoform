@@ -46,9 +46,9 @@
     max-width: 373px;
     @media (max-width:$tablet){
       display: grid;
-      padding-top: 40px;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 15px;
+      padding-top: 40px;
       max-width: 100%;
     }
     @media (max-width: em(660)){
@@ -181,6 +181,9 @@
     row-gap: 25px;
     @media (max-width:$tablet){
       row-gap: 25px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 15px;
     }
   }
   // .contacts__adress
