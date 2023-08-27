@@ -53,10 +53,14 @@
     }
     @media (max-width: em(660)){
       grid-template-columns: 1fr;
+      row-gap: 15px;
       // padding-top: 30px;
       // display: flex;
       // flex-direction: column;
       // row-gap: 15px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 30px;
     }
   }
 
