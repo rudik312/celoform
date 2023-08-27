@@ -45,17 +45,18 @@
     row-gap: 25px;
     max-width: 373px;
     @media (max-width:$tablet){
-      padding-top: 40px;
       display: grid;
+      padding-top: 40px;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 15px;
       max-width: 100%;
     }
-    @media (max-width: em(640)){
-      padding-top: 30px;
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
+    @media (max-width: em(660)){
+      grid-template-columns: 1fr;
+      // padding-top: 30px;
+      // display: flex;
+      // flex-direction: column;
+      // row-gap: 15px;
     }
   }
 
