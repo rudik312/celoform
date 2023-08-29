@@ -245,8 +245,8 @@
 			overflow: auto;
 			transition: right 0.3s ease 0s;
 			// background-color: #ffffff;
-			background-color: transparent;
-			backdrop-filter: blur(20px);
+			background-color: $bg;
+			// backdrop-filter: blur(20px);
 			z-index: 5;
 			order: -1;
 			.menu-open & {
@@ -268,7 +268,7 @@
 		@include adaptiveValue("column-gap", 86, 10, 1080, 920, 1);
 		@media (max-width: $mobile){
 			flex-direction: column;
-			row-gap: 15px;
+			row-gap: 50px;
 			text-align: center;
 		}	
 	}

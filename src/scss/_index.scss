@@ -576,10 +576,11 @@
   &__doctor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 24px;
+    column-gap: 30px;
     @media (max-width:$tablet){
       display: flex;
       justify-content: center;
+      @include adaptiveValue("column-gap", 36, 0, 1000, 480, 1);
     }
     @media (max-width:$mobile){
       @include adaptiveValue("column-gap", 40, 0, 768, 520, 1);
