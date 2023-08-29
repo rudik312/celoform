@@ -318,11 +318,14 @@
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: rem(22);
+		width: rem(27);
 		height: rem(16);
 		cursor: pointer;
 		z-index: 5;
-		right: 21px;
+		right: 16px;
+		@media (max-width:$mobile){
+			
+		}
 		@media (max-width: em(390)){
 			top: -1px;
 			right: 5px;

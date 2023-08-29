@@ -498,12 +498,12 @@
 //.expert
 //=====================================================================================================
 .expert {
-  background-position: center right 0;
+  background-position: center right -180px;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
   @media (max-width: em(1240)){
-    background-position: -190px 75%;
+    background-position: -140px 85%;
     background-size: contain;
   }
   @media (max-width:$tablet){

@@ -6,9 +6,9 @@
   // .reviews__container
   &__container {
     padding-top: 173px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    // display: flex;
+    // flex-direction: column;
+    // row-gap: 20px;
   }
 
   &__heading {
@@ -43,6 +43,8 @@
   &__action {
     display: flex;
     align-items: center;
+    justify-content: center;
+    order: -1;
     @media (max-width:$mobile){
       display: block;
     }
@@ -62,6 +64,7 @@
   &__inner {
     display: grid;
     row-gap: 15px;
+    padding-top: 20px;
   }
   // .reviews__item
   &__item {
@@ -154,35 +157,44 @@
   &__all {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 25px;
+    column-gap: 15px;
     // padding-top: 10px;
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+    }
   }
   // .reviews__content
   &__content {
-    display: flex;
-    justify-content: center;
-    padding-top: 25px;
+    // display: flex;
+    // justify-content: center;
+    padding-top: 15px;
     // @extend %mont-500;
     // font-size: rem(20);
     // line-height: math.div(32 , 20);
     @media (max-width:$tablet){
-      padding-bottom: 75px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      padding-bottom: 50px;
     }
     @media (max-width:$mobile){
-      display: block;
+      // display: block;
     }
   }
 // .reviews__content-email
-  &__content-link {
-    text-decoration-line: underline !important;
-    cursor: pointer;
-    @media (any-hover: hover){
-      transition: all 0.3s ease 0s;
-      &:hover{
-        text-shadow: 0 0 .90px #0033D9, 0 0 .90px #0033D9;
-      }
-    }
-  }
+  // &__content-link {
+  //   text-decoration-line: underline !important;
+  //   cursor: pointer;
+
+  //   @media (any-hover: hover){
+  //     transition: all 0.3s ease 0s;
+  //     &:hover{
+  //       text-shadow: 0 0 .90px #0033D9, 0 0 .90px #0033D9;
+  //     }
+  //   }
+  // }
 
   // .reviews__wrapper
   &__wrapper {
@@ -198,6 +210,13 @@
     padding: 10px 15px;
     border-radius: 16px;
     background-color: $white;
+    font-size: rem(18);
+    @extend %mont-500;
+    line-height: math.div(29 , 18);
+    @media (max-width:$mobileSmall){
+      padding: 10px 10px;
+      @include adaptiveValue("font-size", 18, 14, 480, 420, 1);
+    }
     img {
       width: 32px;
       height: 32px;
