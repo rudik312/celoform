@@ -231,12 +231,12 @@
 
 .menu {
 
-	&__mobile {
-		display: none;
-		@media (max-width:$mobile){
-			display: block;
-		}
-	}
+	// &__mobile {
+		// display: none;
+		// @media (max-width:$mobile){
+			// display: block;
+		// }
+	// }
 
 	// .menu__body
 	&__body {
@@ -326,7 +326,7 @@
 	&__link {
 		@extend %mont-500;
 		// font-size: rem(14);
-		color: #fc1313;
+		color: #fff;
 		@include adaptiveValue("font-size", 14, 12, 480, 420, 1);
 		line-height: 120%;
 	}
