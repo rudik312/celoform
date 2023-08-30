@@ -170,7 +170,7 @@
   }
   // .main__bg
   &__bg {
-    padding-top: 90px;
+    padding-top: 148px;
     @include adaptiveValue("padding-top", 90, 170, 1240, 1000, 1);
     @media (max-width:$mobile){
       padding: 0;

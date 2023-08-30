@@ -16,6 +16,9 @@
 			background-color: $accent;
 			padding: 8px 15px;
 			column-gap: 119px;
+			z-index: 50;
+			position: relative;
+			min-height: 30px;
 		}
 		@media (max-width:$mobile){
 			@include adaptiveValue("column-gap", 119, 0, 767, 480, 1);
@@ -151,8 +154,12 @@
 		@extend %mont-400;
 		// font-size: rem(14);
 		@include adaptiveValue("font-size", 14, 12, 1240, 1000, 1);
+
+		.menu-open & {
+			display: none;	
+		}
 	}
-	// .header__email-icon
+	// .header__email-icon	
 	// .header__phone-icon
 	&__email-icon,
 	&__phone-icon {
@@ -223,6 +230,14 @@
 }
 
 .menu {
+
+	&__mobile {
+		display: none;
+		@media (max-width:$mobile){
+			display: block;
+		}
+	}
+
 	// .menu__body
 	&__body {
 		@media (max-width:$mobile){
@@ -305,8 +320,26 @@
 	&__icon {
 	}
 }
+
+.menu-mobile {
+	display: none;
+	&__link {
+		@extend %mont-500;
+		// font-size: rem(14);
+		color: #fff;
+		@include adaptiveValue("font-size", 14, 12, 480, 420, 1);
+		line-height: 120%;
+	}
+	@media (max-width:$mobile){
+		.menu-open & {
+			display: block;
+		}
+	}
+}
 .icon-menu {
 }
+
+
 
 
 //====================================================================================================
