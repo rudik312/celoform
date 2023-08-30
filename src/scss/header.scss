@@ -326,7 +326,7 @@
 	&__link {
 		@extend %mont-500;
 		// font-size: rem(14);
-		color: #fff;
+		color: #fc1313;
 		@include adaptiveValue("font-size", 14, 12, 480, 420, 1);
 		line-height: 120%;
 	}
