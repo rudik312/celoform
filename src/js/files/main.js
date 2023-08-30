@@ -14,16 +14,16 @@
 		if (item.classList.contains('category-5')) {
 
 				if (item.classList.contains('button_ozon')) {
-					item.setAttribute('href', 'https://kurl.ru/qlsUQ');
+					item.setAttribute('href', 'https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr-1082907013/?asb=GKfSOeK9sJhydDl89uBkGW1jHUSvKdvJcqZvftlSikk%253D&asb2=uXVMUckDGLrd6R0EFCy5Y9P0rqeveu0qLd_q-5yGE41jr5mVcWyuypgEaC0p56Ld&avtc=1&avte=2&avts=1692026998&keywords=целоформ&sh=RldFU2SoxQ');
 				}
 				if (item.classList.contains('button_wildberries')) {
-					item.setAttribute('href', 'https://kurl.ru/vQhoC');
+					item.setAttribute('href', 'https://www.wildberries.ru/catalog/123404223/detail.aspx?targetUrl=EX');
 				}
 				if (item.classList.contains('button_yamarket')) {
-					item.setAttribute('href', 'https://kurl.ru/WPURu');
+					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform/1892256177?nid=16739319&show-uid=16920270712486938596816001&context=search&text=ЦЕЛОФОРМ&sku=102084983345&cpc=xzJwp_iEA1_SsqS1eqa69zrp5l_MmpDuD--NgzOA4eFmkzf8tjSMTH68MTJi5-4u9jJUotnobARVOMA7vgV3LOFaaMTidY_SMgSemRnPn4OfcX-5mdxwr6UHVcjj4siAC6aX_i7DKpcRl5zrq-b0qD3GoOrR9hH7_6nnbVjxFt62LGFTdajfXaB6lzCfAzOTqKWWc27_Aib12r5bBcyU0s854zjij1zFR7Az7saxlclBBJHxE2IgrGL1_tMIk7igjG2GQqFwzXGwgD4CWraWSQ%2C%2C&do-waremd5=OhP9U7_6Eduj5-GzcSdUfg&rs=eJwzamIOYDzKyHBgni2QZGjfDWKn2wDJBLO9IJEiELmgHiTr0AoSPxAGEknQA5PXQCILLPcASYVykJoFc0DkA0EQeWAtWE0ySI0CN4h9QAvEZrgCUn9glTVIJRfYliMg9QouIHGGDWC9x0CyDHIgWYepIFct4LODm7wgez_I5BlgV70ByTpMAZnsADFfGCTeMAHsthiw-gIweQGsZj_IloQHILJhKdjX8WBdYD8yhIBsbHADu0cHbHs1mLwMVjMN7DsWsBpFsBoZsNtSQCIPJoNNlgKHXoIVyBf1IHGFIrDtS8G6usC-8wK7_Dc4HIqsAZlPhhU%2C');
 				}
 				if (item.classList.contains('button_sbermarket')) {
-					item.setAttribute('href', 'https://kurl.ru/YBIrU');
+					item.setAttribute('href', 'https://megamarket.ru/catalog/details/ranozazhivlyayushee-sredstvo-gemostatik-celoform-5-g-600012908816/#?related_search=целоформ');
 				}
 			}
 
@@ -35,19 +35,19 @@
 		if (item.classList.contains('category-15')) {
 
 				if (item.classList.contains('button_ozon')) {
-					item.setAttribute('href', 'https://kurl.ru/AfRvV');
+					item.setAttribute('href', 'https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-15-gr-777854676/?asb=GKfSOeK9sJhydDl89uBkGW1jHUSvKdvJcqZvftlSikk%253D&asb2=uXVMUckDGLrd6R0EFCy5Y9P0rqeveu0qLd_q-5yGE41jr5mVcWyuypgEaC0p56Ld&avtc=1&avte=2&avts=1692026998&from_sku=1082907013&from_url=https%253A%252F%252Fwww.ozon.ru%252Fcategory%252Fkremy-lechebnye-31016%252Ftseloform-87297068%252F%253Fcategory_was_predicted%253Dtrue%2526deny_category_prediction%253Dtrue%2526from_global%253Dtrue%2526text%253D%2525D1%252586%2525D0%2525B5%2525D0%2525BB%2525D0%2525BE%2525D1%252584%2525D0%2525BE%2525D1%252580%2525D0%2525BC&keywords=целоформ&oos_search=false&sh=RldFU2SoxQ');
 				}
 				if (item.classList.contains('button_wildberries')) {
-					item.setAttribute('href', 'https://kurl.ru/eMHjq');
+					item.setAttribute('href', 'https://www.wildberries.ru/catalog/133601677/detail.aspx?targetUrl=EX');
 				}
 				if (item.classList.contains('button_yamarket')) {
-					item.setAttribute('href', 'https://kurl.ru/ffDpp');
+					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform/1892256177?glfilter=23674510%3A15~15_102084184188&text=ЦЕЛОФОРМ&cpa=1&cpc=xzJwp_iEA1_SsqS1eqa69zrp5l_MmpDuD--NgzOA4eFmkzf8tjSMTH68MTJi5-4u9jJUotnobARVOMA7vgV3LOFaaMTidY_SMgSemRnPn4OfcX-5mdxwr6UHVcjj4siAC6aX_i7DKpcRl5zrq-b0qD3GoOrR9hH7_6nnbVjxFt62LGFTdajfXaB6lzCfAzOTqKWWc27_Aib12r5bBcyU0s854zjij1zFR7Az7saxlclBBJHxE2IgrGL1_tMIk7igjG2GQqFwzXGwgD4CWraWSQ%2C%2C&rs=eJwzamIOYDzKyHBgni2QZGjfDWKn2wDJBLO9IJEiELmgHiTr0AoSPxAGEknQA5PXQCILLPcASYVykJoFc0DkA0EQeWAtWE0ySI0CN4h9QAvEZrgCUn9glTVIJRfYliMg9QouIHGGDWC9x0CyDHIgWYepIFct4LODm7wgez_I5BlgV70ByTpMAZnsADFfGCTeMAHsthiw-gIweQGsZj_IloQHILJhKdjX8WBdYD8yhIBsbHADu0cHbHs1mLwMVjMN7DsWsBpFsBoZsNtSQCIPJoNNlgKHXoIVyBf1IHGFIrDtS8G6usC-8wK7_Dc4HIqsAZlPhhU%2C&sku=102084184188&do-waremd5=OhP9U7_6Eduj5-GzcSdUfg&nid=16739319');
 				}
 				if (item.classList.contains('button_sbermarket')) {
-					item.setAttribute('href', 'https://kurl.ru/IqJJB');
+					item.setAttribute('href', 'https://megamarket.ru/catalog/details/ranozazhivlyayushee-sredstvo-gemostatik-celoform-15-gr-600012908778/');
 				}
 				if (item.classList.contains('button_ali')) {
-					item.setAttribute('href', 'https://kurl.ru/KQmPb');
+					item.setAttribute('href', 'https://aliexpress.ru/item/1005005907035330.html?sku_id=12000034795979826&spm=a2g2w.productlist.search_results.8.5d614aa6S6uABu');
 				}
 			}
 
@@ -59,16 +59,16 @@
 		if (item.classList.contains('category-50')) {
 
 				if (item.classList.contains('button_ozon')) {
-					item.setAttribute('href', 'https://kurl.ru/CHPsz');
+					item.setAttribute('href', 'https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-50-gr-742609538/?asb=GKfSOeK9sJhydDl89uBkGW1jHUSvKdvJcqZvftlSikk%253D&asb2=uXVMUckDGLrd6R0EFCy5Y9P0rqeveu0qLd_q-5yGE41jr5mVcWyuypgEaC0p56Ld&avtc=1&avte=2&avts=1692026998&from_sku=1082907013&from_url=https%253A%252F%252Fwww.ozon.ru%252Fcategory%252Fkremy-lechebnye-31016%252Ftseloform-87297068%252F%253Fcategory_was_predicted%253Dtrue%2526deny_category_prediction%253Dtrue%2526from_global%253Dtrue%2526text%253D%2525D1%252586%2525D0%2525B5%2525D0%2525BB%2525D0%2525BE%2525D1%252584%2525D0%2525BE%2525D1%252580%2525D0%2525BC&keywords=целоформ&oos_search=false&sh=RldFU2SoxQ');
 				}
 				if (item.classList.contains('button_wildberries')) {
-					item.setAttribute('href', 'https://kurl.ru/PJwiy');
+					item.setAttribute('href', 'https://www.wildberries.ru/catalog/108659341/detail.aspx?targetUrl=EX');
 				}
 				if (item.classList.contains('button_yamarket')) {
-					item.setAttribute('href', 'https://kurl.ru/ibqqK');
+					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform/1892256177?glfilter=23674510%3A50~50_102170563090&text=ЦЕЛОФОРМ&cpa=1&cpc=xzJwp_iEA1_SsqS1eqa69zrp5l_MmpDuD--NgzOA4eFmkzf8tjSMTH68MTJi5-4u9jJUotnobARVOMA7vgV3LOFaaMTidY_SMgSemRnPn4OfcX-5mdxwr6UHVcjj4siAC6aX_i7DKpcRl5zrq-b0qD3GoOrR9hH7_6nnbVjxFt62LGFTdajfXaB6lzCfAzOTqKWWc27_Aib12r5bBcyU0s854zjij1zFR7Az7saxlclBBJHxE2IgrGL1_tMIk7igjG2GQqFwzXGwgD4CWraWSQ%2C%2C&rs=eJwzamIOYDzKyHBgni2QZGjfDWKn2wDJBLO9IJEiELmgHiTr0AoSPxAGEknQA5PXQCILLPcASYVykJoFc0DkA0EQeWAtWE0ySI0CN4h9QAvEZrgCUn9glTVIJRfYliMg9QouIHGGDWC9x0CyDHIgWYepIFct4LODm7wgez_I5BlgV70ByTpMAZnsADFfGCTeMAHsthiw-gIweQGsZj_IloQHILJhKdjX8WBdYD8yhIBsbHADu0cHbHs1mLwMVjMN7DsWsBpFsBoZsNtSQCIPJoNNlgKHXoIVyBf1IHGFIrDtS8G6usC-8wK7_Dc4HIqsAZlPhhU%2C&sku=102170563090&do-waremd5=OhP9U7_6Eduj5-GzcSdUfg&nid=16739319');
 				}
 				if (item.classList.contains('button_ali')) {
-					item.setAttribute('href', 'https://kurl.ru/UOgak');
+					item.setAttribute('href', 'https://aliexpress.ru/item/1005005907243229.html?sku_id=12000034797302962&spm=a2g2w.stores.seller_list.0.157824d5WL4oHb');
 				}
 			}
 

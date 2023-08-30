@@ -154,7 +154,6 @@
 		@extend %mont-400;
 		// font-size: rem(14);
 		@include adaptiveValue("font-size", 14, 12, 1240, 1000, 1);
-
 		.menu-open & {
 			display: none;	
 		}

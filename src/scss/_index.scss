@@ -1032,7 +1032,7 @@
   // .application__container
   &__container {
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -1081,7 +1081,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
     row-gap: 25px;
-    padding-bottom: 25px;
+    // padding-bottom: 25px;
     @media (max-width:$tablet){
       grid-template-columns: repeat(2, 1fr);
       column-gap: 15px;
