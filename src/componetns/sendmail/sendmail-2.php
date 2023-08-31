@@ -13,9 +13,9 @@
 	//От кого письмо
 	$mail->setFrom('info@celoform.com', 'Сообщение с сайта celoform.com'); // Указать нужный E-mail
 	//Кому отправить
-	$mail->addAddress('fl.rudik@mail.ru'); // Указать нужный E-mail
+	$mail->addAddress('fl.rudik@inbox.ru'); // Указать нужный E-mail
 	//Тема письма
-	$mail->Subject = 'КОНСУЛЬТАЦИЯ ОТ ВРАЧА';
+	$mail->Subject = 'Вопрос по свойствам и применению';
 
 	//Тело письма
 	$body = '<h1>Вопрос:</h1>';
