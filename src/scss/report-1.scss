@@ -7,6 +7,7 @@
   }
   // .report__actions-back
   &__actions-back {
+    margin-bottom: rem(30);
   }
   // .report__back-btn
   &__back-btn {
@@ -16,6 +17,8 @@
   }
   // .report__title-box
   &__title-box {
+    display: grid;
+    row-gap: 8px;
   }
   // .report__title
   &__title {
@@ -25,6 +28,7 @@
   }
   // .report__inner
   &__inner {
+    padding-top: 20px;
     padding-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
