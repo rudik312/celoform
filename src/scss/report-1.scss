@@ -7,6 +7,7 @@
     @media (max-width:$mobile){
       padding-top: 120px;
     }
+
   }
   // .report__actions-back
   &__actions-back {
@@ -27,7 +28,10 @@
   // .report__title-box
   &__title-box {
     display: grid;
-    row-gap: 8px;
+    row-gap: 10px;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("row-gap", 20, 10, 480, 420, 1);
+    }    
   }
   // .report__title
   &__title {
