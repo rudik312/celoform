@@ -25,13 +25,16 @@
   &__container {
     padding-bottom: 46px;
     @media (max-width:$tablet){
-      padding-bottom: 25px;
+      padding-bottom: 40px;
     }
     @media (max-width:$mobile){
       @include adaptiveValue("padding-top", 82, 50, 767, 480, 1);
     }
     @media (max-width:$mobileSmall){
       @include adaptiveValue("padding-top", 50, 70, 480, 420, 1); 
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 25px;
     }
   }
   // .bedsore-main__inner
@@ -52,47 +55,52 @@
     flex-direction: column;
     row-gap: 50px;
     padding-top: 256px;
+    @media (max-width:$tablet){
+      row-gap: 30px;
+    }
     @media (max-width:$mobile){
       padding: 0;
     }
-    @media (max-width: em(420)){
-      row-gap: 24px;
-    }
+    // @media (max-width: em(420)){
+    //   row-gap: 24px;
+    // }
   }
   // .bedsore-main__title-box
   &__title-box {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    @media (max-width:$mobile){
+      row-gap: 5px;
+    }
   }
   // .bedsore-main__title
   &__title {
     @extend %mont-700;
-    // font-size: rem(40) !important;
     line-height: normal;
     color: $accent;
-    @include adaptiveValue("font-size", 40, 30, 1000, 868, 1);
+    @include adaptiveValue("font-size", 40, 32, 1240, 1000, 1);
     @media (max-width:$mobile){
       font-size: rem(48);
-      @include adaptiveValue("font-size", 48, 40);
+      line-height: normal;
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 48, 24, 480, 420, 1);
     }
   }
 
   // .bedsore-main__subtitle
   &__subtitle {
-    // font-size: rem(16);
+    font-size: rem(24);
     @extend %mont-600;
-    @include adaptiveValue("font-size", 24, 13.8, 1000, 868, 1);
     line-height: normal;
+    @include adaptiveValue("font-size", 24, 18, 1240, 1000, 1);
     @media (max-width:$mobile){
-      @include adaptiveValue("font-size", 13.8, 16, 868, 767, 1);
+      font-size: rem(20);
+      line-height: normal;
     }
-    @media (max-width: em(767)){
-      @include adaptiveValue("font-size", 16, 14.4, 767, 480, 1);
-    } 
     @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 14.4, 14, 480, 420, 1);
-      max-width: 210px;
+      @include adaptiveValue("font-size", 20, 14, 480, 420, 1);
     }
   }
 
@@ -112,7 +120,7 @@
   }
   // .bedsore-main__button
   &__button {
-    border-radius: 16px;
+    // border-radius: 16px;
     @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
 		@include adaptiveValue("padding-left", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
@@ -133,7 +141,9 @@
     @media (max-width: em(390)){
       width: 100%;
     }
-
+    @media (max-width:$mobileSmall){
+      border-radius: 10px;
+    }
   }
   // .bedsore-main__link-consultation
   &__link-consultation {
@@ -155,6 +165,9 @@
     @extend %mont-500;
     font-size: rem(12);
     line-height: math.div(17 , 12);
+    @media (max-width:$mobile){
+      padding: 0;
+    }
   }
 // .bedsore-mai__card
   &__card-link {
@@ -194,45 +207,111 @@
 
 // .inovation
 //========================================================================================================================================================
-
 .inovation {
   background-color: $bg;
   // .inovation__container
   &__container {
     padding-top: 40px;
+    padding-bottom: 75px;
+    @media (max-width:$mobile){
+      padding-bottom: 40px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-bottom: 40px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
   // .inovation__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 60px;
+    // column-gap: 107px;
+    @include adaptiveValue("column-gap", 107, 40, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column-reverse;
+      row-gap: 20px;
+    }
   }
   // .inovation__item
   &__item {
 
   }
-
+  // .inovation__item-img
+  &__item-img {
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width:$mobile){
+        width: 367px;
+        height: 347px;
+        margin-left: 15%;
+      }
+      @media (max-width: em(620)){
+        margin-left: 10%;
+      }
+      @media (max-width: em(520)){
+        margin-left: 2%;
+      }
+      @media (max-width:$mobileSmall){
+        margin: 0;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    @media (max-width:$mobileSmall){
+      display: flex;
+      justify-content: flex-start;
+      padding-right: 34px;
+    }
+  }
+  // .inovation__item-box
   &__item-box {
     padding-top: 40px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    @media (max-width:$tablet){
+      padding-top: 0;
+    }
   }
   // .inovation__item-title
   &__item-title {
     font-size: rem(30);
+    line-height: math.div(42 , 30);
+    @media (max-width:$tablet){
+      @include adaptiveValue("font-size", 30, 26, 1000, 768, 1);
+      text-align: left;
+    }
+    @media (max-width:$mobile){
+      text-align: center;
+      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
+    }
   }
   // .inovation__list
   &__list {
     display: grid;
     row-gap: 16px;
-    padding-left: 20px;
+    padding-left: 25px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: normal;
   }
   // .inovation__list-item
   &__list-item {
   }
 }
-.title {
-}
-.item-dots {
-}
+//========================================================================================================================================================
+
+
+//========================================================================================================================================================
+
+
+

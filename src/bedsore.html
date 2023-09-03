@@ -6,7 +6,7 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<bedsore-main class="page">
+			<main class="page">
 				<!-- start bedsore-main -->
 				<section class="bedsore-main" style="background-image: url(../img/bedsore/bedsore-main-bg.png);">
 					<div class="bedsore-main__container">
@@ -37,7 +37,9 @@
 					<div class="inovation__container">
 						<div class="inovation__inner">
 							<div class="inovation__item">
-								<img src="@img/property/property-bg.png" alt="celoform">
+								<div class="inovation__item-img">
+									<img src="@img/bedsore/inovation/celoform.png" alt="celoform">
+								</div>
 							</div>
 							<div class="inovation__item">
 								<div class="inovation__item-box">
@@ -57,8 +59,9 @@
 					</div>
 				</section>
 			<!-- end inovation -->
-			</bedsore-main>
-			<!-- @@include('html/_footer.htm',{}) -->
+
+			</main>
+			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_js.htm',{})
 	</body>
