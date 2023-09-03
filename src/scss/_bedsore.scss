@@ -1,0 +1,195 @@
+
+
+//========================================================================================================================================================
+.bedsore-main {
+  max-width: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: $bg;
+
+  // .bedsore-main__container
+  @media (max-width:$tablet){
+    background-position: 90% 0;
+  }
+  @media (max-width:$mobile){
+    background-position: 70% 92%;
+  }
+  @media (max-width:$mobileSmall){
+    background-position: 73% 0;
+
+  }
+  @media (max-width: em(380)){
+    background-position: 73% 23%;
+    background-size: 300%;
+  }
+  &__container {
+    padding-bottom: 40px;
+    @media (max-width:$tablet){
+      padding-bottom: 25px;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("padding-top", 82, 50, 767, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("padding-top", 50, 70, 480, 420, 1); 
+    }
+  }
+  // .bedsore-main__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  // .bedsore-main__content
+  &__content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding-top: 256px;
+    @media (max-width:$mobile){
+      padding: 0;
+    }
+    @media (max-width: em(420)){
+      row-gap: 24px;
+    }
+  }
+  // .bedsore-main__title-box
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .bedsore-main__title
+  &__title {
+    @extend %mont-700;
+    // font-size: rem(40) !important;
+    line-height: normal;
+    color: $accent;
+    @include adaptiveValue("font-size", 40, 32, 1000, 868, 1);
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 32, 22, 868, 767, 1);
+    }
+    // @media (max-width: em(767)){
+    //   @include adaptiveValue("font-size", 72, 64, 767, 480, 1);
+    // }
+    // @media (max-width:$mobileSmall){
+    //   @include adaptiveValue("font-size", 64, 32, 480, 420, 1);
+    // }
+  }
+
+  // .bedsore-main__subtitle
+  &__subtitle {
+    // font-size: rem(16);
+    @extend %mont-600;
+    @include adaptiveValue("font-size", 24, 13.8, 1000, 868, 1);
+    line-height: normal;
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 13.8, 16, 868, 767, 1);
+    }
+    @media (max-width: em(767)){
+      @include adaptiveValue("font-size", 16, 14.4, 767, 480, 1);
+    } 
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 14.4, 14, 480, 420, 1);
+      max-width: 210px;
+    }
+  }
+
+  // .bedsore-main__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    @media (max-width:$mobile){
+      column-gap: 78px;
+      @include adaptiveValue("column-gap", 78, 41, 768, 480, 1);
+    }
+    @media (max-width: em(460)){
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .bedsore-main__button
+  &__button {
+    border-radius: 16px;
+    @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
+		@include adaptiveValue("padding-left", 80, 60, 1240, 1000, 1);
+		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
+		@include adaptiveValue("padding-top", 12, 10, 1240, 1000, 1);
+		@include adaptiveValue("padding-bottom", 12, 10, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      // padding: 12px 122px;
+      @include adaptiveValue("padding-left", 122, 82, 768, 480, 1);
+      @include adaptiveValue("padding-right", 122, 82, 768, 480, 1);
+      @include adaptiveValue("padding-top", 12, 8, 768, 480, 1);
+      @include adaptiveValue("padding-bottom", 12, 8, 768, 480, 1);
+      width: 50%;
+    }
+    @media (max-width: em(460)){
+      padding-left: 118px;
+      padding-right: 118px;
+    }
+    @media (max-width: em(390)){
+      width: 100%;
+    }
+
+  }
+  // .bedsore-main__link-consultation
+  &__link-consultation {
+    @extend %mont-400;
+    font-size: rem(14);
+    transition: all 0.3s;
+    text-decoration: underline !important;
+    white-space: nowrap;
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 14, 13, 768, 480, 1);
+    }
+  }
+  // .bedsore-mai__card
+  &__card {
+    padding-top: 30px;
+    // flex-grow: 1;
+    @extend %mont-500;
+    font-size: rem(12);
+    line-height: math.div(17 , 12);
+  }
+// .bedsore-mai__card
+  &__card-link {
+    text-decoration: underline !important;
+    color: $accent;
+  }
+
+
+  // .bedsore-main__bg
+  &__bg {
+    // padding-top: 154px;
+    @include adaptiveValue("padding-top", 154, 170, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      @media (max-width:$mobile){
+        width: 546px;
+        height: 482px;
+        @include adaptiveValue("width", 546, 434, 767, 480, 1);
+        @include adaptiveValue("height", 482, 379, 767, 480, 1);
+      }
+      @media (max-width:$mobileSmall){
+        @include adaptiveValue("width", 434, 279, 480, 380, 1);
+        @include adaptiveValue("height", 379, 244, 480, 380, 1);
+      }
+    }
+  }
+
+}

@@ -67,7 +67,7 @@
   // .main__title
   &__title {
     @extend %mont-700;
-    font-size: rem(72);
+    // font-size: rem(72);
     color: $accent;
     @include adaptiveValue("font-size", 72, 62, 1000, 868, 1);
     @media (max-width:$mobile){
@@ -83,7 +83,7 @@
 
   // .main__subtitle
   &__subtitle {
-    font-size: rem(16);
+    // font-size: rem(16);
     @extend %mont-600;
     @include adaptiveValue("font-size", 16, 13.8, 1000, 868, 1);
     @media (max-width:$mobile){
@@ -157,7 +157,7 @@
     }
 
   }
-  // .main__link-reviews
+  // .main__link-consultation
   &__link-consultation {
     @extend %mont-400;
     font-size: rem(14);
@@ -170,7 +170,7 @@
   }
   // .main__bg
   &__bg {
-    padding-top: 148px;
+    // padding-top: 148px;
     @include adaptiveValue("padding-top", 90, 170, 1240, 1000, 1);
     @media (max-width:$mobile){
       padding: 0;

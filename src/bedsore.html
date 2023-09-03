@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Главная"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<bedsore-main class="page">
+				<!-- start bedsore-main -->
+				<section class="bedsore-main" style="background-image: url(../img/bedsore/bedsore-main-bg.png);">
+					<div class="bedsore-main__container">
+						<div class="bedsore-main__inner">
+							<div class="bedsore-main__content">
+								<div class="bedsore-main__title-box">
+									<h1 class="bedsore-main__title">Вылечите опрелости и безнадёжные пролежни без побочных эффектов</h1>
+									<span class="bedsore-main__subtitle">сэкономьте до 50 % средств с помощью порошка "Целоформ"*!</span>
+								</div>
+								<div class="bedsore-main__actions">
+									<a class="bedsore-main__button btn" data-goto-header data-goto=".buy" href="#">Купить</a>
+									<a class="bedsore-main__link-consultation" data-goto-header data-goto=".expert" href="#">Получить консультацию</a>
+								</div>
+								<div class="bedsore-main__card">
+									<p><a class ="bedsore-main__card-link" href="#">*Регистрационное удостоверение (РУ)</a> на медицинское изделие от 31 декабря 2020 года № ФСР 2011/11276 (срок действия: бессрочно)
+									</p>
+								</div>
+							</div>
+							<div class="bedsore-main__bg">
+								<img src="@img/main/celoform.png" alt="celoform">
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end bedsore-main -->
+				
+			</bedsore-main>
+			<!-- @@include('html/_footer.htm',{}) -->
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
+
