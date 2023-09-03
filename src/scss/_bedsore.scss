@@ -377,8 +377,50 @@
   }
 }
 
-
+//.inflammation
 //========================================================================================================================================================
+.inflammation {
+  // .inflammation__container
+  &__container {
+  }
+  // .inflammation__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+  // .inflammation__item
+  &__item {
+  }
+  // .inflammation__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    
+  }
+  // .inflammation__unit
+  &__unit {
+  }
+  // .inflammation__item-title
+  &__item-title {
+  }
+  // .inflammation__item-content
+  &__item-content {
+  }
+  // .inflammation__item-wrap
+  &__item-wrap {
+  }
+  // .inflammation__item-text
+  &__item-text {
+  }
+  // .inflammation__list
+  &__list {
+  }
+  // .inflammation__list-item
+  &__list-item {
+  }
+}
 
 
 
