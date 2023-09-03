@@ -1,5 +1,5 @@
 
-
+//.bedsore-main
 //========================================================================================================================================================
 .bedsore-main {
   max-width: 100%;
@@ -23,7 +23,7 @@
     background-size: 300%;
   }
   &__container {
-    padding-bottom: 40px;
+    padding-bottom: 46px;
     @media (max-width:$tablet){
       padding-bottom: 25px;
     }
@@ -71,16 +71,11 @@
     // font-size: rem(40) !important;
     line-height: normal;
     color: $accent;
-    @include adaptiveValue("font-size", 40, 32, 1000, 868, 1);
+    @include adaptiveValue("font-size", 40, 30, 1000, 868, 1);
     @media (max-width:$mobile){
-      @include adaptiveValue("font-size", 32, 22, 868, 767, 1);
+      font-size: rem(48);
+      @include adaptiveValue("font-size", 48, 40);
     }
-    // @media (max-width: em(767)){
-    //   @include adaptiveValue("font-size", 72, 64, 767, 480, 1);
-    // }
-    // @media (max-width:$mobileSmall){
-    //   @include adaptiveValue("font-size", 64, 32, 480, 420, 1);
-    // }
   }
 
   // .bedsore-main__subtitle
@@ -151,6 +146,8 @@
       @include adaptiveValue("font-size", 14, 13, 768, 480, 1);
     }
   }
+
+
   // .bedsore-mai__card
   &__card {
     padding-top: 30px;
@@ -192,4 +189,50 @@
     }
   }
 
+}
+//========================================================================================================================================================
+
+// .inovation
+//========================================================================================================================================================
+
+.inovation {
+  background-color: $bg;
+  // .inovation__container
+  &__container {
+    padding-top: 40px;
+  }
+  // .inovation__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+  }
+  // .inovation__item
+  &__item {
+
+  }
+
+  &__item-box {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .inovation__item-title
+  &__item-title {
+    font-size: rem(30);
+  }
+  // .inovation__list
+  &__list {
+    display: grid;
+    row-gap: 16px;
+    padding-left: 20px;
+  }
+  // .inovation__list-item
+  &__list-item {
+  }
+}
+.title {
+}
+.item-dots {
 }
