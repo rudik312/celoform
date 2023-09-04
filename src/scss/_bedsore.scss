@@ -388,6 +388,13 @@
     @media (max-width:$tablet){
       padding-top: 40px;
     }
+    @media (max-width:$mobile){
+      padding-bottom: 40px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
   // .inflammation__inner
   &__inner {
@@ -404,11 +411,14 @@
   &__item {
     display: flex;
     flex-direction: column;
-    row-gap: 28px;
     &:first-child{
       justify-content: center;
       @media (max-width:$tablet){
         flex-direction: column-reverse;
+        row-gap: 30px;
+      }
+      @media (max-width:$mobileSmall){
+        row-gap: 10px;
       }
     }
   }
@@ -420,9 +430,14 @@
     row-gap: 60px;
     @media (max-width:$tablet){
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 50px;
+      @include adaptiveValue("column-gap", 50, 20, 767, 670, 1);
       row-gap: 30px;
     }
+    @media (max-width: em(670)){
+      grid-template-columns: repeat(2, 1fr);
+      @include adaptiveValue("column-gap", 50, 40, 670, 480, 1);
+    }
+
   }
   // .inflammation__unit
   &__unit {
@@ -431,18 +446,32 @@
     align-items: center;
     justify-content: center;
     row-gap: 10px;
+    @media (max-width: em(420)){
+      max-width: 100%;
+    }
     img {
-      
+      @media (max-width: em(420)){
+        height: auto;
+        width: 70%;
+        object-fit: cover;
+      }
     }
     p {
       @extend %mont-600;
       font-size: rem(16);
       line-height: math.div(26 , 16);
+      @include adaptiveValue("font-size", 16, 10, 480, 420, 1);
     }
   }
   // .inflammation__item-title
   &__item-title {
     font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
+    }
 
   }
   // .inflammation__item-content
@@ -453,6 +482,12 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
   }
   // .inflammation__item-wrap
   &__item-wrap {
@@ -460,6 +495,9 @@
     row-gap: 17px;
     span {
       @extend %mont-600;
+    }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
     }
   }
   // .inflammation__item-text
@@ -489,6 +527,11 @@
 		}
   }
 }
+//========================================================================================================================================================
+
+
+//========================================================================================================================================================
+
 
 
 
