@@ -948,8 +948,83 @@
     padding-top: 50px;
   }
 }
-
 //========================================================================================================================================================
 
+//.bedsore-application
+.bedsore-application {
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  @media (max-width:$tablet){
+    background-position: 90% 270px;
+    background-size: 290%;
+  }
+  // .bedsore-application__container
+  &__container {
+
+  }
+  // .bedsore-application__title
+  &__title {
+    text-align: left;
+    @media (max-width:$tablet){
+      text-align: center;
+    }
+  }
+  // .bedsore-application__inner
+  &__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 100, 60, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+  // .bedsore-application__item
+  &__item {
+    &:first-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    
+    }
+  }
+  // .bedsore-application__content
+  &__content {
+    max-width: 473px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+  }
+  // .bedsore-application__img
+  &__img {
+    @media (max-width:$tablet){
+      display: grid;
+      justify-content: center;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width:$tablet){
+        max-width: 659px;
+        height: auto;
+      }
+    }
+  }
+}
+.title {
+}
 
 
