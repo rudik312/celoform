@@ -699,7 +699,7 @@
 }
 
 
-//.bedsore
+//.bedsore-expert
 //========================================================================================================================================================
 
 .bedsore-expert__text {
@@ -716,14 +716,14 @@
   background-color: $bg;
   // .efficiency-product__container
   &__container {
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     @media (max-width:$tablet){
-      padding-top: 25px;
-      padding-bottom: 66px;       
+      padding-top: 80px;
+      padding-bottom: 55px;       
     }
     @media (max-width:$mobile){
-      padding-top: 25px;
+      padding-top: 50px;
       padding-bottom: 50px;
     }
   }
@@ -827,6 +827,128 @@
     }
   }
 }
+//========================================================================================================================================================
+
+// .reports
+//========================================================================================================================================================
+.bedsore-reports__container {
+  padding-bottom: 100px;
+  @media (max-width:$tablet){
+    padding-bottom: 80px;
+  }
+  @media (max-width:$mobile){
+    padding-bottom: 50px; 
+  }
+}
+//========================================================================================================================================================
+
+
+//.multiplication
+//========================================================================================================================================================
+.multiplication {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  @media (max-width:$tablet){
+    background-position: center -90px;
+  }
+  // .multiplication__container
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$tablet){
+      padding-bottom: 40px;
+    }
+  }
+  // .multiplication__title
+  &__title {
+  }
+  // .multiplication__inner
+  &__inner {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
+    @media (max-width: em(1180)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(690)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .multiplication__items
+  &__items {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 15px;
+    // display: flex;
+    // flex-direction: column;
+
+  }
+  // .multiplication__item
+  &__item {
+    display: grid;
+    justify-self: center;
+    row-gap: 10px;
+    padding: 30px;
+    border-radius: 24px;
+    background-color: #fff;
+    @media (max-width:$tablet){
+      padding: 15px;
+    }
+  }
+  // .multiplication__item-title
+  &__item-title {
+    text-transform: uppercase;
+    @extend %mont-700;
+    font-size: rem(16);
+    line-height: math.div(19 , 16);
+
+  }
+  // .multiplication__item-text
+  &__item-text {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+
+  }
+  // .multiplication__image
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    img {
+      display: inline-flex;
+      width: 385px;
+      height: 397px;
+    }
+    @media (max-width: em(1180)){
+      display: none;
+    }
+  }
+}
+//========================================================================================================================================================
+
+//.buy
+//========================================================================================================================================================
+.bedsore-buy__container {
+  padding-top: 100px;
+  padding-bottom: 75px;
+  @media (max-width:$tablet){
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  @media (max-width:$mobileSmall){
+    padding-bottom: 50px;
+  }
+  @media (max-width: em(420)){
+    padding-top: 50px;
+  }
+}
+
 //========================================================================================================================================================
 
 
