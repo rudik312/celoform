@@ -958,7 +958,10 @@
   background-color: $bg;
   @media (max-width:$tablet){
     background-position: 90% 270px;
-    background-size: 290%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }
   // .bedsore-application__container
   &__container {
@@ -1024,7 +1027,151 @@
     }
   }
 }
-.title {
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+.bedsore-reviews {
+  background-color: $bg;
+  // .bedsore-reviews__container
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @media (max-width:$tablet){
+      padding-top: 80px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 70px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 50px;
+    }
+  }
+  // .bedsore-reviews__heading
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width:$tablet){
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
+    }
+  }
+  // .bedsore-reviews__title
+  &__title {
+  }
+  // .bedsore-reviews__action
+  &__action {
+  }
+  // .bedsore-reviews__button
+  &__button {
+  }
+  // .bedsore-reviews__inner
+  &__inner {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+    column-gap: 24px;
+    @media (max-width:$tablet){
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // .bedsore-reviews__item
+  &__item {
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: $white;
+  }
+  // .bedsore-reviews__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:$mobileSmall){
+    }
+    @media (max-width: em(530)){
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  // .bedsore-reviews__user-info
+  &__user-info {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .bedsore-reviews__user-name
+  &__user-name {
+    @extend %mont-600;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .bedsore-reviews__user-rating
+  &__user-rating {
+    display: flex;
+    column-gap: 2px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  // .bedsore-reviews__market
+  &__market {
+  }
+  // .bedsore-reviews__market-link
+  &__market-link {
+    padding: 5px 10px 5px 5px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 12px;
+    background: #F5F6FD;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    p {
+      @extend %mont-500;
+      font-size: rem(14);
+      line-height: math.div(23 , 14);
+    }
+    @media (max-width: em(530)){
+      display: inline-flex;
+    }
+  }
+  // .bedsore-reviews__bottom
+  &__bottom {
+  }
+
+  // .bedsore-reviews__text
+  &__text {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14);
+    }
+  }
+  //bedsore-reviews__wrapper
+  &__wrapper {
+    padding-top: 20px;
+    @media (max-width:$tablet){
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
+
+
 
 
