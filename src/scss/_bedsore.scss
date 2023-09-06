@@ -890,8 +890,8 @@
   }
   // .multiplication__item
   &__item {
-    display: grid;
-    justify-self: center;
+    display: flex;
+    flex-direction: column;
     row-gap: 10px;
     padding: 30px;
     border-radius: 24px;
