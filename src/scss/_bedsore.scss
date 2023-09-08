@@ -40,7 +40,8 @@
   // .bedsore-main__inner
   &__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1.3fr;
     column-gap: 30px;
     @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
     @media (max-width:$mobile){
@@ -179,25 +180,35 @@
   // .bedsore-main__bg
   &__bg {
     // padding-top: 154px;
-    @include adaptiveValue("padding-top", 154, 170, 1240, 1000, 1);
+    @include adaptiveValue("padding-top", 177, 170, 1240, 1000, 1);
     @media (max-width:$mobile){
       padding: 0;
+      padding-right: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     img {
       height: auto;
-      width: 100%;
+      max-width: 100%;
       @media (max-width:$mobile){
-        width: 546px;
-        height: 482px;
-        @include adaptiveValue("width", 546, 434, 767, 480, 1);
-        @include adaptiveValue("height", 482, 379, 767, 480, 1);
+        padding-top: 77px;
+        padding-right: 30px;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        // width: 546px;
+        // height: 482px;
+        // @include adaptiveValue("width", 546, 434, 767, 480, 1);
+        // @include adaptiveValue("height", 482, 379, 767, 480, 1);
       }
       @media (max-width:$mobileSmall){
-        @include adaptiveValue("width", 434, 279, 480, 380, 1);
-        @include adaptiveValue("height", 379, 244, 480, 380, 1);
+        padding-top: 47px;
+        // @include adaptiveValue("width", 434, 279, 480, 380, 1);
+        // @include adaptiveValue("height", 379, 244, 480, 380, 1);
+      }
+      @media (max-width: em(420)){
+        padding-top: 40px;
       }
     }
   }
