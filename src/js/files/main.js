@@ -20,7 +20,7 @@
 					item.setAttribute('href', 'https://www.wildberries.ru/catalog/123404223/detail.aspx?targetUrl=EX');
 				}
 				if (item.classList.contains('button_yamarket')) {
-					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform/1892256177?nid=16739319&show-uid=16920270712486938596816001&context=search&text=ЦЕЛОФОРМ&sku=102084983345&cpc=xzJwp_iEA1_SsqS1eqa69zrp5l_MmpDuD--NgzOA4eFmkzf8tjSMTH68MTJi5-4u9jJUotnobARVOMA7vgV3LOFaaMTidY_SMgSemRnPn4OfcX-5mdxwr6UHVcjj4siAC6aX_i7DKpcRl5zrq-b0qD3GoOrR9hH7_6nnbVjxFt62LGFTdajfXaB6lzCfAzOTqKWWc27_Aib12r5bBcyU0s854zjij1zFR7Az7saxlclBBJHxE2IgrGL1_tMIk7igjG2GQqFwzXGwgD4CWraWSQ%2C%2C&do-waremd5=OhP9U7_6Eduj5-GzcSdUfg&rs=eJwzamIOYDzKyHBgni2QZGjfDWKn2wDJBLO9IJEiELmgHiTr0AoSPxAGEknQA5PXQCILLPcASYVykJoFc0DkA0EQeWAtWE0ySI0CN4h9QAvEZrgCUn9glTVIJRfYliMg9QouIHGGDWC9x0CyDHIgWYepIFct4LODm7wgez_I5BlgV70ByTpMAZnsADFfGCTeMAHsthiw-gIweQGsZj_IloQHILJhKdjX8WBdYD8yhIBsbHADu0cHbHs1mLwMVjMN7DsWsBpFsBoZsNtSQCIPJoNNlgKHXoIVyBf1IHGFIrDtS8G6usC-8wK7_Dc4HIqsAZlPhhU%2C');
+					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform-ranozazhivliaiushchii-por/1772758505?glfilter=36472990%3A36614773_101852307745&glfilter=14805583%3A1~1_101852307745&glfilter=23674510%3A5~5_101852307745&sku=101852307745&uniqueId=15661726&cpa=1');
 				}
 				if (item.classList.contains('button_sbermarket')) {
 					item.setAttribute('href', 'https://megamarket.ru/catalog/details/ranozazhivlyayushee-sredstvo-gemostatik-celoform-5-g-600012908816/#?related_search=целоформ');
@@ -41,7 +41,7 @@
 					item.setAttribute('href', 'https://www.wildberries.ru/catalog/133601677/detail.aspx?targetUrl=EX');
 				}
 				if (item.classList.contains('button_yamarket')) {
-					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform/1892256177?glfilter=23674510%3A15~15_102084184188&text=ЦЕЛОФОРМ&cpa=1&cpc=xzJwp_iEA1_SsqS1eqa69zrp5l_MmpDuD--NgzOA4eFmkzf8tjSMTH68MTJi5-4u9jJUotnobARVOMA7vgV3LOFaaMTidY_SMgSemRnPn4OfcX-5mdxwr6UHVcjj4siAC6aX_i7DKpcRl5zrq-b0qD3GoOrR9hH7_6nnbVjxFt62LGFTdajfXaB6lzCfAzOTqKWWc27_Aib12r5bBcyU0s854zjij1zFR7Az7saxlclBBJHxE2IgrGL1_tMIk7igjG2GQqFwzXGwgD4CWraWSQ%2C%2C&rs=eJwzamIOYDzKyHBgni2QZGjfDWKn2wDJBLO9IJEiELmgHiTr0AoSPxAGEknQA5PXQCILLPcASYVykJoFc0DkA0EQeWAtWE0ySI0CN4h9QAvEZrgCUn9glTVIJRfYliMg9QouIHGGDWC9x0CyDHIgWYepIFct4LODm7wgez_I5BlgV70ByTpMAZnsADFfGCTeMAHsthiw-gIweQGsZj_IloQHILJhKdjX8WBdYD8yhIBsbHADu0cHbHs1mLwMVjMN7DsWsBpFsBoZsNtSQCIPJoNNlgKHXoIVyBf1IHGFIrDtS8G6usC-8wK7_Dc4HIqsAZlPhhU%2C&sku=102084184188&do-waremd5=OhP9U7_6Eduj5-GzcSdUfg&nid=16739319');
+					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform-ranozazhivliaiushchii-por/1772758505?glfilter=36472990%3A36614776_101849448730&glfilter=14805583%3A1~1_101849448730&glfilter=23674510%3A15~15_101849448730&sku=101849448730&uniqueId=15661726&cpa=1');
 				}
 				if (item.classList.contains('button_sbermarket')) {
 					item.setAttribute('href', 'https://megamarket.ru/catalog/details/ranozazhivlyayushee-sredstvo-gemostatik-celoform-15-gr-600012908778/');
@@ -65,7 +65,7 @@
 					item.setAttribute('href', 'https://www.wildberries.ru/catalog/108659341/detail.aspx?targetUrl=EX');
 				}
 				if (item.classList.contains('button_yamarket')) {
-					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform/1892256177?glfilter=23674510%3A50~50_102170563090&text=ЦЕЛОФОРМ&cpa=1&cpc=xzJwp_iEA1_SsqS1eqa69zrp5l_MmpDuD--NgzOA4eFmkzf8tjSMTH68MTJi5-4u9jJUotnobARVOMA7vgV3LOFaaMTidY_SMgSemRnPn4OfcX-5mdxwr6UHVcjj4siAC6aX_i7DKpcRl5zrq-b0qD3GoOrR9hH7_6nnbVjxFt62LGFTdajfXaB6lzCfAzOTqKWWc27_Aib12r5bBcyU0s854zjij1zFR7Az7saxlclBBJHxE2IgrGL1_tMIk7igjG2GQqFwzXGwgD4CWraWSQ%2C%2C&rs=eJwzamIOYDzKyHBgni2QZGjfDWKn2wDJBLO9IJEiELmgHiTr0AoSPxAGEknQA5PXQCILLPcASYVykJoFc0DkA0EQeWAtWE0ySI0CN4h9QAvEZrgCUn9glTVIJRfYliMg9QouIHGGDWC9x0CyDHIgWYepIFct4LODm7wgez_I5BlgV70ByTpMAZnsADFfGCTeMAHsthiw-gIweQGsZj_IloQHILJhKdjX8WBdYD8yhIBsbHADu0cHbHs1mLwMVjMN7DsWsBpFsBoZsNtSQCIPJoNNlgKHXoIVyBf1IHGFIrDtS8G6usC-8wK7_Dc4HIqsAZlPhhU%2C&sku=102170563090&do-waremd5=OhP9U7_6Eduj5-GzcSdUfg&nid=16739319');
+					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform-ranozazhivliaiushchii-por/1772758505?glfilter=36472990%3A36472990_Other_101833337739&glfilter=14805583%3A1~1_101833337739&glfilter=23674510%3A50~50_101833337739&sku=101833337739&uniqueId=15661726&cpa=1');
 				}
 				if (item.classList.contains('button_ali')) {
 					item.setAttribute('href', 'https://aliexpress.ru/item/1005005907243229.html?sku_id=12000034797302962&spm=a2g2w.stores.seller_list.0.157824d5WL4oHb');
