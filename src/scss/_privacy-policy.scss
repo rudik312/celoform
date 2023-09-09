@@ -10,11 +10,20 @@
     @media (max-width:$tablet){
       padding-top: 150px;
     }
-
+    @media (max-width:$mobile){
+      padding-top: 120px;
+    }
   }
   // .policy__title
   &__title {
     font-size: rem(32);
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 32, 30, 768, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 30, 20, 480, 420, 1);
+      
+    }
   }
   // .policy__content
   &__content {
