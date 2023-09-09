@@ -13,7 +13,7 @@
 	//От кого письмо
 	$mail->setFrom('info@celoform.com', 'Сообщение с сайта celoform.com'); // Указать нужный E-mail
 	//Кому отправить
-	$mail->addAddress('fl.rudik@mail.ru'); // Указать нужный E-mail
+	$mail->addAddress('doctor@celoform.com'); // Указать нужный E-mail
 	//Тема письма
 	$mail->Subject = 'КОНСУЛЬТАЦИЯ ОТ ВРАЧА';
 
