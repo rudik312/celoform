@@ -1,4 +1,5 @@
 .assenting {
+  background-color: $bg;
   // .assenting__container
   &__container {
     padding-top: 187px;
@@ -47,14 +48,14 @@
   &__list-item {
     position: relative;
     &::before{
-			content: "";
-			border-radius: 50%;
-			position: absolute;
-			width: 2px;
-			height: 2px;
-			background-color: #000;
-			top: 12px;
-			left: -17px;
-		}
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #000;
+      top: 12px;
+      left: -17px;
+    }
   }
 }
