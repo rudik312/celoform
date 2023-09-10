@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Контакты"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="parners">
+					<div class="parners__container">
+						<div class="parners__inner">
+							<div class="parners__title title">
+								<h3>Целоформ – для партнеров</h3>
+							</div>
+							<div class="parners__content">
+								<div class="parners__content-text">
+									<p>ИП Ахмерова Д.Ф. — ведущий производитель в России уникального гипоаллергенного порошка для заживления ран. Наш продукт широко применяется как в гражданской сфере (хирургия, стоматология, педиатрия, оториноларингология, акушерство и гинекология, аллергология, дерматовенерология), так и в военной медицине, медицине катастроф и экстремальных ситуациях.
+									</p>
+									<p>Мы приглашаем вас к партнерству и сотрудничеству в продвижении нашей продукции в различных регионах России и за её пределами. Мы уверены, что сотрудничество с нами станет выгодным шагом для вашего бизнеса.
+									</p>
+									<div class="parners__info">
+										<span>Взаимовыгодное сотрудничество с партнерами мы строим на следующих принципах:</span>
+										<ul class="parners__list">
+											<li class="parners__list-item">Надежные поставки продукции высокого качества.</li>
+											<li class="parners__list-item">Соблюдение всех международных стандартов в производстве и хранении товара.</li>
+											<li class="parners__list-item">Эффективная система продвижения продукции и укрепления бренда "Целоформ".</li>
+										</ul>
+									</div>
+									<div class="parners__content-text">
+										<p>Политика нашей компании — установление долгосрочных и взаимовыгодных отношений с партнерами, поэтому для наших клиентов мы разработали специальные условия, систему скидок и бонусов.
+										</p>
+										<p>Наша компания стремится установить долгосрочные и взаимовыгодные отношения с партнерами, и мы разработали специальные условия, систему скидок и бонусов для наших клиентов. Мы готовы работать с вами на пути к общему успеху и процветанию.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- start contacts -->
+				<section class="contacts partners-contacts">
+					<div class="contacts__container partners-contacts__container">
+						<div class="contacts__heading"></div>
+						<div class="contacts__items">
+							<div class="contacts__item">
+								<div class="contacts__body">
+									<div class="contacts__body-item">
+										<div class="contacts__title-box" data-da=".contacts__heading, 1000">
+											<h3 class="contacts__title title">Контакты</h3>
+											<span class="contacts__subtitle">По всем вопросам обращайтесь по электронной почте или по номеру телефона:</span>
+										</div>
+										<div class="contacts__wrapper">
+											<div class="contacts__email">
+												<div class="contacts__email-icon">
+													<img src="@img/contacts/email-icon.svg" alt="email-icon">
+												</div>
+												<a href="mailto:opt@celoform.com">opt@celoform.com</a>
+											</div>
+											<div class="contacts__phone">
+												<div class="contacts__phone-icon">
+													<img src="@img/contacts/phone-icon.svg" alt="phone-icon">
+												</div>
+												<a class="contacts__phone-link" href="tel:79372885889">+7 (937) 288-58-89</a>
+											</div>
+										</div>
+										<div class="contacts__social">
+											<div class="contacts__social-title">
+												<p>Подписывайтесь на наши соц.сети:</p>
+											</div>
+											<ul class="contacts__social-list">
+												<li class="contacts__social-link">
+													<a href="https://vk.com/apteka_ach" target="_blank" rel="noopener noreferrer">
+														<img src="@img/contacts/vk.svg" alt="vk">
+													</a>
+												</li>
+												<li class="contacts__social-link">
+													<a href="https://ok.ru/group/70000003226608" target="_blank" rel="noopener noreferrer">
+														<img src="@img/contacts/odnoklasniki.svg" alt="odnoklasniki">
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="contacts__body-item">
+										<div class="contacts__details">
+											<div class="contacts__adress">
+												<address>Российская Федерация, Республика Татарстан, г. Казань, ул. Восстания, д. 100
+												</address>
+											</div>
+											<div class="contacts__requisites">
+												<p>ИП Ахмерова Д. Ф. </p>
+												<p>ИНН 165507773343 </p>
+												<p>ОГРНИП 320169000103412</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__item">
+								<form data-ajax class="contacts__form contacts-form" id="form-contacts" method="POST" action="componetns/sendmail/sendmail-2.php">
+									<div class="contacts-form__info">
+										<h5 class="contacts-form__title">ЗАДАТЬ ВОПРОС</h5>
+										<p class="contacts-form__subtitle">
+											Задайте свой вопрос в форме и получите информацию о сотрудничестве
+										</p>
+									</div>
+									<div class="contacts-form__items">
+										<div class="contacts-form__item">
+											<label class="contacts-form__label" for="name">
+												Ваше имя
+												<input class="contacts-form__input" id="name" type="text" name="name" data-required  placeholder="Введите имя">
+											</label>
+										</div>
+										<div class="contacts-form__item">
+											<label class="contacts-form__label" for="email">
+												E-mail
+												<input class="contacts-form__input" id="email" type="text" name="email" data-required placeholder="Введите E-mail">
+											</label>
+										</div>
+									</div>
+									<div class="contacts-form__item">
+										<label class="contacts-form__label" for="message">
+											Ваш вопрос
+											<textarea class="contacts-form__message" id="message" data-required name="message" placeholder="Введите вопрос" data-placeholder="Введите вопрос"></textarea>
+										</label>
+									</div>
+									<div class="contacts-form__checkbox checkbox">
+										<input class="checkbox__input" id="c_2" data-required  type="checkbox" value="1" name="agreement">
+										<label class="checkbox__label" for="c_2">
+											<span class="contacts-form__text">Я не робот</span>
+										</label>
+									</div>
+									<div class="contacts-form__button-box">
+										<button class="contacts-form__button btn" type="submit">Получить консультацию врача</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end contacts -->
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
