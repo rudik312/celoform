@@ -230,12 +230,12 @@
 
 .menu {
 
-	&__mobile {
-		display: none;
-		@media (max-width:$mobile){
-			display: block;
-		}
-	}
+	// &__mobile {
+		// display: none;
+		// @media (max-width:$mobile){
+			// display: block;
+		// }
+	// }
 
 	// .menu__body
 	&__body {
