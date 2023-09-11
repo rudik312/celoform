@@ -117,8 +117,8 @@
 			display: none;
 		}
 	}
-
-	&__site-link {
+	//header__site-text
+	&__site-text {
 		@extend %mont-500;
 		// font-size: rem(12);
 		line-height: normal;
@@ -127,12 +127,12 @@
 		@media (max-width:$tablet){
 			display: none;
 		}
-		@media (any-hover: hover){
-			transition: text-shadow 0.2s;
-			&:hover{
-				text-shadow: 0 0 .20px #0033D9, 0 0 .20px #0033D9;
-			}
-		}
+		// @media (any-hover: hover){
+		// 	transition: text-shadow 0.2s;
+		// 	&:hover{
+		// 		text-shadow: 0 0 .20px #0033D9, 0 0 .20px #0033D9;
+		// 	}
+		// }
 
 	}
 
@@ -323,10 +323,11 @@
 	&__icon {
 	}
 }
-
+//menu-mobile
 .menu-mobile {
 	display: none;
-	&__link {
+	//menu-mobile__link
+	&__text {
 		@extend %mont-500;
 		// font-size: rem(14);
 		color: #fff;

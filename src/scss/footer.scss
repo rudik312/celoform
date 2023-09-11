@@ -153,16 +153,16 @@
     }
   }
   // .footer__site-link
-  &__site-link {
+  &__site-text {
     @extend %mont-500;
     font-size: rem(14);
     max-width: 225px;
-    @media (any-hover: hover){
-      transition: all 0.3s ease 0s;
-      &:hover{
-        text-shadow: 0 0 .90px #fff, 0 0 .90px #fff;
-      }
-    }
+    // @media (any-hover: hover){
+    //   transition: all 0.3s ease 0s;
+    //   &:hover{
+    //     text-shadow: 0 0 .90px #fff, 0 0 .90px #fff;
+    //   }
+    // }
     @media (max-width:$mobile){
       @include adaptiveValue("font-size", 14, 12, 520, 480, 1);
     }
