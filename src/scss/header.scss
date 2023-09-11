@@ -339,6 +339,8 @@
 		}
 	}
 }
+
+
 .icon-menu {
 }
 
@@ -359,9 +361,6 @@
 		cursor: pointer;
 		z-index: 5;
 		right: 16px;
-		@media (max-width:$mobile){
-			
-		}
 		@media (max-width: em(390)){
 			top: -1px;
 			right: 5px;

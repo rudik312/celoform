@@ -5,6 +5,7 @@ import { flsModules } from "./modules.js";
 
 import {} from "./main.js";
 
+window.onload = function() {
 
 //Работаем с табами
 const tabs = document.querySelectorAll(".tabheader__item"),
@@ -28,8 +29,8 @@ prices.forEach((item) =>  {
   item.classList.remove("show", "fade");
 });
 
-}
 
+}
 function showTabContent(i = 1) {
 tabsContent[i].classList.add("show", "fades");
 tabsContent[i].classList.remove("hide");
@@ -44,6 +45,7 @@ prices[i].classList.remove("hide");
 hideTabContent();
 showTabContent();
 showTabPrice();
+
 
 tabsParent.addEventListener("click", function(event) {
 const target = event.target;
@@ -74,3 +76,4 @@ if (target && target.classList.contains("tabheader__item")) {
     });
   });
 
+}

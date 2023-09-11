@@ -8,8 +8,19 @@
 	// все кнопки магазинов
 	const markets = document.querySelectorAll('.mix');
 
+	const setListener = (element, type, handler) => {
+		if(!element) {
+			return; 
+		}
+		element.addEventListener(type, handler);
+		return () => {
+			element.removeEventListener(type, handler);
+		};
+	}
 
-	cel5.addEventListener('click', function () {
+	
+	setListener(cel5, 'click', function () {
+		
 	markets.forEach(item => {
 		if (item.classList.contains('category-5')) {
 
@@ -30,7 +41,7 @@
 		});
 	});
 
-	cel15.addEventListener('click', function () {
+	setListener(cel15, 'click', function () {
 	markets.forEach(item => {
 		if (item.classList.contains('category-15')) {
 
@@ -54,7 +65,7 @@
 		});
 	});
 
-	cel50.addEventListener('click', function () {
+	setListener(cel50, 'click', function () {
 	markets.forEach(item => {
 		if (item.classList.contains('category-50')) {
 
