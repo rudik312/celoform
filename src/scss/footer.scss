@@ -272,7 +272,9 @@
   }
 
   &__yandex {
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+    // display: none;
   }
 }
 
