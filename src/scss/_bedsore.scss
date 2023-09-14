@@ -437,6 +437,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     column-gap: 10px;
     row-gap: 60px;
     @media (max-width:$tablet){
@@ -452,10 +453,12 @@
   }
   // .inflammation__unit
   &__unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    display: grid;
+    justify-items: center;
     row-gap: 10px;
     @media (max-width: em(420)){
       max-width: 100%;
@@ -465,18 +468,20 @@
         height: auto;
         width: 70%;
         object-fit: cover;
+        justify-self: center;
       }
     }
     p {
+      justify-self: center;
       @extend %mont-600;
       font-size: rem(16);
       line-height: math.div(26 , 16);
       @include adaptiveValue("font-size", 16, 10, 480, 420, 1);
     }
     @media (max-width: em(420)){
-      display: grid;
-      justify-items: center;
-      align-items: center;
+      // display: grid;
+      // justify-items: center;
+      // align-items: center;
     }
   }
   // .inflammation__item-title
