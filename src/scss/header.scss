@@ -329,31 +329,32 @@
 	}	
 	//.select__option
 	&__option {
+		display: grid; //----- даёт выбрать текущий язык
 		padding: 8px 0px 8px;
 		
 	}
 	//.select__content
 	&__content {
 		text-transform: uppercase;
-
+		//.select__content .select__russian
 		&.select__russian {
 			&::before{
 				top: -5px;
 			}
 		}
-
+		//.select__content .select__english
 		&.select__english {
 			&::before{
 				top: -5px;
 			}
 		}
-
+		//.select__content .select__spanish
 		&.select__spanish {
 			&::before{
 				top: -5px;
 			}
 		}
-
+		//.select__content .select__french
 		&.select__french {
 			&::before{
 				top: -5px;
@@ -388,6 +389,7 @@
 	}
 	//select__spanish
 	&__spanish {
+		display: none;
 		position: relative;
 		&::before{
 			content:'';
@@ -401,6 +403,7 @@
 	}
 	//select__french
 	&__french {
+		display: none;
 		position: relative;
 		&::before{
 			content:'';
