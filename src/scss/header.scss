@@ -300,8 +300,12 @@
 //   background-color: #e6e6e6; 
 // }
 .header__select {
-	// margin-right: 30px;
 	
+	
+}
+
+.select_form {
+
 }
 
 .select {
@@ -316,6 +320,7 @@
 		min-width: 124px;
 		display: flex;
 		justify-content: center;
+
 		@extend %mont-400;
 		font-size: rem(12);
 		line-height: 120%;
