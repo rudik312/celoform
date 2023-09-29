@@ -301,7 +301,6 @@
 // }
 .header__select {
 	
-	
 }
 
 .select_form {
@@ -317,7 +316,7 @@
 	position: relative;
 	//.select__body
 	&__body {
-		min-width: 124px;
+		// min-width: 124px;
 		display: flex;
 		justify-content: center;
 
@@ -403,6 +402,7 @@
 		}
 		.select__row {
 			padding: 0;
+			justify-content: flex-end;
 		}
 	}
 	//select__russian
@@ -465,9 +465,9 @@
 	letter-spacing: 0.5px;
 	max-width: 26px;
 	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
+	// display: -webkit-box;
+	// -webkit-line-clamp: 3;
+	// -webkit-box-orient: vertical;
 }
 
 .select__content {
@@ -477,7 +477,6 @@
 
 
 .menu {
-
 	// &__mobile {
 		// display: none;
 		// @media (max-width:$mobile){
