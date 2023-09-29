@@ -44,6 +44,11 @@ $btnColor: #0033D9;
   font-weight: 700;
 }
 
+%inter-400 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
 .btn {
   display: flex;
   align-items: center;

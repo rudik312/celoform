@@ -186,12 +186,6 @@ if (target && target.classList.contains("tabheader__item")) {
 
     // cuter();
     //========================================================================================================================================================
-    // let size = 3,
-    // newsContent = $('.select__content > span .select__text'),
-    // newsText = newsContent.text();
 
-    // if (newsText.length > size) {
-    //   newsContent.text(newsText.slice(0, size));
-    // }
 }
 
