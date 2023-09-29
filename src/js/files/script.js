@@ -157,16 +157,41 @@ if (target && target.classList.contains("tabheader__item")) {
     // });
     //========================================================================================================================================================
     
-    (function(){
-      var cut = document.querySelectorAll('.select__content > span .select__text');
-      for( var i = 0; i < cut.length; i++ ){
-        cut[i].innerText = cut[i].innerText.slice(0,3);
-        console.log(cut);
-      }
-    })();
+    // (function(){
+    //   var cut = document.querySelectorAll('.select__content > span .select__text');
+      
+    //   for( var i = 0; i < cut.length; i++ ){
+    //     cut[i].innerText = cut[i].innerText.slice(0, 3, i);
+    //   }
+
+    // })();
+
+  //========================================================================================================================================================
+  
+
+    // function cuter(){
+    //   var cut = document.querySelectorAll('.select__content > span .select__text');
+    //   for( var i = 0; i < cut.length; i++ ){
+        
+    //     cut[i].innerText = cut[i].innerText.slice(0, 3);
+
+        
+    //     if ( cut.length <= 3) {
+
+
+    //     }
+    //   }
+
+    // };
+
+    // cuter();
     //========================================================================================================================================================
+    // let size = 3,
+    // newsContent = $('.select__content > span .select__text'),
+    // newsText = newsContent.text();
 
-
-
+    // if (newsText.length > size) {
+    //   newsContent.text(newsText.slice(0, size));
+    // }
 }
 

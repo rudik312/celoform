@@ -327,8 +327,8 @@
 		}
 	//.select__title
 	&__title {
-		
-			// align-self: center;
+
+
 		}
 
 	&__value {
@@ -375,6 +375,7 @@
 	}
 	//.select__content
 	&__content {
+		// position: relative;
 		text-transform: uppercase;
 		//.select__content .select__russian
 		&.select__russian {
@@ -399,6 +400,9 @@
 			// &::before{
 			// 	top: -5px;
 			// }
+		}
+		.select__row {
+			padding: 0;
 		}
 	}
 	//select__russian
@@ -457,7 +461,16 @@
 	}
 }
 
-.select__content .select__english{
+.select__content > span .select__text {
+	letter-spacing: 0.5px;
+	max-width: 26px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+.select__content {
 
 }
 //========================================================================================================================================================
