@@ -56,7 +56,7 @@
 	}
 	// .header__logo
 	&__logo {
-		padding-right: 15px;
+		// padding-right: 75px;
 		position: relative;
 		z-index: 50;
 		display: flex;
@@ -150,7 +150,6 @@
 
 	// .header__actions
 	&__actions {
-		padding-left: 15px;
 		max-width: 545px;
 		display: flex;
 		align-items: center;
