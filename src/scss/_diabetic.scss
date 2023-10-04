@@ -388,336 +388,75 @@
   }
 }
 
-//.inflammation
+//.syndrome-diabetic
 //========================================================================================================================================================
-.inflammation {
+.syndrome-diabetic {
   background-color: $bg;
-  // .inflammation__container
+  // .syndrome-diabetic__container
   &__container {
     padding-top: 45px;
-    padding-bottom: 50px;
-    @media (max-width:$tablet){
-      padding-top: 40px;
-    }
-    @media (max-width:$mobile){
-      padding-bottom: 40px;
-    }
-    @media (max-width:$mobileSmall){
-      padding-top: 25px;
-      padding-bottom: 25px;
-    }
+    padding-bottom: 90px;
   }
-  // .inflammation__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 50px;
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      row-gap: 40px;
-    }
-  }
-  // .inflammation__item
-  &__item {
-    display: flex;
-    flex-direction: column;
-    &:first-child{
-      justify-content: center;
-      @media (max-width:$tablet){
-        flex-direction: column-reverse;
-        row-gap: 30px;
-      }
-      @media (max-width:$mobileSmall){
-        row-gap: 10px;
-      }
-    }
-  }
-  // .inflammation__wrapper
-  &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    column-gap: 10px;
-    row-gap: 60px;
-    @media (max-width:$tablet){
-      grid-template-columns: repeat(3, 1fr);
-      @include adaptiveValue("column-gap", 50, 20, 767, 670, 1);
-      row-gap: 30px;
-    }
-    @media (max-width: em(670)){
-      grid-template-columns: repeat(2, 1fr);
-      @include adaptiveValue("column-gap", 50, 40, 670, 480, 1);
-    }
-
-  }
-  // .inflammation__unit
-  &__unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    // display: grid;
-    // justify-items: center;
-    row-gap: 10px;
-    @media (max-width: em(420)){
-      max-width: 100%;
-    }
-    img {
-      @media (max-width: em(420)){
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        // justify-self: center;
-      }
-    }
-    p {
-      // justify-self: center;
-      @extend %mont-600;
-      font-size: rem(16);
-      line-height: math.div(26 , 16);
-      @include adaptiveValue("font-size", 16, 10, 480, 420, 1);
-    }
-    @media (max-width: em(420)){
-      // display: grid;
-      // justify-items: center;
-      // align-items: center;
-    }
-  }
-  // .inflammation__item-title
-  &__item-title {
+  // .syndrome-diabetic__title
+  &__title {
     font-size: rem(30);
     @media (max-width:$tablet){
       font-size: rem(32);
     }
     @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
+      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
     }
-
   }
-  // .inflammation__item-content
-  &__item-content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 17px;
+  // .syndrome-diabetic__content
+  &__content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  // .syndrome-diabetic__text
+  &__text {
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-    @media (max-width:$mobileSmall){
-      row-gap: 10px;
-    }
   }
-  // .inflammation__item-wrap
-  &__item-wrap {
+  // .syndrome-diabetic__inner
+  &__inner {
     display: grid;
-    row-gap: 17px;
-    span {
-      @extend %mont-600;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 25px;
+  }
+  // .syndrome-diabetic__item
+  &__item {
+    
+  }
+  // .syndrome-diabetic__stage
+  &__stage {
+    text-align: center;
+    @extend %mont-700;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .syndrome-diabetic__img-ibg
+  &__img-ibg {
+    padding-bottom: percent(351, 175);
+    img {
+      object-position: top;
     }
-    @media (max-width:$mobileSmall){
-      row-gap: 10px;
-    }
   }
-  // .inflammation__item-text
-  &__item-text {
-
-
-  }
-  // .inflammation__list
-  &__list {
-    padding-left: 25px;
-    display: grid;
-    row-gap: 5px;
-    list-style-type: disc !important;
-  }
-  // .inflammation__list-item
-  &__list-item {
-    position: relative;
-		&::before{
-			content: "";
-			border-radius: 50%;
-			position: absolute;
-			width: 2.5px;
-			height: 2.5px;
-			background-color: #000;
-			top: 12px;
-			left: -17px;
-		}
+  // .syndrome-diabetic__info
+  &__info {
+    @extend %mont-700;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    text-align: center;
   }
 }
+
 //========================================================================================================================================================
 
 //.complicate
 //========================================================================================================================================================
-.complicate {
-  background-color: $bg;
-  // .complicate__container
-  &__container {
-    padding-top: 50px;
-    padding-bottom: 100px;
-    @media (max-width:$mobile){
-      padding-bottom: 80px;
-    }
-    @media (max-width:$mobileSmall){
-      padding-top: 40px;
-    }
-    @media (max-width: em(420)){
-      padding-top: 25px;
-      padding-bottom: 50px;
-    }
-  }
-  // .complicate__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 35px;
-    @media (max-width: em(1140)){
-      display: flex;
-      flex-direction: column-reverse;
-      row-gap: 30px;
-    }
-  }
-  // .complicate__item
-  &__item {
-    &:first-child{
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-    }
-    &:last-child{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-  // .complicate__title
-  &__title {
-    @extend %mont-700;
-    color: $accent;
-    font-size: rem(30);
-    line-height: math.div(42 , 30);
-    @media (max-width: em(1140)){
-      text-align: center;
-      font-size: rem(32);
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 32, 20, 480, 420 , 1);
-    }
-  }
-  // .complicate__content
-  &__content {
-    max-width: 559px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    @media (max-width: em(1140)){
-      max-width: 100%;
-    }
-  }
-  // .complicate__content-text
-  &__content-text {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    span {
-      @extend %mont-600;
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-  }
-  // .complicate__content-title
-  &__content-title {
-    @extend %mont-600;
-    font-size: rem(18);
-    line-height: math.div(22 , 18);
-    color: $accent;
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 18, 16, 480, 420, 1);
-    }
-  }
-  // .complicate__list
-  &__list {
-    padding-left: 25px;
-    display: grid;
-    row-gap: 10px;
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-  }
-  // .complicate__list-item
-  &__list-item {
-    position: relative;
-    span {
-      @extend %mont-700;
-    }
-		&::before{
-			content: "";
-			border-radius: 50%;
-			position: absolute;
-			width: 2.5px;
-			height: 2.5px;
-			background-color: #000;
-			top: 12px;
-			left: -17px;
-		}
-  }
-  // .complicate__desc
-  &__desc {
-    @media (max-width: em(1140)){
-      display: flex;
-      justify-content: center;
-    }
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-rows: repeat(3, 1fr);
-    // align-items: center;
-    // justify-items: center;
-    // row-gap: 50px;
-    // column-gap: 10px;
-    // & .complicate__img {
-    //   display: grid;
-    //   row-gap: 20px;
-    //   &:nth-child(1) {
-    //     grid-column: span 2;
-    //   }
-    //   &:nth-child(4) {
-    //     justify-self: center;
-    //   }
 
-    // }
-    // @media (max-width: em(1140)){
-    //   row-gap: 10px;
-    // }
-    
-  }
-  //.complicate__img
-  &__img {
-    max-width: 100%;
-    display: block;
-    img {
-      @media (max-width: em(670)){
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    // p {
-    //   @extend %mont-600;
-    //   font-size: rem(18);
-    //   line-height: math.div(29 , 18);
-    //   text-align: center;
-    // }
-
-  }
-
-}
+//========================================================================================================================================================
 
 
 //.diabetic-expert
