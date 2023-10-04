@@ -395,10 +395,11 @@
   // .syndrome-diabetic__container
   &__container {
     padding-top: 45px;
-    padding-bottom: 90px;
+    padding-bottom: 45px;
   }
   // .syndrome-diabetic__title
   &__title {
+    text-align: center;
     font-size: rem(30);
     @media (max-width:$tablet){
       font-size: rem(32);
@@ -490,8 +491,117 @@
 
 //========================================================================================================================================================
 
-//.complicate
+//.avoid-diabetic
 //========================================================================================================================================================
+.avoid-diabetic {
+  background-color: $bg;
+  // .avoid-diabetic__container
+  &__container {
+    padding-top: 45px;
+  }
+  // .avoid-diabetic__title
+  &__title {
+    text-align: center;
+    font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
+    }
+  }
+  // .avoid-diabetic__content
+  &__content {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$mobile){
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 30px;
+    }
+  }
+  // .avoid-diabetic__text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+}
+.avoid-diabetic {
+  // .avoid-diabetic__inner
+  &__inner {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+    
+    @media (max-width: em(580)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .avoid-diabetic__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    padding: 20px 38.3px;
+    @media (max-width:$tablet){
+      display: grid;
+      padding: 20px 5px;
+      &:last-child{
+        grid-auto-columns: 50%;
+        grid-column: span 2;
+        justify-content: center;
+        @media (max-width: em(580)){
+          grid-auto-columns: auto;
+        }
+      }
+    }
+    @media (max-width:$mobileSmall){
+      padding: 20px 20px;
+    }
+  }
+  // .avoid-diabetic__image-ibg
+  &__image-ibg {
+    overflow: hidden;
+    padding-bottom: percent(250, 250);
+    @media (max-width:$tablet){
+      max-width: 100%;
+      display: block;
+
+    }
+    img {
+      object-position: top;
+      @media (max-width:$tablet){
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  // .avoid-diabetic__item-text
+  &__item-text {
+    flex-grow: 1;
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(23 , 14);
+    text-align: center;
+  }
+}
 
 //========================================================================================================================================================
 
