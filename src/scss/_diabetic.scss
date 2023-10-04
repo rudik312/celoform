@@ -422,11 +422,25 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    column-gap: 25px;
+    // column-gap: 25px;
+    @include adaptiveValue("column-gap", 25, 15, 1360, 1080, 1);
+
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 25px;
+      row-gap: 25px;
+    }
   }
   // .syndrome-diabetic__item
   &__item {
-    
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    // align-content: center;
+    // align-items: center;
+    // display: grid;
+
+    // max-width: 100%;
   }
   // .syndrome-diabetic__stage
   &__stage {
@@ -437,6 +451,9 @@
   }
   // .syndrome-diabetic__img-ibg
   &__img-ibg {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
     padding-bottom: percent(351, 175);
     img {
       object-position: top;
