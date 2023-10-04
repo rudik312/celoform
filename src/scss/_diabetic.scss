@@ -909,7 +909,7 @@
     padding-bottom: 40px;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    // @include adaptiveValue("column-gap", 30, 20, 1240, 1000, 1);
+    @include adaptiveValue("column-gap", 30, 20, 1240, 1000, 1);
     column-gap: 20px;
     @media (max-width:$tablet){
       display: flex;
@@ -964,13 +964,7 @@
   }
   // .diabetic-application__img
   &__img-ibg {
-    // display: block;
-    // max-width: 100%;
     padding-bottom: percent(600, 566);
-    // @media (max-width:$tablet){
-    //   display: grid;
-    //   justify-content: center;
-    // }
     @media (max-width:$tablet){
       padding-bottom: percent(460, 520);
     }
@@ -978,14 +972,8 @@
       padding-bottom: percent(400, 455);
     }
     img {
-      // 
-      // height: auto;
-      // width: 100%;
-      // object-fit: cover;
       object-position: 86%;
       @media (max-width:$tablet){
-        // max-width: 659px;
-        // height: auto;
       }
     }
   }
