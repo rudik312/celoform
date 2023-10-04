@@ -602,7 +602,6 @@
     text-align: center;
   }
 }
-
 //========================================================================================================================================================
 
 
@@ -771,6 +770,29 @@
   // .multiplication__title
   &__title {
   }
+  //.multiplication__content
+  &__content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$mobile){
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 30px;
+    }
+  }
+  //.multiplication__text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+
   // .multiplication__inner
   &__inner {
     padding-top: 20px;
@@ -872,7 +894,7 @@
   }
   // .diabetic-application__container
   &__container {
-
+    padding-bottom: 30px;
   }
   // .diabetic-application__title
   &__title {
@@ -886,8 +908,9 @@
     padding-top: 40px;
     padding-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    @include adaptiveValue("column-gap", 100, 60, 1240, 1000, 1);
+    grid-template-columns: 1.5fr 1fr;
+    // @include adaptiveValue("column-gap", 30, 20, 1240, 1000, 1);
+    column-gap: 20px;
     @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
@@ -903,10 +926,31 @@
     
     }
   }
+  //.diabetic-application__important"
+  &__important {
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: $white;
+    strong {
+      @extend %mont-700;
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+      color: $accent;
+    }
+  }
+  //.diabetic-application__text
+  &__text {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
   // .diabetic-application__content
   &__content {
-    max-width: 473px;
-    width: 100%;
+    // max-width: 473px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -915,21 +959,33 @@
     line-height: math.div(26 , 16);
     @media (max-width:$tablet){
       max-width: 100%;
+      
     }
   }
   // .diabetic-application__img
-  &__img {
+  &__img-ibg {
+    // display: block;
+    // max-width: 100%;
+    padding-bottom: percent(600, 566);
+    // @media (max-width:$tablet){
+    //   display: grid;
+    //   justify-content: center;
+    // }
     @media (max-width:$tablet){
-      display: grid;
-      justify-content: center;
+      padding-bottom: percent(460, 520);
+    }
+    @media (max-width:$mobileSmall){
+      padding-bottom: percent(400, 455);
     }
     img {
-      height: auto;
-      width: 100%;
-      object-fit: cover;
+      // 
+      // height: auto;
+      // width: 100%;
+      // object-fit: cover;
+      object-position: 86%;
       @media (max-width:$tablet){
-        max-width: 659px;
-        height: auto;
+        // max-width: 659px;
+        // height: auto;
       }
     }
   }
