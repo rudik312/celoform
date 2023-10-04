@@ -411,6 +411,17 @@
   &__content {
     padding-top: 20px;
     padding-bottom: 30px;
+    @media (max-width:$mobile){
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 30px;
+    }
   }
   // .syndrome-diabetic__text
   &__text {
@@ -430,17 +441,20 @@
       column-gap: 25px;
       row-gap: 25px;
     }
+    @media (max-width: em(660)){
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+      row-gap: 50px;
+    }
+    @media (max-width: em(360)){
+      @include adaptiveValue("gap", 50, 20, 360, 320, 1);
+    }
   }
   // .syndrome-diabetic__item
   &__item {
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
-    // align-content: center;
-    // align-items: center;
-    // display: grid;
-
-    // max-width: 100%;
+    flex-shrink: 0;
   }
   // .syndrome-diabetic__stage
   &__stage {
@@ -457,6 +471,12 @@
     padding-bottom: percent(351, 175);
     img {
       object-position: top;
+    }
+    @media (max-width: em(660)){
+      padding-bottom: percent(200, 100);
+    }
+    @media (max-width: em(420)){
+      padding-bottom: percent(150, 75);
     }
   }
   // .syndrome-diabetic__info
