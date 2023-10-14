@@ -772,6 +772,86 @@
 }
 //========================================================================================================================================================
 
+//.hemostatic-benefit
+//========================================================================================================================================================
+.hemostatic-benefit {
+  background-color: $bg;
+  background-image: url(../img/hemostatic/hemostatic-benefit-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // .hemostatic-benefit__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  // .hemostatic-benefit__inner
+  &__inner {
+    max-width: 668px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .hemostatic-benefit__title
+  &__title {
+    max-width: 575px;
+    @extend %mont-700;
+    font-size: rem(30);
+    line-height: math.div(42 , 30);
+  }
+  // .hemostatic-benefit__list
+  &__list {
+
+    align-self: stretch;
+  }
+  // .hemostatic-benefit__list-item
+  &__list-item {
+    position: relative;
+    padding-left: 15px;
+    span {
+      @extend %mont-700;
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+      color: $black;
+    }
+    p {
+      @extend %mont-500;
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+      color: $black;
+    }
+    &::before{
+      content:'';
+      border-radius: 50%;
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #000;
+      top: 12px;
+      left: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  // .hemostatic-benefit__text
+  &__text {
+    @extend %mont-600;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $black;
+  }
+}
+
+
+
+//========================================================================================================================================================
+
+
+
 // .reports
 //========================================================================================================================================================
 .hemostatic-reports__container {
