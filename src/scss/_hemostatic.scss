@@ -651,22 +651,13 @@
 }
 //========================================================================================================================================================
 
-//.hemostatic-expert
-//========================================================================================================================================================
 
-.hemostatic-expert__text {
-  @extend %mont-600;
-  font-style: italic;
-  font-size: rem(18);
-  line-height: math.div(29 , 18);
-}
-//========================================================================================================================================================
 
-//.efficiency-product
+//.hemostatic-documents
 //========================================================================================================================================================
-.efficiency-product {
+.hemostatic-documents {
   background-color: $bg;
-  // .efficiency-product__container
+  // .hemostatic-documents__container
   &__container {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -679,7 +670,7 @@
       padding-bottom: 50px;
     }
   }
-  // .efficiency-product__inner
+  // .hemostatic-documents__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -691,7 +682,7 @@
       row-gap: 30px;
     }
   }
-  // .efficiency-product__content
+  // .hemostatic-documents__content
   &__content{
     max-width: 572px;
     display: flex;
@@ -703,7 +694,7 @@
       align-items: center;
     }
   }
-  // .efficiency-product__title
+  // .hemostatic-documents__title
   &__title {
     font-size: rem(30);
     @media (max-width:$tablet){
@@ -713,14 +704,14 @@
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  // .efficiency-product__info
+  // .hemostatic-documents__info
   &__info {
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
     text-align: justify;
     span {
-      color: $accent;
+      color: $black;
       @extend %mont-700;
     }
     p {
@@ -732,7 +723,7 @@
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
     }
   }
-  //.efficiency-product__action
+  //.hemostatic-documents__action
   &__action {
     padding-top: 10px;
     @media (max-width:$mobileSmall){
@@ -741,7 +732,7 @@
       text-align: center;
     }
   }
-  //.efficiency-product__link
+  //.hemostatic-documents__link
   &__btn {
     @media (max-width:$mobileSmall){
       font-size: rem(14);
@@ -753,7 +744,7 @@
       padding: 10px 15px;
     }
   }
-// .efficiency-product__cards 
+// .hemostatic-documents__cards 
   &__cards {
     display: flex;
     align-items: center;
@@ -768,7 +759,7 @@
       @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
     }
   }
-  // .efficiency-product__image
+  // .hemostatic-documents__image
   &__image {
     max-width: 100%;
     display: block;
