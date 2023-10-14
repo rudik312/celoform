@@ -404,7 +404,13 @@
       row-gap: 70px;
     }
     @media (max-width: em(650)){
-      row-gap: 50px;
+      row-gap: 40px;
+    }
+    @media (max-width: em(450)){
+      row-gap: 70px;
+    }
+    @media (max-width: em(380)){
+      row-gap: 30px;
     }
   }
   // .haemostatic__item
@@ -497,6 +503,14 @@
   @media (max-width:$mobile){
     background-position: 13% 366px;
     background-size: 235%;
+  }
+  @media (max-width: em(560)){
+    background-position: 13% 390px;
+    background-size: 295%;
+  }
+  @media (max-width: em(480)){
+    background-position: 15% 365px;
+    background-size: 281%;
   }
 }
 //========================================================================================================================================================
