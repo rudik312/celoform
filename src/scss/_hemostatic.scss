@@ -121,6 +121,12 @@
         margin-bottom: 14px;
       }
     }
+    &::before{
+      background: #04BD38;
+    }
+    &::after{
+      background: rgba(0, 148, 41, 0.30);
+    }
   }
   // .main__actions
   &__actions {
@@ -210,7 +216,7 @@
 
   // .hemostatic-main__card
   &__card {
-    padding-top: 30px;
+    // padding-top: 30px;
     // flex-grow: 1;
     @extend %mont-500;
     font-size: rem(12);
@@ -306,10 +312,14 @@
 }
 //========================================================================================================================================================
 
-// .inovation
+// .haemostatic
 //========================================================================================================================================================
-.inovation {
+.haemostatic {
   background-color: $bg;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   // .inovation__container
   &__container {
     padding-top: 40px;
