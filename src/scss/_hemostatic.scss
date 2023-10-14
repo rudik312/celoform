@@ -522,8 +522,134 @@
     }
   }
 }
+//========================================================================================================================================================
 
+//.hemostatic-multiplication
+//========================================================================================================================================================
+.hemostatic-multiplication {
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  @media (max-width:$tablet){
+    background-position: center -90px;
+  }
+  // .hemostatic-multiplication__container
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$tablet){
+      padding-bottom: 40px;
+    }
+  }
+  // .hemostatic-multiplication__title
+  &__title {
+    h3 {
+      font-size: rem(32);
+      line-height: math.div(45 , 32);
+    }
+  }
+  //.hemostatic-multiplication__content
+  &__content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$mobile){
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 30px;
+    }
+  }
 
+  &__subtitle {
+    h4 {
+      @extend %mont-700;
+      font-size: rem(24);
+      line-height: math.div(39 , 24);
+      color: $black;
+    }
+  }
+
+  //.hemostatic-multiplication__text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+
+  // .hemostatic-multiplication__inner
+  &__inner {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
+    @media (max-width: em(1180)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(690)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .hemostatic-multiplication__items
+  &__items {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 15px;
+    // display: flex;
+    // flex-direction: column;
+
+  }
+  // .hemostatic-multiplication__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+    border-radius: 24px;
+    background-color: #fff;
+    @media (max-width:$tablet){
+      padding: 15px;
+    }
+  }
+  // .hemostatic-multiplication__item-title
+  &__item-title {
+    text-transform: uppercase;
+    @extend %mont-700;
+    font-size: rem(16);
+    line-height: math.div(19 , 16);
+
+  }
+  // .hemostatic-multiplication__item-text
+  &__item-text {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+
+  }
+  // .hemostatic-multiplication__image
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    img {
+      display: inline-flex;
+      width: 385px;
+      height: 397px;
+    }
+    @media (max-width: em(1180)){
+      display: none;
+    }
+  }
+}
+//========================================================================================================================================================
 
 //.hemostatic-expert
 //========================================================================================================================================================
@@ -669,117 +795,6 @@
 //========================================================================================================================================================
 
 
-//.multiplication
-//========================================================================================================================================================
-.multiplication {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $bg;
-  @media (max-width:$tablet){
-    background-position: center -90px;
-  }
-  // .multiplication__container
-  &__container {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    @media (max-width:$tablet){
-      padding-bottom: 40px;
-    }
-  }
-  // .multiplication__title
-  &__title {
-  }
-  //.multiplication__content
-  &__content {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    @media (max-width:$mobile){
-      padding-top: 40px;
-      padding-bottom: 20px;
-    }
-    @media (max-width:$mobileSmall){
-      padding-top: 20px;
-      padding-bottom: 35px;
-    }
-    @media (max-width: em(420)){
-      padding-bottom: 30px;
-    }
-  }
-  //.multiplication__text
-  &__text {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-  }
-
-  // .multiplication__inner
-  &__inner {
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
-    @media (max-width: em(1180)){
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: em(690)){
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
-    }
-  }
-  // .multiplication__items
-  &__items {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 15px;
-    // display: flex;
-    // flex-direction: column;
-
-  }
-  // .multiplication__item
-  &__item {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    padding: 30px;
-    border-radius: 24px;
-    background-color: #fff;
-    @media (max-width:$tablet){
-      padding: 15px;
-    }
-  }
-  // .multiplication__item-title
-  &__item-title {
-    text-transform: uppercase;
-    @extend %mont-700;
-    font-size: rem(16);
-    line-height: math.div(19 , 16);
-
-  }
-  // .multiplication__item-text
-  &__item-text {
-    @extend %mont-500;
-    font-size: rem(14);
-    line-height: math.div(22 , 14);
-
-  }
-  // .multiplication__image
-  &__image {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    img {
-      display: inline-flex;
-      width: 385px;
-      height: 397px;
-    }
-    @media (max-width: em(1180)){
-      display: none;
-    }
-  }
-}
-//========================================================================================================================================================
 
 //.buy
 //========================================================================================================================================================
