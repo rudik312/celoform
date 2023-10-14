@@ -398,6 +398,7 @@
   }
   // .inovation__item-title
   &__item-title {
+    max-width: 496px;
     font-size: rem(30);
     line-height: math.div(42 , 30);
     @media (max-width:$tablet){
@@ -420,289 +421,108 @@
   }
   // .inovation__list-item
   &__list-item {
+    &::before{
+      left: -21px;
+      top: 7px;
+      width: 6px;
+      height: 6px;
+    }
+    &::after{
+      top: 4px;
+      width: 12px;
+      height: 12px;
+    }
   }
 }
 //========================================================================================================================================================
 
-//.benefit
+//.hemostatic-product
 //========================================================================================================================================================
-.benefit {
+.hemostatic-product {
   background-color: $bg;
-  // .benefit__container
+  // .product__container
   &__container {
-    padding-top: 75px;
-    padding-bottom: 45px;
+    padding-top: 50px;
+    padding-bottom: 100px;
     @media (max-width:$tablet){
-      padding-top: 40px;
-    }
-    @media (max-width: em(420)){
       padding-top: 25px;
-    }
-  }
-  // .benefit__title
-  &__title {
-    font-size: rem(30);
-    @media (max-width:$tablet){
-      font-size: rem(32);
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
-    }
-  }
-  // .benefit__inner
-  &__inner {
-    padding-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 25px;
-    row-gap: 25px;
-    @media (max-width:$tablet){
-      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 66px;       
     }
     @media (max-width:$mobile){
+      padding-top: 25px;
+      padding-bottom: 50px;
+    }
+  }
+  // .product__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
+    @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
-      row-gap: 15px;
+      align-items: center;
+      row-gap: 20px;
     }
   }
-  // .benefit__item
-  &__item {
+  // .product__content
+  &__content{
+    max-width: 572px;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 24px;
-  }
-  // .benefit__item-title
-  &__item-title {
-    @extend %mont-600;
-    font-size: rem(18);
-    line-height: math.div(22 , 18);
-  }
-  // .benefit__item-text
-  &__item-text {
-    @extend %mont-500;
-    font-size: rem(14);
-    line-height: math.div(22 , 14);
-  }
-}
-
-//.syndrome-hemostatic
-//========================================================================================================================================================
-.syndrome-hemostatic {
-  background-color: $bg;
-  // .syndrome-hemostatic__container
-  &__container {
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-  // .syndrome-hemostatic__title
-  &__title {
-    text-align: center;
-    font-size: rem(30);
-    @media (max-width:$tablet){
-      font-size: rem(32);
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
-    }
-  }
-  // .syndrome-hemostatic__content
-  &__content {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    @media (max-width:$mobile){
-      padding-top: 40px;
-      padding-bottom: 20px;
-    }
-    @media (max-width:$mobileSmall){
-      padding-top: 20px;
-      padding-bottom: 35px;
-    }
-    @media (max-width: em(420)){
-      padding-bottom: 30px;
-    }
-  }
-  // .syndrome-hemostatic__text
-  &__text {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-  }
-  // .syndrome-hemostatic__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    // column-gap: 25px;
-    @include adaptiveValue("column-gap", 25, 15, 1360, 1080, 1);
-
-    @media (max-width:$tablet){
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 25px;
-      row-gap: 25px;
-    }
-    @media (max-width: em(660)){
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 50px;
-      row-gap: 50px;
-    }
-    @media (max-width: em(360)){
-      @include adaptiveValue("gap", 50, 20, 360, 320, 1);
-    }
-  }
-  // .syndrome-hemostatic__item
-  &__item {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-  }
-  // .syndrome-hemostatic__stage
-  &__stage {
-    text-align: center;
-    @extend %mont-700;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-  }
-  // .syndrome-hemostatic__img-ibg
-  &__img-ibg {
-    display: block;
-    max-width: 100%;
-    overflow: hidden;
-    padding-bottom: percent(351, 175);
-    img {
-      object-position: top;
-    }
-    @media (max-width: em(660)){
-      padding-bottom: percent(200, 100);
-    }
-    @media (max-width: em(420)){
-      padding-bottom: percent(150, 75);
-    }
-  }
-  // .syndrome-hemostatic__info
-  &__info {
-    @extend %mont-700;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    text-align: center;
-  }
-}
-
-//========================================================================================================================================================
-
-//.avoid-hemostatic
-//========================================================================================================================================================
-.avoid-hemostatic {
-  background-color: $bg;
-  // .avoid-hemostatic__container
-  &__container {
-    padding-top: 45px;
-  }
-  // .avoid-hemostatic__title
-  &__title {
-    text-align: center;
-    font-size: rem(30);
-    @media (max-width:$tablet){
-      font-size: rem(32);
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
-    }
-  }
-  // .avoid-hemostatic__content
-  &__content {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    @media (max-width:$mobile){
-      padding-top: 40px;
-      padding-bottom: 20px;
-    }
-    @media (max-width:$mobileSmall){
-      padding-top: 20px;
-      padding-bottom: 35px;
-    }
-    @media (max-width: em(420)){
-      padding-bottom: 30px;
-    }
-  }
-  // .avoid-hemostatic__text
-  &__text {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-  }
-}
-.avoid-hemostatic {
-  // .avoid-hemostatic__inner
-  &__inner {
-    padding-bottom: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 25px;
-    @media (max-width:$tablet){
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 10px;
-    }
-    
-    @media (max-width: em(580)){
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
-    }
-  }
-  // .avoid-hemostatic__item
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     row-gap: 20px;
-    padding: 20px 38.3px;
-    @media (max-width:$tablet){
-      display: grid;
-      padding: 20px 5px;
-      &:last-child{
-        grid-auto-columns: 50%;
-        grid-column: span 2;
-        justify-content: center;
-        @media (max-width: em(580)){
-          grid-auto-columns: auto;
-        }
-      }
-    }
-    @media (max-width:$mobileSmall){
-      padding: 20px 20px;
-    }
-  }
-  // .avoid-hemostatic__image-ibg
-  &__image-ibg {
-    overflow: hidden;
-    padding-bottom: percent(250, 250);
     @media (max-width:$tablet){
       max-width: 100%;
-      display: block;
-
     }
-    img {
-      object-position: top;
-      @media (max-width:$tablet){
-        height: auto;
-        width: 100%;
-        object-fit: cover;
+  }
+  // .product__title
+  &__title {
+  }
+  // .product__info
+  &__info {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    text-align: justify;
+    span {
+      @extend %mont-600;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
       }
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
   }
-  // .avoid-hemostatic__item-text
-  &__item-text {
-    flex-grow: 1;
-    @extend %mont-500;
-    font-size: rem(14);
-    line-height: math.div(23 , 14);
-    text-align: center;
+// .product__cards 
+  &__cards {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    @media (max-width:$tablet){
+      column-gap: 37px;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("column-gap", 37, 30, 767, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
+    }
+  }
+  // .product__image
+  &__image {
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
-//========================================================================================================================================================
+
 
 
 //.hemostatic-expert
