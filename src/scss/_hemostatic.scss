@@ -3,23 +3,24 @@
 //========================================================================================================================================================
 .hemostatic-main {
   max-width: 100%;
-  background-position: center top;
+  background-position: center top 25%;
   background-repeat: no-repeat;
   background-color: $bg;
 
   // .main__container
   @media (max-width:$tablet){
-    background-position: 90% 0;
+    background-position: 60% 0;
   }
   @media (max-width:$mobile){
-    background-position: 70% 92%;
+    background-position: 60% 60px;
+    background-size: 230%;
   }
   @media (max-width:$mobileSmall){
-    background-position: 73% 0;
-
+    background-position: 56% 70px;
+    background-size: 200%;
   }
   @media (max-width: em(380)){
-    background-position: 73% 23%;
+    background-position: 63% 23%;
     background-size: 300%;
   }
   &__container {
@@ -39,7 +40,6 @@
     display: grid;
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr 1fr;
-    // column-gap: 30px;
     @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
     @media (max-width:$mobile){
       display: flex;
@@ -98,7 +98,7 @@
     } 
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 14.4, 14, 480, 420, 1);
-      max-width: 210px;
+      max-width: 100%;
     }
   }
   // .main__list
@@ -180,13 +180,10 @@
   }
   // .hemostatic-main__bg
   &__bg {
-    // padding-top: 148px;
-    @include adaptiveValue("padding-top", 177, 170, 1240, 1000, 1);
+    @include adaptiveValue("padding-top", 160, 140, 1240, 1000, 1);
     @media (max-width:$mobile){
       padding: 0;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
+
     }
     img {
       height: auto;
@@ -197,15 +194,9 @@
         height: auto;
         width: 100%;
         object-fit: cover;
-        // width: 536px;
-        // height: 474px;
-        // @include adaptiveValue("width", 546, 434, 767, 480, 1);
-        // @include adaptiveValue("height", 482, 379, 767, 480, 1);
       }
       @media (max-width:$mobileSmall){
         padding-top: 47px;
-        // @include adaptiveValue("width", 434, 279, 480, 380, 1);
-        // @include adaptiveValue("height", 379, 244, 480, 380, 1);
       }
       @media (max-width: em(420)){
         padding-top: 40px;
@@ -216,8 +207,6 @@
 
   // .hemostatic-main__card
   &__card {
-    // padding-top: 30px;
-    // flex-grow: 1;
     @extend %mont-500;
     font-size: rem(12);
     line-height: math.div(17 , 12);
@@ -846,11 +835,7 @@
   }
 }
 
-
-
 //========================================================================================================================================================
-
-
 
 // .reports
 //========================================================================================================================================================
@@ -864,8 +849,6 @@
   }
 }
 //========================================================================================================================================================
-
-
 
 //.buy
 //========================================================================================================================================================
@@ -915,8 +898,7 @@
     // padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    @include adaptiveValue("column-gap", 30, 20, 1240, 1000, 1);
-    column-gap: 20px;
+    @include adaptiveValue("column-gap", 100, 20, 1240, 1000, 1);
     @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
@@ -932,21 +914,6 @@
     
     }
   }
-  //.hemostatic-application__important"
-  &__important {
-    padding: 20px;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    background-color: $white;
-    strong {
-      @extend %mont-700;
-      font-size: rem(16);
-      line-height: math.div(26 , 16);
-      color: $accent;
-    }
-  }
   //.hemostatic-application__text
   &__text {
     @extend %mont-400;
@@ -955,7 +922,6 @@
   }
   // .hemostatic-application__content
   &__content {
-    // max-width: 473px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -967,6 +933,10 @@
       max-width: 100%;
       
     }
+  }
+  //.hemostatic-application__content-item
+  &__content-item {
+    max-width: 473px;
   }
   // .hemostatic-application__img
   &__img-ibg {
@@ -1131,27 +1101,6 @@
   }
 }
 //========================================================================================================================================================
-
-//hemostatic-contacts
-//========================================================================================================================================================
-.hemostatic-contacts {
-  &__container {
-    padding-top: 50px;
-    padding-bottom: 100px;
-    @media (max-width:$tablet){
-      padding-top: 50px;
-    }
-    @media (max-width:$mobile){
-      padding-bottom: 40px;
-    }
-    @media (max-width:$mobileSmall){
-      padding-top: 40px;
-    }
-    @media (max-width: em(420)){
-      padding-top: 25px;
-    }
-  }
-}
 
 
 

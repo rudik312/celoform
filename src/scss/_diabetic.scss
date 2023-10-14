@@ -40,9 +40,7 @@
   // .diabetic-main__inner
   &__inner {
     display: grid;
-    // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr 1.3fr;
-    // column-gap: 30px;
     @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
     @media (max-width:$mobile){
       display: flex;
@@ -62,9 +60,6 @@
     @media (max-width:$mobile){
       padding: 0;
     }
-    // @media (max-width: em(420)){
-    //   row-gap: 24px;
-    // }
   }
   // .diabetic-main__title-box
   &__title-box {
@@ -121,7 +116,6 @@
   }
   // .diabetic-main__button
   &__button {
-    // border-radius: 16px;
     @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
 		@include adaptiveValue("padding-left", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
@@ -197,15 +191,9 @@
         height: auto;
         width: 100%;
         object-fit: cover;
-        // width: 546px;
-        // height: 482px;
-        // @include adaptiveValue("width", 546, 434, 767, 480, 1);
-        // @include adaptiveValue("height", 482, 379, 767, 480, 1);
       }
       @media (max-width:$mobileSmall){
         padding-top: 47px;
-        // @include adaptiveValue("width", 434, 279, 480, 380, 1);
-        // @include adaptiveValue("height", 379, 244, 480, 380, 1);
       }
       @media (max-width: em(420)){
         padding-top: 40px;
@@ -910,7 +898,6 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     @include adaptiveValue("column-gap", 30, 20, 1240, 1000, 1);
-    column-gap: 20px;
     @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
@@ -949,7 +936,6 @@
   }
   // .diabetic-application__content
   &__content {
-    // max-width: 473px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
