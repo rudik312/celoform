@@ -1,0 +1,1241 @@
+
+//.hemostatic-main
+//========================================================================================================================================================
+.hemostatic-main {
+  max-width: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: $bg;
+
+  // .main__container
+  @media (max-width:$tablet){
+    background-position: 90% 0;
+  }
+  @media (max-width:$mobile){
+    background-position: 70% 92%;
+  }
+  @media (max-width:$mobileSmall){
+    background-position: 73% 0;
+
+  }
+  @media (max-width: em(380)){
+    background-position: 73% 23%;
+    background-size: 300%;
+  }
+  &__container {
+    padding-bottom: 40px;
+    @media (max-width:$tablet){
+      padding-bottom: 25px;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("padding-top", 82, 50, 767, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("padding-top", 50, 70, 480, 420, 1); 
+    }
+  }
+  // .main__inner
+  &__inner {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    // column-gap: 30px;
+    @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  // .main__content
+  &__content {
+    // max-width: 100%;
+    max-width: 532px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 187px;
+    @media (max-width:$mobile){
+      max-width: 100%;
+      padding: 0;
+    }
+    @media (max-width: em(420)){
+      row-gap: 24px;
+    }
+  }
+  // .main__title-box
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+  }
+  // .main__title
+  &__title {
+    @extend %mont-700;
+    // font-size: rem(72);
+    color: $accent;
+    @include adaptiveValue("font-size", 72, 62, 1000, 868, 1);
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 62, 72, 868, 767, 1);
+    }
+    @media (max-width: em(767)){
+      @include adaptiveValue("font-size", 72, 64, 767, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 64, 32, 480, 420, 1);
+    }
+  }
+
+  // .main__subtitle
+  &__subtitle {
+    // font-size: rem(16);
+    @extend %mont-600;
+    @include adaptiveValue("font-size", 16, 13.8, 1000, 868, 1);
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 13.8, 16, 868, 767, 1);
+    }
+    @media (max-width: em(767)){
+      @include adaptiveValue("font-size", 16, 14.4, 767, 480, 1);
+    } 
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 14.4, 14, 480, 420, 1);
+      max-width: 210px;
+    }
+  }
+  // .main__list
+  &__list {
+    max-width: 295px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(19 , 16);
+    padding-left: 25px;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
+    }
+  }
+  // .main__list-item
+  &__list-item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 21px;
+      @media (max-width: em(380)){
+        margin-bottom: 14px;
+      }
+    }
+  }
+  // .main__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    @media (max-width:$mobile){
+      column-gap: 78px;
+      @include adaptiveValue("column-gap", 78, 41, 768, 480, 1);
+    }
+    @media (max-width: em(460)){
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .main__button
+  &__button {
+    border-radius: 16px;
+    @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
+		@include adaptiveValue("padding-left", 80, 60, 1240, 1000, 1);
+		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
+		@include adaptiveValue("padding-top", 12, 10, 1240, 1000, 1);
+		@include adaptiveValue("padding-bottom", 12, 10, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      // padding: 12px 122px;
+      @include adaptiveValue("padding-left", 122, 82, 768, 480, 1);
+      @include adaptiveValue("padding-right", 122, 82, 768, 480, 1);
+      @include adaptiveValue("padding-top", 12, 8, 768, 480, 1);
+      @include adaptiveValue("padding-bottom", 12, 8, 768, 480, 1);
+      width: 50%;
+    }
+    @media (max-width: em(460)){
+      padding-left: 118px;
+      padding-right: 118px;
+    }
+    @media (max-width: em(390)){
+      width: 100%;
+    }
+
+  }
+  // .main__link-consultation
+  &__link-consultation {
+    @extend %mont-400;
+    font-size: rem(14);
+    transition: all 0.3s;
+    text-decoration: underline !important;
+    white-space: nowrap;
+    @media (max-width:$mobile){
+      @include adaptiveValue("font-size", 14, 13, 768, 480, 1);
+    }
+  }
+  // .hemostatic-main__bg
+  &__bg {
+    // padding-top: 148px;
+    @include adaptiveValue("padding-top", 177, 170, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      padding: 0;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+      @media (max-width:$mobile){
+        padding-top: 77px;
+        padding-right: 30px;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        // width: 536px;
+        // height: 474px;
+        // @include adaptiveValue("width", 546, 434, 767, 480, 1);
+        // @include adaptiveValue("height", 482, 379, 767, 480, 1);
+      }
+      @media (max-width:$mobileSmall){
+        padding-top: 47px;
+        // @include adaptiveValue("width", 434, 279, 480, 380, 1);
+        // @include adaptiveValue("height", 379, 244, 480, 380, 1);
+      }
+      @media (max-width: em(420)){
+        padding-top: 40px;
+      }
+    }
+  }
+
+
+  // .hemostatic-main__card
+  &__card {
+    padding-top: 30px;
+    // flex-grow: 1;
+    @extend %mont-500;
+    font-size: rem(12);
+    line-height: math.div(17 , 12);
+    @media (max-width:$mobile){
+      padding: 0;
+    }
+  }
+// .hemostatic-main__card
+  &__card-link {
+    text-decoration: underline !important;
+    color: $accent;
+  }
+
+
+}
+
+//.hemostatic-use
+.hemostatic-use {
+  padding-top: 60px;
+  // .hemostatic-use__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include adaptiveValue("margin-top", 0, 60, 1240, 980, 1);
+  }
+  // .hemostatic-use__item
+  &__item {
+    cursor: pointer;
+    display: grid;
+    justify-items: center;
+    row-gap: 13px;
+    @extend %mont-600;
+    font-size: rem(14);
+    padding: 23px 35px;
+    background-color: $white;
+    border-right: 2px solid #F5F6FD;
+    &:first-child{
+      border-top-left-radius: 30px;
+    }
+    &:last-child{
+      border-bottom-right-radius: 30px;
+      border-right: none;
+    }
+
+    &:nth-child(4) {
+      border-top-right-radius: 30px;
+      border-right: none;
+    }
+    &:nth-child(5){
+      border-bottom-left-radius: 30px;
+    }
+    &:nth-child(n + 6) {
+      border-top: 2px solid #F5F6FD;
+    }
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background: #F5F7FD;
+      -webkit-box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
+      -moz-box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
+      box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
+    }
+
+    @media (max-width: em(1000)){
+      padding: 15px 30px;
+    }
+    @media (max-width: em(940)){
+      padding: 10px 15px;
+    }
+  }
+  // .hemostatic-use__item-img
+  &__item-img {
+    width: 48px;
+    height: 48px;
+    @media (max-width: em(1170)){
+      width: 32px;
+      height: 32px;
+    }
+  }
+  // .hemostatic-use__item-text
+  &__item-text {
+    @extend %mont-600;
+    font-size: rem(14);
+    color: #1B1B1B;
+    text-align: center;
+    @media (max-width: em(1170)){
+      font-size: rem(12);
+    }
+  }
+  @media (max-width:$mobile){
+    display: none;
+  }
+}
+//========================================================================================================================================================
+
+// .inovation
+//========================================================================================================================================================
+.inovation {
+  background-color: $bg;
+  // .inovation__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 75px;
+    @media (max-width:$tablet){
+      padding-bottom: 40px;
+    }
+    @media (max-width:$mobile){
+      padding-bottom: 40px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-bottom: 40px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  // .inovation__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // column-gap: 107px;
+    @include adaptiveValue("column-gap", 107, 40, 1240, 1000, 1);
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column-reverse;
+      row-gap: 20px;
+    }
+  }
+  // .inovation__item
+  &__item {
+
+  }
+  // .inovation__item-img
+  &__item-img {
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width:$mobile){
+        width: 367px;
+        height: 347px;
+        margin-left: 15%;
+      }
+      @media (max-width: em(620)){
+        margin-left: 10%;
+      }
+      @media (max-width: em(520)){
+        margin-left: 2%;
+      }
+      @media (max-width:$mobileSmall){
+        margin: 0;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    @media (max-width:$mobileSmall){
+      display: flex;
+      justify-content: flex-start;
+      padding-right: 34px;
+    }
+  }
+  // .inovation__item-box
+  &__item-box {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @media (max-width:$tablet){
+      padding-top: 0;
+    }
+  }
+  // .inovation__item-title
+  &__item-title {
+    font-size: rem(30);
+    line-height: math.div(42 , 30);
+    @media (max-width:$tablet){
+      @include adaptiveValue("font-size", 30, 26, 1000, 768, 1);
+      text-align: left;
+    }
+    @media (max-width:$mobile){
+      text-align: center;
+      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
+    }
+  }
+  // .inovation__list
+  &__list {
+    display: grid;
+    row-gap: 16px;
+    padding-left: 25px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: normal;
+  }
+  // .inovation__list-item
+  &__list-item {
+  }
+}
+//========================================================================================================================================================
+
+//.benefit
+//========================================================================================================================================================
+.benefit {
+  background-color: $bg;
+  // .benefit__container
+  &__container {
+    padding-top: 75px;
+    padding-bottom: 45px;
+    @media (max-width:$tablet){
+      padding-top: 40px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 25px;
+    }
+  }
+  // .benefit__title
+  &__title {
+    font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
+    }
+  }
+  // .benefit__inner
+  &__inner {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .benefit__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 24px;
+  }
+  // .benefit__item-title
+  &__item-title {
+    @extend %mont-600;
+    font-size: rem(18);
+    line-height: math.div(22 , 18);
+  }
+  // .benefit__item-text
+  &__item-text {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+  }
+}
+
+//.syndrome-hemostatic
+//========================================================================================================================================================
+.syndrome-hemostatic {
+  background-color: $bg;
+  // .syndrome-hemostatic__container
+  &__container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  // .syndrome-hemostatic__title
+  &__title {
+    text-align: center;
+    font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
+    }
+  }
+  // .syndrome-hemostatic__content
+  &__content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$mobile){
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 30px;
+    }
+  }
+  // .syndrome-hemostatic__text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .syndrome-hemostatic__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    // column-gap: 25px;
+    @include adaptiveValue("column-gap", 25, 15, 1360, 1080, 1);
+
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 25px;
+      row-gap: 25px;
+    }
+    @media (max-width: em(660)){
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+      row-gap: 50px;
+    }
+    @media (max-width: em(360)){
+      @include adaptiveValue("gap", 50, 20, 360, 320, 1);
+    }
+  }
+  // .syndrome-hemostatic__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  // .syndrome-hemostatic__stage
+  &__stage {
+    text-align: center;
+    @extend %mont-700;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .syndrome-hemostatic__img-ibg
+  &__img-ibg {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: percent(351, 175);
+    img {
+      object-position: top;
+    }
+    @media (max-width: em(660)){
+      padding-bottom: percent(200, 100);
+    }
+    @media (max-width: em(420)){
+      padding-bottom: percent(150, 75);
+    }
+  }
+  // .syndrome-hemostatic__info
+  &__info {
+    @extend %mont-700;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    text-align: center;
+  }
+}
+
+//========================================================================================================================================================
+
+//.avoid-hemostatic
+//========================================================================================================================================================
+.avoid-hemostatic {
+  background-color: $bg;
+  // .avoid-hemostatic__container
+  &__container {
+    padding-top: 45px;
+  }
+  // .avoid-hemostatic__title
+  &__title {
+    text-align: center;
+    font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
+    }
+  }
+  // .avoid-hemostatic__content
+  &__content {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$mobile){
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 30px;
+    }
+  }
+  // .avoid-hemostatic__text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+}
+.avoid-hemostatic {
+  // .avoid-hemostatic__inner
+  &__inner {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+    
+    @media (max-width: em(580)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .avoid-hemostatic__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    padding: 20px 38.3px;
+    @media (max-width:$tablet){
+      display: grid;
+      padding: 20px 5px;
+      &:last-child{
+        grid-auto-columns: 50%;
+        grid-column: span 2;
+        justify-content: center;
+        @media (max-width: em(580)){
+          grid-auto-columns: auto;
+        }
+      }
+    }
+    @media (max-width:$mobileSmall){
+      padding: 20px 20px;
+    }
+  }
+  // .avoid-hemostatic__image-ibg
+  &__image-ibg {
+    overflow: hidden;
+    padding-bottom: percent(250, 250);
+    @media (max-width:$tablet){
+      max-width: 100%;
+      display: block;
+
+    }
+    img {
+      object-position: top;
+      @media (max-width:$tablet){
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  // .avoid-hemostatic__item-text
+  &__item-text {
+    flex-grow: 1;
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(23 , 14);
+    text-align: center;
+  }
+}
+//========================================================================================================================================================
+
+
+//.hemostatic-expert
+//========================================================================================================================================================
+
+.hemostatic-expert__text {
+  @extend %mont-600;
+  font-style: italic;
+  font-size: rem(18);
+  line-height: math.div(29 , 18);
+}
+//========================================================================================================================================================
+
+//.efficiency-product
+//========================================================================================================================================================
+.efficiency-product {
+  background-color: $bg;
+  // .efficiency-product__container
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @media (max-width:$tablet){
+      padding-top: 80px;
+      padding-bottom: 55px;       
+    }
+    @media (max-width:$mobile){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  // .efficiency-product__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+  }
+  // .efficiency-product__content
+  &__content{
+    max-width: 572px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+  // .efficiency-product__title
+  &__title {
+    font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
+    }
+  }
+  // .efficiency-product__info
+  &__info {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    text-align: justify;
+    span {
+      color: $accent;
+      @extend %mont-700;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  //.efficiency-product__action
+  &__action {
+    padding-top: 10px;
+    @media (max-width:$mobileSmall){
+      padding-top: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  //.efficiency-product__link
+  &__btn {
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      display: block;
+      // width: 100%;
+    }
+    @media (max-width: em(420)){
+      font-size: rem(12);
+      padding: 10px 15px;
+    }
+  }
+// .efficiency-product__cards 
+  &__cards {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    @media (max-width:$tablet){
+      column-gap: 37px;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("column-gap", 37, 30, 767, 480, 1);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
+    }
+  }
+  // .efficiency-product__image
+  &__image {
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+//========================================================================================================================================================
+
+// .reports
+//========================================================================================================================================================
+.hemostatic-reports__container {
+  padding-bottom: 100px;
+  @media (max-width:$tablet){
+    padding-bottom: 80px;
+  }
+  @media (max-width:$mobile){
+    padding-bottom: 50px; 
+  }
+}
+//========================================================================================================================================================
+
+
+//.multiplication
+//========================================================================================================================================================
+.multiplication {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  @media (max-width:$tablet){
+    background-position: center -90px;
+  }
+  // .multiplication__container
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$tablet){
+      padding-bottom: 40px;
+    }
+  }
+  // .multiplication__title
+  &__title {
+  }
+  //.multiplication__content
+  &__content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$mobile){
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 30px;
+    }
+  }
+  //.multiplication__text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+
+  // .multiplication__inner
+  &__inner {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
+    @media (max-width: em(1180)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(690)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .multiplication__items
+  &__items {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 15px;
+    // display: flex;
+    // flex-direction: column;
+
+  }
+  // .multiplication__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+    border-radius: 24px;
+    background-color: #fff;
+    @media (max-width:$tablet){
+      padding: 15px;
+    }
+  }
+  // .multiplication__item-title
+  &__item-title {
+    text-transform: uppercase;
+    @extend %mont-700;
+    font-size: rem(16);
+    line-height: math.div(19 , 16);
+
+  }
+  // .multiplication__item-text
+  &__item-text {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+
+  }
+  // .multiplication__image
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    img {
+      display: inline-flex;
+      width: 385px;
+      height: 397px;
+    }
+    @media (max-width: em(1180)){
+      display: none;
+    }
+  }
+}
+//========================================================================================================================================================
+
+//.buy
+//========================================================================================================================================================
+.hemostatic-buy__container {
+  padding-top: 100px;
+  padding-bottom: 75px;
+  @media (max-width:$tablet){
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  @media (max-width:$mobileSmall){
+    padding-bottom: 50px;
+  }
+  @media (max-width: em(420)){
+    padding-top: 50px;
+  }
+}
+//========================================================================================================================================================
+
+//.hemostatic-application
+.hemostatic-application {
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  @media (max-width:$tablet){
+    background-position: 90% 270px;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  // .hemostatic-application__container
+  &__container {
+    padding-bottom: 30px;
+  }
+  // .hemostatic-application__title
+  &__title {
+    text-align: left;
+    @media (max-width:$tablet){
+      text-align: center;
+    }
+  }
+  // .hemostatic-application__inner
+  &__inner {
+    padding-top: 40px;
+    // padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    @include adaptiveValue("column-gap", 30, 20, 1240, 1000, 1);
+    column-gap: 20px;
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+  // .hemostatic-application__item
+  &__item {
+    &:first-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 23px;
+    
+    }
+  }
+  //.hemostatic-application__important"
+  &__important {
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: $white;
+    strong {
+      @extend %mont-700;
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+      color: $accent;
+    }
+  }
+  //.hemostatic-application__text
+  &__text {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .hemostatic-application__content
+  &__content {
+    // max-width: 473px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$tablet){
+      max-width: 100%;
+      
+    }
+  }
+  // .hemostatic-application__img
+  &__img-ibg {
+    padding-bottom: percent(600, 566);
+    @media (max-width:$tablet){
+      padding-bottom: percent(460, 520);
+    }
+    @media (max-width:$mobileSmall){
+      padding-bottom: percent(400, 455);
+    }
+    img {
+      object-position: 86%;
+      @media (max-width:$tablet){
+      }
+    }
+  }
+}
+//========================================================================================================================================================
+//.hemostatic-reviews
+//========================================================================================================================================================
+.hemostatic-reviews {
+  background-color: $bg;
+  // .hemostatic-reviews__container
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @media (max-width:$tablet){
+      padding-top: 80px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 50px;
+      padding-bottom: 25px;
+    }
+  }
+  // .hemostatic-reviews__heading
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width:$tablet){
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+    }
+    @media (max-width:$mobile){
+      @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
+    }
+  }
+  // .hemostatic-reviews__title
+  &__title {
+  }
+  // .hemostatic-reviews__action
+  &__action {
+  }
+  // .hemostatic-reviews__button
+  &__button {
+  }
+  // .hemostatic-reviews__inner
+  &__inner {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+    column-gap: 24px;
+    @media (max-width:$tablet){
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // .hemostatic-reviews__item
+  &__item {
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: $white;
+  }
+  // .hemostatic-reviews__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:$mobileSmall){
+    }
+    @media (max-width: em(530)){
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  // .hemostatic-reviews__user-info
+  &__user-info {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .hemostatic-reviews__user-name
+  &__user-name {
+    @extend %mont-600;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+  // .hemostatic-reviews__user-rating
+  &__user-rating {
+    display: flex;
+    column-gap: 2px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  // .hemostatic-reviews__market
+  &__market {
+  }
+  // .hemostatic-reviews__market-link
+  &__market-link {
+    padding: 5px 10px 5px 5px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 12px;
+    background: #F5F6FD;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    p {
+      @extend %mont-500;
+      font-size: rem(14);
+      line-height: math.div(23 , 14);
+    }
+    @media (max-width: em(530)){
+      display: inline-flex;
+    }
+  }
+  // .hemostatic-reviews__bottom
+  &__bottom {
+  }
+
+  // .hemostatic-reviews__text
+  &__text {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14);
+    }
+  }
+  //hemostatic-reviews__wrapper
+  &__wrapper {
+    padding-top: 20px;
+    @media (max-width:$tablet){
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+//========================================================================================================================================================
+
+//hemostatic-contacts
+//========================================================================================================================================================
+.hemostatic-contacts {
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    @media (max-width:$tablet){
+      padding-top: 50px;
+    }
+    @media (max-width:$mobile){
+      padding-bottom: 40px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 40px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 25px;
+    }
+  }
+}
+
+
+

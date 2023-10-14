@@ -38,7 +38,6 @@
     display: grid;
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr 1.5fr;
-    // column-gap: 30px;
     @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
     @media (max-width:$mobile){
       display: flex;
