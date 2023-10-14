@@ -245,6 +245,9 @@
       align-items: flex-start;
       background-color: $white;
     }
+    @media (max-width: em(360)){
+      padding: 15px;
+    }
   }
   // .hemostatic-use__item
   &__item {
@@ -307,9 +310,6 @@
     @media (max-width: em(1000)){
       padding: 15px 30px;
     }
-    // @media (max-width: em(940)){
-    //   padding: 20px 15px;
-    // }
     @media (max-width: em(768)){
       padding: 12px 16px;
       display: flex;
@@ -341,6 +341,7 @@
   &__item-text {
     @extend %mont-600;
     font-size: rem(14);
+    line-height: 120%;
     color: #1B1B1B;
     text-align: center;
     @media (max-width: em(1170)){
@@ -367,11 +368,10 @@
 //========================================================================================================================================================
 .haemostatic {
   background-color: $bg;
-  
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // .inovation__container
+  // .haemostatic__container
   &__container {
     padding-top: 40px;
     padding-bottom: 75px;
@@ -389,7 +389,7 @@
       padding-bottom: 25px;
     }
   }
-  // .inovation__inner
+  // .haemostatic__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -400,12 +400,18 @@
       flex-direction: column-reverse;
       row-gap: 20px;
     }
+    @media (max-width:$mobile){
+      row-gap: 70px;
+    }
+    @media (max-width: em(650)){
+      row-gap: 50px;
+    }
   }
-  // .inovation__item
+  // .haemostatic__item
   &__item {
-
+    
   }
-  // .inovation__item-img
+  // .haemostatic__item-img
   &__item-img {
     max-width: 100%;
     display: block;
@@ -437,17 +443,16 @@
       padding-right: 34px;
     }
   }
-  // .inovation__item-box
+  // .haemostatic__item-box
   &__item-box {
     padding-top: 40px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 20px;
     @media (max-width:$tablet){
       padding-top: 0;
     }
   }
-  // .inovation__item-title
+  // .haemostatic__item-title
   &__item-title {
     max-width: 496px;
     font-size: rem(30);
@@ -457,11 +462,13 @@
       text-align: left;
     }
     @media (max-width:$mobile){
+      max-width: 100%;
+      justify-self: center;
       text-align: center;
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  // .inovation__list
+  // .haemostatic__list
   &__list {
     display: grid;
     row-gap: 16px;
@@ -470,7 +477,7 @@
     font-size: rem(16);
     line-height: normal;
   }
-  // .inovation__list-item
+  // .haemostatic__list-item
   &__list-item {
     &::before{
       left: -21px;
@@ -482,7 +489,14 @@
       top: 4px;
       width: 12px;
       height: 12px;
+      @media (max-width:$tablet){
+        left: -24px;
+      }
     }
+  }
+  @media (max-width:$mobile){
+    background-position: 13% 366px;
+    background-size: 235%;
   }
 }
 //========================================================================================================================================================
