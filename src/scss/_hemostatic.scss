@@ -897,6 +897,12 @@
     @media (max-width:$tablet){
       padding-bottom: 311px;
     }
+    @media (max-width: em(490)){
+      padding-bottom: 190px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 160px;
+    }
   }
   // .hemostatic-benefit__inner
   &__inner {
@@ -940,6 +946,10 @@
       font-size: rem(16);
       line-height: math.div(26 , 16);
       color: $black;
+      @media (max-width: em(420)){
+        font-size: rem(14);
+        line-height: math.div(22 , 14);
+      }
     }
     &::before{
       content:'';
@@ -961,6 +971,10 @@
     font-size: rem(16);
     line-height: math.div(26 , 16);
     color: $black;
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
+    }
   }
   @media (max-width:$tablet){
     background-size: 151%;
@@ -978,13 +992,17 @@
         top: 60px; 
       }
       @media (max-width: em(560)){
-        top: 140px;
+        top: 190px;
+      }
+      @media (max-width: em(460)){
+        top: 270px;
       }
     }
   }
   @media (max-width:$mobile){
     background-position: 0 100%; 
   }
+
 }
 
 //========================================================================================================================================================
