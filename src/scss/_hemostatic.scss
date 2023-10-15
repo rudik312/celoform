@@ -894,15 +894,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    @media (max-width:$tablet){
-      padding-bottom: 311px;
-    }
-    @media (max-width: em(490)){
-      padding-bottom: 190px;
-    }
-    @media (max-width: em(420)){
-      padding-bottom: 160px;
-    }
   }
   // .hemostatic-benefit__inner
   &__inner {
@@ -912,8 +903,14 @@
     row-gap: 20px;
     @media (max-width:$tablet){
       max-width: 100%;
-      // flex-basis: 780px;
       min-height: 670px;
+      padding-bottom: 311px;
+    }
+    @media (max-width: em(490)){
+      padding-bottom: 190px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 160px;
     }
   }
   // .hemostatic-benefit__title
@@ -982,6 +979,7 @@
     &::before{
     background: linear-gradient(179deg, #F5F6FD 57.15%, rgba(245, 246, 253, 0.00) 86.49%);;
     width: 100%;
+    height: 100%;
     filter: blur(2px);
     left: 0;
     -moz-transform: scale(1, 1);
@@ -1045,11 +1043,9 @@
   background-size: cover;
   background-color: $bg;
   @media (max-width:$tablet){
-    background-position: 90% 270px;
-    background-position: 100%;
+    background-position: 99% 110%;
     background-repeat: no-repeat;
-    background-size: cover;
-
+    background-size: 390%;
   }
   // .hemostatic-application__container
   &__container {
@@ -1073,6 +1069,9 @@
       display: flex;
       flex-direction: column;
       row-gap: 30px;
+    }
+    @media (max-width: em(480)){
+      row-gap: 0;
     }
   }
   // .hemostatic-application__item
