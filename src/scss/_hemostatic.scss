@@ -402,9 +402,6 @@
       flex-direction: column-reverse;
       row-gap: 20px;
     }
-    @media (max-width:$mobile){
-      row-gap: 70px;
-    }
     @media (max-width: em(650)){
       row-gap: 40px;
     }
@@ -506,13 +503,13 @@
     background-position: 13% 366px;
     background-size: 235%;
   }
-  @media (max-width: em(560)){
+  @media (max-width: em(570)){
     background-position: 13% 390px;
     background-size: 295%;
   }
   @media (max-width: em(480)){
     background-position: 15% 365px;
-    background-size: 281%;
+    background-size: 330%;
   }
 }
 //========================================================================================================================================================
