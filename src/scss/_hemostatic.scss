@@ -508,8 +508,8 @@
     background-size: 295%;
   }
   @media (max-width: em(480)){
-    background-position: 15% 365px;
-    background-size: 330%;
+    background-position: 15% 405px !important;
+    background-size: 330% !important;
   }
 }
 //========================================================================================================================================================
@@ -1037,14 +1037,18 @@
 
 //.hemostatic-application
 .hemostatic-application {
-  background-position: 100%;
+  background-position: 45% 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
+  @media (max-width: em(1480)){
+    background-position: 70% 0;
+  }
   @media (max-width:$tablet){
-    background-position: 99% 110%;
-    background-repeat: no-repeat;
+    // background-position: 99% 110%;
     background-size: 390%;
+    background-position: 95% -170%;
+    background-repeat: no-repeat;
   }
   // .hemostatic-application__container
   &__container {
@@ -1062,8 +1066,9 @@
     padding-top: 40px;
     // padding-bottom: 20px;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    @include adaptiveValue("column-gap", 100, 20, 1240, 1000, 1);
+    grid-template-columns: 1fr 1.3fr;
+    // @include adaptiveValue("column-gap", 100, 20, 1240, 1000, 1);
+    column-gap: 20px;
     @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
@@ -1080,6 +1085,9 @@
       flex-direction: column;
       row-gap: 23px;
     
+    }
+    &:last-child{
+      
     }
   }
   //.hemostatic-application__text
@@ -1105,20 +1113,31 @@
   //.hemostatic-application__content-item
   &__content-item {
     max-width: 473px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
   }
   // .hemostatic-application__img
-  &__img-ibg {
-    padding-bottom: percent(600, 566);
-    @media (max-width:$tablet){
-      padding-bottom: percent(460, 520);
-    }
-    @media (max-width:$mobileSmall){
-      padding-bottom: percent(400, 455);
-    }
+  // &__img-ibg {
+  //   padding-bottom: percent(600, 566);
+  //   @media (max-width:$tablet){
+  //     padding-bottom: percent(460, 520);
+  //   }
+  //   @media (max-width:$mobileSmall){
+  //     padding-bottom: percent(400, 455);
+  //   }
+  //   img {
+  //     object-position: 94%;
+  //   }
+  // }
+
+  &__img {
+    height: auto;
+    width: 100%;
     img {
-      object-position: 86%;
-      @media (max-width:$tablet){
-      }
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
     }
   }
 }

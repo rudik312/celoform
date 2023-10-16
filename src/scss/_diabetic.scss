@@ -912,6 +912,9 @@
       row-gap: 23px;
     
     }
+    &:last-child{
+      
+    }
   }
   //.diabetic-application__important"
   &__important {
@@ -958,7 +961,7 @@
       padding-bottom: percent(400, 455);
     }
     img {
-      object-position: 86%;
+      object-position: 94%;
       @media (max-width:$tablet){
       }
     }
