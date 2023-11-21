@@ -953,9 +953,7 @@
 
   //.hemostatic-benefit__btn
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     width: 116px;
     height: 116px;
     border-radius: 50%;
@@ -964,7 +962,10 @@
 
   //.hemostatic-benefit__btn-link
   &__btn-link {
-
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-55%, -50%);
   }
   //.hemostatic-benefit__video-text
   &__video-text {
