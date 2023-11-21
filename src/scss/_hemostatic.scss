@@ -251,7 +251,7 @@
   }
   // .hemostatic-use__item
   &__item {
-    cursor: pointer;
+    cursor: default;
     display: grid;
     justify-items: center;
     row-gap: 13px;
@@ -300,14 +300,14 @@
       }
     }
     transition: all 0.3s ease 0s;
-    @media (any-hover: hover){
-      &:hover{
-        background-color: #F5F7FD;
-        -webkit-box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
-        -moz-box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
-        box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
-      }
-    }
+    // @media (any-hover: hover){
+    //   &:hover{
+    //     background-color: #F5F7FD;
+    //     -webkit-box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
+    //     -moz-box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
+    //     box-shadow: -1px -1px 10px 0px rgba(34, 60, 80, 0.1);
+    //   }
+    // }
 
     @media (max-width: em(1000)){
       padding: 15px 30px;
@@ -896,22 +896,87 @@
   }
   // .hemostatic-benefit__inner
   &__inner {
-    max-width: 668px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    // max-width: 668px;
+    // display: flex;
+    // flex-direction: column;
+    // row-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
     @media (max-width:$tablet){
-      max-width: 100%;
-      min-height: 670px;
-      padding-bottom: 311px;
+      // max-width: 100%;
+      // min-height: 670px;
+      // padding-bottom: 311px;
     }
     @media (max-width: em(490)){
-      padding-bottom: 190px;
+      // padding-bottom: 190px;
     }
     @media (max-width: em(420)){
-      padding-bottom: 160px;
+      // padding-bottom: 160px;
     }
   }
+  //.hemostatic-benefit__item
+  &__item {
+    &:first-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+    }
+    &:last-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  //.hemostatic-benefit__wrapper
+  &__wrapper {
+
+  }
+
+  //.hemostatic-benefit__video
+  &__video {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  //.hemostatic-benefit__video-info
+  &__video-info {
+    display: flex;
+    align-items: center;
+  }
+
+  //.hemostatic-benefit__btn
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #8CB0FF 0%, #0033D9 50.13%), #0033D9;
+  }
+
+  //.hemostatic-benefit__btn-link
+  &__btn-link {
+
+  }
+  //.hemostatic-benefit__video-text
+  &__video-text {
+    max-width: 320px;
+    padding: 10px 10px 10px 36px;
+    border-radius: 24px;
+    background-color: #fff;
+    @extend %mont-700;
+    font-size: 19px;
+    line-height: 120%;
+  }
+
   // .hemostatic-benefit__title
   &__title {
     max-width: 575px;
@@ -924,7 +989,6 @@
   }
   // .hemostatic-benefit__list
   &__list {
-
     align-self: stretch;
   }
   // .hemostatic-benefit__list-item
