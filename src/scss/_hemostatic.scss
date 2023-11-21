@@ -862,7 +862,6 @@
 .hemostatic-benefit {
   position: relative;
   background-color: $bg;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -903,7 +902,13 @@
     display: grid;
     grid-template-columns: 0.7fr 1fr;
     column-gap: 30px;
+    @media (max-width: em(1140)){
+      grid-template-columns: repeat(2, 1fr);
+    }
     @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
       // max-width: 100%;
       // min-height: 670px;
       // padding-bottom: 311px;
@@ -921,12 +926,19 @@
       display: flex;
       flex-direction: column;
       row-gap: 25px;
-
+      @media (max-width:$tablet){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+      }
     }
     &:last-child{
       display: flex;
       flex-direction: column;
       row-gap: 20px;
+      @media (max-width:$tablet){
+        order: -1;
+      }
     }
   }
 
@@ -946,6 +958,13 @@
     align-items: center;
     height: 100%;
     padding-left: 80px;
+    @media (max-width: em(1140)){
+      max-width: 100%;
+    }
+    @media (max-width:$tablet){
+      min-height: 285px;
+      padding-left: 40px;
+    }
   }
 
   //.hemostatic-benefit__video-info
@@ -954,37 +973,54 @@
     display: flex;
     align-items: center;
     &::before{
+      width: 132px;
+      height: 132px;
       content:'';
       position: absolute;
       background-image: url(../img/hemostatic/ellipse-btn.svg);
-      width: 132px;
-      height: 132px;
+      background-repeat: no-repeat;
       left: -95px;
       top: -21px;
+      @media (max-width:$tablet){
+        background-image: url(../img/hemostatic/ellipse-btn-2.svg);
+        background-repeat: no-repeat;
+        left: -48px;
+        top: -16px;
+      }
     }
+
   }
 
   //.hemostatic-benefit__btn
   &__btn {
-    position: absolute;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    padding-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    padding-left: 10px;
-    width: 116px;
-    height: 116px;
-    border-radius: 50%;
+    position: absolute;
     left: -86px;
     background: linear-gradient(180deg, #8CB0FF 0%, #0033D9 50.13%), #0033D9;
     z-index: 2;
-
+    @media (max-width:$tablet){
+      width: 74px;
+      height: 74px;
+      left: -43px;
+    }
   }
 
   //.hemostatic-benefit__btn-link
   &__btn-link {
     position: relative;
-
+    svg {
+      @media (max-width:$tablet){
+        width: 40px;
+        height: 30px;
+      }
+    }
   }
   //.hemostatic-benefit__video-text
   &__video-text {
@@ -994,7 +1030,7 @@
     border-radius: 24px;
     background-color: #fff;
     @extend %mont-700;
-    font-size: 19px;
+    font-size: rem(19);
     line-height: 120%;
     &::before{
       height: 1px;
@@ -1004,6 +1040,11 @@
       top: -10px;
       left: 70px;
       background-color: #2663EB;
+      @media (max-width:$tablet){
+        width: 147px;
+        top: -7px;
+        left: 55px;
+      }
     }
     &::after{
       height: 1px;
@@ -1013,6 +1054,16 @@
       bottom: -10px;
       left: 70px;
       background-color: #2663EB;
+      @media (max-width:$tablet){
+        width: 122px;
+        bottom: -7px;
+        left: 55px;
+      }
+    }
+    @media (max-width:$tablet){
+      max-width: 216px;
+      padding: 5px 8px 5px 36px;
+      font-size: rem(12);
     }
   }
 
