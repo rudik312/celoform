@@ -974,12 +974,8 @@
     }
     @media (max-width: em(680)){
       min-height: 300px;
-      // padding-left: 90px;
       @include adaptiveValue("padding-left", 90, 60, 680, 480, 1);
     }
-    // @media (max-width: em(480)){
-    //   padding-left: 60px;
-    // }
     @media (max-width: em(360)){
       
     }
