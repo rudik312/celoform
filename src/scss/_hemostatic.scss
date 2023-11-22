@@ -970,10 +970,11 @@
     }
     @media (max-width:$tablet){
       min-height: 285px;
-      padding-left: 40px;
+      padding-left: 30px;
     }
     @media (max-width: em(680)){
       min-height: 300px;
+      padding-left: 90px;
     }
   }
 
@@ -1001,6 +1002,11 @@
         background-image: url(../img/hemostatic/ellipse-btn.svg);
         left: -98px;
         top: -32px;
+      }
+      @media (max-width: em(470)){
+        background-image: url(../img/hemostatic/ellipse-btn-2.svg);
+        left: -62px;
+        top: -16px;
       }
     }
 
@@ -1030,6 +1036,11 @@
       height: 116px;
       left: -90px;
     }
+    @media (max-width: em(470)){
+      width: 74px;
+      height: 74px;
+      left: -57px;
+    }
   }
 
   //.hemostatic-benefit__btn-link
@@ -1043,6 +1054,10 @@
       @media (max-width: em(680)){
         width: 60px;
         height: 46px;
+      }
+      @media (max-width: em(470)){
+        width: 37px;
+        height: 28px;
       } 
     }
   }
@@ -1069,6 +1084,12 @@
         top: -7px;
         left: 55px;
       }
+      @media (max-width: em(680)){
+        left: 65px;
+      }
+      @media (max-width: em(470)){
+        left: 40px;
+      }
     }
     &::after{
       height: 1px;
@@ -1083,6 +1104,12 @@
         bottom: -7px;
         left: 55px;
       }
+      @media (max-width: em(680)){
+        left: 65px;
+      }
+      @media (max-width: em(470)){
+        left: 40px;
+      }
     }
     @media (max-width:$tablet){
       max-width: 216px;
@@ -1092,6 +1119,11 @@
     @media (max-width: em(680)){
       max-width: 300px;
       font-size: rem(17);
+    }
+    @media (max-width: em(470)){
+      padding: 7px 13px 7px 23px;
+      max-width: 195px;
+      font-size: rem(11);
     }
   }
 
