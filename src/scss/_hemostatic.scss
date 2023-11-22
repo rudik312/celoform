@@ -1044,6 +1044,12 @@
       height: 74px;
       left: -57px;
     }
+    @media (any-hover: hover){
+      transition: all 0.3s;
+      &:hover{
+        background: #022AAA;
+      }
+    }
   }
 
   //.hemostatic-benefit__btn-link
