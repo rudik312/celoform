@@ -974,7 +974,14 @@
     }
     @media (max-width: em(680)){
       min-height: 300px;
-      padding-left: 90px;
+      // padding-left: 90px;
+      @include adaptiveValue("padding-left", 90, 60, 680, 480, 1);
+    }
+    // @media (max-width: em(480)){
+    //   padding-left: 60px;
+    // }
+    @media (max-width: em(360)){
+      
     }
   }
 
@@ -1138,6 +1145,12 @@
     }
     @media (max-width: em(680)){
       order: -1;
+    }
+    @media (max-width: em(480)){
+      font-size: rem(24);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(20);
     }
   }
   // .hemostatic-benefit__list
