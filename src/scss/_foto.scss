@@ -263,6 +263,12 @@
     @media (max-width:$tablet){
       max-width: 100%;
     }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   //.sword-cut__item-info
   &__item-info {
@@ -350,6 +356,9 @@
     @media (max-width:$mobileSmall){
       row-gap: 10px;
     }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   // .autodermoplasty__wrapper
   &__wrapper {
@@ -359,6 +368,9 @@
       row-gap: 15px;
       @media (max-width:$mobileSmall){
         row-gap: 10px;
+      }
+      @media (max-width: em(420)){
+        row-gap: 5px;
       }
     }
     &:last-child{
@@ -384,11 +396,13 @@
         row-gap: 15px;
         .autodermoplasty__item {
           max-width: 100%;
-
         }
-        @media (max-width:$mobileSmall){
-          row-gap: 10px;
-        }
+      }
+      @media (max-width:$mobileSmall){
+        row-gap: 10px;
+      }
+      @media (max-width: em(420)){
+        row-gap: 5px;
       }
 
     }
@@ -418,6 +432,9 @@
     row-gap: 15px;
     @media (max-width:$mobileSmall){
       row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
     }
   }
   // .autodermoplasty__img-ibg
@@ -488,6 +505,9 @@
     @media (max-width:$mobileSmall){
       row-gap: 10px;
     }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   // .scalped-wound__items-box
   &__items-box {
@@ -545,6 +565,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
   }
   // .valgus-deform__items
   &__items {
