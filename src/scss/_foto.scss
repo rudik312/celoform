@@ -209,18 +209,6 @@
   // .septic-complication__info
   &__info {
     max-width: 793px;
-    // @extend %mont-500;
-    // font-size: rem(20);
-    // line-height: 120%;
-    // @media (max-width:$tablet){
-    //   font-size: rem(14);
-    // }
-    // @media (max-width:$mobileSmall){
-    //   font-size: rem(13);
-    // }
-    // @media (max-width: em(420)){
-    //   font-size: rem(12);
-    // }
   }
   // .septic-complication__items
   &__items {
@@ -356,6 +344,12 @@
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+    @media (max-width:$tablet){
+      row-gap: 15px;
+    }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
   }
   // .autodermoplasty__wrapper
   &__wrapper {
@@ -363,14 +357,40 @@
       display: flex;
       flex-direction: column;
       row-gap: 15px;
+      @media (max-width:$mobileSmall){
+        row-gap: 10px;
+      }
     }
     &:last-child{
       display: flex;
       justify-content: space-between;
       column-gap: 25px;
-      & .autodermoplasty__img-ibg {
-        padding-bottom: percent(276, 271);
+      .autodermoplasty__item {
+        max-width: 271px;
       }
+
+      & .autodermoplasty__img-ibg {
+        overflow: hidden;
+        border-radius: 24px;
+        padding-bottom: percent(276, 271);
+        img {
+          object-position: top;
+        }
+      }
+      @media (max-width:$tablet){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+        row-gap: 15px;
+        .autodermoplasty__item {
+          max-width: 100%;
+
+        }
+        @media (max-width:$mobileSmall){
+          row-gap: 10px;
+        }
+      }
+
     }
 
   }
@@ -379,14 +399,26 @@
     display: flex;
     justify-content: space-between;
     column-gap: 25px;
+    @media (max-width:$tablet){
+      column-gap: 16px;
+      .autodermoplasty__item {
+        max-width: 100%;
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
   }
   // .autodermoplasty__item
   &__item {
+    max-width: 375px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    max-width: 375px;
-    width: 100%;
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
   }
   // .autodermoplasty__img-ibg
   &__img-ibg {
