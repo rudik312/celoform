@@ -1,0 +1,124 @@
+//.foto
+.foto {
+  // .foto__container
+  &__container {
+    padding-top: 170px;
+  }
+  // .foto__title-box
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    @media (max-width:$tablet){
+      align-items: center;
+    }
+    @media (max-width: em(620)){
+      row-gap: 10px;
+    }
+  }
+  // .foto__title
+  &__title {
+    margin-bottom: 20px;
+    @media (max-width:$tablet){
+      margin-bottom: 0;
+    }
+  }
+  // .foto__subtitle
+  &__subtitle {
+    @extend %mont-600;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #1B1B1B;
+    display: none;
+    @media (max-width:$tablet){
+      display: flex;
+      text-align: center;
+    }
+    @media (max-width:$mobile){
+      max-width: 316px;
+    }
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
+    }
+  }
+}
+
+.sword-cut {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  // .sword-cut__title
+  &__title {
+    @extend %mont-600;
+    font-size: rem(24);
+    line-height: math.div(34 , 24);
+    @media (max-width:$tablet){
+      font-size: rem(16);
+      line-height: math.div(23 , 16);
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      line-height: math.div(20 , 14);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(13);
+      line-height: math.div(19 , 13);
+    }
+  }
+  // .sword-cut__items
+  &__items {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    @media (max-width:$tablet){
+      column-gap: 16px;
+    }
+  }
+  // .sword-cut__item
+  &__item {
+    max-width: 275px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    @media (max-width:$mobile){
+      max-width: 100%;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+  // .sword-cut__img-ibg
+  &__img-ibg {
+    padding-bottom: percent(350, 275);
+    img {
+      border-radius: 24px;
+      height: 100%;
+      object-position: top;
+    }
+  }
+  // .sword-cut__info
+  &__info {
+    display: flex;
+    justify-content: center;
+    @extend %mont-500;
+    font-size: rem(15);
+    line-height: 120%;
+    color: $black;
+    @media (max-width:$tablet){
+      font-size: rem(12);
+      
+    }
+  }
+  @media (max-width:$tablet){
+    padding-top: 40px;
+    row-gap: 20px;
+  }
+  @media (max-width: em(620)){
+    padding-top: 30px;
+  }
+  @media (max-width:$mobileSmall){
+    row-gap: 10px;
+  }
+}
