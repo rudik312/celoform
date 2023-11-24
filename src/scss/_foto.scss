@@ -559,12 +559,42 @@
   // .valgus-deform__info
   &__info {
   }
+
+  //.valgus-deform__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    // вырезаем пальцы
+    @media (max-width:$tablet){
+      .valgus-deform__inner {
+        &:first-child{
+          .valgus-deform__item {
+            &:first-child{
+              display: none;
+            }
+          }
+        }
+        &:last-child{
+          .valgus-deform__item {
+            &:last-child{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
   // .valgus-deform__inner
   &__inner {
     max-width: 975px;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    @media (max-width:$tablet){
+      // max-width: 100%;
+    }
     @media (max-width:$mobileSmall){
       row-gap: 10px;
     }
@@ -579,7 +609,6 @@
   }
   // .valgus-deform__item
   &__item {
-    // max-width: 264px;
     width: 100%;
   }
   // .valgus-deform__img
@@ -604,6 +633,7 @@
       font-size: rem(12);
     }
   }
+
 }
 
 
