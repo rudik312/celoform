@@ -15,6 +15,9 @@
     @media (max-width: em(620)){
       row-gap: 10px;
     }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   // .foto__title
   &__title {
@@ -88,6 +91,12 @@
         display: none;
       }
     }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   // .sword-cut__img-ibg
   &__img-ibg {
@@ -106,9 +115,8 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$tablet){
+    @media (max-width:$mobile){
       font-size: rem(12);
-      
     }
   }
   @media (max-width:$tablet){
@@ -120,5 +128,8 @@
   }
   @media (max-width:$mobileSmall){
     row-gap: 10px;
+  }
+  @media (max-width: em(420)){
+    padding-top: 20px;
   }
 }
