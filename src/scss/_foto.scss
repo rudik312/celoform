@@ -550,12 +550,23 @@
   &__items {
     display: flex;
     column-gap: 25px;
+    @media (max-width:$tablet){
+      column-gap: 16px;
+    }
   }
   // .valgus-deform__item
   &__item {
+    // max-width: 264px;
+    width: 100%;
   }
   // .valgus-deform__img
-  &__img {
+  &__img-ibg {
+    overflow: hidden;
+    border-radius: 24px;
+    padding-bottom: percent(264, 475);
+    img {
+      object-position: top;
+    }
   }
   // .valgus-deform__items-info
   &__items-info {
