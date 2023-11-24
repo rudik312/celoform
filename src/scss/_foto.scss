@@ -270,7 +270,7 @@
       row-gap: 5px;
     }
   }
-  //.sword-cut__item-info
+  //.septic-complication__item-info
   &__item-info {
     display: flex;
     justify-content: center;
@@ -280,6 +280,9 @@
     color: $black;
     @media (max-width:$mobile){
       font-size: rem(12);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
     }
   }
   // .septic-complication__img-ibg
@@ -337,6 +340,7 @@
       object-position: top;
     }
   }
+  
 }
 //========================================================================================================================================================
 
@@ -546,6 +550,9 @@
     @media (max-width:$mobile){
       font-size: rem(12);
     }
+    @media (max-width: em(420)){
+      font-size: rem(11);
+    }
   }
 }
 //========================================================================================================================================================
@@ -638,6 +645,9 @@
     color: $black;
     @media (max-width:$mobile){
       font-size: rem(12);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
     }
   }
 
