@@ -116,8 +116,8 @@
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  // .sword-cut__title
-  &__title {
+  // .sword-cut__subtitle
+  &__subtitle {
     @extend %mont-600;
     font-size: rem(24);
     line-height: math.div(34 , 24);
@@ -203,8 +203,8 @@
 //.septic-complication
 //========================================================================================================================================================
 .septic-complication {
-  // .septic-complication__title
-  &__title {
+  // .septic-complication__subtitle
+  &__subtitle {
   }
   // .septic-complication__info
   &__info {
@@ -291,8 +291,8 @@
 //..multi-septic-complication
 //========================================================================================================================================================
 .multi-septic-complication {
-  // .multi-septic-complication__title
-  &__title {
+  // .multi-septic-complication__subtitle
+  &__subtitle {
   }
   // .multi-septic-complication__info
   &__info {
@@ -447,6 +447,66 @@
   }
 }
 //========================================================================================================================================================
+
+//.scalped-wound
+//========================================================================================================================================================
+.scalped-wound {
+  // .scalped-wound__subtitle
+  &__subtitle {
+  }
+  // .scalped-wound__info
+  &__info {
+  }
+  // .scalped-wound__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+  }
+  // .scalped-wound__items
+  &__items {
+    max-width: 575px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  // .scalped-wound__items-box
+  &__items-box {
+    display: flex;
+    column-gap: 25px;
+  }
+  // .scalped-wound__item
+  &__item {
+    max-width: 275px;
+    width: 100%;
+  }
+  // .scalped-wound__img
+  &__img-ibg {
+    overflow: hidden;
+    border-radius: 24px;
+    padding-bottom: percent(345, 275);
+    img {
+      object-position: top;
+    }
+  }
+  // .scalped-wound__items-info
+  &__items-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @extend %mont-500;
+    font-size: rem(15);
+    line-height: 120%;
+    color: $black;
+    @media (max-width:$mobile){
+      font-size: rem(12);
+    }
+  }
+}
+
+//========================================================================================================================================================
+
 
 
 
