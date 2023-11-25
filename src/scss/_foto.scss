@@ -1145,7 +1145,7 @@
     flex-direction: column;
     row-gap: 15px;
     @media (max-width: em(1240)){
-      max-width: 750px;
+      max-width: 775px;
     }
   }
   // .eczema__wrapper
@@ -1243,11 +1243,37 @@
       .ankle-dislocation__item {
         max-width: 375px;
         width: 100%;
+
         .ankle-dislocation__img-ibg {
           padding-bottom: percent(466, 375);
         }
       }
+      @media (max-width: em(1240)){
+        display: grid;
+        row-gap: 30px;
+        grid-template-rows: 1fr auto;
+        .ankle-dislocation__wrapper {
+          max-width: 775px;
+          grid-column: 1 / 3;
+        }
+        .ankle-dislocation__item {
+          grid-column: 1 / 3;
+        }
+      }
+      @media (max-width:$tablet){
+        display: flex;
+        .ankle-dislocation__wrapper ~ .ankle-dislocation__item {
+          display: none;
+        }
+        .ankle-dislocation__wrapper {
+          max-width: 100%;
+        }
+        .ankle-dislocation__item {
+          max-width: 100%;
+        }
+      }
     }
+
   }
   // .ankle-dislocation__wrapper
   &__wrapper {
@@ -1255,12 +1281,16 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    
   }
   // .ankle-dislocation__inner
   &__inner {
     display: flex;
     justify-content: space-between;
     column-gap: 25px;
+    @media (max-width:$tablet){
+      column-gap: 16px;
+    }
   }
   // .ankle-dislocation__item
   &__item {
@@ -1269,6 +1299,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    @media (max-width:$tablet){
+      
+    }
   }
   // .ankle-dislocation__img-ibg
   &__img-ibg {
@@ -1296,6 +1329,7 @@
     }
   }
 }
+//========================================================================================================================================================
 
 
 
