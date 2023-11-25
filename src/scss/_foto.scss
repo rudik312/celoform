@@ -4,6 +4,7 @@
   // .foto__container
   &__container {
     padding-top: 170px;
+    padding-bottom: 50px;
   }
   // .foto__title-box
   &__title-box {
@@ -1274,6 +1275,23 @@
       }
     }
 
+    @media (max-width:$tablet){
+      &:nth-child(2n - 1) {
+        .ankle-dislocation__wrapper {
+          &:first-child{
+            display: none;
+          }
+        }
+      }
+      &:last-child{
+        .ankle-dislocation__wrapper {
+          &:first-child{
+            display: none;
+          }
+        }
+      }
+    }
+
   }
   // .ankle-dislocation__wrapper
   &__wrapper {
@@ -1281,7 +1299,12 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   // .ankle-dislocation__inner
   &__inner {
@@ -1300,7 +1323,7 @@
     flex-direction: column;
     row-gap: 15px;
     @media (max-width:$tablet){
-      
+      max-width: 100%;
     }
   }
   // .ankle-dislocation__img-ibg
