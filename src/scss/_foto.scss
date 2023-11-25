@@ -180,8 +180,11 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
     }
   }
   @media (max-width:$tablet){
@@ -278,7 +281,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -459,7 +462,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -547,7 +550,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -643,7 +646,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -721,7 +724,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -839,7 +842,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -898,7 +901,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -963,7 +966,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -1029,7 +1032,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -1052,13 +1055,44 @@
   &__items {
     display: flex;
     column-gap: 25px;
-    &:last-child {
+    &:nth-child(3n - 2) {
       .eczema__img-ibg {
         padding-bottom: percent(240, 375);
       }
+      @media (max-width:$tablet){
+        .eczema__item {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
     }
-    @media (max-width: em(1240)){
-      
+    &:nth-child(3n - 3) {
+      @media (max-width: em(1240)){
+        display: grid;
+        row-gap: 15px;
+        grid-template-rows: 1fr auto;
+      }
+      @media (max-width:$tablet){
+        display: flex;
+        column-gap: 16px;
+        .eczema__wrapper {
+          .eczema__item {
+            &:first-child{
+              display: none;
+            }
+          }
+        }
+        .eczema__inner {
+          max-width: 375px;
+          @media (max-width:$tablet){
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    @media (max-width:$tablet){
+      column-gap: 16px;
     }
   }
   // .eczema__item
@@ -1068,6 +1102,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
   }
   // .eczema__img-ibg
   &__img-ibg {
@@ -1087,7 +1124,7 @@
     font-size: rem(15);
     line-height: 120%;
     color: $black;
-    @media (max-width:$mobile){
+    @media (max-width:$tablet){
       font-size: rem(12);
     }
     @media (max-width: em(420)){
@@ -1101,12 +1138,18 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    @media (max-width: em(1240)){
+      max-width: 750px;
+    }
   }
   // .eczema__wrapper
   &__wrapper {
     display: flex;
     justify-content: space-between;
     column-gap: 25px;
+    @media (max-width: em(1240)){
+      justify-content: flex-start;
+    }
   }
 }
 
