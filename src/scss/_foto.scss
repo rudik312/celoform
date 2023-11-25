@@ -848,6 +848,62 @@
 }
 //========================================================================================================================================================
 
+//.basalioma
+//========================================================================================================================================================
+.basalioma {
+  // .basalioma__subtitle
+  &__subtitle {
+  }
+  // .basalioma__items
+  &__items {
+    display: flex;
+    column-gap: 24px;
+    @media (max-width:$tablet){
+      column-gap: 16px;
+    }
+  }
+  // .basalioma__item
+  &__item {
+    max-width: 375px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
+  }
+  // .basalioma__img-ibg
+  &__img-ibg {
+    overflow: hidden;
+    border-radius: 24px;
+    padding-bottom: percent(266, 375);
+    img {
+      object-position: top;
+    }
+  }
+  // .basalioma__item-info
+  &__item-info {
+    display: flex;
+    justify-content: center;
+    @extend %mont-500;
+    font-size: rem(15);
+    line-height: 120%;
+    color: $black;
+    @media (max-width:$mobile){
+      font-size: rem(12);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
+    }
+  }
+}
 
 
 
