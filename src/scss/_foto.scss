@@ -834,6 +834,7 @@
   &__item-info {
     display: flex;
     justify-content: center;
+    text-align: center;
     @extend %mont-500;
     font-size: rem(15);
     line-height: 120%;
@@ -892,6 +893,120 @@
   &__item-info {
     display: flex;
     justify-content: center;
+    text-align: center;
+    @extend %mont-500;
+    font-size: rem(15);
+    line-height: 120%;
+    color: $black;
+    @media (max-width:$mobile){
+      font-size: rem(12);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
+    }
+  }
+}
+//========================================================================================================================================================
+
+//.treatment-diabetic
+//========================================================================================================================================================
+.treatment-diabetic {
+  // .treatment-diabetic__subtitle
+  &__subtitle {
+  }
+  // .treatment-diabetic__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+    @media (max-width:$tablet){
+      column-gap: 16px;
+      .treatment-diabetic__item {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+  // .treatment-diabetic__item
+  &__item {
+    max-width: 375px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
+  }
+  // .treatment-diabetic__img-ibg
+  &__img-ibg {
+    overflow: hidden;
+    border-radius: 24px;
+    padding-bottom: percent(271, 375);
+    img {
+      object-position: top;
+    }
+  }
+  // .treatment-diabetic__item-info
+  &__item-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @extend %mont-500;
+    font-size: rem(15);
+    line-height: 120%;
+    color: $black;
+    @media (max-width:$mobile){
+      font-size: rem(12);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
+    }
+  }
+}
+//========================================================================================================================================================
+
+//.burn-treatment
+//========================================================================================================================================================
+.burn-treatment {
+  // .burn-treatment__subtitle
+  &__subtitle {
+  }
+  // .burn-treatment__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+  }
+  // .burn-treatment__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    max-width: 275px;
+    width: 100%;
+  }
+  // .burn-treatment__img-ibg
+  &__img-ibg {
+    overflow: hidden;
+    border-radius: 24px;
+    padding-bottom: percent(507, 275);
+    img {
+      object-position: top;
+    }
+  }
+  // .burn-treatment__item-info
+  &__item-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     @extend %mont-500;
     font-size: rem(15);
     line-height: 120%;
