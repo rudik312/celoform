@@ -984,6 +984,15 @@
     display: flex;
     justify-content: space-between;
     column-gap: 25px;
+    @media (max-width:$tablet){
+      column-gap: 16px;
+      .burn-treatment__item {
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
   }
   // .burn-treatment__item
   &__item {
@@ -992,6 +1001,15 @@
     row-gap: 15px;
     max-width: 275px;
     width: 100%;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   // .burn-treatment__img-ibg
   &__img-ibg {
