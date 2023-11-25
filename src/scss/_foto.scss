@@ -1228,6 +1228,74 @@
 }
 //========================================================================================================================================================
 
+//.ankle-dislocation
+//========================================================================================================================================================
+.ankle-dislocation {
+  // .ankle-dislocation__subtitle
+  &__subtitle {
+  }
+  // .ankle-dislocation__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+    &:nth-child(3n - 1) {
+      .ankle-dislocation__item {
+        max-width: 375px;
+        width: 100%;
+        .ankle-dislocation__img-ibg {
+          padding-bottom: percent(466, 375);
+        }
+      }
+    }
+  }
+  // .ankle-dislocation__wrapper
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  // .ankle-dislocation__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+  }
+  // .ankle-dislocation__item
+  &__item {
+    max-width: 275px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  // .ankle-dislocation__img-ibg
+  &__img-ibg {
+    overflow: hidden;
+    border-radius: 24px;
+    padding-bottom: percent(365, 275);
+    img {
+      object-position: top;
+    }
+  }
+  // .ankle-dislocation__item-info
+  &__item-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @extend %mont-500;
+    font-size: rem(15);
+    line-height: 120%;
+    color: $black;
+    @media (max-width:$tablet){
+      font-size: rem(12);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
+    }
+  }
+}
 
 
 
