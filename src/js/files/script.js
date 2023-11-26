@@ -110,7 +110,16 @@ if (target && target.classList.contains("tabheader__item")) {
 
 
 //========================================================================================================================================================
+// let btnShowFoto = document.querySelector('.foto-warning__action-btn');
 
+// function showFoto() {
+
+// }
+
+$('.foto-warning__action-btn').on('click', function() {
+  $('.foto-warning').css('display', 'none');
+  $('.foto').css('display', 'block');
+});
 
 //========================================================================================================================================================
 
@@ -160,36 +169,7 @@ if (target && target.classList.contains("tabheader__item")) {
       
     // });
     //========================================================================================================================================================
-    
-    // (function(){
-    //   var cut = document.querySelectorAll('.select__content > span .select__text');
-      
-    //   for( var i = 0; i < cut.length; i++ ){
-    //     cut[i].innerText = cut[i].innerText.slice(0, 3, i);
-    //   }
 
-    // })();
-
-  //========================================================================================================================================================
-  
-
-    // function cuter(){
-    //   var cut = document.querySelectorAll('.select__content > span .select__text');
-    //   for( var i = 0; i < cut.length; i++ ){
-        
-    //     cut[i].innerText = cut[i].innerText.slice(0, 3);
-
-        
-    //     if ( cut.length <= 3) {
-
-
-    //     }
-    //   }
-
-    // };
-
-    // cuter();
-    //========================================================================================================================================================
 
 }
 

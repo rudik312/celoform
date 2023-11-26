@@ -7,9 +7,14 @@
     padding-bottom: 300px;
     @media (max-width:$tablet){
       padding-top: 162px;
+      padding-bottom: 185px;
     }
     @media (max-width:$mobileSmall){
       padding-top: 126px;
+      padding-bottom: 100px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 85px;
     }
   }
   // .foto-warning__inner
