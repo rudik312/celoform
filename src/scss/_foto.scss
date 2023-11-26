@@ -5,6 +5,12 @@
   &__container {
     padding-top: 215px;
     padding-bottom: 300px;
+    @media (max-width:$tablet){
+      padding-top: 162px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-top: 126px;
+    }
   }
   // .foto-warning__inner
   &__inner {
@@ -15,6 +21,9 @@
     @media (max-width:$tablet){
       row-gap: 30px;
     }
+    @media (max-width:$mobileSmall){
+      row-gap: 20px;
+    }
   }
   // .foto-warning__img
   &__img {
@@ -24,6 +33,10 @@
       @media (max-width:$tablet){
         width: 125px;
         height: 125px;
+      }
+      @media (max-width:$mobileSmall){
+        width: 86px;
+        height: 86px;
       }
     }
   }
@@ -36,29 +49,39 @@
       line-height: math.div(58 , 36);
       color: #0033D9;
       @media (max-width:$tablet){
-        font-size: rem(24);
-        line-height: math.div(38 , 24);
-
+        @include adaptiveValue("font-size", 24, 16, 1000, 480, 1);
+        @include adaptiveValue("line-height", 38, 26, 1000, 480, 1);
+      }
+      @media (max-width:$mobileSmall){
+        font-size: rem(14);
+        line-height: math.div(22 , 14);
       }
     }
   }
   // .foto-warning__action
   &__action {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: 120%;
     display: flex;
     align-items: center;
     column-gap: 16px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: 120%;
+    @media (max-width:$mobileSmall){
+      flex-direction: column;
+      row-gap: 7px;
+    }
+    @media (max-width: em(420)){
+      font-size: rem(11);
+    }
   }
   // .foto-warning__action-link
   &__action-link {
+    padding: 10px 51px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    padding: 10px 51px;
-    border-radius: 16px;
     background-color: inherit;
     border: 1px solid #0033D9;
     color: #0033D9;
@@ -68,15 +91,18 @@
         background-color: $white;
       }
     }
+    @media (max-width:$mobileSmall){
+      width: 100%;
+    }
   }
   // .foto-warning__action-btn
   &__action-btn {
+    padding: 11px 51px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    padding: 10px 51px;
-    border-radius: 16px;
     background-color: #0033D9;
     color: #fff;
   }
