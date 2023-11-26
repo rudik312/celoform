@@ -110,11 +110,7 @@ if (target && target.classList.contains("tabheader__item")) {
 
 
 //========================================================================================================================================================
-// let btnShowFoto = document.querySelector('.foto-warning__action-btn');
-
-// function showFoto() {
-
-// }
+//Кнопка показать фотографии на странице foto.html
 
 $('.foto-warning__action-btn').on('click', function() {
   $('.foto-warning').css('display', 'none');
