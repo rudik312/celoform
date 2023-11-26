@@ -119,6 +119,7 @@ if (target && target.classList.contains("tabheader__item")) {
 $('.foto-warning__action-btn').on('click', function() {
   $('.foto-warning').css('display', 'none');
   $('.foto').css('display', 'block');
+  $('.foto-buy').css('display', 'block');
 });
 
 //========================================================================================================================================================
