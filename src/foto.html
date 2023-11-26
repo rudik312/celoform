@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/head/_head-contacts.htm',{
-	"title":"Фото применения"
+	"title":"Фото применения - врачам"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<!-- start foto-warning -->
+				<section class="foto-warning">
+					<div class="foto-warning__container">
+						<div class="foto-warning__inner">
+							<div class="foto-warning__img">
+								<img src="@img/foto/foto-warning-icon.png" alt="foto-warning">
+							</div>
+							<div class="foto-warning__message">
+								<strong>
+									На данной странице находятся фотографии реального использования Целоформ на травмах и повреждениях различного рода. Впечатлительным, слабонервным,  детям, беременным не смотреть!
+								</strong>
+							</div>
+							<div class="foto-warning__action">
+								<a class="foto-warning__action-link btn" href="./">Отмена</a>
+								<button class="foto-warning__action-btn" type="button">Показать</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end foto-warning -->
 				<!-- start foto -->
 				<section class="foto">
 					<div class="foto__container">
@@ -739,7 +759,7 @@
 				</section>
 				<!-- end foto -->
 				<!-- start buy -->
-				<section class="buy">
+				<!-- <section class="buy">
 					<div class="buy__container">
 						<h3 class="buy__title title">Купить Целоформ с быстрой доставкой</h3>
 						<div class="buy__inner">
@@ -818,7 +838,7 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> -->
 				<!-- end buy -->
 			</main>
 			@@include('html/_footer.htm',{})

@@ -1,6 +1,83 @@
+//.foto-warning
+//========================================================================================================================================================
+.foto-warning {
+  // .foto-warning__container
+  &__container {
+    padding-top: 215px;
+    padding-bottom: 300px;
+  }
+  // .foto-warning__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+  }
+  // .foto-warning__img
+  &__img {
+  }
+  // .foto-warning__message
+  &__message {
+    text-align: center;
+    strong {
+      @extend %mont-600;
+      font-size: rem(36);
+      line-height: math.div(58 , 36);
+      color: #0033D9;
+    }
+  }
+  // .foto-warning__action
+  &__action {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+  // .foto-warning__action-link
+  &__action-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 10px 51px;
+    border-radius: 16px;
+    background-color: #0033D9;
+    color: #fff;
+    // @media (any-hover: hover){
+    //   transition: background-color 0.3s ease 0s;
+    //   &:hover{
+    //     background-color: $btnHover;
+    //   }
+    // }
+  }
+  // .foto-warning__action-btn
+  &__action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 10px 51px;
+    border-radius: 16px;
+    background-color: inherit;
+    border: 1px solid #0033D9;
+    color: #0033D9;
+  }
+}
+
+
+
+
+//========================================================================================================================================================
+
+
+
 //.foto
+//========================================================================================================================================================
 .foto {
   background-color: #F5F6FD;
+  display: none;
   // .foto__container
   &__container {
     padding-top: 170px;
