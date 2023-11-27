@@ -1272,6 +1272,12 @@
     @media (max-width: em(1240)){
       max-width: 775px;
     }
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+    @media (max-width: em(420)){
+      row-gap: 5px;
+    }
   }
   // .eczema__wrapper
   &__wrapper {
