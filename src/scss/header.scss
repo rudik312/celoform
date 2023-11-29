@@ -50,7 +50,9 @@
 		margin-bottom: 10px;
 		@media (max-width:$mobile){
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
+			// row-gap: 10px;
+			column-gap: 3px;
 			margin-bottom: 0;
 		}
 	}
@@ -121,6 +123,9 @@
 		@media (max-width:$mobile){
 			justify-content: center;
 		}
+		@media (max-width: em(380)){
+			padding-right: 0;
+		}
 	}
 
 	//.header__site
@@ -144,13 +149,6 @@
 		@media (max-width:$tablet){
 			display: none;
 		}
-		// @media (any-hover: hover){
-		// 	transition: text-shadow 0.2s;
-		// 	&:hover{
-		// 		text-shadow: 0 0 .20px #0033D9, 0 0 .20px #0033D9;
-		// 	}
-		// }
-
 	}
 
 	// .header__actions
@@ -241,11 +239,31 @@
 		@include adaptiveValue("padding-top", 10, 8, 1240, 1000, 1);
 		@include adaptiveValue("padding-bottom", 10, 8, 1240, 1000, 1);
 		@media (max-width:$mobile){
-			display: none;
+			// display: none;
+		}
+		@media (max-width: em(620)){
+			font-size: rem(12);
+			padding: 7px 7px 7px 7px;
+			// padding: 15px;
+			// background-image: url(../img/header/basket-icon2.svg);
+			// background-repeat: no-repeat;
+			// background-position: center;
+			// width: 20px;
+			// height: 20px;
+			// background-color: inherit;
+			
+		}
+		@media (max-width: em(360)){
+			font-size: rem(10);
 		}
 	}
 }
-
+.btn-box {
+	@media (max-width:$mobile){
+		// width: 100%;
+		// grid-column: 2 / 3;
+	}
+}
 //Стили для кастомного select
 // .select {
 //   max-width: 270px;
@@ -609,10 +627,8 @@
 		cursor: pointer;
 		z-index: 5;
 		right: 16px;
-		@media (max-width: em(390)){
-			top: -1px;
-			right: 5px;
-		}
+		// top: -20px;
+
 		span,
 		&::before,
 		&::after {
@@ -649,6 +665,11 @@
 				transform: rotate(45deg);
 			}
 		}
+	}
+	@media (max-width: em(390)){
+		top: -1px;
+		// right: 5px;
+		right: 0;
 	}
 }
 
