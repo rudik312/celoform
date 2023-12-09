@@ -1,27 +1,27 @@
 
-//.hemostatic-main
+//.burns-main
 //========================================================================================================================================================
-.hemostatic-main {
+.burns-main {
   max-width: 100%;
   background-position: center top 14%;
   background-repeat: no-repeat;
   background-color: $bg;
-
-  // .main__container
+  background-size: cover;
+  // .burns-main__container
   @media (max-width:$tablet){
-    background-position: 60% 0;
+    background-position: 70% 0;
   }
   @media (max-width:$mobile){
-    background-position: 60% 60px;
+    // background-position: 60% 60px;
     background-size: 230%;
   }
   @media (max-width:$mobileSmall){
-    background-position: 56% 70px;
+    background-position: 70% 30px;
     background-size: 200%;
   }
   @media (max-width: em(380)){
-    background-position: 63% 10%;
-    background-size: 300%;
+    background-position: 62% 15%;
+    background-size: 220%;
   }
   &__container {
     padding-bottom: 40px;
@@ -35,10 +35,9 @@
       @include adaptiveValue("padding-top", 50, 70, 480, 420, 1); 
     }
   }
-  // .main__inner
+  // .burns-main__inner
   &__inner {
     display: grid;
-    // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr 1fr;
     @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
     @media (max-width:$mobile){
@@ -46,7 +45,7 @@
       flex-direction: column-reverse;
     }
   }
-  // .main__content
+  // .burns-main__content
   &__content {
     // max-width: 100%;
     max-width: 532px;
@@ -63,13 +62,13 @@
       row-gap: 24px;
     }
   }
-  // .main__title-box
+  // .burns-main__title-box
   &__title-box {
     display: flex;
     flex-direction: column;
     row-gap: 7px;
   }
-  // .main__title
+  // .burns-main__title
   &__title {
     @extend %mont-700;
     // font-size: rem(72);
@@ -86,11 +85,14 @@
     }
   }
 
-  // .main__subtitle
+  // .burns-main__subtitle
   &__subtitle {
     // font-size: rem(16);
     @extend %mont-600;
     @include adaptiveValue("font-size", 16, 13.8, 1000, 868, 1);
+    @media (max-width:$tablet){
+      max-width: 427px;
+    }
     @media (max-width:$mobile){
       @include adaptiveValue("font-size", 13.8, 16, 868, 767, 1);
     }
@@ -105,9 +107,9 @@
       max-width: 280px;
     }
   }
-  // .main__list
+  // .burns-main__list
   &__list {
-    max-width: 295px;
+    // max-width: 295px;
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(19 , 16);
@@ -116,7 +118,7 @@
       @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
     }
   }
-  // .main__list-item
+  // .burns-main__list-item
   &__list-item {
     position: relative;
     &:not(:last-child) {
@@ -132,7 +134,7 @@
       background: rgba(0, 148, 41, 0.30);
     }
   }
-  // .main__actions
+  // .burns-main__actions
   &__actions {
     display: flex;
     align-items: center;
@@ -146,7 +148,7 @@
       row-gap: 20px;
     }
   }
-  // .main__button
+  // .burns-main__button
   &__button {
     @extend %mont-500;
     font-size: rem(16);
@@ -174,7 +176,7 @@
       width: 100%;
     }
   }
-  // .main__link-consultation
+  // .burns-main__link-consultation
   &__link-consultation {
     @extend %mont-400;
     font-size: rem(14);
@@ -185,9 +187,9 @@
       @include adaptiveValue("font-size", 14, 13, 768, 480, 1);
     }
   }
-  // .hemostatic-main__bg
+  // .burns-main__bg
   &__bg {
-    @include adaptiveValue("padding-top", 160, 140, 1240, 1000, 1);
+    @include adaptiveValue("padding-top", 180, 160, 1240, 1000, 1);
     @media (max-width:$mobile){
       padding: 0;
 
@@ -195,7 +197,15 @@
     img {
       height: auto;
       max-width: 100%;
+      position: relative;
+      right: 150px;
+      @media (max-width:$tablet){
+        top: 130px;
+        right: 50px;
+      }
       @media (max-width:$mobile){
+        top: 0;
+        right: 10px;
         padding-top: 77px;
         padding-right: 30px;
         height: auto;
@@ -212,7 +222,7 @@
   }
 
 
-  // .hemostatic-main__card
+  // .burns-main__card
   &__card {
     @extend %mont-500;
     font-size: rem(12);
@@ -221,7 +231,7 @@
       padding: 0;
     }
   }
-// .hemostatic-main__card
+// .burns-main__card
   &__card-link {
     text-decoration: underline !important;
     color: $accent;
@@ -230,156 +240,20 @@
 
 }
 
-//.hemostatic-use
-.hemostatic-use {
-  padding-top: 60px;
-  // .hemostatic-use__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    @include adaptiveValue("margin-top", 0, 60, 1240, 980, 1);
-    @media (max-width: em(768)){
-      margin: 0;
-      padding: 20px;
-      border-radius: 24px;
-      display: flex;
-      flex-direction: column;
-      row-gap: 10px;
-      align-items: flex-start;
-      background-color: $white;
-    }
-    @media (max-width: em(360)){
-      padding: 15px;
-    }
-  }
-  // .hemostatic-use__item
-  &__item {
-    cursor: default;
-    display: grid;
-    justify-items: center;
-    row-gap: 13px;
-    @extend %mont-600;
-    font-size: rem(14);
-    padding: 23px 35px;
-    background-color: $white;
-    border-right: 2px solid #F5F6FD;
-    &:first-child{
-      border-top-left-radius: 30px;
-      @media (max-width:$mobile){
-        border-radius: 16px;
-      }
-    }
-    &:last-child{
-      border-bottom-right-radius: 30px;
-      border-right: none;
-      @media (max-width:$mobile){
-        border-radius: 16px;
-      }
-    }
-    &:nth-child(2) {
-      display: none;
-      @media (max-width: em(768)){
-        display: flex;
-      }
-    }
-    &:nth-child(4) {
-      border-right: 2px solid #F5F6FD;
-      span {
-        display: none;
-        @media (max-width: em(768)){
-          display: inline-block;
-        }
-      }
-      @media (max-width: em(768)){
-        border-radius: 16px;
-      }
-    }
-    &:nth-child(5){
-      border-top: 2px solid #F5F6FD;
-      border-top-right-radius: 30px;
-      @media (max-width: em(768)){
-      }
-    }
-    &:nth-child(6) {
-      border-bottom-left-radius: 30px;
-    }
-    &:nth-child(n + 6) {
-      border-top: 2px solid #F5F6FD;
-      @media (max-width: em(768)){
-        display: none;
-      }
-    }
-    transition: all 0.3s ease 0s;
-    @media (max-width: em(1000)){
-      padding: 15px 30px;
-    }
-    @media (max-width: em(768)){
-      padding: 12px 16px;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      background-color: inherit;
-      border: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      font-size: rem(14);
-      line-height: 120%;
-      border-radius: 16px;
-      background-color: $bg;
-    }
-  }
-  // .hemostatic-use__item-img
-  &__item-img {
-    width: 48px;
-    height: 48px;
-    @media (max-width: em(1170)){
-      width: 32px;
-      height: 32px;
-    }
-    @media (max-width: em(768)){
-      display: none;
-    }
-  }
-  // .hemostatic-use__item-text
-  &__item-text {
-    @extend %mont-600;
-    font-size: rem(14);
-    line-height: 120%;
-    color: #1B1B1B;
-    text-align: center;
-    @media (max-width: em(1170)){
-      font-size: rem(12);
-    }
-    @media (max-width: em(768)){
-      text-align: left;
-    }
-  }
-  //.hemostatic-use__item-arrow
-  &__item-arrow {
-    width: 16px;
-    height: 16px;
-    display: none;
-    @media (max-width:$mobile){
-      display: inline-flex;
-    }
-  }
-
-  @media (max-width:$mobile){
-    padding-top: 50px;
-  }
-}
 //========================================================================================================================================================
 
-// .haemostatic
+// .burns-multifaceted
 //========================================================================================================================================================
-.haemostatic {
+.burns-multifaceted {
   background-color: $bg;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+
   // .haemostatic__container
   &__container {
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 75px;
     @media (max-width:$tablet){
       padding-bottom: 40px;
@@ -418,7 +292,28 @@
   }
   // .haemostatic__item
   &__item {
-    
+    &:last-child{
+      @media (max-width:$mobile){
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 241px;
+        // background: linear-gradient(183deg, #F5F6FD 43.47%, rgba(245, 246, 253, 0.00) 98.53%);
+        &::before{
+          content:'';
+          position: absolute;
+          width: 100%;
+          height: 400px;
+          right: 4%;
+          top: 50%;
+          background: linear-gradient(183deg, #F5F6FD 23.47%, rgba(245, 246, 253, 0.00) 78.53%);
+          filter: blur(2px);
+        }
+      }
+      @media (max-width: em(560)){
+        padding-bottom: 152px;
+      }
+    }
   }
   // .haemostatic__item-img
   &__item-img {
@@ -485,6 +380,9 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: normal;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
+    }
   }
   // .haemostatic__list-item
   &__list-item {
@@ -503,26 +401,33 @@
       }
     }
   }
+  @media (max-width: em(1320)){
+    background-position: 30% 0;
+  }
   @media (max-width:$mobile){
-    background-position: 13% 366px;
-    background-size: 235%;
+    background-position: 13% 430px;
+    background-size: 325%;
   }
   @media (max-width: em(570)){
     background-position: 13% 390px;
     background-size: 295%;
   }
   @media (max-width: em(480)){
-    background-position: 15% 405px !important;
+    background-position: 15% 350px !important;
     background-size: 330% !important;
   }
 }
 //========================================================================================================================================================
 
-//.hemostatic-product
+//.burns-product
 //========================================================================================================================================================
-.hemostatic-product {
-  background-color: $bg;
-  // .product__container
+.burns-product {
+  // background-color: $bg;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // .burns-product__container
   &__container {
     padding-top: 50px;
     padding-bottom: 100px;
@@ -535,10 +440,11 @@
       padding-bottom: 50px;
     }
   }
-  // .product__inner
+  // .burns-product__inner
   &__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.2fr 1fr;
     @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
     @media (max-width:$tablet){
       display: flex;
@@ -547,25 +453,57 @@
       row-gap: 20px;
     }
   }
-  // .product__content
-  &__content{
-    max-width: 572px;
+  // burns-product__item
+  &__item {
+    position: relative;
+    max-width: 584px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     row-gap: 20px;
+    &:first-child{
+      @media (max-width:$tablet){
+        &::before{
+          content:'';
+          position: absolute;
+          width: 130%;
+          height: 780px;
+          right: -5%;
+          top: 10%;
+          background: linear-gradient(180deg, #F5F6FD 58.47%, rgba(245, 246, 253, 0.00) 102.53%);
+          filter: blur(2px);
+        }
+      }
+    }
     @media (max-width:$tablet){
       max-width: 100%;
     }
   }
-  // .product__title
+  //.burns-product__img
+  &__img {
+    max-width: 100%;
+    img {
+      display: block;
+      position: relative;
+      right: 120px;
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width: em(1180)){
+        right: 35px;
+      }
+    }
+  }
+  // .burns-product__title
   &__title {
   }
-  // .product__info
+  // .burns-product__info
   &__info {
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
     text-align: justify;
+    z-index: 5;
     span {
       @extend %mont-600;
     }
@@ -578,7 +516,40 @@
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
     }
   }
-// .product__cards 
+  //.burns-product__list
+  &__list {
+    padding-left: 22px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #000;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
+    }
+  }
+  // .burns-product__list-item
+  &__list-item {
+    &::before{
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      left: -21px;
+      top: 9px;
+      @media (max-width:$tablet){
+        left: -20px;
+      }
+    }
+    &::after{
+      top: 6px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+// .burns-product__cards 
   &__cards {
     display: flex;
     align-items: center;
@@ -593,7 +564,7 @@
       @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
     }
   }
-  // .product__image
+  // .burns-product__image
   &__image {
     max-width: 100%;
     display: block;
@@ -603,12 +574,18 @@
       object-fit: cover;
     }
   }
+  @media (max-width: em(1320)){
+    background-position: 70% 0;
+  }
+  @media (max-width:$tablet){
+    background-position: 100% 100px;
+  }
 }
 //========================================================================================================================================================
 
-//.hemostatic-multiplication
+//.burns-multiplication
 //========================================================================================================================================================
-.hemostatic-multiplication {
+.burns-advantages {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -616,7 +593,7 @@
   @media (max-width:$tablet){
     background-position: center -90px;
   }
-  // .hemostatic-multiplication__container
+  // .burns-advantages__container
   &__container {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -624,19 +601,15 @@
       padding-bottom: 40px;
     }
   }
-  // .hemostatic-multiplication__title
+  // .burns-advantages__title
   &__title {
     font-size: rem(32);
     line-height: math.div(45 , 32);
-    // @media (max-width:$tablet){
-    //   font-size: rem(32);
-    // }
-
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  //.hemostatic-multiplication__content
+  //.burns-advantages__content
   &__content {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -662,16 +635,16 @@
     }
   }
 
-  //.hemostatic-multiplication__text
+  //.burns-advantages__text
   &__text {
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
 
-  // .hemostatic-multiplication__inner
+  // .burns-advantages__inner
   &__inner {
-    padding-top: 20px;
+    padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
@@ -684,16 +657,13 @@
       row-gap: 15px;
     }
   }
-  // .hemostatic-multiplication__items
+  // .burns-advantages__items
   &__items {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 15px;
-    // display: flex;
-    // flex-direction: column;
-
   }
-  // .hemostatic-multiplication__item
+  // .burns-advantages__item
   &__item {
     display: flex;
     flex-direction: column;
@@ -705,7 +675,7 @@
       padding: 15px;
     }
   }
-  // .hemostatic-multiplication__item-title
+  // .burns-advantages__item-title
   &__item-title {
     text-transform: uppercase;
     @extend %mont-700;
@@ -713,22 +683,26 @@
     line-height: math.div(19 , 16);
 
   }
-  // .hemostatic-multiplication__item-text
+  // .burns-advantages__item-text
   &__item-text {
     @extend %mont-500;
     font-size: rem(14);
     line-height: math.div(22 , 14);
 
   }
-  // .hemostatic-multiplication__image
+  // .burns-advantages__image
   &__image {
+    max-width: 100%;
+    display: block;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     img {
-      display: inline-flex;
-      width: 385px;
-      height: 397px;
+      position: relative;
+      right: 50px;
+      object-fit: cover;
+      width: 445px;
+      height: 356px;
     }
     @media (max-width: em(1180)){
       display: none;
@@ -740,15 +714,13 @@
 }
 //========================================================================================================================================================
 
-
-
-//.hemostatic-documents
+//.burns-documents
 //========================================================================================================================================================
-.hemostatic-documents {
+.burns-documents {
   background-color: $bg;
-  // .hemostatic-documents__container
+  // .burns-documents__container
   &__container {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
     @media (max-width:$tablet){
       padding-top: 80px;
@@ -759,7 +731,7 @@
       padding-bottom: 50px;
     }
   }
-  // .hemostatic-documents__inner
+  // .burns-documents__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -771,7 +743,7 @@
       row-gap: 30px;
     }
   }
-  // .hemostatic-documents__content
+  // .burns-documents__content
   &__content{
     max-width: 572px;
     display: flex;
@@ -783,7 +755,7 @@
       align-items: center;
     }
   }
-  // .hemostatic-documents__title
+  // .burns-documents__title
   &__title {
     font-size: rem(30);
     @media (max-width:$tablet){
@@ -793,7 +765,7 @@
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  // .hemostatic-documents__info
+  // .burns-documents__info
   &__info {
     @extend %mont-400;
     font-size: rem(16);
@@ -810,9 +782,10 @@
     }
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
     }
   }
-  //.hemostatic-documents__action
+  //.burns-documents__action
   &__action {
     padding-top: 10px;
     @media (max-width:$mobileSmall){
@@ -821,19 +794,19 @@
       text-align: center;
     }
   }
-  //.hemostatic-documents__link
+  //burns-documents__btn
   &__btn {
+    background: linear-gradient(180deg, #E84073 12.5%, #B92350 128.41%), #F13E75;
     @media (max-width:$mobileSmall){
       font-size: rem(14);
       display: block;
-      // width: 100%;
     }
     @media (max-width: em(420)){
       font-size: rem(12);
       padding: 10px 15px;
     }
   }
-// .hemostatic-documents__cards 
+// .burns-documents__cards 
   &__cards {
     display: flex;
     align-items: center;
@@ -848,7 +821,7 @@
       @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
     }
   }
-  // .hemostatic-documents__image
+  // .burns-documents__image
   &__image {
     max-width: 100%;
     display: block;
@@ -861,409 +834,17 @@
 }
 //========================================================================================================================================================
 
-//.hemostatic-benefit
-//========================================================================================================================================================
-.hemostatic-benefit {
-  position: relative;
-  background-color: $bg;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  &::before{
-    content:'';
-    position: absolute;
-    background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
-    width: 60%;
-    height: 105%;
-    right: 25%;
-    top: -23px;
-    filter: blur(2px);
-    -moz-transform: scale(-1, -1);
-    -o-transform: scale(-1, -1);
-    -webkit-transform: scale(-1, -1);
-    transform: scale(-1, -1);
-    z-index: -1;
-    @media (max-width: em(1260)){
-      right: 15%;
-      width: 95%;
-    }
-  }
-  // .hemostatic-benefit__container
-  &__container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  // .hemostatic-benefit__inner
-  &__inner {
-    // max-width: 668px;
-    // display: flex;
-    // flex-direction: column;
-    // row-gap: 20px;
-    display: grid;
-    grid-template-columns: 0.7fr 1fr;
-    column-gap: 30px;
-    @media (max-width: em(1140)){
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      // max-width: 100%;
-      // min-height: 670px;
-      // padding-bottom: 311px;
-    }
-    @media (max-width: em(490)){
-      // padding-bottom: 190px;
-    }
-    @media (max-width: em(420)){
-      // padding-bottom: 160px;
-    }
-  }
-  //.hemostatic-benefit__item
-  &__item {
-    &:first-child{
-      display: flex;
-      flex-direction: column;
-      row-gap: 25px;
-      @media (max-width:$tablet){
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 16px;
-      }
-      @media (max-width: em(680)){
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-      }
-    }
-    &:last-child{
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      @media (max-width:$tablet){
-        order: -1;
-      }
-      @media (max-width: em(680)){
-        order: 2;
-      }
-    }
-  }
-
-  //.hemostatic-benefit__wrapper
-  &__wrapper {
-
-  }
-
-  //.hemostatic-benefit__video
-  &__video {
-    max-width: 475px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding-left: 80px;
-    @media (max-width: em(1140)){
-      max-width: 100%;
-    }
-    @media (max-width:$tablet){
-      min-height: 285px;
-      padding-left: 30px;
-    }
-    @media (max-width: em(680)){
-      min-height: 300px;
-      @include adaptiveValue("padding-left", 90, 60, 680, 480, 1);
-    }
-    @media (max-width: em(360)){
-      
-    }
-  }
-
-  //.hemostatic-benefit__video-info
-  &__video-info {
-    position: relative;
-    display: flex;
-    align-items: center;
-    &::before{
-      width: 132px;
-      height: 132px;
-      content:'';
-      position: absolute;
-      background-image: url(../img/hemostatic/ellipse-btn.svg);
-      background-repeat: no-repeat;
-      left: -95px;
-      top: -21px;
-      @media (max-width:$tablet){
-        background-image: url(../img/hemostatic/ellipse-btn-2.svg);
-        background-repeat: no-repeat;
-        left: -48px;
-        top: -15px;
-      }
-      @media (max-width: em(680)){
-        background-image: url(../img/hemostatic/ellipse-btn.svg);
-        left: -98px;
-        top: -32px;
-      }
-      @media (max-width: em(470)){
-        background-image: url(../img/hemostatic/ellipse-btn-2.svg);
-        left: -62px;
-        top: -16px;
-      }
-    }
-
-  }
-
-  //.hemostatic-benefit__btn
-  &__btn {
-    width: 116px;
-    height: 116px;
-    border-radius: 50%;
-    padding-left: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    position: absolute;
-    left: -86px;
-    background: linear-gradient(180deg, #8CB0FF 0%, #0033D9 50.13%), #0033D9;
-    z-index: 2;
-    @media (max-width:$tablet){
-      width: 74px;
-      height: 74px;
-      left: -43px;
-    }
-    @media (max-width: em(680)){
-      width: 116px;
-      height: 116px;
-      left: -90px;
-    }
-    @media (max-width: em(470)){
-      width: 74px;
-      height: 74px;
-      left: -57px;
-    }
-    @media (any-hover: hover){
-      transition: all 0.3s;
-      &:hover{
-        background: #022AAA;
-      }
-    }
-  }
-
-  //.hemostatic-benefit__btn-link
-  &__btn-link {
-    position: relative;
-    svg {
-      @media (max-width:$tablet){
-        width: 40px;
-        height: 30px;
-      }
-      @media (max-width: em(680)){
-        width: 60px;
-        height: 46px;
-      }
-      @media (max-width: em(470)){
-        width: 37px;
-        height: 28px;
-      } 
-    }
-  }
-  //.hemostatic-benefit__video-text
-  &__video-text {
-    position: relative;
-    max-width: 320px;
-    padding: 10px 10px 10px 36px;
-    border-radius: 24px;
-    background-color: #fff;
-    @extend %mont-700;
-    font-size: rem(19);
-    line-height: 120%;
-    &::before{
-      height: 1px;
-      width: 230px;
-      content:'';
-      position: absolute;
-      top: -10px;
-      left: 70px;
-      background-color: #2663EB;
-      @media (max-width:$tablet){
-        width: 147px;
-        top: -7px;
-        left: 55px;
-      }
-      @media (max-width: em(680)){
-        left: 65px;
-      }
-      @media (max-width: em(470)){
-        left: 40px;
-      }
-    }
-    &::after{
-      height: 1px;
-      width: 190px;
-      content:'';
-      position: absolute;
-      bottom: -10px;
-      left: 70px;
-      background-color: #2663EB;
-      @media (max-width:$tablet){
-        width: 122px;
-        bottom: -7px;
-        left: 55px;
-      }
-      @media (max-width: em(680)){
-        left: 65px;
-      }
-      @media (max-width: em(470)){
-        left: 40px;
-      }
-    }
-    @media (max-width:$tablet){
-      max-width: 216px;
-      padding: 5px 8px 5px 36px;
-      font-size: rem(12);
-    }
-    @media (max-width: em(680)){
-      max-width: 300px;
-      font-size: rem(17);
-    }
-    @media (max-width: em(470)){
-      padding: 7px 13px 7px 23px;
-      max-width: 195px;
-      font-size: rem(11);
-    }
-  }
-
-  // .hemostatic-benefit__title
-  &__title {
-    max-width: 575px;
-    @extend %mont-700;
-    font-size: rem(30);
-    line-height: math.div(42 , 30);
-    @media (max-width:$tablet){
-      max-width: 100%;
-    }
-    @media (max-width: em(680)){
-      order: -1;
-    }
-    @media (max-width: em(480)){
-      font-size: rem(24);
-    }
-    @media (max-width: em(420)){
-      font-size: rem(20);
-    }
-  }
-  // .hemostatic-benefit__list
-  &__list {
-    align-self: stretch;
-  }
-  // .hemostatic-benefit__list-item
-  &__list-item {
-    position: relative;
-    padding-left: 15px;
-    span {
-      @extend %mont-700;
-      font-size: rem(16);
-      line-height: math.div(26 , 16);
-      color: $black;
-    }
-    p {
-      @extend %mont-500;
-      font-size: rem(16);
-      line-height: math.div(26 , 16);
-      color: $black;
-      @media (max-width: em(420)){
-        font-size: rem(14);
-        line-height: math.div(22 , 14);
-      }
-    }
-    &::before{
-      content:'';
-      border-radius: 50%;
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background-color: #000;
-      top: 12px;
-      left: 0;
-    }
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-  // .hemostatic-benefit__text
-  &__text {
-    @extend %mont-600;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: $black;
-    @media (max-width: em(420)){
-      font-size: rem(14);
-      line-height: math.div(22 , 14);
-    }
-  }
-  @media (max-width:$tablet){
-    background-size: 151%;
-    background-position: 0 428px;
-    &::before{
-    background: linear-gradient(179deg, #F5F6FD 57.15%, rgba(245, 246, 253, 0.00) 86.49%);;
-    width: 100%;
-    height: 100%;
-    filter: blur(2px);
-    left: 0;
-    -moz-transform: scale(1, 1);
-    -o-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-      @media (max-width:$mobile){
-        top: 60px; 
-      }
-      @media (max-width: em(560)){
-        top: 190px;
-      }
-      @media (max-width: em(460)){
-        top: 270px;
-      }
-    }
-  }
-  @media (max-width:$mobile){
-    background-position: 0 100%; 
-  }
-
-}
-
-//========================================================================================================================================================
-
-// .reports
-//========================================================================================================================================================
-.hemostatic-reports__container {
-  padding-bottom: 100px;
-  @media (max-width:$tablet){
-    padding-bottom: 80px;
-  }
-  @media (max-width:$mobile){
-    padding-bottom: 50px; 
-  }
-}
-//========================================================================================================================================================
-
 //.buy
 //========================================================================================================================================================
-.hemostatic-buy__container {
-  padding-top: 100px;
-  padding-bottom: 75px;
-  @media (max-width:$tablet){
-    padding-top: 40px;
-    padding-bottom: 80px;
-  }
+.burns-buy__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  // @media (max-width:$tablet){
+  //   padding-top: 40px;
+  //   padding-bottom: 80px;
+  // }
   @media (max-width:$mobileSmall){
-    padding-bottom: 50px;
+    padding-bottom: 25px;
   }
   @media (max-width: em(420)){
     padding-top: 50px;
@@ -1271,80 +852,488 @@
 }
 //========================================================================================================================================================
 
-//.hemostatic-application
-.hemostatic-application {
+//.burns-types
+//========================================================================================================================================================
+.burns-types {
+  // .burns-types__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media (max-width:$mobileSmall){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  // .burns-types__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // column-gap: 60px;
+    @include adaptiveValue("column-gap", 60, 20, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .burns-types__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .burns-types__title
+  &__title {
+  }
+  // .burns-types__list
+  &__list {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  // .burns-types__list-item
+  &__list-item {
+    position: relative;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #000;
+    span {
+      @extend %mont-700;
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #000;
+      left: -10px;
+      top: 10px;
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
+    }
+  }
+  // .burns-types__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // column-gap: 70px;
+    @include adaptiveValue("column-gap", 70, 20, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      column-gap: 70px;
+      justify-content: space-evenly;
+    }
+    @media (max-width:$mobile){
+      justify-content: center;
+    }
+    @media (max-width: em(520)){
+      @include adaptiveValue("column-gap", 70, 50, 520, 420, 1);
+      justify-content: space-between;
+    }
+  }
+  // .burns-types__item
+  &__item {
+
+  }
+
+  &__img {
+    max-width: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+//========================================================================================================================================================
+
+//.burns-hogweed
+//========================================================================================================================================================
+.burns-hogweed {
+  // .burns-hogweed__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media (max-width:$mobileSmall){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  // .burns-hogweed__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .burns-hogweed__item
+  &__item {
+    &:first-child{
+      
+    }
+    &:last-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      @media (max-width:$tablet){
+        order: -1;
+        row-gap: 20px;
+      }
+    }
+  }
+  // .burns-hogweed__img-ibg
+  &__img {
+    overflow: hidden;
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      @media (max-width:$tablet){
+        width: 498px;
+        height: 598px;
+      }
+      @media (max-width: em(520)){
+        height: auto;
+        width: 100%;
+      }
+    }
+    @media (max-width:$tablet){
+      display: flex;
+      justify-content: center;
+    }
+  }
+  // .burns-hogweed__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .burns-hogweed__title
+  &__title {
+    
+  }
+  // .burns-hogweed__important
+  &__important {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 25px 20px 25px 20px;
+    border-radius: 24px;
+    background-color: #FFF;
+
+  }
+  //.burns-hogweed__about
+  &__about {
+    @extend %mont-600;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #000;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  // .burns-hogweed__important-title
+  &__important-title {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    @extend %mont-600;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: #D90027;
+  }
+  // .burns-hogweed__important-icon
+  &__important-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .burns-hogweed__important-text
+  &__important-text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  // .burns-hogweed__content
+  &__content {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  // .burns-hogweed__content-text
+  &__content-text {
+  }
+}
+//========================================================================================================================================================
+
+
+//========================================================================================================================================================
+.burns-work {
+  background-color: $bg;
+  // .burns-work__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    @media (max-width:$tablet){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    @media (max-width:$mobile){
+      row-gap: 30px;
+    }
+  }
+  // .burns-work__title
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+  // .burns-work__info
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 124px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      font-size: rem(14);
+    }
+  }
+  // .burns-work__list
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+  // .burns-work__list-item
+  &__list-item {
+    max-width: 480px;
+    padding-left: 36px;
+    &::before{
+      top: 8px;
+      left: 9px;
+      @media (max-width:$tablet){
+        left: 9px;
+        top: 10px;
+      }
+    }
+    &::after{
+      top: 4px;
+      left: 5px;
+      @media (max-width:$tablet){
+        top: 7px;
+        left: 6px;
+      }
+    }
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+  }
+  // .burns-work__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+    
+    @media (max-width: em(580)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .burns-work__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    padding: 20px 38.3px;
+    @media (max-width:$tablet){
+      display: grid;
+      padding: 20px 5px;
+      &:last-child{
+        grid-auto-columns: 50%;
+        grid-column: span 2;
+        justify-content: center;
+        @media (max-width: em(580)){
+          grid-auto-columns: auto;
+        }
+      }
+    }
+    @media (max-width:$mobileSmall){
+      padding: 20px 20px;
+    }
+  }
+  // .burns-work__image-ibg
+  &__image-ibg {
+    overflow: hidden;
+    padding-bottom: percent(250, 250);
+    @media (max-width:$tablet){
+      max-width: 100%;
+      display: block;
+
+    }
+    img {
+      object-position: top;
+      @media (max-width:$tablet){
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  // .burns-work__item-text
+  &__item-text {
+    flex-grow: 1;
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(23 , 14);
+    text-align: center;
+
+  }
+}
+
+//========================================================================================================================================================
+
+//.burns-application
+.burns-application {
   background-position: 45% 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
   @media (max-width: em(1480)){
-    background-position: 70% 0;
+    background-position: 100% 0;
   }
   @media (max-width:$tablet){
-    // background-position: 99% 110%;
-    // background-size: 390%;
-    // background-position: 95% -170%;
-    // background-repeat: no-repeat;
-    background-image: none !important;
+    background-position: 100% 440px;
+    background-size: 350%;
   }
-  // .hemostatic-application__container
+  // .burns-application__container
   &__container {
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media (max-width:$tablet){
+      padding-bottom: 40px;
+    }
   }
-  // .hemostatic-application__title
+  // .burns-application__title
   &__title {
+    max-width: 714px;
     text-align: left;
     @media (max-width:$tablet){
+      max-width: 100%;
       text-align: center;
     }
   }
-  // .hemostatic-application__inner
+  // .burns-application__inner
   &__inner {
     position: relative;
-    padding-top: 40px;
-    // padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 1.3fr;
-    // @include adaptiveValue("column-gap", 100, 20, 1240, 1000, 1);
     column-gap: 20px;
     @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
       row-gap: 30px;
-      &::before{
-        content:'';
-        position: absolute;
-        background-image: url(../img/hemostatic/bg-item.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
     }
     @media (max-width: em(480)){
       row-gap: 0;
     }
   }
-  // .hemostatic-application__item
+  // .burns-application__item
   &__item {
     &:first-child{
       position: relative;
       display: flex;
       flex-direction: column;
-      row-gap: 23px;
-      z-index: 10;
+      row-gap: 20px;
+      z-index: 5;
+      @media (max-width:$tablet){
+        &::before{
+          content:'';
+          position: absolute;
+          width: 130%;
+          height: 780px;
+          right: -2%;
+          top: 10%;
+          background: linear-gradient(180deg, #F5F6FD 40.47%, rgba(245, 246, 253, 0.00) 102.53%);
+          filter: blur(2px);
+          z-index: -1;
+        }
+      }
     }
   }
-  //.hemostatic-application__text
+  //.burns-application__important
+  &__important {
+    max-width: 475px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: #FFF;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+  }
+  //.burns-application__important-title
+  &__important-title {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  //.burns-application__important-text
+  &__important-text {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #1B1B1B;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
+    }
+  } 
+  //.burns-application__important-icon
+  &__important-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  //.burns-application__text
   &__text {
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
-  // .hemostatic-application__content
+  // .burns-application__content
   &__content {
     max-width: 100%;
     display: flex;
@@ -1358,27 +1347,21 @@
       
     }
   }
-  //.hemostatic-application__content-item
+  //.burns-application__content-item
   &__content-item {
     max-width: 473px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
     @media (max-width:$tablet){
       max-width: 100%;
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
+    }
   }
-  // .hemostatic-application__img
-  // &__img-ibg {
-  //   padding-bottom: percent(600, 566);
-  //   @media (max-width:$tablet){
-  //     padding-bottom: percent(460, 520);
-  //   }
-  //   @media (max-width:$mobileSmall){
-  //     padding-bottom: percent(400, 455);
-  //   }
-  //   img {
-  //     object-position: 94%;
-  //   }
-  // }
-
+  //.burns-application__img
   &__img {
     position: relative;
     height: auto;
@@ -1392,11 +1375,27 @@
   }
 }
 //========================================================================================================================================================
-//.hemostatic-reviews
+
+// .reports
 //========================================================================================================================================================
-.hemostatic-reviews {
+.burns-reports__container {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  @media (max-width:$tablet){
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  @media (max-width:$mobile){
+    padding-bottom: 50px; 
+  }
+}
+//========================================================================================================================================================
+
+//.burns-reviews
+//========================================================================================================================================================
+.burns-reviews {
   background-color: $bg;
-  // .hemostatic-reviews__container
+  // .burns-reviews__container
   &__container {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -1412,31 +1411,97 @@
       padding-bottom: 25px;
     }
   }
-  // .hemostatic-reviews__heading
+  // .burns-reviews__heading
   &__heading {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
     align-items: center;
+    align-items: flex-end;
     @media (max-width:$tablet){
       flex-direction: column;
-      align-items: center;
-      row-gap: 15px;
+      align-items: flex-start;
+      
+      // align-items: center;
     }
     @media (max-width:$mobile){
-      @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
+      // @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
     }
   }
-  // .hemostatic-reviews__title
+  //.burns-reviews__wrapper
+  &__box {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 30px;
+    @media (max-width: em(1000)){
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+  }
+  // .burns-reviews__title
   &__title {
+    max-width: 330px;
+    @media (max-width: em(1000)){
+      max-width: 100%;
+    }
   }
-  // .hemostatic-reviews__action
+  // .burns-reviews__action
   &__action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
   }
-  // .hemostatic-reviews__button
+  //.burns-reviews__foto-btn
+  &__foto-btn {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      // display: block;
+    }
+    @media (max-width: em(430)){
+      font-size: rem(12);
+      padding: 10px 15px;
+    }
+  }
+  // .burns-reviews__button
   &__button {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
+    }
   }
-  // .hemostatic-reviews__inner
+  //.burns-reviews__buy
+  &__buy {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
+    }
+  }
+  //.burns-reviews__buy-btn
+  &__buy-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 51px;
+    border-radius: 16px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: 120%;
+    color: #FFF;
+  }
+  // .burns-reviews__inner
   &__inner {
     padding-top: 25px;
     display: grid;
@@ -1449,7 +1514,7 @@
       flex-direction: column;
     }
   }
-  // .hemostatic-reviews__item
+  // .burns-reviews__item
   &__item {
     padding: 20px;
     border-radius: 24px;
@@ -1458,7 +1523,7 @@
     row-gap: 10px;
     background-color: $white;
   }
-  // .hemostatic-reviews__top
+  // .burns-reviews__top
   &__top {
     display: flex;
     justify-content: space-between;
@@ -1470,19 +1535,19 @@
     }
   }
 
-  // .hemostatic-reviews__user-info
+  // .burns-reviews__user-info
   &__user-info {
     display: flex;
     align-items: center;
     column-gap: 20px;
   }
-  // .hemostatic-reviews__user-name
+  // .burns-reviews__user-name
   &__user-name {
     @extend %mont-600;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
-  // .hemostatic-reviews__user-rating
+  // .burns-reviews__user-rating
   &__user-rating {
     display: flex;
     column-gap: 2px;
@@ -1491,10 +1556,10 @@
       height: 24px;
     }
   }
-  // .hemostatic-reviews__market
+  // .burns-reviews__market
   &__market {
   }
-  // .hemostatic-reviews__market-link
+  // .burns-reviews__market-link
   &__market-link {
     padding: 5px 10px 5px 5px;
     display: flex;
@@ -1515,11 +1580,11 @@
       display: inline-flex;
     }
   }
-  // .hemostatic-reviews__bottom
+  // .burns-reviews__bottom
   &__bottom {
   }
 
-  // .hemostatic-reviews__text
+  // .burns-reviews__text
   &__text {
     @extend %mont-400;
     font-size: rem(16);
@@ -1528,10 +1593,10 @@
       @include adaptiveValue("font-size", 16, 14);
     }
   }
-  //hemostatic-reviews__wrapper
+  //burns-reviews__wrapper
   &__wrapper {
     padding-top: 20px;
-    @media (max-width:$tablet){
+    @media (max-width: em(1000)){
       display: flex;
       justify-content: center;
     }

@@ -53,6 +53,7 @@ $btnColor: #0033D9;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: rem(16);
   @extend %mont-400;
   color: $white;
   border-radius: 16px;
@@ -64,6 +65,10 @@ $btnColor: #0033D9;
       background-color: $btnHover;
     }
   }
+}
+
+.btn-buy {
+  background: linear-gradient(180deg, #E84073 12.5%, #B92350 128.41%), #F13E75;
 }
 
 .title {

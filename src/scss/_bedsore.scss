@@ -122,7 +122,9 @@
   // .bedsore-main__button
   &__button {
     // border-radius: 16px;
-    @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
+    @extend %mont-500;
+    font-size: rem(16);
+    // @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
 		@include adaptiveValue("padding-left", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-top", 12, 10, 1240, 1000, 1);
@@ -134,6 +136,9 @@
       @include adaptiveValue("padding-top", 12, 8, 768, 480, 1);
       @include adaptiveValue("padding-bottom", 12, 8, 768, 480, 1);
       width: 50%;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
     }
     @media (max-width: em(460)){
       padding-left: 118px;
