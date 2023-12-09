@@ -298,6 +298,7 @@
       border-top: 2px solid #F5F6FD;
       border-top-right-radius: 30px;
       @media (max-width: em(768)){
+        border-radius: 16px;
       }
     }
     &:nth-child(6) {

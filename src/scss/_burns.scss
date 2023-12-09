@@ -586,6 +586,7 @@
 //.burns-multiplication
 //========================================================================================================================================================
 .burns-advantages {
+  margin-top: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1427,7 +1428,7 @@
       // @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
     }
   }
-  //.burns-reviews__wrapper
+  //.burns-reviews__box
   &__box {
     display: flex;
     align-items: flex-end;
@@ -1454,15 +1455,11 @@
   }
   //.burns-reviews__foto-btn
   &__foto-btn {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
     @media (max-width:$mobileSmall){
       font-size: rem(14);
-      // display: block;
     }
     @media (max-width: em(430)){
       font-size: rem(12);
@@ -1556,9 +1553,7 @@
       height: 24px;
     }
   }
-  // .burns-reviews__market
-  &__market {
-  }
+
   // .burns-reviews__market-link
   &__market-link {
     padding: 5px 10px 5px 5px;
@@ -1579,9 +1574,6 @@
     @media (max-width: em(530)){
       display: inline-flex;
     }
-  }
-  // .burns-reviews__bottom
-  &__bottom {
   }
 
   // .burns-reviews__text
