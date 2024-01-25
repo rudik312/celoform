@@ -33,7 +33,7 @@
 				if (item.classList.contains('button_yamarket')) {
 					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform-ranozazhivliaiushchii-por/1772758505?glfilter=36472990%3A36614773_101852307745&glfilter=14805583%3A1~1_101852307745&glfilter=23674510%3A5~5_101852307745&sku=101852307745&uniqueId=15661726&cpa=1');
 				}
-				if (item.classList.contains('button_sbermarket')) {
+				if (item.classList.contains('button_farmlend')) {
 					item.setAttribute('href', 'https://megamarket.ru/catalog/details/ranozazhivlyayushee-sredstvo-gemostatik-celoform-5-g-600012908816/#?related_search=целоформ');
 				}
 			}
@@ -54,7 +54,7 @@
 				if (item.classList.contains('button_yamarket')) {
 					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform-ranozazhivliaiushchii-por/1772758505?glfilter=36472990%3A36614776_101849448730&glfilter=14805583%3A1~1_101849448730&glfilter=23674510%3A15~15_101849448730&sku=101849448730&uniqueId=15661726&cpa=1');
 				}
-				if (item.classList.contains('button_sbermarket')) {
+				if (item.classList.contains('button_farmlend')) {
 					item.setAttribute('href', 'https://megamarket.ru/catalog/details/ranozazhivlyayushee-sredstvo-gemostatik-celoform-15-gr-600012908778/');
 				}
 				if (item.classList.contains('button_ali')) {

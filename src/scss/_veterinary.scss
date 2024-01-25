@@ -1,32 +1,48 @@
 
-//.hemostatic-main
+//.veterinary-main
 //========================================================================================================================================================
-.hemostatic-main {
+.veterinary-main {
   max-width: 100%;
-  background-position: center top 14%;
+  background-position: center top 100px;
   background-repeat: no-repeat;
   background-color: $bg;
-
-  // .main__container
+  background-size: 85%;
+  // .veterinary-main__container
+  @media (max-width: em(1880)){
+    background-size: contain;
+  }
+  @media (max-width: em(1620)){
+    background-size: 110%;
+  }
+  @media (max-width: em(1460)){
+    background-size: 130%;
+  }
+  @media (max-width: em(1280)){
+    background-size: 150%;
+  }
+  @media (max-width: em(1170)){
+    background-size: 170%;
+  }
   @media (max-width:$tablet){
-    background-position: 60% 0;
+    background-position: 70% 100px;
+    background-size: 180%;
   }
   @media (max-width:$mobile){
-    background-position: 60% 60px;
-    background-size: 230%;
+    // background-position: 70% 160px;
+    background-size: 170%;
   }
   @media (max-width:$mobileSmall){
-    background-position: 56% 70px;
+    background-position: 70% 90px;
     background-size: 200%;
   }
   @media (max-width: em(380)){
-    background-position: 63% 10%;
-    background-size: 300%;
+    background-position: 82% 12%;
+    background-size: 150%;
   }
   &__container {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     @media (max-width:$tablet){
-      padding-bottom: 25px;
+      padding-bottom: 40px;
     }
     @media (max-width:$mobile){
       @include adaptiveValue("padding-top", 82, 50, 767, 480, 1);
@@ -35,21 +51,22 @@
       @include adaptiveValue("padding-top", 50, 70, 480, 420, 1); 
     }
   }
-  // .main__inner
+  // .veterinary-main__inner
   &__inner {
+    // position: relative;
     display: grid;
-    // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr 1fr;
     @include adaptiveValue("column-gap", 30, 5, 1240, 1000, 1);
     @media (max-width:$mobile){
       display: flex;
       flex-direction: column-reverse;
     }
+
   }
-  // .main__content
+  // .veterinary-main__content
   &__content {
-    // max-width: 100%;
-    max-width: 532px;
+    z-index: 5;
+    // max-width: 532px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,13 +80,13 @@
       row-gap: 24px;
     }
   }
-  // .main__title-box
+  // .veterinary-main__title-box
   &__title-box {
     display: flex;
     flex-direction: column;
     row-gap: 7px;
   }
-  // .main__title
+  // .veterinary-main__title
   &__title {
     @extend %mont-700;
     // font-size: rem(72);
@@ -86,11 +103,13 @@
     }
   }
 
-  // .main__subtitle
+  // .veterinary-main__subtitle
   &__subtitle {
-    // font-size: rem(16);
     @extend %mont-600;
     @include adaptiveValue("font-size", 16, 13.8, 1000, 868, 1);
+    @media (max-width:$tablet){
+      max-width: 427px;
+    }
     @media (max-width:$mobile){
       @include adaptiveValue("font-size", 13.8, 16, 868, 767, 1);
     }
@@ -105,9 +124,9 @@
       max-width: 280px;
     }
   }
-  // .main__list
+  // .veterinary-main__list
   &__list {
-    max-width: 295px;
+    // max-width: 295px;
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(19 , 16);
@@ -116,7 +135,7 @@
       @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
     }
   }
-  // .main__list-item
+  // .veterinary-main__list-item
   &__list-item {
     position: relative;
     &:not(:last-child) {
@@ -125,14 +144,8 @@
         margin-bottom: 14px;
       }
     }
-    &::before{
-      background: #04BD38;
-    }
-    &::after{
-      background: rgba(0, 148, 41, 0.30);
-    }
   }
-  // .main__actions
+  // .veterinary-main__actions
   &__actions {
     display: flex;
     align-items: center;
@@ -146,17 +159,16 @@
       row-gap: 20px;
     }
   }
-  // .main__button
+  // .veterinary-main__button
   &__button {
+    white-space: nowrap;
     @extend %mont-500;
     font-size: rem(16);
-    // @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
 		@include adaptiveValue("padding-left", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-top", 12, 10, 1240, 1000, 1);
 		@include adaptiveValue("padding-bottom", 12, 10, 1240, 1000, 1);
     @media (max-width:$mobile){
-      // padding: 12px 122px;
       @include adaptiveValue("padding-left", 122, 82, 768, 480, 1);
       @include adaptiveValue("padding-right", 122, 82, 768, 480, 1);
       @include adaptiveValue("padding-top", 12, 8, 768, 480, 1);
@@ -174,7 +186,7 @@
       width: 100%;
     }
   }
-  // .main__link-consultation
+  // .veterinary-main__link-consultation
   &__link-consultation {
     @extend %mont-400;
     font-size: rem(14);
@@ -185,17 +197,25 @@
       @include adaptiveValue("font-size", 14, 13, 768, 480, 1);
     }
   }
-  // .hemostatic-main__bg
+  // .veterinary-main__bg
   &__bg {
-    @include adaptiveValue("padding-top", 160, 140, 1240, 1000, 1);
+    position: relative;
+    @include adaptiveValue("padding-top", 180, 160, 1240, 1000, 1);
     @media (max-width:$mobile){
       padding: 0;
-
     }
     img {
       height: auto;
       max-width: 100%;
+      position: relative;
+      right: 150px;
+      @media (max-width:$tablet){
+        top: 130px;
+        right: 50px;
+      }
       @media (max-width:$mobile){
+        top: 0;
+        right: 10px;
         padding-top: 77px;
         padding-right: 30px;
         height: auto;
@@ -209,10 +229,40 @@
         padding-top: 40px;
       }
     }
+    &::before{
+      display: none;
+      @media (max-width:$mobile){
+        display: block;
+        content:'';
+        position: absolute;
+        background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
+        width: 120%;
+        height: 10%;
+        left: -20px;
+        bottom: 5px;
+        filter: blur(10px);
+        -moz-transform: scale(-1, -1);
+        -o-transform: scale(-1, -1);
+        -webkit-transform: scale(-1, -1);
+        transform: scale(-1, -1);
+        z-index: 1;
+      } 
+      @media (max-width:$mobileSmall){
+        bottom: -65px;
+        height: 30%;
+      }
+      @media (max-width: em(380)){
+        bottom: -45px;
+      }
+      @media (max-width: em(360)){
+        bottom: -25px;
+        height: 25%;
+      }
+    }
   }
 
 
-  // .hemostatic-main__card
+  // .veterinary-main__card
   &__card {
     @extend %mont-500;
     font-size: rem(12);
@@ -221,24 +271,22 @@
       padding: 0;
     }
   }
-// .hemostatic-main__card
+// .veterinary-main__card
   &__card-link {
     text-decoration: underline !important;
     color: $accent;
   }
 
-
 }
 
-//.hemostatic-use
-.hemostatic-use {
-  padding-top: 60px;
-  // .hemostatic-use__inner
+//.veterinary-use
+.veterinary-use {
+  margin-top: 45px;
   &__inner {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     @include adaptiveValue("margin-top", 0, 60, 1240, 980, 1);
-    @media (max-width: em(768)){
+    @media (max-width: em(980)){
       margin: 0;
       padding: 20px;
       border-radius: 24px;
@@ -252,15 +300,14 @@
       padding: 15px;
     }
   }
-  // .hemostatic-use__item
+  // .veterinary-use__item
   &__item {
-    cursor: default;
     display: grid;
     justify-items: center;
     row-gap: 13px;
     @extend %mont-600;
     font-size: rem(14);
-    padding: 23px 35px;
+    padding: 23px 18px;
     background-color: $white;
     border-right: 2px solid #F5F6FD;
     &:first-child{
@@ -277,33 +324,38 @@
       }
     }
     &:nth-child(2) {
-      display: none;
-      @media (max-width: em(768)){
+      span {
+        &:first-child{
+          @media (max-width: em(980)){
+            display: none;
+          }
+        }
+        &:last-child{
+          display: none;
+          @media (max-width: em(980)){
+            display: inline-block;
+          }
+        }
+      }
+      @media (max-width: em(980)){
         display: flex;
+      }
+    }
+    &:nth-child(3) {
+      @media (max-width: em(980)){
+        display: none;
       }
     }
     &:nth-child(4) {
       border-right: 2px solid #F5F6FD;
-      // span {
-      //   display: none;
-      //   @media (max-width: em(768)){
-      //     display: inline-block;
-      //   }
-      // }
-      @media (max-width: em(768)){
+      @media (max-width: em(980)){
         border-radius: 16px;
       }
     }
     &:nth-child(5){
       border-top: 2px solid #F5F6FD;
       border-top-right-radius: 30px;
-      span {
-        display: none;
-        @media (max-width: em(768)){
-          display: inline-block;
-        }
-      }
-      @media (max-width: em(768)){
+      @media (max-width: em(980)){
         border-radius: 16px;
       }
     }
@@ -312,7 +364,7 @@
     }
     &:nth-child(n + 6) {
       border-top: 2px solid #F5F6FD;
-      @media (max-width: em(768)){
+      @media (max-width: em(980)){
         display: none;
       }
     }
@@ -320,7 +372,7 @@
     @media (max-width: em(1000)){
       padding: 15px 30px;
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(980)){
       padding: 12px 16px;
       display: flex;
       justify-content: space-between;
@@ -335,7 +387,7 @@
       background-color: $bg;
     }
   }
-  // .hemostatic-use__item-img
+  // .veterinary-use__item-img
   &__item-img {
     width: 48px;
     height: 48px;
@@ -343,11 +395,11 @@
       width: 32px;
       height: 32px;
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(980)){
       display: none;
     }
   }
-  // .hemostatic-use__item-text
+  // .veterinary-use__item-text
   &__item-text {
     @extend %mont-600;
     font-size: rem(14);
@@ -357,32 +409,32 @@
     @media (max-width: em(1170)){
       font-size: rem(12);
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(980)){
       text-align: left;
     }
   }
-
-  @media (max-width:$mobile){
-    padding-top: 50px;
-  }
 }
+
 //========================================================================================================================================================
 
-// .haemostatic
+// .veterinary-multifaceted
 //========================================================================================================================================================
-.haemostatic {
+.veterinary-multifaceted {
   background-color: $bg;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+
   // .haemostatic__container
   &__container {
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 75px;
     @media (max-width:$tablet){
-      padding-bottom: 40px;
+      padding-bottom: 60px;
     }
     @media (max-width:$mobile){
+      padding-top: 40px;
       padding-bottom: 40px;
     }
     @media (max-width:$mobileSmall){
@@ -416,7 +468,28 @@
   }
   // .haemostatic__item
   &__item {
-    
+    &:last-child{
+      @media (max-width:$mobile){
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 241px;
+        // background: linear-gradient(183deg, #F5F6FD 43.47%, rgba(245, 246, 253, 0.00) 98.53%);
+        &::before{
+          content:'';
+          position: absolute;
+          width: 100%;
+          height: 400px;
+          right: 4%;
+          top: 50%;
+          background: linear-gradient(183deg, #F5F6FD 23.47%, rgba(245, 246, 253, 0.00) 78.53%);
+          filter: blur(2px);
+        }
+      }
+      @media (max-width: em(560)){
+        padding-bottom: 152px;
+      }
+    }
   }
   // .haemostatic__item-img
   &__item-img {
@@ -483,6 +556,9 @@
     @extend %mont-500;
     font-size: rem(16);
     line-height: normal;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
+    }
   }
   // .haemostatic__list-item
   &__list-item {
@@ -501,26 +577,33 @@
       }
     }
   }
+  @media (max-width: em(1620)){
+    background-position: 30% 0;
+  }
   @media (max-width:$mobile){
-    background-position: 13% 366px;
-    background-size: 235%;
+    background-position: 13% 430px;
+    background-size: 325%;
   }
   @media (max-width: em(570)){
     background-position: 13% 390px;
     background-size: 295%;
   }
   @media (max-width: em(480)){
-    background-position: 15% 405px !important;
+    background-position: 15% 350px !important;
     background-size: 330% !important;
   }
 }
 //========================================================================================================================================================
 
-//.hemostatic-product
+//.veterinary-product
 //========================================================================================================================================================
-.hemostatic-product {
-  background-color: $bg;
-  // .product__container
+.veterinary-product {
+  // background-color: $bg;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // .veterinary-product__container
   &__container {
     padding-top: 50px;
     padding-bottom: 100px;
@@ -533,10 +616,11 @@
       padding-bottom: 50px;
     }
   }
-  // .product__inner
+  // .veterinary-product__inner
   &__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.2fr 1fr;
     @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
     @media (max-width:$tablet){
       display: flex;
@@ -545,25 +629,57 @@
       row-gap: 20px;
     }
   }
-  // .product__content
-  &__content{
-    max-width: 572px;
+  // veterinary-product__item
+  &__item {
+    position: relative;
+    max-width: 584px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     row-gap: 20px;
+    &:first-child{
+      @media (max-width:$tablet){
+        &::before{
+          content:'';
+          position: absolute;
+          width: 130%;
+          height: 780px;
+          right: -5%;
+          top: 10%;
+          background: linear-gradient(180deg, #F5F6FD 58.47%, rgba(245, 246, 253, 0.00) 102.53%);
+          filter: blur(2px);
+        }
+      }
+    }
     @media (max-width:$tablet){
       max-width: 100%;
     }
   }
-  // .product__title
+  //.veterinary-product__img
+  &__img {
+    max-width: 100%;
+    img {
+      display: block;
+      position: relative;
+      right: 120px;
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width: em(1180)){
+        right: 35px;
+      }
+    }
+  }
+  // .veterinary-product__title
   &__title {
   }
-  // .product__info
+  // .veterinary-product__info
   &__info {
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
     text-align: justify;
+    z-index: 5;
     span {
       @extend %mont-600;
     }
@@ -576,7 +692,40 @@
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
     }
   }
-// .product__cards 
+  //.veterinary-product__list
+  &__list {
+    padding-left: 22px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #000;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
+    }
+  }
+  // .veterinary-product__list-item
+  &__list-item {
+    &::before{
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      left: -21px;
+      top: 9px;
+      @media (max-width:$tablet){
+        left: -20px;
+      }
+    }
+    &::after{
+      top: 6px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+// .veterinary-product__cards 
   &__cards {
     display: flex;
     align-items: center;
@@ -591,7 +740,7 @@
       @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
     }
   }
-  // .product__image
+  // .veterinary-product__image
   &__image {
     max-width: 100%;
     display: block;
@@ -601,12 +750,19 @@
       object-fit: cover;
     }
   }
+  @media (max-width: em(1320)){
+    background-position: 70% 0;
+  }
+  @media (max-width:$tablet){
+    background-position: 100% 100px;
+  }
 }
 //========================================================================================================================================================
 
-//.hemostatic-multiplication
+//.veterinary-multiplication
 //========================================================================================================================================================
-.hemostatic-multiplication {
+.veterinary-advantages {
+  margin-top: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -614,7 +770,7 @@
   @media (max-width:$tablet){
     background-position: center -90px;
   }
-  // .hemostatic-multiplication__container
+  // .veterinary-advantages__container
   &__container {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -622,19 +778,15 @@
       padding-bottom: 40px;
     }
   }
-  // .hemostatic-multiplication__title
+  // .veterinary-advantages__title
   &__title {
     font-size: rem(32);
     line-height: math.div(45 , 32);
-    // @media (max-width:$tablet){
-    //   font-size: rem(32);
-    // }
-
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  //.hemostatic-multiplication__content
+  //.veterinary-advantages__content
   &__content {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -660,16 +812,16 @@
     }
   }
 
-  //.hemostatic-multiplication__text
+  //.veterinary-advantages__text
   &__text {
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
 
-  // .hemostatic-multiplication__inner
+  // .veterinary-advantages__inner
   &__inner {
-    padding-top: 20px;
+    padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
@@ -682,16 +834,13 @@
       row-gap: 15px;
     }
   }
-  // .hemostatic-multiplication__items
+  // .veterinary-advantages__items
   &__items {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 15px;
-    // display: flex;
-    // flex-direction: column;
-
   }
-  // .hemostatic-multiplication__item
+  // .veterinary-advantages__item
   &__item {
     display: flex;
     flex-direction: column;
@@ -703,7 +852,7 @@
       padding: 15px;
     }
   }
-  // .hemostatic-multiplication__item-title
+  // .veterinary-advantages__item-title
   &__item-title {
     text-transform: uppercase;
     @extend %mont-700;
@@ -711,22 +860,26 @@
     line-height: math.div(19 , 16);
 
   }
-  // .hemostatic-multiplication__item-text
+  // .veterinary-advantages__item-text
   &__item-text {
     @extend %mont-500;
     font-size: rem(14);
     line-height: math.div(22 , 14);
 
   }
-  // .hemostatic-multiplication__image
+  // .veterinary-advantages__image
   &__image {
+    max-width: 100%;
+    display: block;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     img {
-      display: inline-flex;
-      width: 385px;
-      height: 397px;
+      position: relative;
+      right: 50px;
+      object-fit: cover;
+      width: 445px;
+      height: 356px;
     }
     @media (max-width: em(1180)){
       display: none;
@@ -738,15 +891,13 @@
 }
 //========================================================================================================================================================
 
-
-
-//.hemostatic-documents
+//.veterinary-documents
 //========================================================================================================================================================
-.hemostatic-documents {
+.veterinary-documents {
   background-color: $bg;
-  // .hemostatic-documents__container
+  // .veterinary-documents__container
   &__container {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
     @media (max-width:$tablet){
       padding-top: 80px;
@@ -757,7 +908,7 @@
       padding-bottom: 50px;
     }
   }
-  // .hemostatic-documents__inner
+  // .veterinary-documents__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -769,7 +920,7 @@
       row-gap: 30px;
     }
   }
-  // .hemostatic-documents__content
+  // .veterinary-documents__content
   &__content{
     max-width: 572px;
     display: flex;
@@ -781,7 +932,7 @@
       align-items: center;
     }
   }
-  // .hemostatic-documents__title
+  // .veterinary-documents__title
   &__title {
     font-size: rem(30);
     @media (max-width:$tablet){
@@ -791,7 +942,7 @@
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  // .hemostatic-documents__info
+  // .veterinary-documents__info
   &__info {
     @extend %mont-400;
     font-size: rem(16);
@@ -808,9 +959,10 @@
     }
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
     }
   }
-  //.hemostatic-documents__action
+  //.veterinary-documents__action
   &__action {
     padding-top: 10px;
     @media (max-width:$mobileSmall){
@@ -819,19 +971,19 @@
       text-align: center;
     }
   }
-  //.hemostatic-documents__link
+  //veterinary-documents__btn
   &__btn {
+    background: linear-gradient(180deg, #E84073 12.5%, #B92350 128.41%), #F13E75;
     @media (max-width:$mobileSmall){
       font-size: rem(14);
       display: block;
-      // width: 100%;
     }
     @media (max-width: em(420)){
       font-size: rem(12);
       padding: 10px 15px;
     }
   }
-// .hemostatic-documents__cards 
+// .veterinary-documents__cards 
   &__cards {
     display: flex;
     align-items: center;
@@ -846,7 +998,7 @@
       @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
     }
   }
-  // .hemostatic-documents__image
+  // .veterinary-documents__image
   &__image {
     max-width: 100%;
     display: block;
@@ -859,409 +1011,17 @@
 }
 //========================================================================================================================================================
 
-//.hemostatic-benefit
-//========================================================================================================================================================
-.hemostatic-benefit {
-  // position: relative;
-  background-color: $bg;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // z-index: 1;
-  // &::before{
-  //   content:'';
-  //   position: absolute;
-  //   background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
-  //   width: 60%;
-  //   height: 105%;
-  //   right: 25%;
-  //   top: -23px;
-  //   filter: blur(2px);
-  //   -moz-transform: scale(-1, -1);
-  //   -o-transform: scale(-1, -1);
-  //   -webkit-transform: scale(-1, -1);
-  //   transform: scale(-1, -1);
-  //   z-index: -1;
-  //   @media (max-width: em(1260)){
-  //     right: 15%;
-  //     width: 95%;
-  //   }
-  // }
-  // .hemostatic-benefit__container
-  &__container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  // .hemostatic-benefit__inner
-  &__inner {
-    // max-width: 668px;
-    // display: flex;
-    // flex-direction: column;
-    // row-gap: 20px;
-    display: grid;
-    grid-template-columns: 0.7fr 1fr;
-    column-gap: 30px;
-    @media (max-width: em(1140)){
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      // max-width: 100%;
-      // min-height: 670px;
-      // padding-bottom: 311px;
-    }
-    @media (max-width: em(490)){
-      // padding-bottom: 190px;
-    }
-    @media (max-width: em(420)){
-      // padding-bottom: 160px;
-    }
-  }
-  //.hemostatic-benefit__item
-  &__item {
-    &:first-child{
-      display: flex;
-      flex-direction: column;
-      row-gap: 25px;
-      @media (max-width:$tablet){
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 16px;
-      }
-      @media (max-width: em(680)){
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-      }
-    }
-    &:last-child{
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      @media (max-width:$tablet){
-        order: -1;
-      }
-      @media (max-width: em(680)){
-        order: 2;
-      }
-    }
-  }
-
-  //.hemostatic-benefit__wrapper
-  &__wrapper {
-
-  }
-
-  //.hemostatic-benefit__video
-  &__video {
-    max-width: 475px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding-left: 80px;
-    @media (max-width: em(1140)){
-      max-width: 100%;
-    }
-    @media (max-width:$tablet){
-      min-height: 285px;
-      padding-left: 30px;
-    }
-    @media (max-width: em(680)){
-      min-height: 300px;
-      @include adaptiveValue("padding-left", 90, 60, 680, 480, 1);
-    }
-    @media (max-width: em(360)){
-      
-    }
-  }
-
-  //.hemostatic-benefit__video-info
-  &__video-info {
-    position: relative;
-    display: flex;
-    align-items: center;
-    &::before{
-      width: 132px;
-      height: 132px;
-      content:'';
-      position: absolute;
-      background-image: url(../img/hemostatic/ellipse-btn.svg);
-      background-repeat: no-repeat;
-      left: -95px;
-      top: -21px;
-      @media (max-width:$tablet){
-        background-image: url(../img/hemostatic/ellipse-btn-2.svg);
-        background-repeat: no-repeat;
-        left: -48px;
-        top: -15px;
-      }
-      @media (max-width: em(680)){
-        background-image: url(../img/hemostatic/ellipse-btn.svg);
-        left: -98px;
-        top: -32px;
-      }
-      @media (max-width: em(470)){
-        background-image: url(../img/hemostatic/ellipse-btn-2.svg);
-        left: -62px;
-        top: -16px;
-      }
-    }
-
-  }
-
-  //.hemostatic-benefit__btn
-  &__btn {
-    width: 116px;
-    height: 116px;
-    border-radius: 50%;
-    padding-left: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    position: absolute;
-    left: -86px;
-    background: linear-gradient(180deg, #8CB0FF 0%, #0033D9 50.13%), #0033D9;
-    z-index: 2;
-    @media (max-width:$tablet){
-      width: 74px;
-      height: 74px;
-      left: -43px;
-    }
-    @media (max-width: em(680)){
-      width: 116px;
-      height: 116px;
-      left: -90px;
-    }
-    @media (max-width: em(470)){
-      width: 74px;
-      height: 74px;
-      left: -57px;
-    }
-    @media (any-hover: hover){
-      transition: all 0.3s;
-      &:hover{
-        background: #022AAA;
-      }
-    }
-  }
-
-  //.hemostatic-benefit__btn-link
-  &__btn-link {
-    position: relative;
-    svg {
-      @media (max-width:$tablet){
-        width: 40px;
-        height: 30px;
-      }
-      @media (max-width: em(680)){
-        width: 60px;
-        height: 46px;
-      }
-      @media (max-width: em(470)){
-        width: 37px;
-        height: 28px;
-      } 
-    }
-  }
-  //.hemostatic-benefit__video-text
-  &__video-text {
-    position: relative;
-    max-width: 320px;
-    padding: 10px 10px 10px 36px;
-    border-radius: 24px;
-    background-color: #fff;
-    @extend %mont-700;
-    font-size: rem(19);
-    line-height: 120%;
-    &::before{
-      height: 1px;
-      width: 230px;
-      content:'';
-      position: absolute;
-      top: -10px;
-      left: 70px;
-      background-color: #2663EB;
-      @media (max-width:$tablet){
-        width: 147px;
-        top: -7px;
-        left: 55px;
-      }
-      @media (max-width: em(680)){
-        left: 65px;
-      }
-      @media (max-width: em(470)){
-        left: 40px;
-      }
-    }
-    &::after{
-      height: 1px;
-      width: 190px;
-      content:'';
-      position: absolute;
-      bottom: -10px;
-      left: 70px;
-      background-color: #2663EB;
-      @media (max-width:$tablet){
-        width: 122px;
-        bottom: -7px;
-        left: 55px;
-      }
-      @media (max-width: em(680)){
-        left: 65px;
-      }
-      @media (max-width: em(470)){
-        left: 40px;
-      }
-    }
-    @media (max-width:$tablet){
-      max-width: 216px;
-      padding: 5px 8px 5px 36px;
-      font-size: rem(12);
-    }
-    @media (max-width: em(680)){
-      max-width: 300px;
-      font-size: rem(17);
-    }
-    @media (max-width: em(470)){
-      padding: 7px 13px 7px 23px;
-      max-width: 195px;
-      font-size: rem(11);
-    }
-  }
-
-  // .hemostatic-benefit__title
-  &__title {
-    max-width: 575px;
-    @extend %mont-700;
-    font-size: rem(30);
-    line-height: math.div(42 , 30);
-    @media (max-width:$tablet){
-      max-width: 100%;
-    }
-    @media (max-width: em(680)){
-      order: -1;
-    }
-    @media (max-width: em(480)){
-      font-size: rem(24);
-    }
-    @media (max-width: em(420)){
-      font-size: rem(20);
-    }
-  }
-  // .hemostatic-benefit__list
-  &__list {
-    align-self: stretch;
-  }
-  // .hemostatic-benefit__list-item
-  &__list-item {
-    position: relative;
-    padding-left: 15px;
-    span {
-      @extend %mont-700;
-      font-size: rem(16);
-      line-height: math.div(26 , 16);
-      color: $black;
-    }
-    p {
-      @extend %mont-500;
-      font-size: rem(16);
-      line-height: math.div(26 , 16);
-      color: $black;
-      @media (max-width: em(420)){
-        font-size: rem(14);
-        line-height: math.div(22 , 14);
-      }
-    }
-    &::before{
-      content:'';
-      border-radius: 50%;
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background-color: #000;
-      top: 12px;
-      left: 0;
-    }
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-  // .hemostatic-benefit__text
-  &__text {
-    @extend %mont-600;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: $black;
-    @media (max-width: em(420)){
-      font-size: rem(14);
-      line-height: math.div(22 , 14);
-    }
-  }
-  @media (max-width:$tablet){
-    background-size: 151%;
-    background-position: 0 428px;
-    &::before{
-    background: linear-gradient(179deg, #F5F6FD 57.15%, rgba(245, 246, 253, 0.00) 86.49%);;
-    width: 100%;
-    height: 100%;
-    filter: blur(2px);
-    left: 0;
-    -moz-transform: scale(1, 1);
-    -o-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-      @media (max-width:$mobile){
-        top: 60px; 
-      }
-      @media (max-width: em(560)){
-        top: 190px;
-      }
-      @media (max-width: em(460)){
-        top: 270px;
-      }
-    }
-  }
-  @media (max-width:$mobile){
-    background-position: 0 100%; 
-  }
-
-}
-
-//========================================================================================================================================================
-
-// .reports
-//========================================================================================================================================================
-.hemostatic-reports__container {
-  padding-bottom: 100px;
-  @media (max-width:$tablet){
-    padding-bottom: 80px;
-  }
-  @media (max-width:$mobile){
-    padding-bottom: 50px; 
-  }
-}
-//========================================================================================================================================================
-
 //.buy
 //========================================================================================================================================================
-.hemostatic-buy__container {
-  padding-top: 100px;
-  padding-bottom: 75px;
-  @media (max-width:$tablet){
-    padding-top: 40px;
-    padding-bottom: 80px;
-  }
+.veterinary-buy__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  // @media (max-width:$tablet){
+  //   padding-top: 40px;
+  //   padding-bottom: 80px;
+  // }
   @media (max-width:$mobileSmall){
-    padding-bottom: 50px;
+    padding-bottom: 25px;
   }
   @media (max-width: em(420)){
     padding-top: 50px;
@@ -1269,33 +1029,409 @@
 }
 //========================================================================================================================================================
 
-//.hemostatic-application
-.hemostatic-application {
+//.veterinary-types
+//========================================================================================================================================================
+.veterinary-types {
+  // .veterinary-types__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media (max-width:$mobileSmall){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  // .veterinary-types__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // column-gap: 60px;
+    @include adaptiveValue("column-gap", 60, 20, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .veterinary-types__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .veterinary-types__title
+  &__title {
+  }
+  // .veterinary-types__list
+  &__list {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  // .veterinary-types__list-item
+  &__list-item {
+    position: relative;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #000;
+    span {
+      @extend %mont-700;
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #000;
+      left: -10px;
+      top: 10px;
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
+    }
+  }
+  // .veterinary-types__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // column-gap: 70px;
+    @include adaptiveValue("column-gap", 70, 20, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      column-gap: 70px;
+      justify-content: space-evenly;
+    }
+    @media (max-width:$mobile){
+      justify-content: center;
+    }
+    @media (max-width: em(520)){
+      @include adaptiveValue("column-gap", 70, 50, 520, 420, 1);
+      justify-content: space-between;
+    }
+  }
+  // .veterinary-types__item
+  &__item {
+
+  }
+
+  &__img {
+    max-width: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+//========================================================================================================================================================
+
+//.veterinary-hogweed
+//========================================================================================================================================================
+.veterinary-hogweed {
+  // .veterinary-hogweed__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media (max-width:$mobileSmall){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  // .veterinary-hogweed__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .veterinary-hogweed__item
+  &__item {
+    &:first-child{
+      
+    }
+    &:last-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      @media (max-width:$tablet){
+        order: -1;
+        row-gap: 20px;
+      }
+    }
+  }
+  // .veterinary-hogweed__img-ibg
+  &__img {
+    overflow: hidden;
+    max-width: 100%;
+    display: block;
+    img {
+      height: auto;
+      width: 100%;
+      @media (max-width:$tablet){
+        width: 498px;
+        height: 598px;
+      }
+      @media (max-width: em(520)){
+        height: auto;
+        width: 100%;
+      }
+    }
+    @media (max-width:$tablet){
+      display: flex;
+      justify-content: center;
+    }
+  }
+  // .veterinary-hogweed__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .veterinary-hogweed__title
+  &__title {
+    
+  }
+  // .veterinary-hogweed__important
+  &__important {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 25px 20px 25px 20px;
+    border-radius: 24px;
+    background-color: #FFF;
+
+  }
+  //.veterinary-hogweed__about
+  &__about {
+    @extend %mont-600;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #000;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  // .veterinary-hogweed__important-title
+  &__important-title {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    @extend %mont-600;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: #D90027;
+  }
+  // .veterinary-hogweed__important-icon
+  &__important-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .veterinary-hogweed__important-text
+  &__important-text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  // .veterinary-hogweed__content
+  &__content {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  // .veterinary-hogweed__content-text
+  &__content-text {
+  }
+}
+//========================================================================================================================================================
+
+
+//========================================================================================================================================================
+.veterinary-work {
+  background-color: $bg;
+  // .veterinary-work__container
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    @media (max-width:$tablet){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    @media (max-width:$mobile){
+      row-gap: 30px;
+    }
+  }
+  // .veterinary-work__title
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+  // .veterinary-work__info
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 124px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      font-size: rem(14);
+    }
+  }
+  // .veterinary-work__list
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+  // .veterinary-work__list-item
+  &__list-item {
+    max-width: 480px;
+    padding-left: 36px;
+    &::before{
+      top: 8px;
+      left: 9px;
+      @media (max-width:$tablet){
+        left: 9px;
+        top: 10px;
+      }
+    }
+    &::after{
+      top: 4px;
+      left: 5px;
+      @media (max-width:$tablet){
+        top: 7px;
+        left: 6px;
+      }
+    }
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+  }
+  // .veterinary-work__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+    
+    @media (max-width: em(580)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .veterinary-work__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    padding: 20px 38.3px;
+    @media (max-width:$tablet){
+      display: grid;
+      padding: 20px 5px;
+      &:last-child{
+        grid-auto-columns: 50%;
+        grid-column: span 2;
+        justify-content: center;
+        @media (max-width: em(580)){
+          grid-auto-columns: auto;
+        }
+      }
+    }
+    @media (max-width:$mobileSmall){
+      padding: 20px 20px;
+    }
+  }
+  // .veterinary-work__image-ibg
+  &__image-ibg {
+    overflow: hidden;
+    padding-bottom: percent(250, 250);
+    @media (max-width:$tablet){
+      max-width: 100%;
+      display: block;
+
+    }
+    img {
+      object-position: top;
+      @media (max-width:$tablet){
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  // .veterinary-work__item-text
+  &__item-text {
+    flex-grow: 1;
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(23 , 14);
+    text-align: center;
+
+  }
+}
+
+//========================================================================================================================================================
+
+//.veterinary-application
+.veterinary-application {
   background-position: 45% 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
   @media (max-width: em(1480)){
-    background-position: 70% 0;
+    background-position: 100% 0;
   }
   @media (max-width:$tablet){
-    background-image: none !important;
+    background-position: 100% 440px;
+    background-size: 350%;
   }
-  // .hemostatic-application__container
+  // .veterinary-application__container
   &__container {
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media (max-width:$tablet){
+      padding-bottom: 40px;
+    }
   }
-  // .hemostatic-application__title
+  // .veterinary-application__title
   &__title {
+    max-width: 714px;
     text-align: left;
     @media (max-width:$tablet){
+      max-width: 100%;
       text-align: center;
     }
   }
-  // .hemostatic-application__inner
+  // .veterinary-application__inner
   &__inner {
     position: relative;
-    padding-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     column-gap: 20px;
@@ -1303,40 +1439,78 @@
       display: flex;
       flex-direction: column;
       row-gap: 30px;
-      &::before{
-        content:'';
-        position: absolute;
-        background-image: url(../img/hemostatic/bg-item.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
     }
     @media (max-width: em(480)){
       row-gap: 0;
     }
   }
-  // .hemostatic-application__item
+  // .veterinary-application__item
   &__item {
     &:first-child{
       position: relative;
       display: flex;
       flex-direction: column;
-      row-gap: 23px;
-      z-index: 10;
+      row-gap: 20px;
+      z-index: 5;
+      @media (max-width:$tablet){
+        &::before{
+          content:'';
+          position: absolute;
+          width: 130%;
+          height: 780px;
+          right: -2%;
+          top: 10%;
+          background: linear-gradient(180deg, #F5F6FD 40.47%, rgba(245, 246, 253, 0.00) 102.53%);
+          filter: blur(2px);
+          z-index: -1;
+        }
+      }
     }
   }
-  //.hemostatic-application__text
+  //.veterinary-application__important
+  &__important {
+    max-width: 475px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: #FFF;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+  }
+  //.veterinary-application__important-title
+  &__important-title {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  //.veterinary-application__important-text
+  &__important-text {
+    @extend %mont-400;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: #1B1B1B;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
+    }
+  } 
+  //.veterinary-application__important-icon
+  &__important-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  //.veterinary-application__text
   &__text {
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
-  // .hemostatic-application__content
+  // .veterinary-application__content
   &__content {
     max-width: 100%;
     display: flex;
@@ -1350,27 +1524,21 @@
       
     }
   }
-  //.hemostatic-application__content-item
+  //.veterinary-application__content-item
   &__content-item {
     max-width: 473px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
     @media (max-width:$tablet){
       max-width: 100%;
     }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
+    }
   }
-  // .hemostatic-application__img
-  // &__img-ibg {
-  //   padding-bottom: percent(600, 566);
-  //   @media (max-width:$tablet){
-  //     padding-bottom: percent(460, 520);
-  //   }
-  //   @media (max-width:$mobileSmall){
-  //     padding-bottom: percent(400, 455);
-  //   }
-  //   img {
-  //     object-position: 94%;
-  //   }
-  // }
-
+  //.veterinary-application__img
   &__img {
     position: relative;
     height: auto;
@@ -1384,11 +1552,27 @@
   }
 }
 //========================================================================================================================================================
-//.hemostatic-reviews
+
+// .reports
 //========================================================================================================================================================
-.hemostatic-reviews {
+.veterinary-reports__container {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  @media (max-width:$tablet){
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  @media (max-width:$mobile){
+    padding-bottom: 50px; 
+  }
+}
+//========================================================================================================================================================
+
+//.veterinary-reviews
+//========================================================================================================================================================
+.veterinary-reviews {
   background-color: $bg;
-  // .hemostatic-reviews__container
+  // .veterinary-reviews__container
   &__container {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -1404,31 +1588,93 @@
       padding-bottom: 25px;
     }
   }
-  // .hemostatic-reviews__heading
+  // .veterinary-reviews__heading
   &__heading {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
     align-items: center;
+    align-items: flex-end;
     @media (max-width:$tablet){
       flex-direction: column;
-      align-items: center;
-      row-gap: 15px;
+      align-items: flex-start;
+      
+      // align-items: center;
     }
     @media (max-width:$mobile){
-      @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
+      // @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
     }
   }
-  // .hemostatic-reviews__title
+  //.veterinary-reviews__box
+  &__box {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 30px;
+    @media (max-width: em(1000)){
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+  }
+  // .veterinary-reviews__title
   &__title {
+    max-width: 330px;
+    @media (max-width: em(1000)){
+      max-width: 100%;
+    }
   }
-  // .hemostatic-reviews__action
+  // .veterinary-reviews__action
   &__action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
   }
-  // .hemostatic-reviews__button
+  //.veterinary-reviews__foto-btn
+  &__foto-btn {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+    }
+    @media (max-width: em(430)){
+      font-size: rem(12);
+      padding: 10px 15px;
+    }
+  }
+  // .veterinary-reviews__button
   &__button {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
+    }
   }
-  // .hemostatic-reviews__inner
+  //.veterinary-reviews__buy
+  &__buy {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
+    }
+  }
+  //.veterinary-reviews__buy-btn
+  &__buy-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 51px;
+    border-radius: 16px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: 120%;
+    color: #FFF;
+  }
+  // .veterinary-reviews__inner
   &__inner {
     padding-top: 25px;
     display: grid;
@@ -1441,7 +1687,7 @@
       flex-direction: column;
     }
   }
-  // .hemostatic-reviews__item
+  // .veterinary-reviews__item
   &__item {
     padding: 20px;
     border-radius: 24px;
@@ -1450,7 +1696,7 @@
     row-gap: 10px;
     background-color: $white;
   }
-  // .hemostatic-reviews__top
+  // .veterinary-reviews__top
   &__top {
     display: flex;
     justify-content: space-between;
@@ -1462,19 +1708,19 @@
     }
   }
 
-  // .hemostatic-reviews__user-info
+  // .veterinary-reviews__user-info
   &__user-info {
     display: flex;
     align-items: center;
     column-gap: 20px;
   }
-  // .hemostatic-reviews__user-name
+  // .veterinary-reviews__user-name
   &__user-name {
     @extend %mont-600;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
-  // .hemostatic-reviews__user-rating
+  // .veterinary-reviews__user-rating
   &__user-rating {
     display: flex;
     column-gap: 2px;
@@ -1483,10 +1729,8 @@
       height: 24px;
     }
   }
-  // .hemostatic-reviews__market
-  &__market {
-  }
-  // .hemostatic-reviews__market-link
+
+  // .veterinary-reviews__market-link
   &__market-link {
     padding: 5px 10px 5px 5px;
     display: flex;
@@ -1507,11 +1751,8 @@
       display: inline-flex;
     }
   }
-  // .hemostatic-reviews__bottom
-  &__bottom {
-  }
 
-  // .hemostatic-reviews__text
+  // .veterinary-reviews__text
   &__text {
     @extend %mont-400;
     font-size: rem(16);
@@ -1520,10 +1761,10 @@
       @include adaptiveValue("font-size", 16, 14);
     }
   }
-  //hemostatic-reviews__wrapper
+  //veterinary-reviews__wrapper
   &__wrapper {
     padding-top: 20px;
-    @media (max-width:$tablet){
+    @media (max-width: em(1000)){
       display: flex;
       justify-content: center;
     }
