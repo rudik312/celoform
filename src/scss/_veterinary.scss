@@ -2,11 +2,10 @@
 //.veterinary-main
 //========================================================================================================================================================
 .veterinary-main {
-  max-width: 100%;
-  background-position: center top 100px;
+  background-position: center top 150px;
   background-repeat: no-repeat;
   background-color: $bg;
-  background-size: 85%;
+  background-size: 80%;
   // .veterinary-main__container
   @media (max-width: em(1880)){
     background-size: contain;
@@ -28,7 +27,6 @@
     background-size: 180%;
   }
   @media (max-width:$mobile){
-    // background-position: 70% 160px;
     background-size: 170%;
   }
   @media (max-width:$mobileSmall){
@@ -424,9 +422,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-
-  // .haemostatic__container
+  @media (max-width: em(1620)){
+    background-position: 30% 0;
+  }
+  @media (max-width:$tablet){
+    background-size: 220%;
+  }
+  @media (max-width:$mobile){
+    background-position: 13% 430px;
+    background-size: 125%;
+    background-image: none !important;
+  }
+  // .veterinary-multifaceted__container
   &__container {
     padding-top: 50px;
     padding-bottom: 75px;
@@ -445,53 +452,85 @@
       padding-bottom: 25px;
     }
   }
-  // .haemostatic__inner
+  // .veterinary-multifaceted__inner
   &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    // column-gap: 107px;
-    @include adaptiveValue("column-gap", 107, 40, 1240, 1000, 1);
-    @media (max-width:$mobile){
-      display: flex;
-      flex-direction: column-reverse;
-      row-gap: 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    &::before{
+      display: none;
+      content:'';
+      position: absolute;
+      background-image: url(../img/veterinary/veterinary-multifaceted-before.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 120%;
+      height: 100%;
+      left: -20px;
+      @media (max-width:$mobile){
+        display: block;
+        top: 30px;
+        width: 120%;
+      }
+      @media (max-width: em(720)){
+        @include adaptiveValue("top", 90, 150, 720, 630, 1);
+      }
+      @media (max-width: em(620)){
+        top: 90px;
+      }
+      @media (max-width: em(570)){
+        @include adaptiveValue("top", 180, 250, 570, 480, 1);
+      }
+      @media (max-width: em(435)){
+        top: 180px;
+      }
+      @media (max-width: em(420)){
+        top: 160px;
+      }
+      @media (max-width: em(380)){
+        @include adaptiveValue("top", 190, 240, 380, 320, 1);
+      }
     }
-    @media (max-width: em(650)){
-      row-gap: 40px;
+    @media (max-width:$mobile){
+      min-height: 620px;
+    }
+    @media (max-width: em(620)){
+      min-height: 540px;
+    }
+    @media (max-width: em(570)){
+      min-height: 630px;
     }
     @media (max-width: em(450)){
-      row-gap: 70px;
+      min-height: 570px;
     }
-    @media (max-width: em(380)){
-      row-gap: 30px;
+    @media (max-width: em(435)){
+      min-height: 480px;
     }
   }
-  // .haemostatic__item
+  // .veterinary-multifaceted__item
   &__item {
-    &:last-child{
       @media (max-width:$mobile){
         position: relative;
-        width: 100%;
-        height: 100%;
-        padding-bottom: 241px;
-        // background: linear-gradient(183deg, #F5F6FD 43.47%, rgba(245, 246, 253, 0.00) 98.53%);
         &::before{
           content:'';
           position: absolute;
-          width: 100%;
-          height: 400px;
-          right: 4%;
-          top: 50%;
+          width: 120%;
+          height: 240px;
+          left: -20px;
+          top: 200px;
           background: linear-gradient(183deg, #F5F6FD 23.47%, rgba(245, 246, 253, 0.00) 78.53%);
-          filter: blur(2px);
+          filter: blur(10px);
+          @media (max-width: em(620)){
+            top: 190px;
+            height: 260px;
+          }
+          @media (max-width:$mobileSmall){
+            top: 130px;
+          }
         }
       }
-      @media (max-width: em(560)){
-        padding-bottom: 152px;
-      }
-    }
   }
-  // .haemostatic__item-img
+  // .veterinary-multifaceted__item-img
   &__item-img {
     max-width: 100%;
     display: block;
@@ -523,16 +562,17 @@
       padding-right: 34px;
     }
   }
-  // .haemostatic__item-box
+  // .veterinary-multifaceted__item-box
   &__item-box {
+    position: relative;
     padding-top: 40px;
     display: grid;
-    row-gap: 20px;
+    row-gap: 25px;
     @media (max-width:$tablet){
       padding-top: 0;
     }
   }
-  // .haemostatic__item-title
+  // .veterinary-multifaceted__item-title
   &__item-title {
     max-width: 496px;
     font-size: rem(30);
@@ -548,7 +588,7 @@
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  // .haemostatic__list
+  // .veterinary-multifaceted__list
   &__list {
     display: grid;
     row-gap: 16px;
@@ -560,7 +600,7 @@
       @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
     }
   }
-  // .haemostatic__list-item
+  // .veterinary-multifaceted__list-item
   &__list-item {
     &::before{
       left: -21px;
@@ -577,21 +617,6 @@
       }
     }
   }
-  @media (max-width: em(1620)){
-    background-position: 30% 0;
-  }
-  @media (max-width:$mobile){
-    background-position: 13% 430px;
-    background-size: 325%;
-  }
-  @media (max-width: em(570)){
-    background-position: 13% 390px;
-    background-size: 295%;
-  }
-  @media (max-width: em(480)){
-    background-position: 15% 350px !important;
-    background-size: 330% !important;
-  }
 }
 //========================================================================================================================================================
 
@@ -599,10 +624,9 @@
 //========================================================================================================================================================
 .veterinary-product {
   // background-color: $bg;
-  
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center right -220px;
   // .veterinary-product__container
   &__container {
     padding-top: 50px;
@@ -637,20 +661,20 @@
     flex-direction: column;
     justify-content: flex-end;
     row-gap: 20px;
-    &:first-child{
-      @media (max-width:$tablet){
-        &::before{
-          content:'';
-          position: absolute;
-          width: 130%;
-          height: 780px;
-          right: -5%;
-          top: 10%;
-          background: linear-gradient(180deg, #F5F6FD 58.47%, rgba(245, 246, 253, 0.00) 102.53%);
-          filter: blur(2px);
-        }
-      }
-    }
+    // &:first-child{
+    //   @media (max-width:$tablet){
+    //     &::before{
+    //       content:'';
+    //       position: absolute;
+    //       width: 130%;
+    //       height: 780px;
+    //       right: -5%;
+    //       top: 10%;
+    //       background: linear-gradient(180deg, #F5F6FD 58.47%, rgba(245, 246, 253, 0.00) 102.53%);
+    //       filter: blur(2px);
+    //     }
+    //   }
+    // }
     @media (max-width:$tablet){
       max-width: 100%;
     }
@@ -675,6 +699,9 @@
   }
   // .veterinary-product__info
   &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
     @extend %mont-400;
     font-size: rem(16);
     line-height: math.div(26 , 16);
@@ -683,46 +710,8 @@
     span {
       @extend %mont-600;
     }
-    p {
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-  }
-  //.veterinary-product__list
-  &__list {
-    padding-left: 22px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    @extend %mont-400;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: #000;
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-      line-height: math.div(23 , 14);
-    }
-  }
-  // .veterinary-product__list-item
-  &__list-item {
-    &::before{
-      top: 10px;
-      width: 6px;
-      height: 6px;
-      left: -21px;
-      top: 9px;
-      @media (max-width:$tablet){
-        left: -20px;
-      }
-    }
-    &::after{
-      top: 6px;
-      width: 12px;
-      height: 12px;
     }
   }
 // .veterinary-product__cards 
@@ -750,16 +739,25 @@
       object-fit: cover;
     }
   }
-  @media (max-width: em(1320)){
-    background-position: 70% 0;
+  @media (max-width: em(1360)){
+    background-position: center right -10px;
   }
   @media (max-width:$tablet){
-    background-position: 100% 100px;
+    background-size: cover;
+    background-position: 95% 100px;
+  }
+  @media (max-width: em(660)){
+    background-position: 85% 100px;
+  }
+  @media (max-width:$mobileSmall){
+    background-size: 230%;
+    background-position: 95% 480px;
+
   }
 }
 //========================================================================================================================================================
 
-//.veterinary-multiplication
+//.veterinary-advantages
 //========================================================================================================================================================
 .veterinary-advantages {
   margin-top: 50px;
@@ -767,9 +765,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
-  @media (max-width:$tablet){
-    background-position: center -90px;
-  }
   // .veterinary-advantages__container
   &__container {
     padding-top: 20px;
@@ -778,38 +773,30 @@
       padding-bottom: 40px;
     }
   }
+  // .veterinary-advantages__title-box
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  } 
+
   // .veterinary-advantages__title
   &__title {
+    max-width: 1050px;
     font-size: rem(32);
     line-height: math.div(45 , 32);
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
     }
   }
-  //.veterinary-advantages__content
-  &__content {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    @media (max-width:$mobile){
-      padding-top: 40px;
-      padding-bottom: 20px;
-    }
-    @media (max-width:$mobileSmall){
-      padding-top: 20px;
-      padding-bottom: 35px;
-    }
-    @media (max-width: em(420)){
-      padding-bottom: 30px;
-    }
-  }
 
+  // .veterinary-advantages__subtitle
   &__subtitle {
-    h4 {
-      @extend %mont-700;
-      font-size: rem(24);
-      line-height: math.div(39 , 24);
-      color: $black;
-    }
+    max-width: 874px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $black;
   }
 
   //.veterinary-advantages__text
@@ -828,6 +815,9 @@
     @media (max-width: em(1180)){
       grid-template-columns: repeat(2, 1fr);
     }
+    @media (max-width:$tablet){
+      padding-top: 20px;
+    }
     @media (max-width: em(690)){
       display: flex;
       flex-direction: column;
@@ -837,11 +827,13 @@
   // .veterinary-advantages__items
   &__items {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1.2fr 1fr;
     row-gap: 15px;
+
   }
   // .veterinary-advantages__item
   &__item {
+    max-width: 375px;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -851,14 +843,20 @@
     @media (max-width:$tablet){
       padding: 15px;
     }
+    @media (max-width: em(690)){
+      max-width: 100%;
+    }
   }
   // .veterinary-advantages__item-title
   &__item-title {
+    white-space: nowrap;
     text-transform: uppercase;
     @extend %mont-700;
     font-size: rem(16);
     line-height: math.div(19 , 16);
-
+    @media (max-width:$mobile){
+      white-space: wrap;
+    }
   }
   // .veterinary-advantages__item-text
   &__item-text {
@@ -873,7 +871,7 @@
     display: block;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     img {
       position: relative;
       right: 50px;
@@ -886,10 +884,96 @@
     }
   }
   @media (max-width:$tablet){
-    background-position: 100% 230px;
+    // background-position: 100% 230px;
+    background-position: 100% 0px;
   }
 }
 //========================================================================================================================================================
+
+
+//.veterinary-benefit
+//========================================================================================================================================================
+.veterinary-benefit {
+  background-color: $bg;
+  // .benefit__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 75px;
+    padding-bottom: 45px;
+    @media (max-width:$tablet){
+      padding-top: 40px;
+      row-gap: 20px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 25px;
+    }
+  }
+  // .veterinary-benefit__title
+  &__title {
+    font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
+    }
+  }
+  // .veterinary-benefit__inner
+  &__inner {
+    // padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .veterinary-benefit__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 24px;
+    @media (max-width: em(380)){
+      padding: 15px;
+    }
+  }
+  // .veterinary-benefit__item-title
+  &__item-title {
+    @extend %mont-600;
+    font-size: rem(18);
+    line-height: math.div(22 , 18);
+  }
+  // .veterinary-benefit__item-text
+  &__item-text {
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+  }
+  //.veterinary-benefit__info
+  &__info {
+    max-width: 874px;
+    padding-top: 15px;
+    @extend %mont-600;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$tablet){
+      max-width: 100%;
+      padding-top: 0;
+    }
+  }
+}
+
 
 //.veterinary-documents
 //========================================================================================================================================================
@@ -949,7 +1033,7 @@
     line-height: math.div(26 , 16);
     text-align: justify;
     span {
-      color: $black;
+      color: $accent;
       @extend %mont-700;
     }
     p {
@@ -1011,15 +1095,136 @@
 }
 //========================================================================================================================================================
 
+
+//.veterinary-compatibility
+//========================================================================================================================================================
+.veterinary-compatibility {
+  margin-top: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  // .veterinary-advantages__container
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @media (max-width:$tablet){
+      padding-bottom: 40px;
+    }
+  }
+  // .veterinary-advantages__title-box
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  } 
+
+  // .veterinary-advantages__title
+  &__title {
+    max-width: 1050px;
+    font-size: rem(32);
+    line-height: math.div(45 , 32);
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
+    }
+  }
+
+  // .veterinary-advantages__subtitle
+  &__subtitle {
+    max-width: 874px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $black;
+  }
+
+  //.veterinary-advantages__text
+  &__text {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+  }
+
+  // .veterinary-advantages__inner
+  &__inner {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
+    @media (max-width: em(1180)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$tablet){
+      padding-top: 20px;
+    }
+    @media (max-width: em(690)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  // .veterinary-advantages__items
+  &__items {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 15px;
+
+  }
+  // .veterinary-advantages__item
+  &__item {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 30px;
+    border-radius: 24px;
+    background-color: #fff;
+    @media (max-width:$tablet){
+      padding: 15px;
+    }
+    @media (max-width: em(690)){
+      max-width: 100%;
+    }
+  }
+  // .veterinary-advantages__item-text
+  &__item-text {
+    text-transform: uppercase;
+    @extend %mont-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+
+  }
+  // .veterinary-advantages__image
+  &__image {
+    max-width: 100%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      position: relative;
+      right: 50px;
+      object-fit: cover;
+      width: 445px;
+      height: 356px;
+    }
+    @media (max-width: em(1180)){
+      display: none;
+    }
+  }
+  @media (max-width:$tablet){
+    // background-position: 100% 230px;
+    background-position: 100% 0px;
+  }
+}
+//========================================================================================================================================================
+
 //.buy
 //========================================================================================================================================================
 .veterinary-buy__container {
   padding-top: 40px;
   padding-bottom: 40px;
-  // @media (max-width:$tablet){
-  //   padding-top: 40px;
-  //   padding-bottom: 80px;
-  // }
   @media (max-width:$mobileSmall){
     padding-bottom: 25px;
   }
@@ -1029,386 +1234,26 @@
 }
 //========================================================================================================================================================
 
-//.veterinary-types
-//========================================================================================================================================================
-.veterinary-types {
-  // .veterinary-types__container
-  &__container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    @media (max-width:$mobileSmall){
-      padding-top: 25px;
-      padding-bottom: 25px;
-    }
-  }
-  // .veterinary-types__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    // column-gap: 60px;
-    @include adaptiveValue("column-gap", 60, 20, 1240, 1000, 1);
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-    }
-  }
-  // .veterinary-types__content
-  &__content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-  }
-  // .veterinary-types__title
-  &__title {
-  }
-  // .veterinary-types__list
-  &__list {
-    padding-left: 10px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
-  }
-  // .veterinary-types__list-item
-  &__list-item {
-    position: relative;
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: #000;
-    span {
-      @extend %mont-700;
-    }
-    &::before{
-      content:'';
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background-color: #000;
-      left: -10px;
-      top: 10px;
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
-    }
-  }
-  // .veterinary-types__items
-  &__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // column-gap: 70px;
-    @include adaptiveValue("column-gap", 70, 20, 1240, 1000, 1);
-    @media (max-width:$tablet){
-      column-gap: 70px;
-      justify-content: space-evenly;
-    }
-    @media (max-width:$mobile){
-      justify-content: center;
-    }
-    @media (max-width: em(520)){
-      @include adaptiveValue("column-gap", 70, 50, 520, 420, 1);
-      justify-content: space-between;
-    }
-  }
-  // .veterinary-types__item
-  &__item {
-
-  }
-
-  &__img {
-    max-width: 100%;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-//========================================================================================================================================================
-
-//.veterinary-hogweed
-//========================================================================================================================================================
-.veterinary-hogweed {
-  // .veterinary-hogweed__container
-  &__container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    @media (max-width:$mobileSmall){
-      padding-top: 25px;
-      padding-bottom: 25px;
-    }
-  }
-  // .veterinary-hogweed__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 70px;
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-    }
-  }
-  // .veterinary-hogweed__item
-  &__item {
-    &:first-child{
-      
-    }
-    &:last-child{
-      display: flex;
-      flex-direction: column;
-      row-gap: 25px;
-      @media (max-width:$tablet){
-        order: -1;
-        row-gap: 20px;
-      }
-    }
-  }
-  // .veterinary-hogweed__img-ibg
-  &__img {
-    overflow: hidden;
-    max-width: 100%;
-    display: block;
-    img {
-      height: auto;
-      width: 100%;
-      @media (max-width:$tablet){
-        width: 498px;
-        height: 598px;
-      }
-      @media (max-width: em(520)){
-        height: auto;
-        width: 100%;
-      }
-    }
-    @media (max-width:$tablet){
-      display: flex;
-      justify-content: center;
-    }
-  }
-  // .veterinary-hogweed__info
-  &__info {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-  }
-  // .veterinary-hogweed__title
-  &__title {
-    
-  }
-  // .veterinary-hogweed__important
-  &__important {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 25px 20px 25px 20px;
-    border-radius: 24px;
-    background-color: #FFF;
-
-  }
-  //.veterinary-hogweed__about
-  &__about {
-    @extend %mont-600;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: #000;
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-  }
-  // .veterinary-hogweed__important-title
-  &__important-title {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
-    @extend %mont-600;
-    font-size: rem(18);
-    line-height: math.div(29 , 18);
-    color: #D90027;
-  }
-  // .veterinary-hogweed__important-icon
-  &__important-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  // .veterinary-hogweed__important-text
-  &__important-text {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-  }
-  // .veterinary-hogweed__content
-  &__content {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-  }
-  // .veterinary-hogweed__content-text
-  &__content-text {
-  }
-}
-//========================================================================================================================================================
-
-
-//========================================================================================================================================================
-.veterinary-work {
-  background-color: $bg;
-  // .veterinary-work__container
-  &__container {
-    padding-top: 40px;
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-    @media (max-width:$tablet){
-      padding-top: 25px;
-      padding-bottom: 25px;
-    }
-    @media (max-width:$mobile){
-      row-gap: 30px;
-    }
-  }
-  // .veterinary-work__title
-  &__title {
-    display: flex;
-    justify-content: center;
-  }
-  // .veterinary-work__info
-  &__info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 124px;
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      font-size: rem(14);
-    }
-  }
-  // .veterinary-work__list
-  &__list {
-    display: grid;
-    row-gap: 20px;
-  }
-  // .veterinary-work__list-item
-  &__list-item {
-    max-width: 480px;
-    padding-left: 36px;
-    &::before{
-      top: 8px;
-      left: 9px;
-      @media (max-width:$tablet){
-        left: 9px;
-        top: 10px;
-      }
-    }
-    &::after{
-      top: 4px;
-      left: 5px;
-      @media (max-width:$tablet){
-        top: 7px;
-        left: 6px;
-      }
-    }
-    @media (max-width:$tablet){
-      max-width: 100%;
-    }
-  }
-  // .veterinary-work__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 25px;
-    @media (max-width:$tablet){
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 10px;
-    }
-    
-    @media (max-width: em(580)){
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
-    }
-  }
-  // .veterinary-work__item
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: 20px;
-    padding: 20px 38.3px;
-    @media (max-width:$tablet){
-      display: grid;
-      padding: 20px 5px;
-      &:last-child{
-        grid-auto-columns: 50%;
-        grid-column: span 2;
-        justify-content: center;
-        @media (max-width: em(580)){
-          grid-auto-columns: auto;
-        }
-      }
-    }
-    @media (max-width:$mobileSmall){
-      padding: 20px 20px;
-    }
-  }
-  // .veterinary-work__image-ibg
-  &__image-ibg {
-    overflow: hidden;
-    padding-bottom: percent(250, 250);
-    @media (max-width:$tablet){
-      max-width: 100%;
-      display: block;
-
-    }
-    img {
-      object-position: top;
-      @media (max-width:$tablet){
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  // .veterinary-work__item-text
-  &__item-text {
-    flex-grow: 1;
-    @extend %mont-500;
-    font-size: rem(14);
-    line-height: math.div(23 , 14);
-    text-align: center;
-
-  }
-}
-
-//========================================================================================================================================================
-
 //.veterinary-application
+//========================================================================================================================================================
 .veterinary-application {
-  background-position: 45% 0;
+  background-position: -60% 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
-  @media (max-width: em(1480)){
-    background-position: 100% 0;
+  @media (max-width: em(1890)){
+    background-position: 50% -100px;
   }
   @media (max-width:$tablet){
-    background-position: 100% 440px;
-    background-size: 350%;
+    background-position: 99% 400px;
+    background-size: 290%;
+  }
+  @media (max-width: em(660)){
+    // background-position: 85% 400px;
+    background-position: 85% 360px;
+  }
+  @media (max-width:$mobileSmall){
+    background-position: 81% 490px;
   }
   // .veterinary-application__container
   &__container {
@@ -1435,6 +1280,10 @@
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     column-gap: 20px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $black;
     @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
@@ -1443,15 +1292,33 @@
     @media (max-width: em(480)){
       row-gap: 0;
     }
+
+
   }
   // .veterinary-application__item
   &__item {
+
     &:first-child{
       position: relative;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       row-gap: 20px;
       z-index: 5;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 245%;
+        height: 850px;
+        right: -217%;
+        top: -30%;
+        background: linear-gradient(72deg, #F5F6FD 56.89%, rgba(245, 246, 253, 0) 73.03%);
+        filter: blur(20px);
+        z-index: -1;
+        @media (max-width: em(1890)){
+          right: -185%;
+        }
+      }
+      // background: linear-gradient(90deg, #F5F6FD 40.47%, rgba(245, 246, 253, 0) 102.53%);
       @media (max-width:$tablet){
         &::before{
           content:'';
@@ -1489,10 +1356,10 @@
   }
   //.veterinary-application__important-text
   &__important-text {
-    @extend %mont-400;
+    @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
-    color: #1B1B1B;
+    color: $black;
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
       line-height: math.div(23 , 14);
@@ -1549,24 +1416,13 @@
       display: block;
       object-fit: cover;
     }
+    @media (max-width: em(660)){
+      top: 100px;
+    }
   }
 }
 //========================================================================================================================================================
 
-// .reports
-//========================================================================================================================================================
-.veterinary-reports__container {
-  padding-top: 80px;
-  padding-bottom: 100px;
-  @media (max-width:$tablet){
-    padding-top: 40px;
-    padding-bottom: 80px;
-  }
-  @media (max-width:$mobile){
-    padding-bottom: 50px; 
-  }
-}
-//========================================================================================================================================================
 
 //.veterinary-reviews
 //========================================================================================================================================================
