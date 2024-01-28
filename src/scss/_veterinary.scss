@@ -1252,8 +1252,15 @@
     // background-position: 85% 400px;
     background-position: 85% 360px;
   }
-  @media (max-width:$mobileSmall){
-    background-position: 81% 490px;
+  @media (max-width: em(530)){
+    background-position: 100% 625px;
+    background-size: 190%;
+  }
+  @media (max-width: em(420)){
+    background-position: 100% 610px;
+  }
+  @media (max-width: em(360)){
+    background-position: 100% 670px;
   }
   // .veterinary-application__container
   &__container {
