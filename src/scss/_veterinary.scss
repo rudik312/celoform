@@ -1080,6 +1080,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $bg;
+  
   // .veterinary-advantages__container
   &__container {
     padding-top: 20px;
@@ -1189,9 +1190,7 @@
       display: none;
     }
   }
-  @media (max-width:$tablet){
-    background-position: 100% 0px;
-  }
+
 }
 //========================================================================================================================================================
 
@@ -1227,14 +1226,14 @@
     background-position: 85% 360px;
   }
   @media (max-width: em(530)){
-    background-position: 100% 625px;
-    background-size: 190%;
+    background-position: 95% 625px;
+    background-size: 200%;
   }
   @media (max-width: em(420)){
-    background-position: 100% 610px;
+    background-position: 95% 610px;
   }
   @media (max-width: em(360)){
-    background-position: 100% 670px;
+    background-position: 95% 670px;
   }
   // .veterinary-application__container
   &__container {
@@ -1306,11 +1305,27 @@
           position: absolute;
           width: 130%;
           height: 780px;
-          right: -2%;
+          right: -4%;
           top: 10%;
           background: linear-gradient(180deg, #F5F6FD 40.47%, rgba(245, 246, 253, 0.00) 102.53%);
           filter: blur(2px);
           z-index: -1;
+        }
+      }
+    }
+    &:last-child{
+      position: relative;
+      @media (max-width: em(660)){
+        &::before{
+          content: "";
+          position: absolute;
+          width: 315%;
+          height: 640px;
+          right: -217%;
+          top: -20%;
+          background: linear-gradient(0deg, #F5F6FD 50.89%, rgba(245, 246, 253, 0) 43.03%);
+          filter: blur(100px);
+          z-index: 1;
         }
       }
     }
@@ -1427,10 +1442,12 @@
   }
   // .veterinary-reviews__heading
   &__heading {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-items: flex-end;
+    z-index: 5;
     @media (max-width:$tablet){
       flex-direction: column;
       align-items: flex-start;
