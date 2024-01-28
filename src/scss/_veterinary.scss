@@ -2,9 +2,8 @@
 //.veterinary-main
 //========================================================================================================================================================
 .veterinary-main {
-  background-position: center top 150px;
+  background-position: center top 100px;
   background-repeat: no-repeat;
-  background-color: $bg;
   background-size: 80%;
   // .veterinary-main__container
   @media (max-width: em(1880)){
@@ -64,7 +63,6 @@
   // .veterinary-main__content
   &__content {
     z-index: 5;
-    // max-width: 532px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +85,6 @@
   // .veterinary-main__title
   &__title {
     @extend %mont-700;
-    // font-size: rem(72);
     color: $accent;
     @include adaptiveValue("font-size", 72, 62, 1000, 868, 1);
     @media (max-width:$mobile){
@@ -124,7 +121,6 @@
   }
   // .veterinary-main__list
   &__list {
-    // max-width: 295px;
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(19 , 16);
@@ -259,7 +255,6 @@
     }
   }
 
-
   // .veterinary-main__card
   &__card {
     @extend %mont-500;
@@ -274,7 +269,6 @@
     text-decoration: underline !important;
     color: $accent;
   }
-
 }
 
 //.veterinary-use
@@ -623,7 +617,6 @@
 //.veterinary-product
 //========================================================================================================================================================
 .veterinary-product {
-  // background-color: $bg;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right -220px;
@@ -643,7 +636,6 @@
   // .veterinary-product__inner
   &__inner {
     display: grid;
-    // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1.2fr 1fr;
     @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
     @media (max-width:$tablet){
@@ -661,20 +653,6 @@
     flex-direction: column;
     justify-content: flex-end;
     row-gap: 20px;
-    // &:first-child{
-    //   @media (max-width:$tablet){
-    //     &::before{
-    //       content:'';
-    //       position: absolute;
-    //       width: 130%;
-    //       height: 780px;
-    //       right: -5%;
-    //       top: 10%;
-    //       background: linear-gradient(180deg, #F5F6FD 58.47%, rgba(245, 246, 253, 0.00) 102.53%);
-    //       filter: blur(2px);
-    //     }
-    //   }
-    // }
     @media (max-width:$tablet){
       max-width: 100%;
     }
@@ -695,8 +673,8 @@
     }
   }
   // .veterinary-product__title
-  &__title {
-  }
+  // &__title {
+  // }
   // .veterinary-product__info
   &__info {
     display: flex;
@@ -884,7 +862,6 @@
     }
   }
   @media (max-width:$tablet){
-    // background-position: 100% 230px;
     background-position: 100% 0px;
   }
 }
@@ -922,7 +899,6 @@
   }
   // .veterinary-benefit__inner
   &__inner {
-    // padding-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
@@ -1028,10 +1004,10 @@
   }
   // .veterinary-documents__info
   &__info {
-    @extend %mont-400;
+    @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
-    text-align: justify;
+    // text-align: justify;
     span {
       color: $accent;
       @extend %mont-700;
@@ -1214,7 +1190,6 @@
     }
   }
   @media (max-width:$tablet){
-    // background-position: 100% 230px;
     background-position: 100% 0px;
   }
 }
@@ -1249,7 +1224,6 @@
     background-size: 290%;
   }
   @media (max-width: em(660)){
-    // background-position: 85% 400px;
     background-position: 85% 360px;
   }
   @media (max-width: em(530)){
@@ -1272,8 +1246,10 @@
   }
   // .veterinary-application__title
   &__title {
+    position: relative;
     max-width: 714px;
     text-align: left;
+    z-index: 6;
     @media (max-width:$tablet){
       max-width: 100%;
       text-align: center;
@@ -1304,7 +1280,6 @@
   }
   // .veterinary-application__item
   &__item {
-
     &:first-child{
       position: relative;
       display: flex;
@@ -1325,7 +1300,6 @@
           right: -185%;
         }
       }
-      // background: linear-gradient(90deg, #F5F6FD 40.47%, rgba(245, 246, 253, 0) 102.53%);
       @media (max-width:$tablet){
         &::before{
           content:'';
@@ -1460,11 +1434,6 @@
     @media (max-width:$tablet){
       flex-direction: column;
       align-items: flex-start;
-      
-      // align-items: center;
-    }
-    @media (max-width:$mobile){
-      // @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
     }
   }
   //.veterinary-reviews__box
