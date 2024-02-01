@@ -1,45 +1,50 @@
 
-//.veterinary-main
+//.pediatrics-main
 //========================================================================================================================================================
-.veterinary-main {
-  background-position: center top 100px;
+.pediatrics-main {
+  background-position: left 0 top 120px;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: contain;
   @media (max-width: em(1880)){
-    background-size: contain;
+    background-size: 110%;
+    background-position: left -130px top 90px;
+  }
+  @media (max-width: em(1740)){
+    background-size: 120%;
+    background-position: left -230px top 90px;
   }
   @media (max-width: em(1620)){
-    background-size: 110%;
-  }
-  @media (max-width: em(1460)){
     background-size: 130%;
+    background-position: left -340px top 90px;
+  }
+  @media (max-width: em(1480)){
+    background-size: 135%;
+    background-position: left -370px top 90px;
+  }
+  @media (max-width: em(1380)){
+    background-size: 145%;
+    background-position: left -510px top 90px;
   }
   @media (max-width: em(1280)){
-    background-size: 150%;
-  }
-  @media (max-width: em(1170)){
-    background-size: 170%;
+    background-size: 160%;
+    background-position: left -600px top 90px;
   }
   @media (max-width:$tablet){
-    background-position: 70% 100px;
-    background-size: 180%;
-  }
-  @media (max-width:$mobile){
     background-size: 170%;
   }
-  @media (max-width:$mobileSmall){
-    background-position: 70% 90px;
-    background-size: 200%;
+  @media (max-width: em(880)){
+    background-size: 160%;
+    background-position: left -440px top 90px;
   }
-  @media (max-width: em(380)){
-    background-position: 82% 12%;
-    background-size: 150%;
+  @media (max-width:$mobile){
+    background-size: 210%;
+    background-position: left 95% top 100px;
   }
-    // .veterinary-main__container
+    // .pediatrics-main__container
   &__container {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     @media (max-width:$tablet){
-      padding-bottom: 40px;
+      padding-bottom: 25px;
     }
     @media (max-width:$mobile){
       @include adaptiveValue("padding-top", 82, 50, 767, 480, 1);
@@ -48,7 +53,7 @@
       @include adaptiveValue("padding-top", 50, 70, 480, 420, 1); 
     }
   }
-  // .veterinary-main__inner
+  // .pediatrics-main__inner
   &__inner {
     // position: relative;
     display: grid;
@@ -60,14 +65,52 @@
     }
 
   }
-  // .veterinary-main__content
+  // .pediatrics-main__content
   &__content {
+    position: relative;
     z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 30px;
     padding-top: 187px;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 870px;
+      right: -90%;
+      top: -30%;
+      background: linear-gradient(59deg, #F5F6FD 46.89%, rgba(245, 246, 253, 0) 73.03%);
+      filter: blur(20px);
+      z-index: -1;
+      @media (max-width: em(1480)){
+        right: -70%;
+      }
+      @media (max-width: em(1180)){
+        width: 160%;
+        right: -50%;
+      }
+      @media (max-width:$mobile){
+        width: 150%;
+        height: 530px;
+        right: -33%;
+        top: -116%;
+        background: linear-gradient(30deg, #F5F6FD 55%, rgba(245, 246, 253, 0) 57.03%);
+        filter: blur(40px);
+        z-index: -1;
+      }
+      @media (max-width: em(640)){
+        right: -15%;
+      }
+      @media (max-width: em(520)){
+        width: 180%;
+        height: 580px;
+      }
+      @media (max-width:$mobileSmall){
+        top: -110%;
+      }
+    }
     @media (max-width:$mobile){
       max-width: 100%;
       padding: 0;
@@ -76,13 +119,13 @@
       row-gap: 24px;
     }
   }
-  // .veterinary-main__title-box
+  // .pediatrics-main__title-box
   &__title-box {
     display: flex;
     flex-direction: column;
     row-gap: 7px;
   }
-  // .veterinary-main__title
+  // .pediatrics-main__title
   &__title {
     @extend %mont-700;
     color: $accent;
@@ -98,10 +141,16 @@
     }
   }
 
-  // .veterinary-main__subtitle
+  // .pediatrics-main__subtitle
   &__subtitle {
     @extend %mont-600;
     @include adaptiveValue("font-size", 16, 13.8, 1000, 868, 1);
+    span {
+      font-size: rem(24);
+      line-height: 120%;
+      color: #E1205C;
+    }
+
     @media (max-width:$tablet){
       max-width: 427px;
     }
@@ -115,11 +164,11 @@
       @include adaptiveValue("font-size", 14.4, 14, 480, 420, 1);
       max-width: 100%;
     }
-    @media (max-width: em(380)){
-      max-width: 280px;
+    @media (max-width: em(390)){
+      max-width: 265px;
     }
   }
-  // .veterinary-main__list
+  // .pediatrics-main__list
   &__list {
     @extend %mont-500;
     font-size: rem(16);
@@ -129,7 +178,7 @@
       @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
     }
   }
-  // .veterinary-main__list-item
+  // .pediatrics-main__list-item
   &__list-item {
     position: relative;
     &:not(:last-child) {
@@ -139,7 +188,7 @@
       }
     }
   }
-  // .veterinary-main__actions
+  // .pediatrics-main__actions
   &__actions {
     display: flex;
     align-items: center;
@@ -153,7 +202,7 @@
       row-gap: 20px;
     }
   }
-  // .veterinary-main__button
+  // .pediatrics-main__button
   &__button {
     white-space: nowrap;
     @extend %mont-500;
@@ -180,7 +229,7 @@
       width: 100%;
     }
   }
-  // .veterinary-main__link-consultation
+  // .pediatrics-main__link-consultation
   &__link-consultation {
     @extend %mont-400;
     font-size: rem(14);
@@ -191,9 +240,10 @@
       @include adaptiveValue("font-size", 14, 13, 768, 480, 1);
     }
   }
-  // .veterinary-main__bg
+  // .pediatrics-main__bg
   &__bg {
     position: relative;
+    z-index: 5;
     @include adaptiveValue("padding-top", 180, 160, 1240, 1000, 1);
     @media (max-width:$mobile){
       padding: 0;
@@ -224,38 +274,47 @@
       }
     }
     &::before{
-      display: none;
-      @media (max-width:$mobile){
-        display: block;
-        content:'';
-        position: absolute;
-        background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
-        width: 120%;
-        height: 10%;
-        left: -20px;
-        bottom: 5px;
-        filter: blur(10px);
-        -moz-transform: scale(-1, -1);
-        -o-transform: scale(-1, -1);
-        -webkit-transform: scale(-1, -1);
-        transform: scale(-1, -1);
-        z-index: 1;
-      } 
-      @media (max-width:$mobileSmall){
-        bottom: -65px;
-        height: 30%;
+      content:'';
+      position: absolute;
+      background-image: url(../img/pediatrics/celoform-label.png);
+      width: 256px;
+      height: 256px;
+      left: -170px;
+      top: 280px;
+      z-index: 6;
+      zoom: 80%;
+      @media (max-width: em(1220)){
+        left: 150px;
+        top: 540px;
+        zoom: 70%;
       }
-      @media (max-width: em(380)){
-        bottom: -45px;
+      @media (max-width:$tablet){
+        left: 240px;
+        top: 730px;
+        zoom: 60%;
+      }
+      @media (max-width: em(880)){
+        left: 20%;
+        top: 70%;
+      }
+      @media (max-width:$mobile){
+        left: 45%;
+        top: 60%;
+        zoom: 70%;
+      }
+      @media (max-width: em(620)){
+        zoom: 50%;
+      }
+      @media (max-width:$mobileSmall){
+        zoom: 35%;
       }
       @media (max-width: em(360)){
-        bottom: -25px;
-        height: 25%;
+        zoom: 30%;
       }
     }
   }
 
-  // .veterinary-main__card
+  // .pediatrics-main__card
   &__card {
     @extend %mont-500;
     font-size: rem(12);
@@ -264,16 +323,26 @@
       padding: 0;
     }
   }
-// .veterinary-main__card
+// .pediatrics-main__card
   &__card-link {
     text-decoration: underline !important;
     color: $accent;
   }
 }
+//========================================================================================================================================================
 
-//.veterinary-use
-.veterinary-use {
+
+//.pediatrics-use
+.pediatrics-use {
+  position: relative;
   margin-top: 45px;
+  z-index: 5;
+  @media (max-width:$mobile){
+    margin-top: 50px;
+  }
+  @media (max-width: em(420)){
+    margin-top: 30px;
+  }
   &__inner {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -292,14 +361,14 @@
       padding: 15px;
     }
   }
-  // .veterinary-use__item
+  // .pediatrics-use__item
   &__item {
     display: grid;
     justify-items: center;
     row-gap: 13px;
     @extend %mont-600;
     font-size: rem(14);
-    padding: 23px 18px;
+    padding: 23px 7px;
     background-color: $white;
     border-right: 2px solid #F5F6FD;
     &:first-child{
@@ -315,37 +384,10 @@
         border-radius: 16px;
       }
     }
-    &:nth-child(2) {
-      span {
-        &:first-child{
-          @media (max-width: em(980)){
-            display: none;
-          }
-        }
-        &:last-child{
-          display: none;
-          @media (max-width: em(980)){
-            display: inline-block;
-          }
-        }
-      }
-      @media (max-width: em(980)){
-        display: flex;
-      }
-    }
-    &:nth-child(3) {
-      @media (max-width: em(980)){
-        display: none;
-      }
-    }
     &:nth-child(4) {
       border-right: 2px solid #F5F6FD;
-      @media (max-width: em(980)){
-        border-radius: 16px;
-      }
     }
     &:nth-child(5){
-      border-top: 2px solid #F5F6FD;
       border-top-right-radius: 30px;
       @media (max-width: em(980)){
         border-radius: 16px;
@@ -353,12 +395,17 @@
     }
     &:nth-child(6) {
       border-bottom-left-radius: 30px;
+      @media (max-width: em(980)){
+        border-radius: 16px;
+      }
     }
     &:nth-child(n + 6) {
       border-top: 2px solid #F5F6FD;
-      // @media (max-width: em(980)){
-      //   display: none;
-      // }
+    }
+    &:nth-child(9) {
+      @media (max-width: em(980)){
+        display: none;
+      }
     }
     transition: all 0.3s ease 0s;
     @media (max-width: em(1000)){
@@ -379,7 +426,7 @@
       background-color: $bg;
     }
   }
-  // .veterinary-use__item-img
+  // .pediatrics-use__item-img
   &__item-img {
     width: 48px;
     height: 48px;
@@ -391,7 +438,7 @@
       display: none;
     }
   }
-  // .veterinary-use__item-text
+  // .pediatrics-use__item-text
   &__item-text {
     @extend %mont-600;
     font-size: rem(14);
@@ -406,316 +453,134 @@
     }
   }
 }
-
 //========================================================================================================================================================
 
-// .veterinary-multifaceted
+//.pediatrics-documents
 //========================================================================================================================================================
-.veterinary-multifaceted {
-  background-color: $bg;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  @media (max-width: em(1620)){
-    background-position: 30% 0;
-  }
-  @media (max-width:$tablet){
-    background-size: 220%;
-  }
-  @media (max-width:$mobile){
-    background-position: 13% 430px;
-    background-size: 125%;
-    background-image: none !important;
-  }
-  // .veterinary-multifaceted__container
+.pediatrics-documents {
+  // .pediatrics-documents__container
   &__container {
-    padding-top: 50px;
-    padding-bottom: 75px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     @media (max-width:$tablet){
-      padding-bottom: 60px;
+      padding-top: 25px;
+      padding-bottom: 25px;       
     }
-    @media (max-width:$mobile){
-      padding-top: 40px;
-      padding-bottom: 40px;
+  }
+  // .pediatrics-documents__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+  }
+  // .pediatrics-documents__content
+  &__content{
+    max-width: 572px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+  // .pediatrics-documents__title
+  &__title {
+    font-size: rem(30);
+    @media (max-width:$tablet){
+      font-size: rem(32);
     }
     @media (max-width:$mobileSmall){
-      padding-bottom: 40px;
+      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
+    }
+  }
+  // .pediatrics-documents__info
+  &__info {
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    span {
+      color: $accent;
+      @extend %mont-500;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+      line-height: math.div(23 , 14);
+    }
+  }
+  //.pediatrics-documents__action
+  &__action {
+    padding-top: 10px;
+    @media (max-width:$mobileSmall){
+      padding-top: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  //pediatrics-documents__btn
+  &__btn {
+    background: linear-gradient(180deg, #E84073 12.5%, #B92350 128.41%), #F13E75;
+    @media (max-width:$mobileSmall){
+      font-size: rem(14);
+      display: block;
     }
     @media (max-width: em(420)){
-      padding-top: 25px;
-      padding-bottom: 25px;
+      font-size: rem(12);
+      padding: 10px 15px;
     }
   }
-  // .veterinary-multifaceted__inner
-  &__inner {
-    position: relative;
+// .pediatrics-documents__cards 
+  &__cards {
     display: flex;
-    justify-content: flex-end;
-    &::before{
-      display: none;
-      content:'';
-      position: absolute;
-      background-image: url(../img/veterinary/veterinary-multifaceted-before.png);
-      background-repeat: no-repeat;
-      background-size: 100%;
-      width: 120%;
-      height: 100%;
-      left: -20px;
-      @media (max-width:$mobile){
-        display: block;
-        top: 30px;
-        width: 120%;
-      }
-      @media (max-width: em(720)){
-        @include adaptiveValue("top", 90, 150, 720, 630, 1);
-      }
-      @media (max-width: em(620)){
-        top: 90px;
-      }
-      @media (max-width: em(570)){
-        @include adaptiveValue("top", 180, 250, 570, 480, 1);
-      }
-      @media (max-width: em(435)){
-        top: 180px;
-      }
-      @media (max-width: em(420)){
-        top: 160px;
-      }
-      @media (max-width: em(380)){
-        @include adaptiveValue("top", 190, 240, 380, 320, 1);
-      }
+    align-items: center;
+    column-gap: 16px;
+    @media (max-width:$tablet){
+      column-gap: 37px;
     }
     @media (max-width:$mobile){
-      min-height: 620px;
+      @include adaptiveValue("column-gap", 37, 30, 767, 480, 1);
     }
-    @media (max-width: em(620)){
-      min-height: 540px;
-    }
-    @media (max-width: em(570)){
-      min-height: 630px;
-    }
-    @media (max-width: em(450)){
-      min-height: 570px;
-    }
-    @media (max-width: em(435)){
-      min-height: 480px;
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
     }
   }
-  // .veterinary-multifaceted__item
-  &__item {
-      @media (max-width:$mobile){
-        position: relative;
-        &::before{
-          content:'';
-          position: absolute;
-          width: 120%;
-          height: 240px;
-          left: -20px;
-          top: 200px;
-          background: linear-gradient(183deg, #F5F6FD 23.47%, rgba(245, 246, 253, 0.00) 78.53%);
-          filter: blur(10px);
-          @media (max-width: em(620)){
-            top: 190px;
-            height: 260px;
-          }
-          @media (max-width:$mobileSmall){
-            top: 130px;
-          }
-        }
-      }
-  }
-  // .veterinary-multifaceted__item-img
-  &__item-img {
+  // .pediatrics-documents__image
+  &__image {
     max-width: 100%;
     display: block;
     img {
       height: auto;
       width: 100%;
       object-fit: cover;
-      @media (max-width:$mobile){
-        width: 367px;
-        height: 347px;
-        margin-left: 15%;
-      }
-      @media (max-width: em(620)){
-        margin-left: 10%;
-      }
-      @media (max-width: em(520)){
-        margin-left: 2%;
-      }
-      @media (max-width:$mobileSmall){
-        margin: 0;
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    @media (max-width:$mobileSmall){
-      display: flex;
-      justify-content: flex-start;
-      padding-right: 34px;
-    }
-  }
-  // .veterinary-multifaceted__item-box
-  &__item-box {
-    position: relative;
-    padding-top: 40px;
-    display: grid;
-    row-gap: 25px;
-    @media (max-width:$tablet){
-      padding-top: 0;
-    }
-  }
-  // .veterinary-multifaceted__item-title
-  &__item-title {
-    max-width: 496px;
-    font-size: rem(30);
-    line-height: math.div(42 , 30);
-    @media (max-width:$tablet){
-      @include adaptiveValue("font-size", 30, 26, 1000, 768, 1);
-      text-align: left;
-    }
-    @media (max-width:$mobile){
-      max-width: 100%;
-      justify-self: center;
-      text-align: center;
-      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
-    }
-  }
-  // .veterinary-multifaceted__list
-  &__list {
-    display: grid;
-    row-gap: 16px;
-    padding-left: 25px;
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: normal;
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 13, 480, 420, 1);
-    }
-  }
-  // .veterinary-multifaceted__list-item
-  &__list-item {
-    &::before{
-      left: -21px;
-      top: 7px;
-      width: 6px;
-      height: 6px;
-    }
-    &::after{
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      @media (max-width:$tablet){
-        left: -24px;
-      }
     }
   }
 }
 //========================================================================================================================================================
 
-//.veterinary-product
+//.pediatrics-advantages
 //========================================================================================================================================================
-.veterinary-product {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right -220px;
-  // .veterinary-product__container
-  &__container {
-    padding-top: 50px;
-    padding-bottom: 100px;
-    @media (max-width:$tablet){
-      padding-top: 25px;
-      padding-bottom: 66px;       
-    }
-    @media (max-width:$mobile){
-      padding-top: 25px;
-      padding-bottom: 50px;
-    }
-  }
-  // .veterinary-product__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 20px;
-    }
-  }
-  // veterinary-product__item
-  &__item {
-    position: relative;
-    max-width: 584px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    row-gap: 20px;
-    @media (max-width:$tablet){
-      max-width: 100%;
-    }
-  }
-  //.veterinary-product__img
-  &__img {
-    max-width: 100%;
-    img {
-      display: block;
-      position: relative;
-      right: 120px;
-      height: auto;
-      width: 100%;
-      object-fit: cover;
-      @media (max-width: em(1180)){
-        right: 35px;
-      }
-    }
-  }
-  // .veterinary-product__info
-  &__info {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    @extend %mont-400;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    text-align: justify;
-    z-index: 5;
-    span {
-      @extend %mont-600;
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-    }
-  }
-  @media (max-width: em(1360)){
-    background-position: center right -10px;
-  }
-  @media (max-width:$tablet){
-    background-size: cover;
-    background-position: 95% 100px;
-  }
-  @media (max-width: em(660)){
-    background-position: 85% 100px;
-  }
-  @media (max-width:$mobileSmall){
-    background-size: 230%;
-    background-position: 95% 480px;
-
-  }
-}
-//========================================================================================================================================================
-
-//.veterinary-advantages
-//========================================================================================================================================================
-.veterinary-advantages {
-  margin-top: 50px;
+.pediatrics-advantages {
+  margin-top: 40px;
+  margin-bottom: 40px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $bg;
-  // .veterinary-advantages__container
+  @media (max-width:$tablet){
+    margin-bottom: 25px;
+  }
+  // .pediatrics-advantages__container
   &__container {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -723,14 +588,14 @@
       padding-bottom: 40px;
     }
   }
-  // .veterinary-advantages__title-box
+  // .pediatrics-advantages__title-box
   &__title-box {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
   } 
 
-  // .veterinary-advantages__title
+  // .pediatrics-advantages__title
   &__title {
     max-width: 1050px;
     font-size: rem(32);
@@ -740,7 +605,7 @@
     }
   }
 
-  // .veterinary-advantages__subtitle
+  // .pediatrics-advantages__subtitle
   &__subtitle {
     max-width: 874px;
     @extend %mont-500;
@@ -749,14 +614,14 @@
     color: $black;
   }
 
-  //.veterinary-advantages__text
+  //.pediatrics-advantages__text
   &__text {
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
 
-  // .veterinary-advantages__inner
+  // .pediatrics-advantages__inner
   &__inner {
     padding-top: 40px;
     display: grid;
@@ -774,14 +639,14 @@
       row-gap: 15px;
     }
   }
-  // .veterinary-advantages__items
+  // .pediatrics-advantages__items
   &__items {
     display: grid;
     grid-template-rows: 1fr 1.2fr 1fr;
     row-gap: 15px;
 
   }
-  // .veterinary-advantages__item
+  // .pediatrics-advantages__item
   &__item {
     max-width: 375px;
     display: flex;
@@ -797,7 +662,7 @@
       max-width: 100%;
     }
   }
-  // .veterinary-advantages__item-title
+  // .pediatrics-advantages__item-title
   &__item-title {
     white-space: nowrap;
     text-transform: uppercase;
@@ -808,14 +673,14 @@
       white-space: wrap;
     }
   }
-  // .veterinary-advantages__item-text
+  // .pediatrics-advantages__item-text
   &__item-text {
     @extend %mont-500;
     font-size: rem(14);
     line-height: math.div(22 , 14);
 
   }
-  // .veterinary-advantages__image
+  // .pediatrics-advantages__image
   &__image {
     max-width: 100%;
     display: block;
@@ -839,28 +704,223 @@
 }
 //========================================================================================================================================================
 
-
-//.veterinary-benefit
+//.pediatrics-product
 //========================================================================================================================================================
-.veterinary-benefit {
-  background-color: $bg;
+.pediatrics-product {
+  padding-top: 40px;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: top 25px right 250px;
+  @media (max-width: em(1880)){
+    background-size: 100%;
+    background-position: top 25px right 90px;
+  }
+  @media (max-width: em(1680)){
+    background-size: 111%;
+    background-position: top 25px right 0px;
+  }
+  @media (max-width: em(1460)){
+    background-size: 126%;
+    background-position: top 25px right -100px;
+  }
+  @media (max-width: em(1280)){
+    background-size: 144%;
+    background-position: top 25px right -190px;
+  }
+  @media (max-width: em(1170)){
+    background-size: 157%;
+    background-position: top 25px right -250px;
+  }
+  @media (max-width: em(1090)){
+    background-size: cover;
+    background-position: top -95px right -490px;
+  }
+  @media (max-width:$tablet){
+    background-size: 240%;
+    // background-position: -318px 230px;
+    background-position: 20% 230px;
+    padding-top: 25px;
+    margin-bottom: 25px;
+  }
+  @media (max-width:$mobile){
+    background-position: 20% 390px;
+  }
+  @media (max-width: em(690)){
+    background-size: 280%;
+    background-position: 26% 111%;
+  }
+  @media (max-width: em(540)){
+    background-position: 27% 100%;
+  }
+  // .pediatrics-product__container
+  &__container {
+    padding-bottom: 35px;
+    @media (max-width:$tablet){
+      padding-top: 25px;
+      padding-bottom: 66px;       
+    }
+    @media (max-width:$mobile){
+      padding-top: 25px;
+      padding-bottom: 50px;
+    }
+  }
+  // .pediatrics-product__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
+    @media (max-width:$tablet){
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 20px;
+    }
+  }
+  // pediatrics-product__item
+  &__item {
+    position: relative;
+    max-width: 584px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 20px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
+    &:first-child{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &:last-child{
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 890px;
+        left: -86%;
+        top: -30%;
+        background: linear-gradient(270deg, #F5F6FD 56.89%, rgba(245, 246, 253, 0) 73.03%);
+        filter: blur(40px);
+        z-index: 0;
+        @media (max-width:$tablet){
+          width: 130%;
+          height: 910px;
+          left: -16%;
+          top: -90%;
+          background: linear-gradient(360deg, #F5F6FD 56.89%, rgba(245, 246, 253, 0) 73.03%);
+          filter: blur(130px);
+          z-index: 0;
+        }
+        @media (max-width: em(690)){
+          top: -30%;
+        }
+        @media (max-width: em(570)){
+          top: 0;
+        }
+        @media (max-width:$mobileSmall){
+          top: -10%;
+          left: -22%;
+          width: 160%;
+        }
+        @media (max-width: em(380)){
+          top: -20%;
+          filter: blur(20px);
+        }
+      }
+    }
+  }
+  //.pediatrics-product__img
+  &__img {
+    max-width: 100%;
+    z-index: 1;
+    img {
+      display: block;
+      position: relative;
+      // left: 120px;
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width: em(1180)){
+        right: 35px;
+      }
+    }
+  }
+  // .pediatrics-product__title
+  &__title {
+    @extend %mont-700;
+    font-size: rem(30);
+    line-height: math.div(56 , 30);
+    z-index: 1;
+    @media (max-width: em(640)){
+      font-size: rem(28);
+      line-height: math.div(45 , 28);
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 28, 20, 480, 420, 1);
+    }
+  }
+  // .pediatrics-product__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    z-index: 5;
+
+  }
+  //.pediatrics-product__list
+  &__list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @extend %mont-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width:$tablet){
+      row-gap: 10px;
+    }
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
+    }
+  }
+  //.pediatrics-product__list-item
+  &__list-item {
+    position: relative;
+		&::before{
+			content: "";
+			border-radius: 50%;
+			position: absolute;
+			width: 3px;
+			height: 3px;
+			background-color: #000;
+			top: 10px;
+			left: -17px;
+		}
+  }
+}
+//========================================================================================================================================================
+
+
+//.pediatrics-benefit
+//========================================================================================================================================================
+.pediatrics-benefit {
   // .benefit__container
   &__container {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
-    padding-top: 75px;
-    padding-bottom: 45px;
+    padding-top: 35px;
+    padding-bottom: 40px;
     @media (max-width:$tablet){
-      padding-top: 40px;
+      padding-top: 25px;
+      padding-bottom: 25px;
       row-gap: 20px;
     }
-    @media (max-width: em(420)){
-      padding-top: 25px;
-    }
   }
-  // .veterinary-benefit__title
+  // .pediatrics-benefit__title
   &__title {
+    max-width: 1010px;
     font-size: rem(30);
     @media (max-width:$tablet){
       font-size: rem(32);
@@ -869,7 +929,7 @@
       @include adaptiveValue("font-size", 32, 20, 480, 420 ,1);
     }
   }
-  // .veterinary-benefit__inner
+  // .pediatrics-benefit__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -884,7 +944,7 @@
       row-gap: 15px;
     }
   }
-  // .veterinary-benefit__item
+  // .pediatrics-benefit__item
   &__item {
     display: flex;
     flex-direction: column;
@@ -896,282 +956,213 @@
       padding: 15px;
     }
   }
-  // .veterinary-benefit__item-title
+  // .pediatrics-benefit__item-title
   &__item-title {
     @extend %mont-600;
     font-size: rem(18);
     line-height: math.div(22 , 18);
   }
-  // .veterinary-benefit__item-text
+  // .pediatrics-benefit__item-text
   &__item-text {
     @extend %mont-500;
     font-size: rem(14);
     line-height: math.div(22 , 14);
   }
-  //.veterinary-benefit__info
-  &__info {
-    max-width: 874px;
-    padding-top: 15px;
-    @extend %mont-600;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    @media (max-width:$tablet){
-      max-width: 100%;
-      padding-top: 0;
-    }
-  }
-}
-
-
-//.veterinary-documents
-//========================================================================================================================================================
-.veterinary-documents {
-  background-color: $bg;
-  // .veterinary-documents__container
-  &__container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    @media (max-width:$tablet){
-      padding-top: 80px;
-      padding-bottom: 55px;       
-    }
-    @media (max-width:$mobile){
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-  }
-  // .veterinary-documents__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    @include adaptiveValue("column-gap", 32, 10, 1240, 1000, 1);
-    @media (max-width:$tablet){
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 30px;
-    }
-  }
-  // .veterinary-documents__content
-  &__content{
-    max-width: 572px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 20px;
-    @media (max-width:$tablet){
-      max-width: 100%;
-      align-items: center;
-    }
-  }
-  // .veterinary-documents__title
-  &__title {
-    font-size: rem(30);
-    @media (max-width:$tablet){
-      font-size: rem(32);
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
-    }
-  }
-  // .veterinary-documents__info
-  &__info {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    // text-align: justify;
-    span {
-      color: $accent;
-      @extend %mont-700;
-    }
-    p {
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-      line-height: math.div(23 , 14);
-    }
-  }
-  //.veterinary-documents__action
-  &__action {
-    padding-top: 10px;
-    @media (max-width:$mobileSmall){
-      padding-top: 0;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  //veterinary-documents__btn
-  &__btn {
-    background: linear-gradient(180deg, #E84073 12.5%, #B92350 128.41%), #F13E75;
-    @media (max-width:$mobileSmall){
-      font-size: rem(14);
-      display: block;
-    }
-    @media (max-width: em(420)){
-      font-size: rem(12);
-      padding: 10px 15px;
-    }
-  }
-// .veterinary-documents__cards 
-  &__cards {
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
-    @media (max-width:$tablet){
-      column-gap: 37px;
-    }
-    @media (max-width:$mobile){
-      @include adaptiveValue("column-gap", 37, 30, 767, 480, 1);
-    }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("column-gap", 30, 20, 480, 420, 1);
-    }
-  }
-  // .veterinary-documents__image
-  &__image {
-    max-width: 100%;
-    display: block;
-    img {
-      height: auto;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
 }
 //========================================================================================================================================================
 
-
-//.veterinary-compatibility
+//.pediatrics-powder
 //========================================================================================================================================================
-.veterinary-compatibility {
-  margin-top: 50px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $bg;
-  
-  // .veterinary-advantages__container
+.pediatrics-powder {
+  // .pediatrics-powder__container
   &__container {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    @media (max-width:$tablet){
+    padding-top: 40px;
+    padding-bottom: 80px;
+    @media (max-width: em(1180)){
       padding-bottom: 40px;
     }
+    @media (max-width:$tablet){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
-  // .veterinary-advantages__title-box
+  //.pediatrics-powder__title-box
   &__title-box {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-  } 
-
-  // .veterinary-advantages__title
+    row-gap: 20px;
+  }
+  // .pediatrics-powder__title
   &__title {
-    max-width: 1050px;
-    font-size: rem(32);
-    line-height: math.div(45 , 32);
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 32, 20, 480, 420, 1);
-    }
-  }
-
-  // .veterinary-advantages__subtitle
-  &__subtitle {
-    max-width: 874px;
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: $black;
-  }
-
-  //.veterinary-advantages__text
-  &__text {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-  }
-
-  // .veterinary-advantages__inner
-  &__inner {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    @include adaptiveValue("column-gap", 25, 15, 1240, 1180, 1);
-    @media (max-width: em(1180)){
-      grid-template-columns: repeat(2, 1fr);
-    }
+    max-width: 1010px;
+    font-size: rem(30);
+    line-height: math.div(42 , 30);
+    text-transform: uppercase;
     @media (max-width:$tablet){
-      padding-top: 20px;
+      font-size: rem(32);
+      @include adaptiveValue("font-size", 32, 28, 1000, 480, 1);
     }
-    @media (max-width: em(690)){
+    @media (max-width:$mobileSmall){
+      @include adaptiveValue("font-size", 28, 20, 480, 420, 1);
+    }
+  }
+  //.pediatrics-powder__subtitle
+  &__subtitle {
+    @extend %mont-600;
+    font-size: rem(24);
+    line-height: math.div(34 , 24);
+    @media (max-width:$tablet){
+      font-size: rem(20);
+      line-height: math.div(28 , 20);
+      text-align: center;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(16);
+      line-height: math.div(23 , 16);
+    }
+  }
+  // .pediatrics-powder__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    @media (max-width:$tablet){
+      row-gap: 50px;
+    }
+    @media (max-width:$mobile){
+      row-gap: 40px;
+    }
+  }
+  // .pediatrics-powder__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    @media (max-width:$tablet){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 40px;
+      .pediatrics-powder__item {
+        &:nth-child(1) {
+          grid-column: span 2;
+        }
+      }
+    }
+    @media (max-width: em(620)){
       display: flex;
       flex-direction: column;
-      row-gap: 15px;
+      row-gap: 20px;
+      .pediatrics-powder__item {
+        &:nth-child(1) {
+          grid-column: auto;
+        }
+      }
     }
   }
-  // .veterinary-advantages__items
-  &__items {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 15px;
-
-  }
-  // .veterinary-advantages__item
+  // .pediatrics-powder__item
   &__item {
-    max-width: 375px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 10px;
-    padding: 30px;
-    border-radius: 24px;
-    background-color: #fff;
+    align-items: center;
+    column-gap: 70px;
     @media (max-width:$tablet){
-      padding: 15px;
-    }
-    @media (max-width: em(690)){
-      max-width: 100%;
+      flex-direction: column;
+      row-gap: 30px;
+      @include adaptiveValue("column-gap", 70, 30, 1000, 768, 1);
     }
   }
-  // .veterinary-advantages__item-text
-  &__item-text {
-    text-transform: uppercase;
-    @extend %mont-500;
-    font-size: rem(14);
-    line-height: math.div(22 , 14);
-
-  }
-  // .veterinary-advantages__image
-  &__image {
+  // .pediatrics-powder__img
+  &__img {
     max-width: 100%;
     display: block;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     img {
-      position: relative;
-      right: 50px;
-      object-fit: cover;
-      width: 445px;
-      height: 356px;
-    }
-    @media (max-width: em(1180)){
-      display: none;
+      width: 183px;
+      height: 183px;
     }
   }
+  // .pediatrics-powder__info
+  &__info {
+    @extend %mont-500;
+    font-size: rem(20);
+    line-height: 120%;
+    @media (max-width:$tablet){
+      font-size: rem(16);
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(15);
+    }
+    @media (max-width: em(420)){
+      font-size: rem(14);
+    }
+  }
+  // .pediatrics-powder__item-heading
+  &__item-heading {
+    @extend %mont-700;
+  }
+  // .pediatrics-powder__item-text
+  &__item-text {
+    max-width: 900px;
+  }
+}
 
+
+//========================================================================================================================================================
+
+
+//.expert .pediatrics-expert
+.pediatrics-expert {
+  margin-bottom: 40px;
+  @media (max-width:$tablet){
+    margin-bottom: 0;
+  }
+
+  .pediatrics-expert__text {
+    @extend %mont-600;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    font-style: italic;
+    text-align: justify;
+    @media (max-width:$tablet){
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+      font-style: normal;
+    }
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
+    }
+  }
+  .expert__doctor {
+
+  }
+  .expert__avatar  {
+    @media (max-width: em(435)){
+      display: inline-flex;
+    }
+  }
+  .expert__name {
+    @media (max-width: em(420)){
+      font-size: rem(13);
+      line-height: math.div(18 , 13);
+    }
+  }
+  .expert__profile {
+    @media (max-width: em(420)){
+      font-size: rem(11);
+      line-height: math.div(15 , 11);
+    }
+  }
 }
 //========================================================================================================================================================
 
 //.buy
 //========================================================================================================================================================
-.veterinary-buy__container {
+.pediatrics-buy__container {
   padding-top: 40px;
   padding-bottom: 40px;
-  @media (max-width:$mobileSmall){
+  @media (max-width:$tablet){
     padding-bottom: 25px;
   }
   @media (max-width: em(420)){
@@ -1180,42 +1171,41 @@
 }
 //========================================================================================================================================================
 
-//.veterinary-application
+//.reports
+// .reports {
+
+// }
 //========================================================================================================================================================
-.veterinary-application {
-  background-position: -60% 0;
+
+//.pediatrics-application
+//========================================================================================================================================================
+.pediatrics-application {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-position: 40% 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $bg;
-  @media (max-width: em(1890)){
-    background-position: 50% -100px;
+  @media (max-width: em(1680)){
+    background-position: 100% 0px;
   }
   @media (max-width:$tablet){
-    background-position: 99% 400px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    background-position: 99% 420px;
     background-size: 290%;
   }
-  @media (max-width: em(660)){
-    background-position: 85% 360px;
-  }
   @media (max-width: em(530)){
-    background-position: 95% 625px;
-    background-size: 200%;
+    background-position: 99% 95%;
   }
-  @media (max-width: em(420)){
-    background-position: 95% 610px;
-  }
-  @media (max-width: em(360)){
-    background-position: 95% 670px;
-  }
-  // .veterinary-application__container
+  // .pediatrics-application__container
   &__container {
     padding-top: 50px;
     padding-bottom: 50px;
     @media (max-width:$tablet){
-      padding-bottom: 40px;
+      padding-top: 25px;
     }
   }
-  // .veterinary-application__title
+  // .pediatrics-application__title
   &__title {
     position: relative;
     max-width: 714px;
@@ -1226,7 +1216,7 @@
       text-align: center;
     }
   }
-  // .veterinary-application__inner
+  // .pediatrics-application__inner
   &__inner {
     position: relative;
     padding-top: 20px;
@@ -1246,95 +1236,43 @@
     @media (max-width: em(480)){
       row-gap: 0;
     }
-
-
   }
-  // .veterinary-application__item
+  // .pediatrics-application__item
   &__item {
     &:first-child{
       position: relative;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       row-gap: 20px;
       z-index: 5;
       &::before{
         content: "";
         position: absolute;
         width: 245%;
-        height: 850px;
-        right: -217%;
-        top: -30%;
+        height: 710px;
+        right: -100%;
+        top: -33%;
         background: linear-gradient(72deg, #F5F6FD 56.89%, rgba(245, 246, 253, 0) 73.03%);
         filter: blur(20px);
         z-index: -1;
-        @media (max-width: em(1890)){
-          right: -185%;
-        }
-      }
-      @media (max-width:$tablet){
-        &::before{
-          content:'';
-          position: absolute;
+        @media (max-width:$tablet){
           width: 130%;
-          height: 780px;
-          right: -4%;
-          top: 10%;
+          height: 520px;
+          right: -16%;
+          top: 19%;
           background: linear-gradient(180deg, #F5F6FD 40.47%, rgba(245, 246, 253, 0.00) 102.53%);
-          filter: blur(2px);
-          z-index: -1;
+        }
+        @media (max-width: em(530)){
+          top: 40%;
         }
       }
     }
   }
-  //.veterinary-application__important
-  &__important {
-    max-width: 475px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    background-color: #FFF;
-    @media (max-width:$tablet){
-      max-width: 100%;
-    }
-  }
-  //.veterinary-application__important-title
-  &__important-title {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-  }
-  //.veterinary-application__important-text
-  &__important-text {
-    @extend %mont-500;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: $black;
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
-      line-height: math.div(23 , 14);
-    }
-  } 
-  //.veterinary-application__important-icon
-  &__important-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  //.veterinary-application__text
-  &__text {
-    @extend %mont-400;
-    font-size: rem(16);
-    line-height: math.div(26 , 16);
-  }
-  // .veterinary-application__content
-  &__content {
+  // .pediatrics-list__content
+  &__list {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
@@ -1343,12 +1281,27 @@
       
     }
   }
-  //.veterinary-application__content-item
-  &__content-item {
+  //.pediatrics-applicatilist-item
+  &__list-item {
     max-width: 473px;
     @extend %mont-500;
     font-size: rem(16);
     line-height: math.div(26 , 16);
+    span {
+      position: relative;
+      padding-left: 20px;
+      @extend %mont-600;
+      &::before{
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background-color: #000;
+        top: 8px;
+        left: 5px;
+      }
+    }
     @media (max-width:$tablet){
       max-width: 100%;
     }
@@ -1357,7 +1310,11 @@
       line-height: math.div(23 , 14);
     }
   }
-  //.veterinary-application__img
+  //.pediatrics-applicatilist-title
+  &__list-title {
+
+  }
+  //.pediatrics-application__img
   &__img {
     position: relative;
     height: auto;
@@ -1368,35 +1325,30 @@
       display: block;
       object-fit: cover;
     }
-    @media (max-width: em(660)){
-      top: 100px;
-    }
   }
 }
 //========================================================================================================================================================
 
-
-//.veterinary-reviews
+//.pediatrics-reviews
 //========================================================================================================================================================
-.veterinary-reviews {
-  background-color: $bg;
-  // .veterinary-reviews__container
+.pediatrics-reviews {
+  // .pediatrics-reviews__container
   &__container {
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 50px;
     @media (max-width:$tablet){
-      padding-top: 80px;
+      padding-top: 25px;
     }
     @media (max-width:$mobileSmall){
-      padding-top: 70px;
-      padding-bottom: 40px;
+      // padding-top: 70px;
+      // padding-bottom: 40px;
     }
     @media (max-width: em(420)){
-      padding-top: 50px;
-      padding-bottom: 25px;
+      // padding-top: 50px;
+      // padding-bottom: 25px;
     }
   }
-  // .veterinary-reviews__heading
+  // .pediatrics-reviews__heading
   &__heading {
     position: relative;
     display: flex;
@@ -1409,7 +1361,7 @@
       align-items: flex-start;
     }
   }
-  //.veterinary-reviews__box
+  //.pediatrics-reviews__box
   &__box {
     display: flex;
     align-items: flex-end;
@@ -1420,21 +1372,21 @@
       row-gap: 20px;
     }
   }
-  // .veterinary-reviews__title
+  // .pediatrics-reviews__title
   &__title {
     max-width: 330px;
     @media (max-width: em(1000)){
       max-width: 100%;
     }
   }
-  // .veterinary-reviews__action
+  // .pediatrics-reviews__action
   &__action {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 20px;
   }
-  //.veterinary-reviews__foto-btn
+  //.pediatrics-reviews__foto-btn
   &__foto-btn {
     @extend %mont-500;
     font-size: rem(16);
@@ -1447,7 +1399,7 @@
       padding: 10px 15px;
     }
   }
-  // .veterinary-reviews__button
+  // .pediatrics-reviews__button
   &__button {
     @extend %mont-500;
     font-size: rem(16);
@@ -1457,7 +1409,7 @@
       line-height: math.div(24 , 14);
     }
   }
-  //.veterinary-reviews__buy
+  //.pediatrics-reviews__buy
   &__buy {
     @extend %mont-500;
     font-size: rem(16);
@@ -1467,7 +1419,7 @@
       line-height: math.div(24 , 14);
     }
   }
-  //.veterinary-reviews__buy-btn
+  //.pediatrics-reviews__buy-btn
   &__buy-btn {
     display: flex;
     justify-content: center;
@@ -1479,20 +1431,31 @@
     line-height: 120%;
     color: #FFF;
   }
-  // .veterinary-reviews__inner
+  // .pediatrics-reviews__inner
   &__inner {
     padding-top: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 24px;
-    column-gap: 24px;
+    // column-gap: 24px;
+    @include adaptiveValue("column-gap", 24, 10, 1090, 1000, 1);
+    .pediatrics-reviews__item {
+      &:nth-child(3) {
+        .pediatrics-reviews__user-info {
+          align-items: flex-start;
+        }
+        .pediatrics-reviews__user-name {
+          max-width: 105px;
+        }
+      }
+    }
     @media (max-width:$tablet){
       padding-top: 30px;
       display: flex;
       flex-direction: column;
     }
   }
-  // .veterinary-reviews__item
+  // .pediatrics-reviews__item
   &__item {
     padding: 20px;
     border-radius: 24px;
@@ -1501,10 +1464,11 @@
     row-gap: 10px;
     background-color: $white;
   }
-  // .veterinary-reviews__top
+  // .pediatrics-reviews__top
   &__top {
     display: flex;
     justify-content: space-between;
+    column-gap: 10px;
     @media (max-width:$mobileSmall){
     }
     @media (max-width: em(530)){
@@ -1513,19 +1477,19 @@
     }
   }
 
-  // .veterinary-reviews__user-info
+  // .pediatrics-reviews__user-info
   &__user-info {
     display: flex;
     align-items: center;
     column-gap: 20px;
   }
-  // .veterinary-reviews__user-name
+  // .pediatrics-reviews__user-name
   &__user-name {
     @extend %mont-600;
     font-size: rem(16);
     line-height: math.div(26 , 16);
   }
-  // .veterinary-reviews__user-rating
+  // .pediatrics-reviews__user-rating
   &__user-rating {
     display: flex;
     column-gap: 2px;
@@ -1535,8 +1499,9 @@
     }
   }
 
-  // .veterinary-reviews__market-link
+  // .pediatrics-reviews__market-link
   &__market-link {
+    white-space: nowrap;
     padding: 5px 10px 5px 5px;
     display: flex;
     align-items: center;
@@ -1557,7 +1522,7 @@
     }
   }
 
-  // .veterinary-reviews__text
+  // .pediatrics-reviews__text
   &__text {
     @extend %mont-400;
     font-size: rem(16);
@@ -1566,7 +1531,7 @@
       @include adaptiveValue("font-size", 16, 14);
     }
   }
-  //veterinary-reviews__wrapper
+  //pediatrics-reviews__wrapper
   &__wrapper {
     padding-top: 20px;
     @media (max-width: em(1080)){

@@ -206,6 +206,7 @@
     @extend %mont-500;
     font-size: rem(18);
     line-height: math.div(29 , 18);
+    text-align: center;
     cursor: pointer;
     img {
       width: 40px;
@@ -314,6 +315,9 @@
   // .reports__title
   &__title {
     max-width: 740px;
+    @media (max-width:$tablet){
+      max-width: 100%;
+    }
   }
   // .reports__inner
   &__inner {
@@ -356,8 +360,6 @@
   }
   // .reports__item-text
   &__item-text {
-    // display: flex;
-    // flex-direction: column;
     display: grid;
     row-gap: 8px;
     @extend %mont-600;

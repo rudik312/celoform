@@ -136,7 +136,7 @@
   }
   // .main__button
   &__button {
-
+    white-space: nowrap;
     @extend %mont-500;
     font-size: rem(16);
     // @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
