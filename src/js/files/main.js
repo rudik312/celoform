@@ -1,7 +1,7 @@
 
 
 		// кнопки выбора продукта
-	const cel5 = document.querySelector('._icon-celoform-5');
+	// const cel5 = document.querySelector('._icon-celoform-5');
 	const cel15 = document.querySelector('._icon-celoform-15');
 	const cel50 = document.querySelector('._icon-celoform-50');
 
@@ -18,28 +18,28 @@
 		};
 	}
 
-	
-	setListener(cel5, 'click', function () {
+	// убрали функционал кнопки 5 мг.
+	// setListener(cel5, 'click', function () {
 		
-	markets.forEach(item => {
-		if (item.classList.contains('category-5')) {
+	// markets.forEach(item => {
+	// 	if (item.classList.contains('category-5')) {
 
-				if (item.classList.contains('button_ozon')) {
-					item.setAttribute('href', 'https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr-1082907013/?asb=GKfSOeK9sJhydDl89uBkGW1jHUSvKdvJcqZvftlSikk%253D&asb2=uXVMUckDGLrd6R0EFCy5Y9P0rqeveu0qLd_q-5yGE41jr5mVcWyuypgEaC0p56Ld&avtc=1&avte=2&avts=1692026998&keywords=целоформ&sh=RldFU2SoxQ');
-				}
-				if (item.classList.contains('button_wildberries')) {
-					item.setAttribute('href', 'https://www.wildberries.ru/catalog/123404223/detail.aspx?targetUrl=EX');
-				}
-				if (item.classList.contains('button_yamarket')) {
-					item.setAttribute('href', 'https://market.yandex.ru/product--tseloform-ranozazhivliaiushchii-por/1772758505?glfilter=36472990%3A36614773_101852307745&glfilter=14805583%3A1~1_101852307745&glfilter=23674510%3A5~5_101852307745&sku=101852307745&uniqueId=15661726&cpa=1');
-				}
-				if (item.classList.contains('button_farmlend')) {
-					item.setAttribute('href', 'https://farmlend.ru/product/375508');
-				}
-			}
+	// 			if (item.classList.contains('button_ozon')) {
+	// 				item.setAttribute('href', 'https://www.ozon.ru/product/tseloform-ranozazhivlyayushchee-sredstvo-gemostatik-5-gr-1082907013/?asb=GKfSOeK9sJhydDl89uBkGW1jHUSvKdvJcqZvftlSikk%253D&asb2=uXVMUckDGLrd6R0EFCy5Y9P0rqeveu0qLd_q-5yGE41jr5mVcWyuypgEaC0p56Ld&avtc=1&avte=2&avts=1692026998&keywords=целоформ&sh=RldFU2SoxQ');
+	// 			}
+	// 			if (item.classList.contains('button_wildberries')) {
+	// 				item.setAttribute('href', 'https://www.wildberries.ru/catalog/123404223/detail.aspx?targetUrl=EX');
+	// 			}
+	// 			if (item.classList.contains('button_yamarket')) {
+	// 				item.setAttribute('href', 'https://market.yandex.ru/product--tseloform-ranozazhivliaiushchii-por/1772758505?glfilter=36472990%3A36614773_101852307745&glfilter=14805583%3A1~1_101852307745&glfilter=23674510%3A5~5_101852307745&sku=101852307745&uniqueId=15661726&cpa=1');
+	// 			}
+	// 			if (item.classList.contains('button_farmlend')) {
+	// 				item.setAttribute('href', 'https://farmlend.ru/product/375508');
+	// 			}
+	// 		}
 
-		});
-	});
+	// 	});
+	// });
 
 	setListener(cel15, 'click', function () {
 	markets.forEach(item => {

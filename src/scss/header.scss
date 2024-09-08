@@ -287,64 +287,7 @@
 		
 	}
 }
-//Стили для кастомного select
-// .select {
-//   max-width: 270px;
-//   position: relative;
-//   /* margin: 50px auto; */
-//   text-align-last: left; 
-// }
 
-
-// .select__current {
-//   width: 100%;
-//   border: 1px solid #ccc;
-//   padding: 10px;
-//   border-radius: 3px;
-//   position: relative;
-//   cursor: pointer;
-//   box-shadow: 0 0 5px 3px rgba(204, 204, 204, 0.2);
-//   background-color: #b3b3b3; 
-// }
-// .select__current::after {
-//   content: '';
-//   position: absolute;
-//   right: 10px;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   width: 0;
-//   height: 0;
-//   border-style: solid;
-//   border-width: 5px 5px 0 5px;
-//   border-color: #000 transparent transparent transparent; 
-// }
-// .select__list {
-// 	width: 124px !important;
-// 	position: absolute;
-//   width: 100%;
-//   overflow: hidden;
-//   border: 1px solid #ccc;
-//   margin-top: 5px;
-//   border-radius: 3px;
-//   display: none; 
-// }
-// .select__list--show {
-//   display: block; 
-// }
-// .select__item {
-// 	display: flex !important;
-// 	align-items: center;
-// 	column-gap: 5px;
-//   padding: 10px;
-//   cursor: pointer;
-//   background-color: #fff;
-//   border: none;
-//   display: inline-block;
-//   width: 100%; 
-// }
-// .select__item:hover, .select__item:focus {
-//   background-color: #e6e6e6; 
-// }
 .header__select {
 	
 }

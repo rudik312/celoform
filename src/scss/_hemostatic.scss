@@ -5,7 +5,6 @@
   background-position: center top 14%;
   background-repeat: no-repeat;
   background-color: $bg;
-
   // .main__container
   @media (max-width:$tablet){
     background-position: 60% 0;
@@ -146,13 +145,11 @@
   &__button {
     @extend %mont-500;
     font-size: rem(16);
-    // @include adaptiveValue("font-size", 16, 14, 1240, 1000, 1);
 		@include adaptiveValue("padding-left", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-right", 80, 60, 1240, 1000, 1);
 		@include adaptiveValue("padding-top", 12, 10, 1240, 1000, 1);
 		@include adaptiveValue("padding-bottom", 12, 10, 1240, 1000, 1);
     @media (max-width:$mobile){
-      // padding: 12px 122px;
       @include adaptiveValue("padding-left", 122, 82, 768, 480, 1);
       @include adaptiveValue("padding-right", 122, 82, 768, 480, 1);
       @include adaptiveValue("padding-top", 12, 8, 768, 480, 1);
@@ -403,10 +400,6 @@
       row-gap: 30px;
     }
   }
-  // .haemostatic__item
-  // &__item {
-    
-  // }
   // .haemostatic__item-img
   &__item-img {
     max-width: 100%;
@@ -544,9 +537,6 @@
       max-width: 100%;
     }
   }
-  // .product__title
-  // &__title {
-  // }
   // .product__info
   &__info {
     @extend %mont-400;
@@ -720,8 +710,6 @@
 }
 //========================================================================================================================================================
 
-
-
 //.hemostatic-documents
 //========================================================================================================================================================
 .hemostatic-documents {
@@ -806,7 +794,6 @@
     @media (max-width:$mobileSmall){
       font-size: rem(14);
       display: block;
-      // width: 100%;
     }
     @media (max-width: em(420)){
       font-size: rem(12);
@@ -844,31 +831,10 @@
 //.hemostatic-benefit
 //========================================================================================================================================================
 .hemostatic-benefit {
-  // position: relative;
   background-color: $bg;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  // z-index: 1;
-  // &::before{
-  //   content:'';
-  //   position: absolute;
-  //   background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
-  //   width: 60%;
-  //   height: 105%;
-  //   right: 25%;
-  //   top: -23px;
-  //   filter: blur(2px);
-  //   -moz-transform: scale(-1, -1);
-  //   -o-transform: scale(-1, -1);
-  //   -webkit-transform: scale(-1, -1);
-  //   transform: scale(-1, -1);
-  //   z-index: -1;
-  //   @media (max-width: em(1260)){
-  //     right: 15%;
-  //     width: 95%;
-  //   }
-  // }
   // .hemostatic-benefit__container
   &__container {
     padding-top: 40px;
@@ -920,10 +886,6 @@
     }
   }
 
-  //.hemostatic-benefit__wrapper
-  // &__wrapper {
-
-  // }
 
   //.hemostatic-benefit__video
   &__video {
@@ -946,9 +908,6 @@
     @media (max-width: em(680)){
       min-height: 300px;
       @include adaptiveValue("padding-left", 90, 60, 680, 480, 1);
-    }
-    @media (max-width: em(360)){
-      
     }
   }
 
@@ -1126,10 +1085,6 @@
       font-size: rem(20);
     }
   }
-  // .hemostatic-benefit__list
-  &__list {
-    align-self: stretch;
-  }
   // .hemostatic-benefit__list-item
   &__list-item {
     position: relative;
@@ -1204,7 +1159,6 @@
   }
 
 }
-
 //========================================================================================================================================================
 
 // .reports
@@ -1374,15 +1328,6 @@
       @include adaptiveValue("row-gap", 15, 20, 768, 480, 1);
     }
   }
-  // .hemostatic-reviews__title
-  // &__title {
-  // }
-  // .hemostatic-reviews__action
-  // &__action {
-  // }
-  // .hemostatic-reviews__button
-  // &__button {
-  // }
   // .hemostatic-reviews__inner
   &__inner {
     padding-top: 25px;
@@ -1438,9 +1383,6 @@
       height: 24px;
     }
   }
-  // .hemostatic-reviews__market
-  // &__market {
-  // }
   // .hemostatic-reviews__market-link
   &__market-link {
     padding: 5px 10px 5px 5px;
@@ -1462,9 +1404,6 @@
       display: inline-flex;
     }
   }
-  // .hemostatic-reviews__bottom
-  // &__bottom {
-  // }
 
   // .hemostatic-reviews__text
   &__text {

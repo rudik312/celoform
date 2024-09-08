@@ -32,6 +32,7 @@
   &__inner {
   
   }
+
 }
 .tabcontainer {
   display: grid;
@@ -131,7 +132,12 @@
   &__size {
     display: flex;
     column-gap: 15px;
-
+    // убрали кнопку 5 мг.
+    & .tabheader__item {
+      &._icon-celoform-5 {
+        display: none;
+      }
+    }
   }
   // .tabheader__item
   &__item {
@@ -143,6 +149,11 @@
     font-size: rem(18);
     line-height: math.div(29 , 18);
     cursor: pointer;
+    background: #fff;
+    border-radius: 16px;
+    @media (max-width:$tablet){
+      padding: 10px 65px;
+    }
     @media (max-width:$mobileSmall){
       @include adaptiveValue("font-size", 18, 16, 480, 420, 1);
       padding: 10px 10px;
@@ -150,7 +161,7 @@
     // .tabheader__item_active
     &_active {
       background-color: #0033D9;
-      border-radius: 16px;
+      
       color: #fff;
       &.tabheader__item {
         &::before{
